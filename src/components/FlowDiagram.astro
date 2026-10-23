@@ -1,0 +1,84 @@
+---
+import agg from '../content/zones/aggregates.json';
+
+const inr = (n) => Math.round(n || 0).toLocaleString('en-IN');
+
+const t = agg.totals;
+const casesPerDay = t.cases_per_month / 30;
+const best = agg.city.route_clusters[0];
+
+const households = agg.localities.reduce((a, l) => a + l.population.households, 0);
+const petShare = (t.pet_households / households) * 100;
+const caseShare = (t.cases_per_month / (t.pet_households * 12)) * 100;
+
+const stages = [
+  { k: 'Households', v: inr(households), note: 'in the two corridors', rate: '' },
+  { k: 'Pet-owning households', v: inr(t.pet_households), note: `${petShare.toFixed(1)}% of households`, rate: `${petShare.toFixed(1)}%` },
+  { k: 'Cases a month', v: inr(t.cases_per_month), note: '4.0 contacts a year each', rate: `${caseShare.toFixed(1)}%` },
+  { k: 'Cases a day', v: inr(casesPerDay), note: 'across the hundred', rate: '' },
+  { k: 'Our mix a month', v: `Rs ${inr(t.our_monthly_revenue)}`, note: 'at the route blend', rate: '' },
+];
+
+const W = 1080;
+const H = 300;
+const padX = 40;
+const gap = 26;
+const panelW = (W - padX * 2 - gap * (stages.length - 1)) / stages.length;
+const panelY = 54;
+const panelH = 130;
+
+const parts = [];
+const rateLabels = [];
+
+stages.forEach((s, i) => {
+  const x = padX + i * (panelW + gap);
+  const last = i === stages.length - 1;
+
+  parts.push(
+    `<g class="fl-stage${last ? ' fl-stage--last' : ''}">` +
+      `<rect x="${x}" y="${panelY}" width="${panelW}" height="${panelH}" class="fl-box"/>` +
+      `<text x="${x + 14}" y="${panelY + 26}" class="fl-k">${s.k}</text>` +
+      `<text x="${x + 14}" y="${panelY + 72}" class="fl-v${s.v.length > 9 ? ' fl-v--long' : ''}">${s.v}</text>` +
+      `<text x="${x + 14}" y="${panelY + 100}" class="fl-n">${s.note}</text>` +
+      `</g>`
+  );
+
+  if (!last) {
+    parts.push(
+      `<g class="fl-arrow">` +
+        `<line x1="${x + panelW}" y1="${panelY + panelH / 2}" x2="${x + panelW + gap - 8}" y2="${panelY + panelH / 2}"/>` +
+        `<path d="M ${x + panelW + gap - 8} ${panelY + panelH / 2 - 5} l 8 5 l -8 5 z"/>` +
+        `</g>`
+    );
+    if (s.rate) {
+      rateLabels.push(
+        `<text x="${x + panelW + gap / 2}" y="${panelY + panelH / 2 - 14}" class="fl-rate">${s.rate}</text>`
+      );
+    }
+  }
+});
+
+parts.push(
+  `<g class="fl-take">` +
+    `<rect x="${padX}" y="${panelY + panelH + 34}" width="${W - padX * 2}" height="52" class="fl-take__box"/>` +
+    `<text x="${padX + 18}" y="${panelY + panelH + 66}" class="fl-take__v">One route takes 156 visits a month out of that ${inr(t.cases_per_month)}</text>` +
+    `<text x="${W - padX - 18}" y="${panelY + panelH + 66}" class="fl-take__r" text-anchor="end">0.9% of the demand &middot; ${best.id} earns Rs ${inr(best.one_route_contribution)} of contribution</text>` +
+    `</g>`
+);
+
+const inner = parts.join('') + rateLabels.join('');
+---
+
+<figure class="flow" id="flow">
+  <svg
+    viewBox={`0 0 ${W} ${H}`}
+    role="img"
+    aria-label="Flow diagram: from households to pet-owning households, to cases a month, to cases a day, to the revenue the practice mix could earn"
+    set:html={inner}
+  />
+  <figcaption class="flow__cap">
+    The chain from a street to a route. Every step is a multiplier the practice does not control, and
+    the last line is the one that decides the business: the market is far larger than the fleet that
+    can serve it, so the constraint is how many visits a team can sell, staff and deliver in a day.
+  </figcaption>
+</figure>

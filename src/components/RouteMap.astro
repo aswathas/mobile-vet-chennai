@@ -1,0 +1,86 @@
+---
+import agg from '../content/zones/aggregates.json';
+
+const inr = (n) => Math.round(n || 0).toLocaleString('en-IN');
+
+const clusters = agg.city.route_clusters;
+const zones = ['A', 'B'].map((z) => {
+  const list = clusters.filter((c) => c.zone === z);
+  return {
+    zone: z,
+    hub: list[0]?.anchor ?? '',
+    gates: list.map((c) => ({
+      id: c.id,
+      anchor: c.anchor,
+      members: c.localities,
+      cases: Math.round(c.cases_per_month),
+      contribution: c.one_route_contribution,
+      travel: c.travel_min,
+      revenue: c.monthly_revenue,
+    })),
+  };
+});
+
+// The recommended gate is the one the board points at: the strongest by
+// monthly revenue inside the corridor the report opens in.
+const recommended = zones[0].gates[0];
+
+const W = 1080;
+const LANE = 150;
+const H = 392;
+const LEFT = 210;
+const RIGHT = 60;
+const HUB_X = LEFT - 54;
+const laneY = (i) => 96 + i * LANE;
+
+const parts = [];
+
+zones.forEach((zc, i) => {
+  const y = laneY(i);
+  const usable = W - LEFT - RIGHT;
+  const step = usable / Math.max(1, zc.gates.length - 1 || 1);
+  const x = (k) => LEFT + (zc.gates.length === 1 ? usable / 2 : k * step);
+
+  parts.push(`<text x="${HUB_X - 62}" y="${y + 5}" class="rm-lane">Zone ${zc.zone}</text>`);
+  parts.push(`<line x1="${LEFT}" x2="${W - RIGHT}" y1="${y}" y2="${y}" class="rm-line"/>`);
+  parts.push(
+    `<g class="rm-hub"><rect x="${HUB_X - 13}" y="${y - 13}" width="26" height="26" class="rm-hub__box"/>` +
+      `<text x="${HUB_X}" y="${y + 34}" class="rm-hub__label">hub</text></g>`
+  );
+
+  const pts = [];
+  zc.gates.forEach((g, k) => {
+    const gx = x(k);
+    pts.push(`${gx},${y + 52}`);
+    const isTarget = g.id === recommended.id;
+    parts.push(
+      `<g class="rm-gate${isTarget ? ' rm-gate--target' : ''}" data-gate="${g.id}">` +
+        `<rect x="${gx - 9}" y="${y - 9}" width="18" height="18" class="rm-gate__box"/>` +
+        `<text x="${gx}" y="${y - 18}" class="rm-gate__id">${g.id}</text>` +
+        `<text x="${gx}" y="${y + 26}" class="rm-gate__cases">${inr(g.cases)}</text>` +
+        `</g>`
+    );
+  });
+
+  parts.push(`<polyline points="${pts.join(' ')}" class="rm-order" pathLength="1"/>`);
+});
+
+const inner = parts.join('');
+---
+
+<figure class="routemap" id="routemap">
+  <svg
+    viewBox={`0 0 ${W} ${H}`}
+    role="img"
+    aria-label="Route diagram: two corridors, each a line of gates in travel order, with the gate to open first marked"
+    set:html={inner}
+  />
+  <figcaption class="rm-cap">
+    Each corridor is one line of gates, strongest first: the upper line is the south-east cluster
+    and the lower is the OMR and ECR corridor. A square is a route cluster, the figure under it is
+    the cases a month that cluster holds, and the black square at the left is the hub the corridor
+    runs from. The yellow gate is the one the first route opens on. The order across the gates is
+    the order of prize, not a travel order: the research passes give a travel order inside each
+    cluster but not between clusters.
+  </figcaption>
+</figure>

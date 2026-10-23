@@ -1,0 +1,210 @@
+---
+import meta from '../content/zones/meta.json';
+import lede from '../content/zones/lede.html?raw';
+import references from '../content/zones/references.json';
+import outline from '../content/zones/outline.json';
+import agg from '../content/zones/aggregates.json';
+import BodyA from '../content/zones/body-a.md';
+import BodyB from '../content/zones/body-b.md';
+import Rail from '../components/Rail.astro';
+import Bin from '../components/Bin.astro';
+import DossierKeyResult from '../components/DossierKeyResult.astro';
+import FlowDiagram from '../components/FlowDiagram.astro';
+import RouteMap from '../components/RouteMap.astro';
+import DossierRail from '../components/DossierRail.astro';
+import '../styles/tokens.css';
+import '../styles/frame.css';
+import '../styles/document.css';
+import '../styles/zones.css';
+
+const [titleMain, titleSub] = meta.title.split(/: (.+)/);
+const zoneNames = agg.zones.map((z) => z.name).join(' and ');
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{meta.title}</title>
+    <meta
+      name="description"
+      content="Locality-level demand, pricing and route economics for a mobile veterinary service across {zoneNames} in Chennai, one hundred scored localities, two corridors, fifteen route clusters."
+    />
+    <meta name="color-scheme" content="light" />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+  </head>
+
+  <body>
+    <a class="skip" href="#doc">Skip to the dossier</a>
+
+    <header class="band">
+      <div class="band__inner">
+        <h1>
+          {titleMain}
+          {titleSub && <span class="band__sub2">{titleSub}</span>}
+        </h1>
+        <p class="band__deck">
+          Where the demand actually sits, what each locality is worth, and which one to launch in.
+          <span class="band__note"
+            >{meta.localities} localities &middot; {meta.words.toLocaleString('en-IN')} words &middot;
+            {meta.sources} sources</span
+          >
+        </p>
+
+        <div class="slate">
+          <div class="slate__cell">
+            <span class="slate__k">Subject</span>
+            <span class="slate__v">Mobile veterinary house-call, locality by locality</span>
+          </div>
+          <div class="slate__cell">
+            <span class="slate__k">Zones</span>
+            <span class="slate__v">{zoneNames}</span>
+          </div>
+          <div class="slate__cell">
+            <span class="slate__k">Localities</span>
+            <span class="slate__v">{meta.localities} scored</span>
+          </div>
+          <div class="slate__cell">
+            <span class="slate__k">Status</span>
+            <span class="slate__v">Internal R&amp;D, not published</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <a class="backlink" href="/">&larr; The market report</a>
+
+    <Rail
+      outline={outline}
+      storageKey="mvt-dossier-last-frame"
+      shorts={{
+        verdict: 'Verdict',
+        'how-this-dossier-was-built': 'Method',
+        'the-two-corridors-against-each-other': 'The Two',
+        'zone-a-the-south-east-cluster': 'Zone A',
+        'zone-b-the-omr-and-ecr-corridor': 'Zone B',
+        'the-shape-of-a-chennai-pet-day': 'The Day',
+        'where-the-money-is': 'The Money',
+        'the-route-plan': 'Route Plan',
+        'what-would-change-the-verdict': 'Risks',
+        'appendix-all-one-hundred-localities': 'Appendix',
+      }}
+    />
+
+    <main class="sheet">
+      <article class="window window--sheet window--wide">
+        <div class="doc" id="doc">
+          <div class="verdict">
+            <Fragment set:html={lede} />
+          </div>
+
+          <DossierKeyResult />
+
+          <nav class="zonebtn" aria-label="Jump to a corridor">
+            <a class="zonebtn__link" href="#zone-a-the-south-east-cluster">
+              <span class="zonebtn__id">Zone A</span>
+              <span class="zonebtn__name">The south-east cluster</span>
+              <span class="zonebtn__v">{agg.zones[0].locality_count} localities &middot; {Math.round(agg.zones[0].total_cases_per_month).toLocaleString('en-IN')} cases a month</span>
+            </a>
+            <a class="zonebtn__link" href="#zone-b-the-omr-and-ecr-corridor">
+              <span class="zonebtn__id">Zone B</span>
+              <span class="zonebtn__name">The OMR and ECR corridor</span>
+              <span class="zonebtn__v">{agg.zones[1].locality_count} localities &middot; {Math.round(agg.zones[1].total_cases_per_month).toLocaleString('en-IN')} cases a month</span>
+            </a>
+          </nav>
+
+          <FlowDiagram />
+
+          <div class="doc__grid">
+            <div class="doc__read">
+              <BodyA />
+
+              <RouteMap />
+
+              <BodyB />
+            </div>
+            <DossierRail />
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <Bin
+      references={references}
+      heading="Trims"
+      note="Every source the locality dossier leans on, with its number, its publisher and its address. {n} in all."
+    />
+
+    <footer class="foot">
+      <div class="foot__inner">
+        <span>MVT-CHN-002 &middot; Locality Dossier, south Chennai</span>
+        <span>
+          {meta.localities} localities &middot; {meta.words.toLocaleString('en-IN')} words &middot;
+          {meta.sources} sources &middot; {meta.tableRows} table rows
+        </span>
+      </div>
+    </footer>
+
+    <script>
+      // The board's one instrument: change a filter and the arrow repaints onto
+      // the first gate that still stands.
+      const board = document.getElementById('board');
+      if (board) {
+        const gates = Array.from(board.querySelectorAll('.gate'));
+        const selects = Array.from(board.querySelectorAll('select[data-filter]'));
+
+        const paint = () => {
+          const f = Object.fromEntries(selects.map((s) => [s.dataset.filter, s.value]));
+          let first = null;
+
+          for (const g of gates) {
+            const ok =
+              (!f.zone || g.dataset.zone === f.zone) &&
+              (!f.verdict || g.dataset.verdict === f.verdict) &&
+              (!f.tier || g.dataset.tier === f.tier);
+
+            g.hidden = !ok;
+            g.classList.remove('gate--target');
+            const arrow = g.querySelector('.gate__arrow');
+            if (arrow) arrow.remove();
+
+            if (ok && !first) first = g;
+          }
+
+          if (first) {
+            first.classList.add('gate--target');
+            first.insertAdjacentHTML(
+              'beforeend',
+              '<span class="gate__arrow" aria-hidden="true"></span>'
+            );
+          }
+        };
+
+        for (const s of selects) s.addEventListener('change', paint);
+        paint();
+      }
+
+      // The route map draws its two corridors on the way in, once.
+      const map = document.getElementById('routemap');
+      if (map && 'IntersectionObserver' in window) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            for (const e of entries) {
+              if (e.isIntersecting) {
+                e.target.classList.add('is-drawn');
+                io.unobserve(e.target);
+              }
+            }
+          },
+          { threshold: 0.35 }
+        );
+        io.observe(map);
+      } else if (map) {
+        map.classList.add('is-drawn');
+      }
+    </script>
+  </body>
+</html>

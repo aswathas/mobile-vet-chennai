@@ -1,0 +1,53 @@
+---
+import agg from '../content/zones/aggregates.json';
+
+const inr = (n) => Math.round(n || 0).toLocaleString('en-IN');
+
+const FRAMES = 24;
+const rows = agg.zones.map((z) => {
+  const per = z.our_monthly_revenue / FRAMES;
+  const one = per > 0 ? Math.min(FRAMES, Math.round(z.one_route_monthly_revenue / per)) : 0;
+  const two = per > 0 ? Math.min(FRAMES, Math.round((z.one_route_monthly_revenue * 2) / per)) : 0;
+  return { zone: z.name, letter: z.zone, one, two, per, revenue: z.our_monthly_revenue, oneRev: z.one_route_monthly_revenue, contribution: z.one_route_contribution };
+});
+
+const total = agg.totals.our_monthly_revenue;
+const totalCases = agg.totals.cases_per_month;
+---
+
+<section class="result" aria-labelledby="dossier-result-k">
+  <div class="result__head">
+    <span class="result__k" id="dossier-result-k">What the two zones could carry, at our prices</span>
+    <span class="result__num">Rs {inr(total)}<span class="result__flag" aria-hidden="true"></span></span>
+  </div>
+  <p class="result__sub">
+    A month, at the chronic, senior and end-of-life mix, across {agg.totals.localities} localities and
+    {Math.round(totalCases).toLocaleString('en-IN')} cases a month the two zones hold. This is demand the
+    route could reach. It is not revenue that exists yet, and the Rs 1,100 floor from the market report
+    still has to clear in every cluster before any of it is bankable.
+  </p>
+
+  <div class="scale">
+    <div class="ladder-strip" role="img" aria-label="Route capacity against the revenue each zone could carry">
+      {
+        rows.map((r) => (
+          <div class="ladder">
+            <span class="ladder__zone">{r.letter}</span>
+            <span class="ladder__cells">
+              {Array.from({ length: FRAMES }, (_, i) => (
+                <i class="ladder__cell" data-mark={i < r.two ? (i < r.one ? 'one' : 'two') : 'none'} />
+              ))}
+            </span>
+            <span class="ladder__v">
+              Rs&nbsp;{inr(r.oneRev)} <em>one route reaches</em> &middot; Rs&nbsp;{inr(r.contribution)} <em>contribution</em>
+            </span>
+          </div>
+        ))
+      }
+    </div>
+    <p class="ladder__cap">
+      Each cell is one twenty-fourth of what the zone could carry at our prices. A solid cell is what a
+      first route reaches. A tinted cell is what a second route adds on top of it.
+    </p>
+  </div>
+</section>

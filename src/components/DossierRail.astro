@@ -1,0 +1,58 @@
+---
+import agg from '../content/zones/aggregates.json';
+
+const tierCounts = agg.localities.reduce((acc, l) => {
+  acc[l.demand.tier] = (acc[l.demand.tier] || 0) + 1;
+  return acc;
+}, {});
+
+const TIERS = [
+  { k: 'A', v: 'Sourced. A page or a document that was actually opened and read.', n: tierCounts.A || 0 },
+  { k: 'B', v: 'Derived from sourced inputs by a stated formula, with a modelled rate.', n: tierCounts.B || 0 },
+  { k: 'C', v: 'Modelled. The assumption and its uncertainty band are stated.', n: tierCounts.C || 0 },
+];
+---
+
+<aside class="doc__rail" aria-label="Units, provenance and how to read the tables">
+  <section class="railbox">
+    <h2 class="railbox__k">Units</h2>
+    <dl class="railbox__dl">
+      <dt>Rs</dt><dd>Indian rupees.</dd>
+      <dt>Lakh, crore</dt><dd>Indian number words. 1 lakh is 100,000; 1 crore is 10,000,000.</dd>
+      <dt>Cases a month</dt><dd>Veterinary demand in that locality in an average month. Not bookings.</dd>
+      <dt>Blend</dt><dd>The price a visit earns on the route that locality sits on, after the route is filled.</dd>
+      <dt>Contribution</dt><dd>What a route earns above the Rs 850 it costs to run.</dd>
+      <dt>Saturation</dt><dd>How crowded that ground already is with veterinary supply. 100 is saturated.</dd>
+      <dt>Peak cover</dt><dd>The most cases one locality could see in one day at the seasonal peak.</dd>
+    </dl>
+  </section>
+
+  <section class="railbox">
+    <h2 class="railbox__k">Provenance</h2>
+    <ul class="tiers">
+      {
+        TIERS.map((t) => (
+          <li>
+            <span class="tiers__k">{t.k}</span>
+            <span class="tiers__n">{t.n}</span>
+            <span class="tiers__v">{t.v}</span>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="railbox__note">
+      The tier travels with the number it qualifies. Half this corpus is tier C, and the prose says so
+      where it matters.
+    </p>
+  </section>
+
+  <section class="railbox">
+    <h2 class="railbox__k">Reading a gate</h2>
+    <p class="railbox__note">
+      A gate is a route cluster: four to eight localities one vehicle can serve without scattering.
+      The cases a month is what the cluster holds. The blend is what a visit earns on that route. The
+      one-route figure is what the route earns above its cost. Read them in that order and the
+      ranking explains itself.
+    </p>
+  </section>
+</aside>

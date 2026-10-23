@@ -1,0 +1,1140 @@
+/* ==========================================================================
+   The Sign Band — the dossier's figures, tables and the decision board
+   --------------------------------------------------------------------------
+   Yellow marks the one thing the reader should go to: the peak hour, the peak
+   day, the peak month, the gate the arrow points at. Everything else is black
+   on white. Two series are told apart by weight and hatch, never by hue.
+   ========================================================================== */
+
+/* --- the decision board: the fifteen gates -------------------------------- */
+
+.board {
+  margin: 0 0 40px;
+  scroll-margin-top: calc(var(--band-h) + 24px);
+  border: 1px solid var(--rule);
+  background: var(--paper);
+}
+
+.board__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.board__k {
+  font-family: var(--face-data);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.board__note {
+  font-size: 13px;
+  color: var(--ink-2);
+}
+
+.board__filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.board__filters label {
+  font-family: var(--face-data);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.board__filters select {
+  font-family: var(--face-data);
+  font-size: 12px;
+  padding: 4px 8px;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.gates {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gate {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr) 84px 104px 84px 36px;
+  align-items: center;
+  gap: 12px;
+  padding: 0 18px;
+  border-top: 1px solid var(--rule-hair);
+  min-height: 46px;
+}
+
+.gate:first-child {
+  border-top: 0;
+}
+
+.gate__id {
+  font-family: var(--face-data);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+}
+
+.gate__name {
+  font-size: 14.5px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--ink);
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  min-width: 0;
+}
+
+.gate__name span {
+  overflow-wrap: anywhere;
+}
+
+.gate__v {
+  font-family: var(--face-data);
+  font-size: 12px;
+  color: var(--ink-2);
+  text-align: right;
+}
+
+.gate__v b {
+  display: block;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.gate__v i {
+  font-style: normal;
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+/* the arrow: the one mark that says where to go */
+
+.gate__arrow {
+  justify-self: end;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 10px solid var(--ink);
+}
+
+/* the gate the arrow points at: yellow, because it is the destination */
+
+.gate--target {
+  background: var(--signal);
+}
+
+.gate--target .gate__id,
+.gate--target .gate__name,
+.gate--target .gate__v b {
+  color: var(--signal-ink);
+}
+
+.gate--target .gate__v,
+.gate--target .gate__v i {
+  color: rgba(17, 17, 17, 0.72);
+}
+
+.gate--target .gate__arrow {
+  border-left-color: var(--signal-ink);
+}
+
+.gate--closed {
+  color: var(--closed);
+}
+
+.gate--closed .gate__name {
+  color: var(--closed);
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+@media (max-width: 860px) {
+  .gate {
+    grid-template-columns: 52px 1fr 40px;
+    padding: 8px 14px;
+    row-gap: 4px;
+  }
+
+  .gate__v {
+    display: none;
+  }
+}
+
+/* --- figures --------------------------------------------------------------- */
+
+.chart {
+  margin: 0 0 30px;
+  padding: 18px 0 4px;
+  border-top: 2px solid var(--rule);
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.chart svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.chart__cap {
+  font-family: var(--face-data);
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--ink-3);
+  margin: 10px 0 0;
+  max-width: var(--measure);
+}
+
+.chart__keys {
+  display: inline-flex;
+  gap: 16px;
+  margin-left: 10px;
+}
+
+.ch-key {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ch-key__mark {
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+}
+
+.ch-key__mark--a {
+  background: var(--ink);
+}
+
+.ch-key__mark--b {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--ink) 0 2px,
+    var(--paper) 2px 4px
+  );
+  border: 1px solid var(--ink);
+}
+
+/* --- hour curve ------------------------------------------------------------ */
+
+.ch-grid {
+  stroke: var(--rule-hair);
+  stroke-width: 1;
+}
+
+.ch-axis-line {
+  stroke: var(--rule);
+  stroke-width: 1.5;
+}
+
+.ch-axis {
+  font-family: var(--face-data);
+  font-size: 11px;
+  fill: var(--ink-3);
+}
+
+.ch-bar--a {
+  fill: var(--ink);
+}
+
+.ch-bar--b {
+  fill: url(#ch-hatch);
+  stroke: var(--ink);
+  stroke-width: 0.8;
+}
+
+.ch-bar--peak {
+  fill: var(--signal);
+  stroke: var(--rule);
+  stroke-width: 1.2;
+}
+
+/* --- weekday strip --------------------------------------------------------- */
+
+.wk {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.wk__row {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.wk__zone {
+  font-family: var(--face-data);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.wk__cells {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.wk__cell {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: center;
+}
+
+.wk__fill {
+  width: 100%;
+  height: 30px;
+  background: var(--panel);
+  border: 1px solid var(--rule-soft);
+  background-image: linear-gradient(var(--ink), var(--ink));
+  background-repeat: no-repeat;
+  background-size: calc(var(--fill) / 8 * 100%) 100%;
+}
+
+.wk__row:last-child .wk__fill {
+  background-image: linear-gradient(var(--ink-3), var(--ink-3));
+}
+
+.wk__cell--peak .wk__fill {
+  background-image: linear-gradient(var(--signal), var(--signal));
+  border-color: var(--rule);
+}
+
+.wk__k {
+  font-family: var(--face-data);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.wk__v {
+  font-family: var(--face-data);
+  font-size: 11px;
+  color: var(--ink);
+}
+
+/* --- seasonality ----------------------------------------------------------- */
+
+.se {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.se__row {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  align-items: end;
+  gap: 12px;
+}
+
+.se__zone {
+  font-family: var(--face-data);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink);
+  padding-bottom: 26px;
+}
+
+.se__cells {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 5px;
+  align-items: end;
+}
+
+.se__cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3px;
+}
+
+.se__bar {
+  width: 100%;
+  background: var(--ink);
+  display: block;
+}
+
+.se__row:last-child .se__bar {
+  background: var(--ink-3);
+}
+
+.se__cell--peak .se__bar {
+  background: var(--signal);
+  outline: 1px solid var(--rule);
+  outline-offset: -1px;
+}
+
+.se__k {
+  font-family: var(--face-data);
+  font-size: 9.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.se__v {
+  font-family: var(--face-data);
+  font-size: 10px;
+  color: var(--ink-2);
+}
+
+/* --- revenue ranking ------------------------------------------------------- */
+
+.rb {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.rb__row {
+  display: grid;
+  grid-template-columns: minmax(120px, 1.4fr) 3fr auto 22px;
+  align-items: center;
+  gap: 10px;
+}
+
+.rb__name {
+  font-size: 14px;
+  color: var(--ink-2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rb__track {
+  height: 14px;
+  background: var(--panel);
+  border: 1px solid var(--rule-hair);
+  display: block;
+}
+
+.rb__bar {
+  display: block;
+  height: 100%;
+  background: var(--ink);
+}
+
+.rb__row--top .rb__bar {
+  background: var(--signal);
+  outline: 1px solid var(--rule);
+  outline-offset: -1px;
+}
+
+.rb__v {
+  font-family: var(--face-data);
+  font-size: 12px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.rb__z {
+  font-family: var(--face-data);
+  font-size: 11px;
+  color: var(--ink-3);
+}
+
+/* --- the route ladder in the key result ------------------------------------ */
+
+.ladder {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  gap: 8px 12px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.ladder__zone {
+  font-family: var(--face-data);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.ladder__cells {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  gap: 2px;
+}
+
+.ladder__cell {
+  height: 16px;
+  background: var(--panel);
+  border: 1px solid var(--rule-hair);
+  display: block;
+}
+
+.ladder__cell[data-mark='one'] {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.ladder__cell[data-mark='two'] {
+  background: var(--signal);
+  border-color: var(--rule);
+}
+
+.ladder__v {
+  grid-column: 2;
+  font-family: var(--face-data);
+  font-size: 11.5px;
+  color: var(--ink-3);
+}
+
+.ladder__v em {
+  font-style: normal;
+  color: var(--ink-3);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.ladder__cap {
+  font-family: var(--face-data);
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--ink-3);
+  margin: 8px 0 0;
+  max-width: var(--measure);
+}
+
+/* --- the wide table -------------------------------------------------------- */
+
+.tbl-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+  margin: 0 0 30px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.tbl-scroll table {
+  width: 100%;
+  min-width: 660px;
+  margin: 0;
+}
+
+.tbl-scroll:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.tbl__note {
+  font-family: var(--face-data);
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--ink-3);
+  margin: -18px 0 30px;
+  max-width: var(--measure);
+}
+
+/* --- responsive ------------------------------------------------------------ */
+
+@media (max-width: 720px) {
+  .chart {
+    padding-top: 12px;
+  }
+
+  .rb__row {
+    grid-template-columns: minmax(90px, 1.2fr) 2fr auto;
+  }
+
+  .rb__z {
+    display: none;
+  }
+
+  .wk__fill {
+    height: 22px;
+  }
+
+  .se__cells {
+    gap: 3px;
+  }
+
+  .se__v {
+    font-size: 9px;
+  }
+}
+
+/* --- print ----------------------------------------------------------------- */
+
+@media print {
+  .chart,
+  .ladder,
+  .tbl__note,
+  .board {
+    break-inside: avoid;
+  }
+
+  .chart svg {
+    max-height: 88mm;
+  }
+
+  .tbl-scroll {
+    overflow: visible;
+    break-inside: auto;
+  }
+
+  .tbl-scroll table {
+    min-width: 0;
+    font-size: 8.4pt;
+  }
+
+  .tbl-scroll thead th {
+    font-size: 7.4pt;
+  }
+
+  .tbl-scroll tbody td {
+    padding: 4px 8px 4px 0;
+  }
+
+  .gate {
+    font-size: 9pt;
+  }
+}
+
+/* ==========================================================================
+   The corridor buttons — the way in
+   ========================================================================== */
+
+.zonebtn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin: 0 0 40px;
+}
+
+.zonebtn__link {
+  display: grid;
+  gap: 8px;
+  padding: 18px 20px 20px;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--ink);
+  transform: perspective(900px) rotateX(4deg);
+  transform-origin: bottom center;
+  transition:
+    transform var(--dur) var(--ease),
+    background var(--dur) var(--ease);
+}
+
+.zonebtn__link:hover,
+.zonebtn__link:focus-visible {
+  background: var(--signal);
+  transform: perspective(900px) rotateX(0deg) translateY(-2px);
+}
+
+.zonebtn__id {
+  justify-self: start;
+  padding: 3px 9px;
+  background: var(--ink);
+  color: var(--signal);
+  font-family: var(--face-data);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.zonebtn__name {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+}
+
+.zonebtn__v {
+  font-family: var(--face-data);
+  font-size: 12px;
+  color: var(--ink-2);
+}
+
+@media (max-width: 720px) {
+  .zonebtn {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   The route map — two corridors as lines of gates
+   ========================================================================== */
+
+.routemap {
+  margin: 0 0 44px;
+  padding: 18px 0 6px;
+  border-top: 2px solid var(--rule);
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.routemap svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.rm-line {
+  stroke: var(--rule);
+  stroke-width: 3;
+}
+
+.rm-lane {
+  font-family: var(--face-data);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  fill: var(--ink);
+}
+
+.rm-hub__box {
+  fill: var(--ink);
+}
+
+.rm-hub__label {
+  font-family: var(--face-data);
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  fill: var(--ink-3);
+  text-anchor: middle;
+}
+
+.rm-gate__box {
+  fill: var(--paper);
+  stroke: var(--rule);
+  stroke-width: 1.6;
+}
+
+.rm-gate__id {
+  font-family: var(--face-data);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  fill: var(--ink-2);
+  text-anchor: middle;
+}
+
+.rm-gate__cases {
+  font-family: var(--face-data);
+  font-size: 11px;
+  fill: var(--ink);
+  text-anchor: middle;
+}
+
+.rm-gate--target .rm-gate__box {
+  fill: var(--signal);
+  stroke: var(--rule);
+  stroke-width: 2;
+}
+
+.rm-gate--target .rm-gate__id {
+  fill: var(--ink);
+  font-weight: 500;
+}
+
+.rm-order {
+  fill: none;
+  stroke: var(--ink-3);
+  stroke-width: 1.4;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 1400ms var(--ease);
+}
+
+.routemap.is-drawn .rm-order {
+  stroke-dashoffset: 0;
+}
+
+.rm-cap {
+  font-family: var(--face-data);
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--ink-3);
+  margin: 12px 0 0;
+  max-width: var(--measure);
+}
+
+/* ==========================================================================
+   The flow diagram — from a street to a route
+   ========================================================================== */
+
+.flow {
+  margin: 0 0 44px;
+  padding: 18px 0 6px;
+  border-top: 2px solid var(--rule);
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.flow svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.fl-box {
+  fill: var(--paper);
+  stroke: var(--rule);
+  stroke-width: 1.6;
+}
+
+.fl-stage--last .fl-box {
+  fill: var(--signal);
+}
+
+.fl-k {
+  font-family: var(--face-data);
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  fill: var(--ink-3);
+}
+
+.fl-v {
+  font-size: 27px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  fill: var(--ink);
+}
+
+.fl-n {
+  font-family: var(--face-data);
+  font-size: 11px;
+  fill: var(--ink-2);
+}
+
+.fl-arrow line {
+  stroke: var(--rule);
+  stroke-width: 2;
+}
+
+.fl-arrow path {
+  fill: var(--rule);
+}
+
+.fl-rate {
+  font-family: var(--face-data);
+  font-size: 11px;
+  fill: var(--ink-3);
+  text-anchor: middle;
+}
+
+.fl-take__box {
+  fill: none;
+  stroke: var(--rule);
+  stroke-width: 1.6;
+  stroke-dasharray: 5 4;
+}
+
+.fl-take__v {
+  font-size: 15px;
+  font-weight: 600;
+  fill: var(--ink);
+}
+
+.fl-take__r {
+  font-family: var(--face-data);
+  font-size: 12px;
+  fill: var(--ink-2);
+}
+
+.flow__cap {
+  font-family: var(--face-data);
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--ink-3);
+  margin: 12px 0 0;
+  max-width: var(--measure);
+}
+
+/* ==========================================================================
+   Motion — one orchestrated moment, and the board's own flip
+   ========================================================================== */
+
+.gate {
+  transition:
+    background var(--dur) var(--ease),
+    opacity var(--dur) var(--ease);
+}
+
+.gate[hidden] {
+  display: none;
+}
+
+.board.is-flipping .gate {
+  animation: gate-flip 320ms var(--ease);
+}
+
+@keyframes gate-flip {
+  0% {
+    transform: perspective(700px) rotateX(-42deg);
+    opacity: 0.4;
+  }
+  100% {
+    transform: perspective(700px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .board.is-flipping .gate {
+    animation: none;
+  }
+
+  .rm-order {
+    transition: none;
+    stroke-dashoffset: 0;
+  }
+}
+
+/* The route ladder is its own strip: the price scale's fixed height belongs to
+   the price scale, and reusing it crushed the ladder's own labels. */
+
+.ladder-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* A long money figure gets its own size so it stays inside its panel. */
+
+.fl-v--long {
+  font-size: 19px;
+}
+
+/* The board's filters carry the world: no OS chrome, a drawn chevron. */
+
+.board__filters select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--ink) 50%),
+    linear-gradient(135deg, var(--ink) 50%, transparent 50%);
+  background-position: calc(100% - 14px) 52%, calc(100% - 9px) 52%;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  padding-right: 26px;
+  border-radius: 0;
+}
+
+.board__filters select:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 1px;
+}
+
+/* ==========================================================================
+   The dossier's margin column — units, provenance and how to read a gate
+   ========================================================================== */
+
+.doc__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 32px;
+}
+
+.doc__read {
+  min-width: 0;
+}
+
+.doc__rail {
+  min-width: 0;
+}
+
+.railbox {
+  border-top: 2px solid var(--rule);
+  padding: 14px 0 16px;
+  margin-bottom: 22px;
+}
+
+.doc h2.railbox__k {
+  background: none;
+  border: 0;
+  border-top: 2px solid var(--rule);
+  margin: 0 0 10px;
+  padding: 10px 0 0;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  color: var(--ink-3);
+}
+
+.railbox__dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+  gap: 6px 12px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.railbox__dl dt {
+  font-family: var(--face-data);
+  font-size: 11.5px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.railbox__dl dd {
+  margin: 0;
+  color: var(--ink-2);
+}
+
+.railbox__note {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-2);
+  margin: 10px 0 0;
+}
+
+.railbox__table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+
+.railbox__table thead th {
+  font-family: var(--face-data);
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  text-align: left;
+  padding: 0 8px 6px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.railbox__table tbody td {
+  padding: 6px 8px 6px 0;
+  border-bottom: 1px solid var(--rule-hair);
+  color: var(--ink-2);
+  vertical-align: top;
+}
+
+.railbox__table tbody td:first-child {
+  font-family: var(--face-data);
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+@media (min-width: 1180px) {
+  .doc__grid {
+    grid-template-columns: minmax(0, 1fr) 13rem;
+  }
+
+  .doc__rail {
+    position: sticky;
+    top: calc(var(--band-h) + 18px);
+    align-self: start;
+    max-height: calc(100vh - var(--band-h) - 40px);
+    overflow-y: auto;
+  }
+
+  /* the section bands head the reading column, so they stop at its edge */
+  .doc__read > h2 {
+    margin-right: 0;
+  }
+}
+
+/* The dossier sheet is wider than the report's: it carries a margin column
+   and the figures need the room. */
+
+.window--wide {
+  max-width: 1240px;
+}
+
+/* The rail's headings are labels, not wayfinding, so they stay black on white
+   with a rule over them. Yellow belongs to the signs. */
+
+.railbox__k {
+  border-top: 2px solid var(--rule);
+  padding-top: 10px;
+}
+
+/* A narrow rail reads better with the term above its meaning. */
+
+.railbox__dl {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2px;
+}
+
+.railbox__dl dt {
+  margin-top: 9px;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+
+.railbox__dl dd {
+  margin-top: 1px;
+  font-size: 12.5px;
+}
+
+/* The provenance legend, in the rail's own narrow measure. */
+
+.tiers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tiers li {
+  display: grid;
+  grid-template-columns: 1.2rem 2.6rem 1fr;
+  gap: 2px 6px;
+  align-items: baseline;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--rule-hair);
+}
+
+.tiers__k {
+  font-family: var(--face-data);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.tiers__n {
+  font-family: var(--face-data);
+  font-size: 12px;
+  color: var(--ink-2);
+}
+
+.tiers__v {
+  grid-column: 1 / -1;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--ink-2);
+}
+
+/* The multiplier label sits above its arrow, with a knocked-out ground so the
+   arrow never cuts through the number. */
+
+.fl-rate {
+  paint-order: stroke;
+  stroke: var(--paper);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
