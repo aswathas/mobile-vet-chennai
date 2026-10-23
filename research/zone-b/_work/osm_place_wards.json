@@ -1,0 +1,3834 @@
+[
+ {
+  "name": "Nesapakkam",
+  "place": "neighbourhood",
+  "lat": 13.03449,
+  "lon": 80.191301,
+  "ward": "Ward 128",
+  "osm_id": "node/290747272"
+ },
+ {
+  "name": "Sector 4",
+  "place": "neighbourhood",
+  "lat": 13.041976,
+  "lon": 80.200522,
+  "ward": "Ward 131",
+  "osm_id": "node/389787310"
+ },
+ {
+  "name": "Sector 6",
+  "place": "neighbourhood",
+  "lat": 13.037779,
+  "lon": 80.199858,
+  "ward": "Ward 131",
+  "osm_id": "node/389903333"
+ },
+ {
+  "name": "Sector 7",
+  "place": "neighbourhood",
+  "lat": 13.038144,
+  "lon": 80.197329,
+  "ward": "Ward 131",
+  "osm_id": "node/389903335"
+ },
+ {
+  "name": "Sector 8",
+  "place": "neighbourhood",
+  "lat": 13.040186,
+  "lon": 80.197688,
+  "ward": "Ward 131",
+  "osm_id": "node/389877088"
+ },
+ {
+  "name": "Sector 9",
+  "place": "neighbourhood",
+  "lat": 13.041999,
+  "lon": 80.198245,
+  "ward": "Ward 131",
+  "osm_id": "node/14211387567"
+ },
+ {
+  "name": "Postal Colony",
+  "place": "neighbourhood",
+  "lat": 13.036329,
+  "lon": 80.219548,
+  "ward": "Ward 135",
+  "osm_id": "node/290728853"
+ },
+ {
+  "name": "West Saidapet",
+  "place": "neighbourhood",
+  "lat": 13.025258,
+  "lon": 80.220424,
+  "ward": "Ward 140",
+  "osm_id": "node/256031797"
+ },
+ {
+  "name": "Mettukuppam",
+  "place": "neighbourhood",
+  "lat": 13.058535,
+  "lon": 80.173446,
+  "ward": "Ward 147",
+  "osm_id": "node/14197390560"
+ },
+ {
+  "name": "Balakrishna Nagar",
+  "place": "neighbourhood",
+  "lat": 13.059415,
+  "lon": 80.184745,
+  "ward": "Ward 148",
+  "osm_id": "node/14185672306"
+ },
+ {
+  "name": "Valasaravakkam",
+  "place": "suburb",
+  "lat": 13.043023,
+  "lon": 80.175212,
+  "ward": "Ward 149",
+  "osm_id": "node/294073565"
+ },
+ {
+  "name": "Chettiyar Agaram",
+  "place": "neighbourhood",
+  "lat": 13.048036,
+  "lon": 80.143976,
+  "ward": "Ward 150",
+  "osm_id": "node/14206547784"
+ },
+ {
+  "name": "Ramapuram",
+  "place": "suburb",
+  "lat": 13.031419,
+  "lon": 80.178914,
+  "ward": "Ward 155",
+  "osm_id": "node/290747585"
+ },
+ {
+  "name": "Sri Laxmi Nagar",
+  "place": "neighbourhood",
+  "lat": 13.036349,
+  "lon": 80.18065,
+  "ward": "Ward 155",
+  "osm_id": "node/4487976271"
+ },
+ {
+  "name": "Nandambakkam",
+  "place": "suburb",
+  "lat": 13.016648,
+  "lon": 80.191188,
+  "ward": "Ward 158",
+  "osm_id": "node/294073575"
+ },
+ {
+  "name": "Pazhavanthangal",
+  "place": "suburb",
+  "lat": 12.988352,
+  "lon": 80.189132,
+  "ward": "Ward 164",
+  "osm_id": "node/310910972"
+ },
+ {
+  "name": "Ullagaram",
+  "place": "suburb",
+  "lat": 12.976587,
+  "lon": 80.19672,
+  "ward": "Ward 168",
+  "osm_id": "node/301731218"
+ },
+ {
+  "name": "Achutan Nagar",
+  "place": "locality",
+  "lat": 13.020278,
+  "lon": 80.201026,
+  "ward": "Ward 170",
+  "osm_id": "node/365784878"
+ },
+ {
+  "name": "Defence Colony",
+  "place": "locality",
+  "lat": 13.022007,
+  "lon": 80.199503,
+  "ward": "Ward 170",
+  "osm_id": "node/364279139"
+ },
+ {
+  "name": "Navaratna Gardens",
+  "place": "neighbourhood",
+  "lat": 13.023086,
+  "lon": 80.201086,
+  "ward": "Ward 170",
+  "osm_id": "node/364873652"
+ },
+ {
+  "name": "Sundar Nagar",
+  "place": "locality",
+  "lat": 13.016778,
+  "lon": 80.198731,
+  "ward": "Ward 170",
+  "osm_id": "node/364279392"
+ },
+ {
+  "name": "CIT Nagar",
+  "place": "neighbourhood",
+  "lat": 13.029384,
+  "lon": 80.234283,
+  "ward": "Ward 171",
+  "osm_id": "node/250319617"
+ },
+ {
+  "name": "Seva Nagar Velachery",
+  "place": "neighbourhood",
+  "lat": 12.986411,
+  "lon": 80.229321,
+  "ward": "Ward 174",
+  "osm_id": "node/4294644653"
+ },
+ {
+  "name": "Sony Nagar",
+  "place": "neighbourhood",
+  "lat": 12.98651,
+  "lon": 80.227991,
+  "ward": "Ward 174",
+  "osm_id": "node/4294644654"
+ },
+ {
+  "name": "Adyar",
+  "place": "suburb",
+  "lat": 13.00645,
+  "lon": 80.257779,
+  "ward": "Ward 175",
+  "osm_id": "node/249497711"
+ },
+ {
+  "name": "Gangai Nagar",
+  "place": "neighbourhood",
+  "lat": 12.983525,
+  "lon": 80.215924,
+  "ward": "Ward 177",
+  "osm_id": "node/338406849"
+ },
+ {
+  "name": "Velachery",
+  "place": "suburb",
+  "lat": 12.977261,
+  "lon": 80.220918,
+  "ward": "Ward 179",
+  "osm_id": "node/14306417136"
+ },
+ {
+  "name": "Vijaynagar",
+  "place": "neighbourhood",
+  "lat": 12.975743,
+  "lon": 80.220988,
+  "ward": "Ward 179",
+  "osm_id": "node/306114498"
+ },
+ {
+  "name": "Devendra Nagar",
+  "place": "neighbourhood",
+  "lat": 12.978757,
+  "lon": 80.25546,
+  "ward": "Ward 183",
+  "osm_id": "node/334201335"
+ },
+ {
+  "name": "Kandaswamy Nagar",
+  "place": "neighbourhood",
+  "lat": 12.966178,
+  "lon": 80.254818,
+  "ward": "Ward 183",
+  "osm_id": "node/1453434168"
+ },
+ {
+  "name": "Kannappa Nagar",
+  "place": "neighbourhood",
+  "lat": 12.975555,
+  "lon": 80.256908,
+  "ward": "Ward 183",
+  "osm_id": "node/1453466052"
+ },
+ {
+  "name": "PTC Colony",
+  "place": "neighbourhood",
+  "lat": 12.976383,
+  "lon": 80.256519,
+  "ward": "Ward 183",
+  "osm_id": "node/334201359"
+ },
+ {
+  "name": "Palkalai Nagar",
+  "place": "locality",
+  "lat": 12.965504,
+  "lon": 80.259273,
+  "ward": "Ward 183",
+  "osm_id": "node/1453511775"
+ },
+ {
+  "name": "Srinivasa Nagar",
+  "place": "locality",
+  "lat": 12.974967,
+  "lon": 80.260008,
+  "ward": "Ward 183",
+  "osm_id": "node/334201383"
+ },
+ {
+  "name": "Tirumalai Nagar",
+  "place": "neighbourhood",
+  "lat": 12.971804,
+  "lon": 80.245578,
+  "ward": "Ward 183",
+  "osm_id": "node/1453679151"
+ },
+ {
+  "name": "Vikram Sarabhai Industrial Estate",
+  "place": "neighbourhood",
+  "lat": 12.980955,
+  "lon": 80.250875,
+  "ward": "Ward 183",
+  "osm_id": "node/1457526998"
+ },
+ {
+  "name": "Madura Kali Nagar",
+  "place": "neighbourhood",
+  "lat": 12.958032,
+  "lon": 80.193832,
+  "ward": "Ward 187",
+  "osm_id": "node/1636177745"
+ },
+ {
+  "name": "Ram Nagar",
+  "place": "neighbourhood",
+  "lat": 12.965356,
+  "lon": 80.211813,
+  "ward": "Ward 188",
+  "osm_id": "node/280521191"
+ },
+ {
+  "name": "Jalladiampet",
+  "place": "suburb",
+  "lat": 12.919753,
+  "lon": 80.201692,
+  "ward": "Ward 190",
+  "osm_id": "node/306115540"
+ },
+ {
+  "name": "Jayachandran Nagar",
+  "place": "locality",
+  "lat": 12.921633,
+  "lon": 80.198788,
+  "ward": "Ward 190",
+  "osm_id": "node/1329325017"
+ },
+ {
+  "name": "Secretariat Colony",
+  "place": "locality",
+  "lat": 12.938272,
+  "lon": 80.244006,
+  "ward": "Ward 193",
+  "osm_id": "node/415858768"
+ },
+ {
+  "name": "Sholinganallur",
+  "place": "suburb",
+  "lat": 12.893536,
+  "lon": 80.232063,
+  "ward": "Ward 198",
+  "osm_id": "node/256197959"
+ },
+ {
+  "name": "AGS Colony",
+  "place": "neighbourhood",
+  "lat": 12.974592,
+  "lon": 80.256433,
+  "ward": null,
+  "osm_id": "node/334201370"
+ },
+ {
+  "name": "AGS Colony",
+  "place": "locality",
+  "lat": 12.969129,
+  "lon": 80.259928,
+  "ward": null,
+  "osm_id": "node/1453648372"
+ },
+ {
+  "name": "AGS Officers Colony",
+  "place": "neighbourhood",
+  "lat": 12.97897,
+  "lon": 80.209705,
+  "ward": null,
+  "osm_id": "node/401786624"
+ },
+ {
+  "name": "AVM Avenue",
+  "place": "neighbourhood",
+  "lat": 13.050354,
+  "lon": 80.187623,
+  "ward": null,
+  "osm_id": "node/14197390558"
+ },
+ {
+  "name": "Abhiramapuram",
+  "place": "neighbourhood",
+  "lat": 13.031024,
+  "lon": 80.2583,
+  "ward": null,
+  "osm_id": "node/243060101"
+ },
+ {
+  "name": "Adambakkam",
+  "place": "suburb",
+  "lat": 12.982221,
+  "lon": 80.209121,
+  "ward": null,
+  "osm_id": "node/256202991"
+ },
+ {
+  "name": "Adhanur",
+  "place": "suburb",
+  "lat": 12.872462,
+  "lon": 80.050689,
+  "ward": null,
+  "osm_id": "node/14038759249"
+ },
+ {
+  "name": "Agaramel",
+  "place": "neighbourhood",
+  "lat": 13.038647,
+  "lon": 80.07832,
+  "ward": null,
+  "osm_id": "node/332008929"
+ },
+ {
+  "name": "Agaramthen",
+  "place": "suburb",
+  "lat": 12.885667,
+  "lon": 80.153976,
+  "ward": null,
+  "osm_id": "node/308900749"
+ },
+ {
+  "name": "Akash Nagar",
+  "place": "neighbourhood",
+  "lat": 13.002523,
+  "lon": 80.131125,
+  "ward": null,
+  "osm_id": "node/14269098218"
+ },
+ {
+  "name": "Alandur",
+  "place": "town",
+  "lat": 13.003131,
+  "lon": 80.204443,
+  "ward": null,
+  "osm_id": "node/14069995115"
+ },
+ {
+  "name": "Alapakkam",
+  "place": "locality",
+  "lat": 12.884719,
+  "lon": 80.111374,
+  "ward": null,
+  "osm_id": "node/332381569"
+ },
+ {
+  "name": "Alapakkam",
+  "place": "suburb",
+  "lat": 13.049901,
+  "lon": 80.165435,
+  "ward": null,
+  "osm_id": "node/978454693"
+ },
+ {
+  "name": "Alliance Humming Garden",
+  "place": "neighbourhood",
+  "lat": 12.77996,
+  "lon": 80.214003,
+  "ward": null,
+  "osm_id": "node/11003487448"
+ },
+ {
+  "name": "Alwarpet",
+  "place": "suburb",
+  "lat": 13.03386,
+  "lon": 80.254549,
+  "ward": null,
+  "osm_id": "node/243053506"
+ },
+ {
+  "name": "Alwarthirunagar",
+  "place": "locality",
+  "lat": 13.047486,
+  "lon": 80.183669,
+  "ward": null,
+  "osm_id": "node/402293205"
+ },
+ {
+  "name": "Alwarthirunagar",
+  "place": "suburb",
+  "lat": 13.044322,
+  "lon": 80.187982,
+  "ward": null,
+  "osm_id": "node/4489923165"
+ },
+ {
+  "name": "Ambal Nagar",
+  "place": "locality",
+  "lat": 13.018353,
+  "lon": 80.20445,
+  "ward": null,
+  "osm_id": "node/364571579"
+ },
+ {
+  "name": "Ammāpettai",
+  "place": "village",
+  "lat": 12.740547,
+  "lon": 80.129599,
+  "ward": null,
+  "osm_id": "node/5103850806"
+ },
+ {
+  "name": "Anakaputhur",
+  "place": "suburb",
+  "lat": 12.980616,
+  "lon": 80.129755,
+  "ward": null,
+  "osm_id": "node/301138039"
+ },
+ {
+  "name": "Annai Sathya Nagar",
+  "place": "neighbourhood",
+  "lat": 13.036122,
+  "lon": 80.188108,
+  "ward": null,
+  "osm_id": "node/4486583995"
+ },
+ {
+  "name": "Arul Nagar",
+  "place": "neighbourhood",
+  "lat": 12.907466,
+  "lon": 80.111262,
+  "ward": null,
+  "osm_id": "node/9787595230"
+ },
+ {
+  "name": "Arunachalapuram",
+  "place": "neighbourhood",
+  "lat": 13.008735,
+  "lon": 80.260852,
+  "ward": null,
+  "osm_id": "node/313774973"
+ },
+ {
+  "name": "Ashok Nagar",
+  "place": "suburb",
+  "lat": 13.035927,
+  "lon": 80.21457,
+  "ward": null,
+  "osm_id": "node/247689098"
+ },
+ {
+  "name": "Aurum Villas by Pacifica",
+  "place": "neighbourhood",
+  "lat": 12.806899,
+  "lon": 80.214109,
+  "ward": null,
+  "osm_id": "node/11013412995"
+ },
+ {
+  "name": "Avvai Nagar",
+  "place": "neighbourhood",
+  "lat": 12.977378,
+  "lon": 80.253883,
+  "ward": null,
+  "osm_id": "node/1446415364"
+ },
+ {
+  "name": "Aziz Nagar",
+  "place": "neighbourhood",
+  "lat": 13.048697,
+  "lon": 80.228114,
+  "ward": null,
+  "osm_id": "node/298389659"
+ },
+ {
+  "name": "Baby Nagar",
+  "place": "neighbourhood",
+  "lat": 12.980365,
+  "lon": 80.229195,
+  "ward": null,
+  "osm_id": "node/4294644648"
+ },
+ {
+  "name": "Bakhtavachalam Nagar",
+  "place": "neighbourhood",
+  "lat": 12.97786,
+  "lon": 80.179105,
+  "ward": null,
+  "osm_id": "node/301136096"
+ },
+ {
+  "name": "Bakthavatchalam Nagar",
+  "place": "neighbourhood",
+  "lat": 13.003406,
+  "lon": 80.253094,
+  "ward": null,
+  "osm_id": "node/335480495"
+ },
+ {
+  "name": "Bakthavathsalam Nagar",
+  "place": "neighbourhood",
+  "lat": 13.036387,
+  "lon": 80.092987,
+  "ward": null,
+  "osm_id": "node/14283897672"
+ },
+ {
+  "name": "Balaji Nagar",
+  "place": "neighbourhood",
+  "lat": 12.972164,
+  "lon": 80.190572,
+  "ward": null,
+  "osm_id": "node/280510797"
+ },
+ {
+  "name": "Balaji Nagar",
+  "place": "neighbourhood",
+  "lat": 12.908755,
+  "lon": 80.14521,
+  "ward": null,
+  "osm_id": "node/335749107"
+ },
+ {
+  "name": "Balaji Nagar",
+  "place": "neighbourhood",
+  "lat": 13.022916,
+  "lon": 80.204868,
+  "ward": null,
+  "osm_id": "node/367789091"
+ },
+ {
+  "name": "Balaraman Nagar",
+  "place": "neighbourhood",
+  "lat": 13.045216,
+  "lon": 80.100739,
+  "ward": null,
+  "osm_id": "node/14283897669"
+ },
+ {
+  "name": "Barathi Nagar",
+  "place": "neighbourhood",
+  "lat": 12.918564,
+  "lon": 80.142709,
+  "ward": null,
+  "osm_id": "node/14224684428"
+ },
+ {
+  "name": "Besant Nagar",
+  "place": "suburb",
+  "lat": 12.999691,
+  "lon": 80.268226,
+  "ward": null,
+  "osm_id": "node/249497705"
+ },
+ {
+  "name": "Bharathidasan Colony",
+  "place": "neighbourhood",
+  "lat": 13.033573,
+  "lon": 80.204406,
+  "ward": null,
+  "osm_id": "node/369932290"
+ },
+ {
+  "name": "Bhuvaneswary Nagar",
+  "place": "neighbourhood",
+  "lat": 12.96991,
+  "lon": 80.221953,
+  "ward": null,
+  "osm_id": "node/4294647426"
+ },
+ {
+  "name": "Burma Colony",
+  "place": "neighbourhood",
+  "lat": 13.028268,
+  "lon": 80.196276,
+  "ward": null,
+  "osm_id": "node/365784585"
+ },
+ {
+  "name": "CIT Colony",
+  "place": "neighbourhood",
+  "lat": 13.04131,
+  "lon": 80.260472,
+  "ward": null,
+  "osm_id": "node/243060531"
+ },
+ {
+  "name": "Central Government Officers Quarters, General Pool Accomodation",
+  "place": "neighbourhood",
+  "lat": 13.002196,
+  "lon": 80.265283,
+  "ward": null,
+  "osm_id": "node/1730498127"
+ },
+ {
+  "name": "Chembarambakkam",
+  "place": "suburb",
+  "lat": 13.032562,
+  "lon": 80.055425,
+  "ward": null,
+  "osm_id": "node/294073738"
+ },
+ {
+  "name": "Chendurpuram",
+  "place": "neighbourhood",
+  "lat": 13.035593,
+  "lon": 80.123,
+  "ward": null,
+  "osm_id": "node/14283897664"
+ },
+ {
+  "name": "Chettinad Enclave",
+  "place": "locality",
+  "lat": 12.94175,
+  "lon": 80.201913,
+  "ward": null,
+  "osm_id": "node/402947915"
+ },
+ {
+  "name": "Chinnapanicheri",
+  "place": "neighbourhood",
+  "lat": 13.01976,
+  "lon": 80.119833,
+  "ward": null,
+  "osm_id": "node/294073651"
+ },
+ {
+  "name": "Chitlapakkam",
+  "place": "suburb",
+  "lat": 12.933098,
+  "lon": 80.141383,
+  "ward": null,
+  "osm_id": "node/256197931"
+ },
+ {
+  "name": "Chowdhary Nagar",
+  "place": "neighbourhood",
+  "lat": 13.037934,
+  "lon": 80.180924,
+  "ward": null,
+  "osm_id": "node/4487976268"
+ },
+ {
+  "name": "Chromepet",
+  "place": "suburb",
+  "lat": 12.949684,
+  "lon": 80.135642,
+  "ward": null,
+  "osm_id": "node/256197927"
+ },
+ {
+  "name": "DGI Layout",
+  "place": "locality",
+  "lat": 12.967891,
+  "lon": 80.259011,
+  "ward": null,
+  "osm_id": "node/1453574554"
+ },
+ {
+  "name": "Damodarapuram",
+  "place": "neighbourhood",
+  "lat": 13.001807,
+  "lon": 80.262981,
+  "ward": null,
+  "osm_id": "node/335535157"
+ },
+ {
+  "name": "Devaraj Nagar",
+  "place": "locality",
+  "lat": 13.05721,
+  "lon": 80.203358,
+  "ward": null,
+  "osm_id": "node/301699475"
+ },
+ {
+  "name": "Dhanalkshmi Colony",
+  "place": "locality",
+  "lat": 13.054927,
+  "lon": 80.205467,
+  "ward": null,
+  "osm_id": "node/343406007"
+ },
+ {
+  "name": "Dhandeeswaram",
+  "place": "neighbourhood",
+  "lat": 12.982639,
+  "lon": 80.224188,
+  "ward": null,
+  "osm_id": "node/4294644649"
+ },
+ {
+  "name": "Dharkas",
+  "place": "village",
+  "lat": 12.941044,
+  "lon": 80.071542,
+  "ward": null,
+  "osm_id": "node/331913707"
+ },
+ {
+  "name": "Dr Ambedkar Nagar",
+  "place": "neighbourhood",
+  "lat": 12.990055,
+  "lon": 80.207484,
+  "ward": null,
+  "osm_id": "node/401769766"
+ },
+ {
+  "name": "East Abhiramapuram",
+  "place": "neighbourhood",
+  "lat": 13.034268,
+  "lon": 80.261791,
+  "ward": null,
+  "osm_id": "node/247689703"
+ },
+ {
+  "name": "East Tambaram",
+  "place": "suburb",
+  "lat": 12.926515,
+  "lon": 80.131453,
+  "ward": null,
+  "osm_id": "node/256197926"
+ },
+ {
+  "name": "Echangadu",
+  "place": "suburb",
+  "lat": 12.948073,
+  "lon": 80.183921,
+  "ward": null,
+  "osm_id": "node/14041638036"
+ },
+ {
+  "name": "Ekkattuthangal",
+  "place": "suburb",
+  "lat": 13.024245,
+  "lon": 80.206551,
+  "ward": null,
+  "osm_id": "node/364280369"
+ },
+ {
+  "name": "Elango Nagar",
+  "place": "locality",
+  "lat": 12.971554,
+  "lon": 80.252379,
+  "ward": null,
+  "osm_id": "node/1446415374"
+ },
+ {
+  "name": "Ellaiamman Colony",
+  "place": "neighbourhood",
+  "lat": 13.046986,
+  "lon": 80.251936,
+  "ward": null,
+  "osm_id": "node/301947537"
+ },
+ {
+  "name": "Erumaiyur",
+  "place": "suburb",
+  "lat": 12.954739,
+  "lon": 80.081599,
+  "ward": null,
+  "osm_id": "node/301134468"
+ },
+ {
+  "name": "Ettayapuram",
+  "place": "village",
+  "lat": 12.947209,
+  "lon": 80.063104,
+  "ward": null,
+  "osm_id": "node/331914721"
+ },
+ {
+  "name": "Foreshore Estate",
+  "place": "suburb",
+  "lat": 13.024921,
+  "lon": 80.277687,
+  "ward": null,
+  "osm_id": "node/264040697"
+ },
+ {
+  "name": "GOCHS Colony",
+  "place": "neighbourhood",
+  "lat": 12.997872,
+  "lon": 80.269171,
+  "ward": null,
+  "osm_id": "node/10559615705"
+ },
+ {
+  "name": "Ganapathy Colony",
+  "place": "neighbourhood",
+  "lat": 13.050851,
+  "lon": 80.259732,
+  "ward": null,
+  "osm_id": "node/259686670"
+ },
+ {
+  "name": "Ganapathy Nagar",
+  "place": "neighbourhood",
+  "lat": 13.04103,
+  "lon": 80.094368,
+  "ward": null,
+  "osm_id": "node/294073694"
+ },
+ {
+  "name": "Gandhi Nagar",
+  "place": "locality",
+  "lat": 13.058274,
+  "lon": 80.207887,
+  "ward": null,
+  "osm_id": "node/824088043"
+ },
+ {
+  "name": "Gandhi Nagar",
+  "place": "neighbourhood",
+  "lat": 13.041268,
+  "lon": 80.187183,
+  "ward": null,
+  "osm_id": "node/4489923166"
+ },
+ {
+  "name": "Gandhinagar",
+  "place": "neighbourhood",
+  "lat": 13.008993,
+  "lon": 80.253863,
+  "ward": null,
+  "osm_id": "node/249497704"
+ },
+ {
+  "name": "Ganesapuram",
+  "place": "neighbourhood",
+  "lat": 13.030853,
+  "lon": 80.245009,
+  "ward": null,
+  "osm_id": "node/389518725"
+ },
+ {
+  "name": "Ganesh Nagar",
+  "place": "locality",
+  "lat": 12.979411,
+  "lon": 80.258162,
+  "ward": null,
+  "osm_id": "node/334201327"
+ },
+ {
+  "name": "Ganga Enclave",
+  "place": "locality",
+  "lat": 13.054207,
+  "lon": 80.221703,
+  "ward": null,
+  "osm_id": "node/2270504117"
+ },
+ {
+  "name": "Gemini",
+  "place": "neighbourhood",
+  "lat": 13.052104,
+  "lon": 80.250007,
+  "ward": null,
+  "osm_id": "node/301758149"
+ },
+ {
+  "name": "Gerugambakkam",
+  "place": "locality",
+  "lat": 13.001751,
+  "lon": 80.137541,
+  "ward": null,
+  "osm_id": "node/294073621"
+ },
+ {
+  "name": "Gerugambakkam",
+  "place": "suburb",
+  "lat": 13.015235,
+  "lon": 80.136854,
+  "ward": null,
+  "osm_id": "node/12255709754"
+ },
+ {
+  "name": "Gopalapuram",
+  "place": "suburb",
+  "lat": 13.049732,
+  "lon": 80.258203,
+  "ward": null,
+  "osm_id": "node/243059957"
+ },
+ {
+  "name": "Goparasanallur",
+  "place": "neighbourhood",
+  "lat": 13.045754,
+  "lon": 80.12575,
+  "ward": null,
+  "osm_id": "node/14300599729"
+ },
+ {
+  "name": "Gorimedu",
+  "place": "neighbourhood",
+  "lat": 13.041319,
+  "lon": 80.107474,
+  "ward": null,
+  "osm_id": "node/14283897666"
+ },
+ {
+  "name": "Govindaswamy Nagar",
+  "place": "neighbourhood",
+  "lat": 12.96857,
+  "lon": 80.245916,
+  "ward": null,
+  "osm_id": "node/1446415376"
+ },
+ {
+  "name": "Gowriwakkam",
+  "place": "suburb",
+  "lat": 12.920759,
+  "lon": 80.161974,
+  "ward": null,
+  "osm_id": "node/310378460"
+ },
+ {
+  "name": "Guduvancheri",
+  "place": "village",
+  "lat": 12.843995,
+  "lon": 80.060834,
+  "ward": null,
+  "osm_id": "node/1180849778"
+ },
+ {
+  "name": "Guindy",
+  "place": "suburb",
+  "lat": 13.00871,
+  "lon": 80.220365,
+  "ward": null,
+  "osm_id": "node/249497729"
+ },
+ {
+  "name": "Hasthinapuram",
+  "place": "neighbourhood",
+  "lat": 12.937282,
+  "lon": 80.151985,
+  "ward": null,
+  "osm_id": "node/256197932"
+ },
+ {
+  "name": "Heritage Jayendra Nagar",
+  "place": "neighbourhood",
+  "lat": 12.934519,
+  "lon": 80.164748,
+  "ward": null,
+  "osm_id": "node/1693541848"
+ },
+ {
+  "name": "IAS Officers Colony",
+  "place": "locality",
+  "lat": 13.013385,
+  "lon": 80.180194,
+  "ward": null,
+  "osm_id": "node/692706123"
+ },
+ {
+  "name": "IOB Colony",
+  "place": "neighbourhood",
+  "lat": 12.920805,
+  "lon": 80.141185,
+  "ward": null,
+  "osm_id": "node/14224684425"
+ },
+ {
+  "name": "Indira Colony",
+  "place": "locality",
+  "lat": 13.033131,
+  "lon": 80.210927,
+  "ward": null,
+  "osm_id": "node/300224864"
+ },
+ {
+  "name": "Indira Nagar",
+  "place": "locality",
+  "lat": 12.996315,
+  "lon": 80.25242,
+  "ward": null,
+  "osm_id": "node/257431353"
+ },
+ {
+  "name": "Injambakkam",
+  "place": "suburb",
+  "lat": 12.918937,
+  "lon": 80.251295,
+  "ward": null,
+  "osm_id": "node/306115800"
+ },
+ {
+  "name": "Irumbuliyur",
+  "place": "suburb",
+  "lat": 12.912203,
+  "lon": 80.108898,
+  "ward": null,
+  "osm_id": "node/256203138"
+ },
+ {
+  "name": "Iyappanthangal",
+  "place": "suburb",
+  "lat": 13.03577,
+  "lon": 80.133653,
+  "ward": null,
+  "osm_id": "node/294073678"
+ },
+ {
+  "name": "Jafferkhanpet",
+  "place": "neighbourhood",
+  "lat": 13.02995,
+  "lon": 80.20542,
+  "ward": null,
+  "osm_id": "node/290741806"
+ },
+ {
+  "name": "JagannathaPuram",
+  "place": "neighbourhood",
+  "lat": 12.984682,
+  "lon": 80.221892,
+  "ward": null,
+  "osm_id": "node/4304426157"
+ },
+ {
+  "name": "Janaki Nagar",
+  "place": "neighbourhood",
+  "lat": 13.04017,
+  "lon": 80.182073,
+  "ward": null,
+  "osm_id": "node/4487976269"
+ },
+ {
+  "name": "Jayendra Colony",
+  "place": "neighbourhood",
+  "lat": 12.969828,
+  "lon": 80.248232,
+  "ward": null,
+  "osm_id": "node/1454648321"
+ },
+ {
+  "name": "Jeevarathinam Nagar",
+  "place": "neighbourhood",
+  "lat": 13.002057,
+  "lon": 80.260695,
+  "ward": null,
+  "osm_id": "node/313775328"
+ },
+ {
+  "name": "Jeth Nagar",
+  "place": "neighbourhood",
+  "lat": 13.027831,
+  "lon": 80.262238,
+  "ward": null,
+  "osm_id": "node/410616097"
+ },
+ {
+  "name": "Jothiammal Nagar",
+  "place": "neighbourhood",
+  "lat": 13.019511,
+  "lon": 80.228897,
+  "ward": null,
+  "osm_id": "node/256035579"
+ },
+ {
+  "name": "Judge's Colony",
+  "place": "neighbourhood",
+  "lat": 12.97596,
+  "lon": 80.248175,
+  "ward": null,
+  "osm_id": "node/1453588714"
+ },
+ {
+  "name": "K.K.Nagar",
+  "place": "suburb",
+  "lat": 13.040797,
+  "lon": 80.20298,
+  "ward": null,
+  "osm_id": "node/12899837948"
+ },
+ {
+  "name": "Kaayar",
+  "place": "village",
+  "lat": 12.77002,
+  "lon": 80.146435,
+  "ward": null,
+  "osm_id": "node/11014101610"
+ },
+ {
+  "name": "Kadaperi",
+  "place": "locality",
+  "lat": 12.93431,
+  "lon": 80.121504,
+  "ward": null,
+  "osm_id": "node/331881314"
+ },
+ {
+  "name": "Kalaimagal Nagar",
+  "place": "neighbourhood",
+  "lat": 13.025262,
+  "lon": 80.204908,
+  "ward": null,
+  "osm_id": "node/364278256"
+ },
+ {
+  "name": "Kalakshetra Colony",
+  "place": "locality",
+  "lat": 12.993635,
+  "lon": 80.266422,
+  "ward": null,
+  "osm_id": "node/257431355"
+ },
+ {
+  "name": "Kalattipettai",
+  "place": "suburb",
+  "lat": 12.986794,
+  "lon": 80.066909,
+  "ward": null,
+  "osm_id": "node/294073710"
+ },
+ {
+  "name": "Kalivanthapattu",
+  "place": "village",
+  "lat": 12.775004,
+  "lon": 80.074473,
+  "ward": null,
+  "osm_id": "node/11014895008"
+ },
+ {
+  "name": "Kalvoi",
+  "place": "village",
+  "lat": 12.778195,
+  "lon": 80.107561,
+  "ward": null,
+  "osm_id": "node/14260826284"
+ },
+ {
+  "name": "Kamakoti Nagar",
+  "place": "neighbourhood",
+  "lat": 12.941036,
+  "lon": 80.213268,
+  "ward": null,
+  "osm_id": "node/12534286145"
+ },
+ {
+  "name": "Kamakshiamman Nagar",
+  "place": "neighbourhood",
+  "lat": 13.037022,
+  "lon": 80.115604,
+  "ward": null,
+  "osm_id": "node/14283897673"
+ },
+ {
+  "name": "Kamakshiamman Nagar Layout",
+  "place": "neighbourhood",
+  "lat": 13.027862,
+  "lon": 80.128285,
+  "ward": null,
+  "osm_id": "node/12809049259"
+ },
+ {
+  "name": "Kamarajapuram",
+  "place": "locality",
+  "lat": 12.972442,
+  "lon": 80.121501,
+  "ward": null,
+  "osm_id": "node/301139010"
+ },
+ {
+  "name": "Kamarajar Colony",
+  "place": "neighbourhood",
+  "lat": 13.049974,
+  "lon": 80.220129,
+  "ward": null,
+  "osm_id": "node/298471030"
+ },
+ {
+  "name": "Kamatchi Nagar",
+  "place": "neighbourhood",
+  "lat": 12.944583,
+  "lon": 80.215865,
+  "ward": null,
+  "osm_id": "node/12534285821"
+ },
+ {
+  "name": "Kamraj nagar",
+  "place": "locality",
+  "lat": 12.98393,
+  "lon": 80.257283,
+  "ward": null,
+  "osm_id": "node/698282780"
+ },
+ {
+  "name": "Kandigai",
+  "place": "suburb",
+  "lat": 12.849503,
+  "lon": 80.140273,
+  "ward": null,
+  "osm_id": "node/332382931"
+ },
+ {
+  "name": "Kannadapalayam",
+  "place": "suburb",
+  "lat": 12.936436,
+  "lon": 80.101535,
+  "ward": null,
+  "osm_id": "node/331910223"
+ },
+ {
+  "name": "Kannagi Nagar",
+  "place": "neighbourhood",
+  "lat": 12.927645,
+  "lon": 80.239667,
+  "ward": null,
+  "osm_id": "node/401654480"
+ },
+ {
+  "name": "Kannammapet",
+  "place": "neighbourhood",
+  "lat": 13.032326,
+  "lon": 80.228078,
+  "ward": null,
+  "osm_id": "node/250319611"
+ },
+ {
+  "name": "Kannan Nagar",
+  "place": "neighbourhood",
+  "lat": 12.969907,
+  "lon": 80.189316,
+  "ward": null,
+  "osm_id": "node/280510383"
+ },
+ {
+  "name": "Kannivakkam",
+  "place": "village",
+  "lat": 12.811174,
+  "lon": 80.091193,
+  "ward": null,
+  "osm_id": "node/11014895006"
+ },
+ {
+  "name": "Karambakkam",
+  "place": "suburb",
+  "lat": 13.041008,
+  "lon": 80.164404,
+  "ward": null,
+  "osm_id": "node/1446805944"
+ },
+ {
+  "name": "Karanai",
+  "place": "suburb",
+  "lat": 12.857444,
+  "lon": 80.20026,
+  "ward": null,
+  "osm_id": "node/335755162"
+ },
+ {
+  "name": "Karapakkam",
+  "place": "suburb",
+  "lat": 12.911707,
+  "lon": 80.22772,
+  "ward": null,
+  "osm_id": "node/306115629"
+ },
+ {
+  "name": "Karayambedu",
+  "place": "village",
+  "lat": 12.805026,
+  "lon": 80.070728,
+  "ward": null,
+  "osm_id": "node/826126983"
+ },
+ {
+  "name": "Karayanchavadi",
+  "place": "suburb",
+  "lat": 13.04868,
+  "lon": 80.110836,
+  "ward": null,
+  "osm_id": "node/14058440404"
+ },
+ {
+  "name": "Karpagam Avenue",
+  "place": "neighbourhood",
+  "lat": 13.021979,
+  "lon": 80.26783,
+  "ward": null,
+  "osm_id": "node/2218345692"
+ },
+ {
+  "name": "Karpagam Garden",
+  "place": "neighbourhood",
+  "lat": 13.007178,
+  "lon": 80.261545,
+  "ward": null,
+  "osm_id": "node/313775085"
+ },
+ {
+  "name": "Karpagambal Nagar",
+  "place": "locality",
+  "lat": 12.973664,
+  "lon": 80.259637,
+  "ward": null,
+  "osm_id": "node/1453466056"
+ },
+ {
+  "name": "Karthikeyapuram",
+  "place": "neighbourhood",
+  "lat": 12.962594,
+  "lon": 80.194524,
+  "ward": null,
+  "osm_id": "node/1760697495"
+ },
+ {
+  "name": "Kasturibai Nagar",
+  "place": "neighbourhood",
+  "lat": 13.004044,
+  "lon": 80.250938,
+  "ward": null,
+  "osm_id": "node/257431352"
+ },
+ {
+  "name": "Kattupakkam",
+  "place": "suburb",
+  "lat": 13.040055,
+  "lon": 80.124303,
+  "ward": null,
+  "osm_id": "node/294073683"
+ },
+ {
+  "name": "Kaveri Nagar",
+  "place": "locality",
+  "lat": 12.970304,
+  "lon": 80.263756,
+  "ward": null,
+  "osm_id": "node/1453511772"
+ },
+ {
+  "name": "Kaveri Rangan Colony",
+  "place": "neighbourhood",
+  "lat": 13.053764,
+  "lon": 80.201233,
+  "ward": null,
+  "osm_id": "node/361000031"
+ },
+ {
+  "name": "Kazhipattur",
+  "place": "suburb",
+  "lat": 12.824957,
+  "lon": 80.231425,
+  "ward": null,
+  "osm_id": "node/12997864930"
+ },
+ {
+  "name": "Keelkattalai",
+  "place": "suburb",
+  "lat": 12.954847,
+  "lon": 80.185269,
+  "ward": null,
+  "osm_id": "node/310360632"
+ },
+ {
+  "name": "Keelur",
+  "place": "village",
+  "lat": 12.740786,
+  "lon": 80.110243,
+  "ward": null,
+  "osm_id": "node/11014101677"
+ },
+ {
+  "name": "Keerapakkam",
+  "place": "village",
+  "lat": 12.827687,
+  "lon": 80.128782,
+  "ward": null,
+  "osm_id": "node/14261880737"
+ },
+ {
+  "name": "Keezhkottaiyur",
+  "place": "suburb",
+  "lat": 12.837982,
+  "lon": 80.153593,
+  "ward": null,
+  "osm_id": "node/11013328844"
+ },
+ {
+  "name": "Kelambakkam",
+  "place": "town",
+  "lat": 12.787144,
+  "lon": 80.219987,
+  "ward": null,
+  "osm_id": "node/297473137"
+ },
+ {
+  "name": "Kesavaperumalpuram",
+  "place": "neighbourhood",
+  "lat": 13.021125,
+  "lon": 80.254118,
+  "ward": null,
+  "osm_id": "node/410691069"
+ },
+ {
+  "name": "Kilambakkam",
+  "place": "suburb",
+  "lat": 12.873771,
+  "lon": 80.077359,
+  "ward": null,
+  "osm_id": "node/14031488244"
+ },
+ {
+  "name": "Kirupananda Variar Nagar",
+  "place": "neighbourhood",
+  "lat": 13.038719,
+  "lon": 80.104405,
+  "ward": null,
+  "osm_id": "node/14283897670"
+ },
+ {
+  "name": "Kodambakkam",
+  "place": "suburb",
+  "lat": 13.049207,
+  "lon": 80.224283,
+  "ward": null,
+  "osm_id": "node/247689032"
+ },
+ {
+  "name": "Kohinoor Garden",
+  "place": "neighbourhood",
+  "lat": 12.774655,
+  "lon": 80.198598,
+  "ward": null,
+  "osm_id": "node/11473856819"
+ },
+ {
+  "name": "Kolapakkam",
+  "place": "suburb",
+  "lat": 13.009707,
+  "lon": 80.152899,
+  "ward": null,
+  "osm_id": "node/294073620"
+ },
+ {
+  "name": "Kolapakkam",
+  "place": "suburb",
+  "lat": 12.871914,
+  "lon": 80.104974,
+  "ward": null,
+  "osm_id": "node/306117685"
+ },
+ {
+  "name": "Kolathur",
+  "place": "village",
+  "lat": 12.812267,
+  "lon": 80.160806,
+  "ward": null,
+  "osm_id": "node/14260826285"
+ },
+ {
+  "name": "Kollacheri",
+  "place": "suburb",
+  "lat": 13.006533,
+  "lon": 80.09995,
+  "ward": null,
+  "osm_id": "node/294073700"
+ },
+ {
+  "name": "Kottivakkam",
+  "place": "suburb",
+  "lat": 12.970505,
+  "lon": 80.261503,
+  "ward": null,
+  "osm_id": "node/306113450"
+ },
+ {
+  "name": "Kottur Gardens",
+  "place": "neighbourhood",
+  "lat": 13.020631,
+  "lon": 80.244128,
+  "ward": null,
+  "osm_id": "node/410699145"
+ },
+ {
+  "name": "Kotturpuram",
+  "place": "suburb",
+  "lat": 13.01937,
+  "lon": 80.243551,
+  "ward": null,
+  "osm_id": "node/249497870"
+ },
+ {
+  "name": "Kovalam",
+  "place": "village",
+  "lat": 12.787743,
+  "lon": 80.250933,
+  "ward": null,
+  "osm_id": "node/308872224"
+ },
+ {
+  "name": "Kovalam Point",
+  "place": "locality",
+  "lat": 12.783621,
+  "lon": 80.255229,
+  "ward": null,
+  "osm_id": "node/5106036686"
+ },
+ {
+  "name": "Kovilambakkam",
+  "place": "suburb",
+  "lat": 12.940682,
+  "lon": 80.179988,
+  "ward": null,
+  "osm_id": "node/14041638035"
+ },
+ {
+  "name": "Kovilanchery",
+  "place": "suburb",
+  "lat": 12.881309,
+  "lon": 80.168806,
+  "ward": null,
+  "osm_id": "node/335748452"
+ },
+ {
+  "name": "Kovur",
+  "place": "suburb",
+  "lat": 13.011362,
+  "lon": 80.120858,
+  "ward": null,
+  "osm_id": "node/294073647"
+ },
+ {
+  "name": "Kozhumanivakkam",
+  "place": "neighbourhood",
+  "lat": 13.025551,
+  "lon": 80.103232,
+  "ward": null,
+  "osm_id": "node/14283897667"
+ },
+ {
+  "name": "Krishna Nagar, Periyar Road",
+  "place": "neighbourhood",
+  "lat": 13.015122,
+  "lon": 80.172141,
+  "ward": null,
+  "osm_id": "way/234104189"
+ },
+ {
+  "name": "Kuberan Nagar",
+  "place": "neighbourhood",
+  "lat": 12.957493,
+  "lon": 80.206235,
+  "ward": null,
+  "osm_id": "node/978454328"
+ },
+ {
+  "name": "Kumananchavadi",
+  "place": "locality",
+  "lat": 13.045625,
+  "lon": 80.115391,
+  "ward": null,
+  "osm_id": "node/332089675"
+ },
+ {
+  "name": "Kumaran Colony",
+  "place": "locality",
+  "lat": 13.052779,
+  "lon": 80.207046,
+  "ward": null,
+  "osm_id": "node/301435966"
+ },
+ {
+  "name": "Kumizhi",
+  "place": "village",
+  "lat": 12.800276,
+  "lon": 80.122879,
+  "ward": null,
+  "osm_id": "node/11014847700"
+ },
+ {
+  "name": "Kundrathur",
+  "place": "town",
+  "lat": 12.99577,
+  "lon": 80.097311,
+  "ward": null,
+  "osm_id": "node/294073627"
+ },
+ {
+  "name": "Kālavākkam",
+  "place": "village",
+  "lat": 12.745319,
+  "lon": 80.195045,
+  "ward": null,
+  "osm_id": "node/5106036684"
+ },
+ {
+  "name": "Labour Colony",
+  "place": "neighbourhood",
+  "lat": 13.015472,
+  "lon": 80.209408,
+  "ward": null,
+  "osm_id": "node/369149434"
+ },
+ {
+  "name": "Lakshmanaperumal Nagar",
+  "place": "locality",
+  "lat": 12.971698,
+  "lon": 80.261648,
+  "ward": null,
+  "osm_id": "node/1453559830"
+ },
+ {
+  "name": "Lakshmi Hayagriva Nagar",
+  "place": "neighbourhood",
+  "lat": 12.985429,
+  "lon": 80.212138,
+  "ward": null,
+  "osm_id": "node/300469486"
+ },
+ {
+  "name": "Little Mount",
+  "place": "suburb",
+  "lat": 13.014186,
+  "lon": 80.226688,
+  "ward": null,
+  "osm_id": "node/249497723"
+ },
+ {
+  "name": "Lloyds Colony",
+  "place": "neighbourhood",
+  "lat": 13.049074,
+  "lon": 80.271599,
+  "ward": null,
+  "osm_id": "node/604232151"
+ },
+ {
+  "name": "Lotus Colony",
+  "place": "neighbourhood",
+  "lat": 13.029642,
+  "lon": 80.240377,
+  "ward": null,
+  "osm_id": "node/386002557"
+ },
+ {
+  "name": "MGR Nagar",
+  "place": "neighbourhood",
+  "lat": 12.979583,
+  "lon": 80.249444,
+  "ward": null,
+  "osm_id": "node/1453588715"
+ },
+ {
+  "name": "MRC Nagar",
+  "place": "suburb",
+  "lat": 13.019669,
+  "lon": 80.270652,
+  "ward": null,
+  "osm_id": "node/248196797"
+ },
+ {
+  "name": "Madambakkam",
+  "place": "suburb",
+  "lat": 12.90633,
+  "lon": 80.158679,
+  "ward": null,
+  "osm_id": "node/256202916"
+ },
+ {
+  "name": "Madanandapuram",
+  "place": "locality",
+  "lat": 13.023516,
+  "lon": 80.153423,
+  "ward": null,
+  "osm_id": "node/294073618"
+ },
+ {
+  "name": "Madavilagam",
+  "place": "neighbourhood",
+  "lat": 13.050742,
+  "lon": 80.067744,
+  "ward": null,
+  "osm_id": "node/294073736"
+ },
+ {
+  "name": "Madipakkam",
+  "place": "suburb",
+  "lat": 12.961135,
+  "lon": 80.200129,
+  "ward": null,
+  "osm_id": "node/278544356"
+ },
+ {
+  "name": "Maduvankarai",
+  "place": "locality",
+  "lat": 13.002022,
+  "lon": 80.210656,
+  "ward": null,
+  "osm_id": "node/401769780"
+ },
+ {
+  "name": "Mahalingapuram",
+  "place": "neighbourhood",
+  "lat": 13.056783,
+  "lon": 80.236404,
+  "ward": null,
+  "osm_id": "node/247688953"
+ },
+ {
+  "name": "Majestic Colony",
+  "place": "neighbourhood",
+  "lat": 13.039758,
+  "lon": 80.178876,
+  "ward": null,
+  "osm_id": "node/4487976270"
+ },
+ {
+  "name": "Malayambakkam",
+  "place": "suburb",
+  "lat": 13.031336,
+  "lon": 80.083671,
+  "ward": null,
+  "osm_id": "node/14031534003"
+ },
+ {
+  "name": "Mambakkam",
+  "place": "suburb",
+  "lat": 12.836014,
+  "lon": 80.168978,
+  "ward": null,
+  "osm_id": "node/11013328843"
+ },
+ {
+  "name": "Manancheri",
+  "place": "suburb",
+  "lat": 12.996802,
+  "lon": 80.108271,
+  "ward": null,
+  "osm_id": "node/294073640"
+ },
+ {
+  "name": "Manapakkam",
+  "place": "suburb",
+  "lat": 13.014753,
+  "lon": 80.174493,
+  "ward": null,
+  "osm_id": "node/294073596"
+ },
+ {
+  "name": "Mandaveli",
+  "place": "suburb",
+  "lat": 13.025844,
+  "lon": 80.262788,
+  "ward": null,
+  "osm_id": "node/247677647"
+ },
+ {
+  "name": "Mangadu",
+  "place": "suburb",
+  "lat": 13.031441,
+  "lon": 80.109658,
+  "ward": null,
+  "osm_id": "node/294073692"
+ },
+ {
+  "name": "Mannivakkam",
+  "place": "suburb",
+  "lat": 12.894369,
+  "lon": 80.065227,
+  "ward": null,
+  "osm_id": "node/340358334"
+ },
+ {
+  "name": "Mappedu",
+  "place": "suburb",
+  "lat": 12.888546,
+  "lon": 80.137533,
+  "ward": null,
+  "osm_id": "node/14045532123"
+ },
+ {
+  "name": "Maruderi",
+  "place": "village",
+  "lat": 12.745151,
+  "lon": 80.075548,
+  "ward": null,
+  "osm_id": "node/5106036682"
+ },
+ {
+  "name": "Maruthur Gopalan Ramachandran Nagar",
+  "place": "neighbourhood",
+  "lat": 13.03412,
+  "lon": 80.19904,
+  "ward": null,
+  "osm_id": "node/290741766"
+ },
+ {
+  "name": "Mattankuppam",
+  "place": "neighbourhood",
+  "lat": 13.05672,
+  "lon": 80.279743,
+  "ward": null,
+  "osm_id": "node/339988118"
+ },
+ {
+  "name": "Maxworth Nagar",
+  "place": "neighbourhood",
+  "lat": 12.943917,
+  "lon": 80.19949,
+  "ward": null,
+  "osm_id": "node/402947917"
+ },
+ {
+  "name": "Medavakkam",
+  "place": "suburb",
+  "lat": 12.920214,
+  "lon": 80.187216,
+  "ward": null,
+  "osm_id": "node/256197949"
+ },
+ {
+  "name": "Meenambakkam",
+  "place": "suburb",
+  "lat": 12.986601,
+  "lon": 80.172636,
+  "ward": null,
+  "osm_id": "node/313443780"
+ },
+ {
+  "name": "Meenava Kuppam",
+  "place": "locality",
+  "lat": 12.967702,
+  "lon": 80.264945,
+  "ward": null,
+  "osm_id": "node/1453616378"
+ },
+ {
+  "name": "Melakottaiyur",
+  "place": "suburb",
+  "lat": 12.846409,
+  "lon": 80.148124,
+  "ward": null,
+  "osm_id": "node/11013328845"
+ },
+ {
+  "name": "Mettukuppam",
+  "place": "village",
+  "lat": 12.743937,
+  "lon": 80.183673,
+  "ward": null,
+  "osm_id": "node/5103850814"
+ },
+ {
+  "name": "Metukuppam",
+  "place": "neighbourhood",
+  "lat": 12.93654,
+  "lon": 80.237423,
+  "ward": null,
+  "osm_id": "node/415858922"
+ },
+ {
+  "name": "Moovarasampettai",
+  "place": "suburb",
+  "lat": 12.969366,
+  "lon": 80.183359,
+  "ward": null,
+  "osm_id": "node/301734430"
+ },
+ {
+  "name": "Moulivakkam",
+  "place": "suburb",
+  "lat": 13.022269,
+  "lon": 80.141393,
+  "ward": null,
+  "osm_id": "node/294073619"
+ },
+ {
+  "name": "Mudichur",
+  "place": "suburb",
+  "lat": 12.914985,
+  "lon": 80.068842,
+  "ward": null,
+  "osm_id": "node/306118067"
+ },
+ {
+  "name": "Mugalivakkam",
+  "place": "suburb",
+  "lat": 13.02058,
+  "lon": 80.168516,
+  "ward": null,
+  "osm_id": "node/294073614"
+ },
+ {
+  "name": "Mugalivakkam",
+  "place": "neighbourhood",
+  "lat": 13.019487,
+  "lon": 80.160972,
+  "ward": null,
+  "osm_id": "relation/7888807"
+ },
+ {
+  "name": "Mukti Enclave",
+  "place": "locality",
+  "lat": 13.017131,
+  "lon": 80.177263,
+  "ward": null,
+  "osm_id": "node/4604367125"
+ },
+ {
+  "name": "Muthamizh Nagar",
+  "place": "locality",
+  "lat": 12.970081,
+  "lon": 80.143733,
+  "ward": null,
+  "osm_id": "node/301133602"
+ },
+ {
+  "name": "Muttukaadu",
+  "place": "suburb",
+  "lat": 12.805901,
+  "lon": 80.243797,
+  "ward": null,
+  "osm_id": "node/13630256025"
+ },
+ {
+  "name": "Mylapore",
+  "place": "suburb",
+  "lat": 13.031647,
+  "lon": 80.270017,
+  "ward": null,
+  "osm_id": "node/247677540"
+ },
+ {
+  "name": "NATCO Colony",
+  "place": "neighbourhood",
+  "lat": 12.97073,
+  "lon": 80.257008,
+  "ward": null,
+  "osm_id": "node/1453434169"
+ },
+ {
+  "name": "NCBS Colony",
+  "place": "neighbourhood",
+  "lat": 12.985463,
+  "lon": 80.189696,
+  "ward": null,
+  "osm_id": "node/3187965965"
+ },
+ {
+  "name": "NGO Colony",
+  "place": "neighbourhood",
+  "lat": 12.994895,
+  "lon": 80.20776,
+  "ward": null,
+  "osm_id": "node/401769776"
+ },
+ {
+  "name": "Naduveerapattu",
+  "place": "village",
+  "lat": 12.938033,
+  "lon": 80.055865,
+  "ward": null,
+  "osm_id": "node/402294609"
+ },
+ {
+  "name": "Nallambakkam",
+  "place": "village",
+  "lat": 12.841743,
+  "lon": 80.122803,
+  "ward": null,
+  "osm_id": "node/14261880738"
+ },
+ {
+  "name": "Nandambakkam",
+  "place": "suburb",
+  "lat": 12.980333,
+  "lon": 80.064398,
+  "ward": null,
+  "osm_id": "node/331919034"
+ },
+ {
+  "name": "Nandanam",
+  "place": "suburb",
+  "lat": 13.028629,
+  "lon": 80.240256,
+  "ward": null,
+  "osm_id": "node/243060007"
+ },
+ {
+  "name": "Nandhivaram",
+  "place": "suburb",
+  "lat": 12.837529,
+  "lon": 80.06809,
+  "ward": null,
+  "osm_id": "node/14260826286"
+ },
+ {
+  "name": "Nanganallur",
+  "place": "suburb",
+  "lat": 12.980124,
+  "lon": 80.184902,
+  "ward": null,
+  "osm_id": "node/278512528"
+ },
+ {
+  "name": "Nanganallur Co-op Society Colony",
+  "place": "neighbourhood",
+  "lat": 12.98796,
+  "lon": 80.190591,
+  "ward": null,
+  "osm_id": "node/8688165341"
+ },
+ {
+  "name": "Nanmangalam",
+  "place": "neighbourhood",
+  "lat": 12.937431,
+  "lon": 80.177425,
+  "ward": null,
+  "osm_id": "node/4089493731"
+ },
+ {
+  "name": "Narayanapuram",
+  "place": "suburb",
+  "lat": 12.941797,
+  "lon": 80.208384,
+  "ward": null,
+  "osm_id": "node/306115288"
+ },
+ {
+  "name": "Natesan Colony",
+  "place": "neighbourhood",
+  "lat": 12.973094,
+  "lon": 80.256686,
+  "ward": null,
+  "osm_id": "node/1453467729"
+ },
+ {
+  "name": "Natesan Nagar",
+  "place": "neighbourhood",
+  "lat": 13.057898,
+  "lon": 80.192704,
+  "ward": null,
+  "osm_id": "node/14197390559"
+ },
+ {
+  "name": "Nava Bharath Colony",
+  "place": "neighbourhood",
+  "lat": 12.990005,
+  "lon": 80.266667,
+  "ward": null,
+  "osm_id": "node/334267235"
+ },
+ {
+  "name": "Navalur",
+  "place": "suburb",
+  "lat": 12.84559,
+  "lon": 80.227222,
+  "ward": null,
+  "osm_id": "node/308875320"
+ },
+ {
+  "name": "Nazarathpet",
+  "place": "suburb",
+  "lat": 13.042259,
+  "lon": 80.078535,
+  "ward": null,
+  "osm_id": "node/294073716"
+ },
+ {
+  "name": "Nazarethpuram",
+  "place": "neighbourhood",
+  "lat": 13.012641,
+  "lon": 80.198992,
+  "ward": null,
+  "osm_id": "node/12917009792"
+ },
+ {
+  "name": "Neduncheri",
+  "place": "neighbourhood",
+  "lat": 13.043963,
+  "lon": 80.052333,
+  "ward": null,
+  "osm_id": "node/294073746"
+ },
+ {
+  "name": "Nedungundram",
+  "place": "suburb",
+  "lat": 12.879608,
+  "lon": 80.108904,
+  "ward": null,
+  "osm_id": "node/313281569"
+ },
+ {
+  "name": "Neelankarai",
+  "place": "suburb",
+  "lat": 12.945495,
+  "lon": 80.257469,
+  "ward": null,
+  "osm_id": "node/306114285"
+ },
+ {
+  "name": "Nehru Nagar Industrial Estate",
+  "place": "neighbourhood",
+  "lat": 12.974216,
+  "lon": 80.247542,
+  "ward": null,
+  "osm_id": "node/257439186"
+ },
+ {
+  "name": "Nellikuppam",
+  "place": "village",
+  "lat": 12.749068,
+  "lon": 80.106498,
+  "ward": null,
+  "osm_id": "node/826127001"
+ },
+ {
+  "name": "Nemilichery",
+  "place": "neighbourhood",
+  "lat": 12.946043,
+  "lon": 80.163715,
+  "ward": null,
+  "osm_id": "node/964604614"
+ },
+ {
+  "name": "New Colony",
+  "place": "locality",
+  "lat": 12.969327,
+  "lon": 80.258413,
+  "ward": null,
+  "osm_id": "node/1453574555"
+ },
+ {
+  "name": "New Colony",
+  "place": "neighbourhood",
+  "lat": 12.98271,
+  "lon": 80.232297,
+  "ward": null,
+  "osm_id": "node/4304450062"
+ },
+ {
+  "name": "New Colony",
+  "place": "neighbourhood",
+  "lat": 12.951294,
+  "lon": 80.136448,
+  "ward": null,
+  "osm_id": "node/13277610183"
+ },
+ {
+  "name": "Nookampalayam",
+  "place": "suburb",
+  "lat": 12.884252,
+  "lon": 80.201892,
+  "ward": null,
+  "osm_id": "node/402979599"
+ },
+ {
+  "name": "Noombal",
+  "place": "suburb",
+  "lat": 13.051427,
+  "lon": 80.134423,
+  "ward": null,
+  "osm_id": "node/14052117841"
+ },
+ {
+  "name": "Noothanchery",
+  "place": "suburb",
+  "lat": 12.896717,
+  "lon": 80.170484,
+  "ward": null,
+  "osm_id": "node/335750854"
+ },
+ {
+  "name": "Old Pallavaram",
+  "place": "suburb",
+  "lat": 12.963304,
+  "lon": 80.166539,
+  "ward": null,
+  "osm_id": "node/9902413099"
+ },
+ {
+  "name": "Othivakkam",
+  "place": "village",
+  "lat": 12.791456,
+  "lon": 80.094523,
+  "ward": null,
+  "osm_id": "node/14260826283"
+ },
+ {
+  "name": "Ottagapalayam",
+  "place": "locality",
+  "lat": 13.043309,
+  "lon": 80.213016,
+  "ward": null,
+  "osm_id": "node/301207899"
+ },
+ {
+  "name": "Ottiambakkam",
+  "place": "suburb",
+  "lat": 12.861072,
+  "lon": 80.191851,
+  "ward": null,
+  "osm_id": "node/335753159"
+ },
+ {
+  "name": "PTC Colony",
+  "place": "locality",
+  "lat": 12.934107,
+  "lon": 80.236152,
+  "ward": null,
+  "osm_id": "node/401706040"
+ },
+ {
+  "name": "PVS Nagar",
+  "place": "neighbourhood",
+  "lat": 12.947607,
+  "lon": 80.242015,
+  "ward": null,
+  "osm_id": "node/415858191"
+ },
+ {
+  "name": "Paari Nagar",
+  "place": "locality",
+  "lat": 13.027895,
+  "lon": 80.209076,
+  "ward": null,
+  "osm_id": "node/391874314"
+ },
+ {
+  "name": "Padmanabha Nagar",
+  "place": "neighbourhood",
+  "lat": 13.004551,
+  "lon": 80.258729,
+  "ward": null,
+  "osm_id": "node/313775083"
+ },
+ {
+  "name": "Padmavathy Nagar",
+  "place": "neighbourhood",
+  "lat": 12.90933,
+  "lon": 80.154478,
+  "ward": null,
+  "osm_id": "node/14224684426"
+ },
+ {
+  "name": "Padur",
+  "place": "suburb",
+  "lat": 12.805216,
+  "lon": 80.224036,
+  "ward": null,
+  "osm_id": "node/9942141872"
+ },
+ {
+  "name": "Palanthandalam",
+  "place": "suburb",
+  "lat": 12.95993,
+  "lon": 80.07039,
+  "ward": null,
+  "osm_id": "node/301134429"
+ },
+ {
+  "name": "Palavakkam",
+  "place": "suburb",
+  "lat": 12.95999,
+  "lon": 80.256027,
+  "ward": null,
+  "osm_id": "node/306113540"
+ },
+ {
+  "name": "Pallavaram",
+  "place": "town",
+  "lat": 12.965467,
+  "lon": 80.145118,
+  "ward": null,
+  "osm_id": "node/256197928"
+ },
+ {
+  "name": "Pallikaranai",
+  "place": "suburb",
+  "lat": 12.930475,
+  "lon": 80.207769,
+  "ward": null,
+  "osm_id": "node/964604382"
+ },
+ {
+  "name": "Pammal",
+  "place": "suburb",
+  "lat": 12.976231,
+  "lon": 80.136365,
+  "ward": null,
+  "osm_id": "node/256202986"
+ },
+ {
+  "name": "Panaiyur",
+  "place": "suburb",
+  "lat": 12.887855,
+  "lon": 80.245198,
+  "ward": null,
+  "osm_id": "node/11728015253"
+ },
+ {
+  "name": "Parameswari Nagar",
+  "place": "neighbourhood",
+  "lat": 13.002787,
+  "lon": 80.258125,
+  "ward": null,
+  "osm_id": "node/313775329"
+ },
+ {
+  "name": "Paraniputhur",
+  "place": "neighbourhood",
+  "lat": 13.021961,
+  "lon": 80.13059,
+  "ward": null,
+  "osm_id": "node/294073653"
+ },
+ {
+  "name": "Park Square colony",
+  "place": "neighbourhood",
+  "lat": 12.965665,
+  "lon": 80.193486,
+  "ward": null,
+  "osm_id": "node/1760699733"
+ },
+ {
+  "name": "Pattur",
+  "place": "neighbourhood",
+  "lat": 13.025241,
+  "lon": 80.114062,
+  "ward": null,
+  "osm_id": "node/14283897665"
+ },
+ {
+  "name": "Pebble Beach",
+  "place": "locality",
+  "lat": 12.900092,
+  "lon": 80.254284,
+  "ward": null,
+  "osm_id": "node/415867912"
+ },
+ {
+  "name": "Peerkankaranai",
+  "place": "neighbourhood",
+  "lat": 12.908086,
+  "lon": 80.100982,
+  "ward": null,
+  "osm_id": "node/306117469"
+ },
+ {
+  "name": "Periya Colony",
+  "place": "neighbourhood",
+  "lat": 12.973463,
+  "lon": 80.061497,
+  "ward": null,
+  "osm_id": "node/294073714"
+ },
+ {
+  "name": "Periyapanicheri",
+  "place": "neighbourhood",
+  "lat": 13.011107,
+  "lon": 80.131218,
+  "ward": null,
+  "osm_id": "node/294073649"
+ },
+ {
+  "name": "Perumathunallur",
+  "place": "village",
+  "lat": 12.818075,
+  "lon": 80.08041,
+  "ward": null,
+  "osm_id": "node/11014895007"
+ },
+ {
+  "name": "Perumbakkam",
+  "place": "suburb",
+  "lat": 12.905546,
+  "lon": 80.195616,
+  "ward": null,
+  "osm_id": "node/256197952"
+ },
+ {
+  "name": "Perungalathur",
+  "place": "suburb",
+  "lat": 12.914545,
+  "lon": 80.087955,
+  "ward": null,
+  "osm_id": "node/256203139"
+ },
+ {
+  "name": "Perungudi",
+  "place": "suburb",
+  "lat": 12.971024,
+  "lon": 80.241805,
+  "ward": null,
+  "osm_id": "node/257439179"
+ },
+ {
+  "name": "Poes Garden",
+  "place": "neighbourhood",
+  "lat": 13.043707,
+  "lon": 80.253316,
+  "ward": null,
+  "osm_id": "node/257899442"
+ },
+ {
+  "name": "Pollacheri",
+  "place": "neighbourhood",
+  "lat": 12.839087,
+  "lon": 80.184578,
+  "ward": null,
+  "osm_id": "node/14286250808"
+ },
+ {
+  "name": "Ponmar",
+  "place": "suburb",
+  "lat": 12.857279,
+  "lon": 80.171469,
+  "ward": null,
+  "osm_id": "node/335748740"
+ },
+ {
+  "name": "Poonamallee",
+  "place": "town",
+  "lat": 13.04174,
+  "lon": 80.100686,
+  "ward": null,
+  "osm_id": "node/243327788"
+ },
+ {
+  "name": "Porur",
+  "place": "suburb",
+  "lat": 13.032458,
+  "lon": 80.158286,
+  "ward": null,
+  "osm_id": "node/243327790"
+ },
+ {
+  "name": "Porur Gardens",
+  "place": "neighbourhood",
+  "lat": 13.046018,
+  "lon": 80.154049,
+  "ward": null,
+  "osm_id": "node/14197390561"
+ },
+ {
+  "name": "Pozhichalur",
+  "place": "suburb",
+  "lat": 12.99053,
+  "lon": 80.14405,
+  "ward": null,
+  "osm_id": "node/1780106324"
+ },
+ {
+  "name": "Pudupakkam",
+  "place": "suburb",
+  "lat": 12.809782,
+  "lon": 80.202305,
+  "ward": null,
+  "osm_id": "node/335757346"
+ },
+ {
+  "name": "Puliambedu",
+  "place": "neighbourhood",
+  "lat": 13.050215,
+  "lon": 80.126702,
+  "ward": null,
+  "osm_id": "node/14249665511"
+ },
+ {
+  "name": "Pushpa Nagar",
+  "place": "neighbourhood",
+  "lat": 13.059457,
+  "lon": 80.238997,
+  "ward": null,
+  "osm_id": "way/1410855659"
+ },
+ {
+  "name": "Puzhuthivakkam",
+  "place": "suburb",
+  "lat": 12.969143,
+  "lon": 80.206263,
+  "ward": null,
+  "osm_id": "node/280518793"
+ },
+ {
+  "name": "Radha Avenue",
+  "place": "neighbourhood",
+  "lat": 13.051084,
+  "lon": 80.177301,
+  "ward": null,
+  "osm_id": "node/14185672304"
+ },
+ {
+  "name": "Radha Nagar",
+  "place": "neighbourhood",
+  "lat": 12.95078,
+  "lon": 80.146811,
+  "ward": null,
+  "osm_id": "node/14059916525"
+ },
+ {
+  "name": "Radhakrishnan Nagar",
+  "place": "locality",
+  "lat": 12.994345,
+  "lon": 80.258691,
+  "ward": null,
+  "osm_id": "node/313786571"
+ },
+ {
+  "name": "Raj Bhavan",
+  "place": "neighbourhood",
+  "lat": 13.00794,
+  "lon": 80.226399,
+  "ward": null,
+  "osm_id": "node/304287902"
+ },
+ {
+  "name": "Raja Annamalai Puram",
+  "place": "suburb",
+  "lat": 13.024478,
+  "lon": 80.253937,
+  "ward": null,
+  "osm_id": "node/243060039"
+ },
+ {
+  "name": "Rajakilpakkam",
+  "place": "suburb",
+  "lat": 12.917844,
+  "lon": 80.154427,
+  "ward": null,
+  "osm_id": "node/256197946"
+ },
+ {
+  "name": "Rajalakshmi Nagar",
+  "place": "neighbourhood",
+  "lat": 12.985288,
+  "lon": 80.218743,
+  "ward": null,
+  "osm_id": "node/4304426158"
+ },
+ {
+  "name": "Rajeswari Nagar",
+  "place": "neighbourhood",
+  "lat": 12.923971,
+  "lon": 80.140923,
+  "ward": null,
+  "osm_id": "way/297314918"
+ },
+ {
+  "name": "Ram Nagar",
+  "place": "locality",
+  "lat": 12.891924,
+  "lon": 80.065098,
+  "ward": null,
+  "osm_id": "node/340358380"
+ },
+ {
+  "name": "Ram Nagar",
+  "place": "neighbourhood",
+  "lat": 12.984889,
+  "lon": 80.194335,
+  "ward": null,
+  "osm_id": "node/3187965967"
+ },
+ {
+  "name": "Ram Nagar",
+  "place": "neighbourhood",
+  "lat": 12.988635,
+  "lon": 80.195524,
+  "ward": null,
+  "osm_id": "node/3187965968"
+ },
+ {
+  "name": "Ramakrishna Nagar",
+  "place": "neighbourhood",
+  "lat": 13.024366,
+  "lon": 80.261062,
+  "ward": null,
+  "osm_id": "node/2587530813"
+ },
+ {
+  "name": "Ramalinga Nagar",
+  "place": "neighbourhood",
+  "lat": 12.967594,
+  "lon": 80.205851,
+  "ward": null,
+  "osm_id": "node/1317143256"
+ },
+ {
+  "name": "Ramalinga Nagar",
+  "place": "locality",
+  "lat": 12.976532,
+  "lon": 80.252227,
+  "ward": null,
+  "osm_id": "node/1453486863"
+ },
+ {
+  "name": "Rathinamangalam",
+  "place": "suburb",
+  "lat": 12.858527,
+  "lon": 80.131642,
+  "ward": null,
+  "osm_id": "node/332382930"
+ },
+ {
+  "name": "Rentakattalai",
+  "place": "locality",
+  "lat": 12.993857,
+  "lon": 80.116127,
+  "ward": null,
+  "osm_id": "node/294073637"
+ },
+ {
+  "name": "Royapettah",
+  "place": "suburb",
+  "lat": 13.055472,
+  "lon": 80.263971,
+  "ward": null,
+  "osm_id": "node/247689739"
+ },
+ {
+  "name": "SBI Colony",
+  "place": "neighbourhood",
+  "lat": 13.053773,
+  "lon": 80.198937,
+  "ward": null,
+  "osm_id": "node/290752888"
+ },
+ {
+  "name": "SSM Nagar",
+  "place": "suburb",
+  "lat": 12.892455,
+  "lon": 80.116708,
+  "ward": null,
+  "osm_id": "node/6129432715"
+ },
+ {
+  "name": "Sadanandapuram",
+  "place": "suburb",
+  "lat": 12.897366,
+  "lon": 80.109712,
+  "ward": null,
+  "osm_id": "node/313280567"
+ },
+ {
+  "name": "Sadasiva Nagar",
+  "place": "neighbourhood",
+  "lat": 12.965129,
+  "lon": 80.202854,
+  "ward": null,
+  "osm_id": "node/280521508"
+ },
+ {
+  "name": "Sai Mangal Avenue",
+  "place": "neighbourhood",
+  "lat": 12.774663,
+  "lon": 80.198101,
+  "ward": null,
+  "osm_id": "node/11473856818"
+ },
+ {
+  "name": "Sai Nagar",
+  "place": "neighbourhood",
+  "lat": 12.95163,
+  "lon": 80.234471,
+  "ward": null,
+  "osm_id": "node/12718947448"
+ },
+ {
+  "name": "Saidapet",
+  "place": "suburb",
+  "lat": 13.020817,
+  "lon": 80.223954,
+  "ward": null,
+  "osm_id": "node/247689106"
+ },
+ {
+  "name": "Sakthi Nagar",
+  "place": "neighbourhood",
+  "lat": 13.035608,
+  "lon": 80.097444,
+  "ward": null,
+  "osm_id": "node/14283897671"
+ },
+ {
+  "name": "Saligramam",
+  "place": "suburb",
+  "lat": 13.056989,
+  "lon": 80.20373,
+  "ward": null,
+  "osm_id": "node/248420921"
+ },
+ {
+  "name": "Sangam Colony",
+  "place": "neighbourhood",
+  "lat": 12.967386,
+  "lon": 80.25582,
+  "ward": null,
+  "osm_id": "node/1446415385"
+ },
+ {
+  "name": "Santhome",
+  "place": "neighbourhood",
+  "lat": 13.029837,
+  "lon": 80.275738,
+  "ward": null,
+  "osm_id": "node/247689726"
+ },
+ {
+  "name": "Santoshapuram",
+  "place": "suburb",
+  "lat": 12.915966,
+  "lon": 80.17399,
+  "ward": null,
+  "osm_id": "node/310363802"
+ },
+ {
+  "name": "Sapthagiri Colony",
+  "place": "neighbourhood",
+  "lat": 13.030039,
+  "lon": 80.201651,
+  "ward": null,
+  "osm_id": "node/366460967"
+ },
+ {
+  "name": "Sathya Garden",
+  "place": "neighbourhood",
+  "lat": 13.045547,
+  "lon": 80.198255,
+  "ward": null,
+  "osm_id": "way/1410857207"
+ },
+ {
+  "name": "Sector 1",
+  "place": "neighbourhood",
+  "lat": 13.037499,
+  "lon": 80.202658,
+  "ward": null,
+  "osm_id": "node/389903332"
+ },
+ {
+  "name": "Sector 10",
+  "place": "neighbourhood",
+  "lat": 13.04285,
+  "lon": 80.194905,
+  "ward": null,
+  "osm_id": "node/389787266"
+ },
+ {
+  "name": "Sector 11",
+  "place": "neighbourhood",
+  "lat": 13.040635,
+  "lon": 80.194506,
+  "ward": null,
+  "osm_id": "node/389877090"
+ },
+ {
+  "name": "Sector 12",
+  "place": "neighbourhood",
+  "lat": 13.038575,
+  "lon": 80.194279,
+  "ward": null,
+  "osm_id": "node/389903336"
+ },
+ {
+  "name": "Sector 13",
+  "place": "neighbourhood",
+  "lat": 13.041004,
+  "lon": 80.20756,
+  "ward": null,
+  "osm_id": "node/389948937"
+ },
+ {
+  "name": "Sector 14",
+  "place": "locality",
+  "lat": 13.044083,
+  "lon": 80.206491,
+  "ward": null,
+  "osm_id": "node/389948938"
+ },
+ {
+  "name": "Sector 2",
+  "place": "neighbourhood",
+  "lat": 13.039379,
+  "lon": 80.202989,
+  "ward": null,
+  "osm_id": "node/389847168"
+ },
+ {
+  "name": "Sector 3",
+  "place": "neighbourhood",
+  "lat": 13.041527,
+  "lon": 80.203687,
+  "ward": null,
+  "osm_id": "node/389847165"
+ },
+ {
+  "name": "Sector 5",
+  "place": "neighbourhood",
+  "lat": 13.039717,
+  "lon": 80.200887,
+  "ward": null,
+  "osm_id": "node/389877057"
+ },
+ {
+  "name": "Sector 9 Santosh Colony",
+  "place": "locality",
+  "lat": 13.042816,
+  "lon": 80.195834,
+  "ward": null,
+  "osm_id": "node/389787308"
+ },
+ {
+  "name": "Seethammal Colony",
+  "place": "neighbourhood",
+  "lat": 13.035012,
+  "lon": 80.250978,
+  "ward": null,
+  "osm_id": "node/257899025"
+ },
+ {
+  "name": "Seethapathy Nagar",
+  "place": "neighbourhood",
+  "lat": 12.981951,
+  "lon": 80.227033,
+  "ward": null,
+  "osm_id": "node/4294644651"
+ },
+ {
+  "name": "Selaiyur",
+  "place": "suburb",
+  "lat": 12.917811,
+  "lon": 80.137954,
+  "ward": null,
+  "osm_id": "node/256197930"
+ },
+ {
+  "name": "Sembakkam",
+  "place": "suburb",
+  "lat": 12.927376,
+  "lon": 80.159645,
+  "ward": null,
+  "osm_id": "node/14059858524"
+ },
+ {
+  "name": "Sengādu",
+  "place": "village",
+  "lat": 12.74693,
+  "lon": 80.184596,
+  "ward": null,
+  "osm_id": "node/5106036683"
+ },
+ {
+  "name": "Senneer Kuppam",
+  "place": "suburb",
+  "lat": 13.058958,
+  "lon": 80.114583,
+  "ward": null,
+  "osm_id": "node/14031534001"
+ },
+ {
+  "name": "Serene Avenue",
+  "place": "neighbourhood",
+  "lat": 12.860716,
+  "lon": 80.171386,
+  "ward": null,
+  "osm_id": "node/11148027551"
+ },
+ {
+  "name": "Seshadripuram",
+  "place": "neighbourhood",
+  "lat": 12.979839,
+  "lon": 80.230669,
+  "ward": null,
+  "osm_id": "node/4294644652"
+ },
+ {
+  "name": "Shakti Nagar",
+  "place": "locality",
+  "lat": 12.944972,
+  "lon": 80.240633,
+  "ward": null,
+  "osm_id": "node/415858209"
+ },
+ {
+  "name": "Shanmuga Nagar",
+  "place": "locality",
+  "lat": 12.896888,
+  "lon": 80.06309,
+  "ward": null,
+  "osm_id": "node/340358501"
+ },
+ {
+  "name": "Shastri Nagar",
+  "place": "neighbourhood",
+  "lat": 12.998773,
+  "lon": 80.259912,
+  "ward": null,
+  "osm_id": "node/257431354"
+ },
+ {
+  "name": "Sheela Nagar",
+  "place": "neighbourhood",
+  "lat": 12.96505,
+  "lon": 80.202075,
+  "ward": null,
+  "osm_id": "node/1317142941"
+ },
+ {
+  "name": "Sikkarayapuram",
+  "place": "suburb",
+  "lat": 13.016774,
+  "lon": 80.102531,
+  "ward": null,
+  "osm_id": "node/294073698"
+ },
+ {
+  "name": "Sirukalathur",
+  "place": "suburb",
+  "lat": 12.995526,
+  "lon": 80.076207,
+  "ward": null,
+  "osm_id": "node/294073708"
+ },
+ {
+  "name": "Siruseri",
+  "place": "suburb",
+  "lat": 12.836766,
+  "lon": 80.203431,
+  "ward": null,
+  "osm_id": "node/335755198"
+ },
+ {
+  "name": "Sithalapakkam",
+  "place": "suburb",
+  "lat": 12.891423,
+  "lon": 80.18403,
+  "ward": null,
+  "osm_id": "node/256197956"
+ },
+ {
+  "name": "Sivabhutam",
+  "place": "neighbourhood",
+  "lat": 13.057816,
+  "lon": 80.155372,
+  "ward": null,
+  "osm_id": "node/14252002010"
+ },
+ {
+  "name": "Skylab Avenue",
+  "place": "neighbourhood",
+  "lat": 12.892103,
+  "lon": 80.184139,
+  "ward": null,
+  "osm_id": "node/2210037955"
+ },
+ {
+  "name": "Skylab Avenue",
+  "place": "locality",
+  "lat": 12.893044,
+  "lon": 80.184773,
+  "ward": null,
+  "osm_id": "node/2210077654"
+ },
+ {
+  "name": "Sonalur",
+  "place": "suburb",
+  "lat": 12.831273,
+  "lon": 80.17593,
+  "ward": null,
+  "osm_id": "node/14286250807"
+ },
+ {
+  "name": "Sri Devi Nagar",
+  "place": "neighbourhood",
+  "lat": 13.045339,
+  "lon": 80.168503,
+  "ward": null,
+  "osm_id": "node/14197390562"
+ },
+ {
+  "name": "Sri Krishna Enclave",
+  "place": "locality",
+  "lat": 12.972542,
+  "lon": 80.265066,
+  "ward": null,
+  "osm_id": "node/1457114963"
+ },
+ {
+  "name": "Sri Nagar",
+  "place": "neighbourhood",
+  "lat": 13.048497,
+  "lon": 80.102423,
+  "ward": null,
+  "osm_id": "node/14283897668"
+ },
+ {
+  "name": "Sri Ragavendra Nagar",
+  "place": "neighbourhood",
+  "lat": 13.037277,
+  "lon": 80.186014,
+  "ward": null,
+  "osm_id": "node/4486584002"
+ },
+ {
+  "name": "Srinagar Colony",
+  "place": "neighbourhood",
+  "lat": 13.013467,
+  "lon": 80.230278,
+  "ward": null,
+  "osm_id": "node/269767377"
+ },
+ {
+  "name": "Srinivasa Nagar",
+  "place": "locality",
+  "lat": 12.912771,
+  "lon": 80.157519,
+  "ward": null,
+  "osm_id": "node/335750561"
+ },
+ {
+  "name": "Srinivasa Nagar",
+  "place": "neighbourhood",
+  "lat": 12.9503,
+  "lon": 80.246967,
+  "ward": null,
+  "osm_id": "node/415858178"
+ },
+ {
+  "name": "Srinivasapuram",
+  "place": "neighbourhood",
+  "lat": 13.032241,
+  "lon": 80.130739,
+  "ward": null,
+  "osm_id": "node/294073676"
+ },
+ {
+  "name": "Srinivasapuram",
+  "place": "locality",
+  "lat": 12.972051,
+  "lon": 80.260487,
+  "ward": null,
+  "osm_id": "node/1453511777"
+ },
+ {
+  "name": "Sriram Nagar",
+  "place": "neighbourhood",
+  "lat": 13.003549,
+  "lon": 80.244317,
+  "ward": null,
+  "osm_id": "node/312024616"
+ },
+ {
+  "name": "Sriram Nagar",
+  "place": "locality",
+  "lat": 12.990942,
+  "lon": 80.260611,
+  "ward": null,
+  "osm_id": "node/334267244"
+ },
+ {
+  "name": "Sriram Nagar",
+  "place": "neighbourhood",
+  "lat": 13.031397,
+  "lon": 80.250059,
+  "ward": null,
+  "osm_id": "node/355515108"
+ },
+ {
+  "name": "St. Thomas Mount Cantonment",
+  "place": "suburb",
+  "lat": 13.006022,
+  "lon": 80.196728,
+  "ward": null,
+  "osm_id": "node/5344512054"
+ },
+ {
+  "name": "Sunnambu Kolathur",
+  "place": "neighbourhood",
+  "lat": 12.942667,
+  "lon": 80.196346,
+  "ward": null,
+  "osm_id": "node/306115244"
+ },
+ {
+  "name": "Suresh Nagar",
+  "place": "neighbourhood",
+  "lat": 13.037627,
+  "lon": 80.182819,
+  "ward": null,
+  "osm_id": "node/4487976272"
+ },
+ {
+  "name": "Swaminathan Nagar",
+  "place": "neighbourhood",
+  "lat": 12.971352,
+  "lon": 80.254342,
+  "ward": null,
+  "osm_id": "node/1453431020"
+ },
+ {
+  "name": "TNHB Colony",
+  "place": "neighbourhood",
+  "lat": 12.99142,
+  "lon": 80.212059,
+  "ward": null,
+  "osm_id": "node/12557371740"
+ },
+ {
+  "name": "TVS Emerald Heartland",
+  "place": "neighbourhood",
+  "lat": 12.781135,
+  "lon": 80.219806,
+  "ward": null,
+  "osm_id": "way/1358680378"
+ },
+ {
+  "name": "TVS Green Hills",
+  "place": "locality",
+  "lat": 12.8907,
+  "lon": 80.112462,
+  "ward": null,
+  "osm_id": "node/6129385262"
+ },
+ {
+  "name": "Tambaram",
+  "place": "city",
+  "lat": 12.924528,
+  "lon": 80.115053,
+  "ward": null,
+  "osm_id": "node/256196848"
+ },
+ {
+  "name": "Tansi Nagar",
+  "place": "neighbourhood",
+  "lat": 12.979209,
+  "lon": 80.224022,
+  "ward": null,
+  "osm_id": "node/4294644655"
+ },
+ {
+  "name": "Taramani",
+  "place": "suburb",
+  "lat": 12.984907,
+  "lon": 80.240407,
+  "ward": null,
+  "osm_id": "node/325198962"
+ },
+ {
+  "name": "Teachers Colony",
+  "place": "locality",
+  "lat": 12.983369,
+  "lon": 80.266185,
+  "ward": null,
+  "osm_id": "node/334596004"
+ },
+ {
+  "name": "Teynampet",
+  "place": "suburb",
+  "lat": 13.044324,
+  "lon": 80.249846,
+  "ward": null,
+  "osm_id": "node/243059228"
+ },
+ {
+  "name": "Thaiyur",
+  "place": "village",
+  "lat": 12.774314,
+  "lon": 80.194166,
+  "ward": null,
+  "osm_id": "node/5106036685"
+ },
+ {
+  "name": "Thandalam",
+  "place": "suburb",
+  "lat": 13.00153,
+  "lon": 80.118201,
+  "ward": null,
+  "osm_id": "node/294073645"
+ },
+ {
+  "name": "Tharachand Nagar",
+  "place": "locality",
+  "lat": 13.054056,
+  "lon": 80.195338,
+  "ward": null,
+  "osm_id": "node/347360785"
+ },
+ {
+  "name": "Tharapakkam",
+  "place": "suburb",
+  "lat": 12.994779,
+  "lon": 80.127102,
+  "ward": null,
+  "osm_id": "node/294073623"
+ },
+ {
+  "name": "Tharavur",
+  "place": "suburb",
+  "lat": 12.983308,
+  "lon": 80.055189,
+  "ward": null,
+  "osm_id": "node/294073712"
+ },
+ {
+  "name": "Thazhambur",
+  "place": "suburb",
+  "lat": 12.849205,
+  "lon": 80.208883,
+  "ward": null,
+  "osm_id": "node/335758183"
+ },
+ {
+  "name": "Thelliyaragaram",
+  "place": "neighbourhood",
+  "lat": 13.032268,
+  "lon": 80.142959,
+  "ward": null,
+  "osm_id": "node/294073674"
+ },
+ {
+  "name": "Thillai Ganga Nagar",
+  "place": "neighbourhood",
+  "lat": 12.989843,
+  "lon": 80.193662,
+  "ward": null,
+  "osm_id": "node/310911805"
+ },
+ {
+  "name": "Thillai Ganga Nagar",
+  "place": "neighbourhood",
+  "lat": 12.988583,
+  "lon": 80.193288,
+  "ward": null,
+  "osm_id": "node/3187965969"
+ },
+ {
+  "name": "Thirumalai Nagar",
+  "place": "neighbourhood",
+  "lat": 13.034759,
+  "lon": 80.182392,
+  "ward": null,
+  "osm_id": "node/4487976273"
+ },
+ {
+  "name": "Thirumazhisai",
+  "place": "town",
+  "lat": 13.054014,
+  "lon": 80.060757,
+  "ward": null,
+  "osm_id": "node/294073748"
+ },
+ {
+  "name": "Thirumudivakkam",
+  "place": "suburb",
+  "lat": 12.964867,
+  "lon": 80.081544,
+  "ward": null,
+  "osm_id": "node/301134399"
+ },
+ {
+  "name": "Thirunageshwaram",
+  "place": "locality",
+  "lat": 13.000376,
+  "lon": 80.093258,
+  "ward": null,
+  "osm_id": "node/294073702"
+ },
+ {
+  "name": "Thiruneermalai",
+  "place": "suburb",
+  "lat": 12.963094,
+  "lon": 80.113541,
+  "ward": null,
+  "osm_id": "node/256202982"
+ },
+ {
+  "name": "Thiruvalluvar Nagar",
+  "place": "neighbourhood",
+  "lat": 12.96261,
+  "lon": 80.247467,
+  "ward": null,
+  "osm_id": "node/1446415388"
+ },
+ {
+  "name": "Thiruvanchery",
+  "place": "suburb",
+  "lat": 12.895705,
+  "lon": 80.1403,
+  "ward": null,
+  "osm_id": "node/14045532122"
+ },
+ {
+  "name": "Thiruvanmiyur",
+  "place": "suburb",
+  "lat": 12.985895,
+  "lon": 80.264421,
+  "ward": null,
+  "osm_id": "node/249497808"
+ },
+ {
+  "name": "Thiruverkadu Co - Operative Nagar",
+  "place": "locality",
+  "lat": 13.057835,
+  "lon": 80.125675,
+  "ward": null,
+  "osm_id": "node/1833971624"
+ },
+ {
+  "name": "Thiruvidanthai",
+  "place": "village",
+  "lat": 12.762268,
+  "lon": 80.243863,
+  "ward": null,
+  "osm_id": "node/343302633"
+ },
+ {
+  "name": "Thiyagaraya Nagar",
+  "place": "suburb",
+  "lat": 13.037829,
+  "lon": 80.231836,
+  "ward": null,
+  "osm_id": "node/12255801857"
+ },
+ {
+  "name": "Thoraipakkam",
+  "place": "suburb",
+  "lat": 12.949176,
+  "lon": 80.240688,
+  "ward": null,
+  "osm_id": "node/257439176"
+ },
+ {
+  "name": "Thousand Lights",
+  "place": "suburb",
+  "lat": 13.058783,
+  "lon": 80.255711,
+  "ward": null,
+  "osm_id": "node/247689799"
+ },
+ {
+  "name": "Thundalam",
+  "place": "neighbourhood",
+  "lat": 13.04661,
+  "lon": 80.137411,
+  "ward": null,
+  "osm_id": "node/14252002009"
+ },
+ {
+  "name": "Thuraipakkam",
+  "place": "suburb",
+  "lat": 12.939059,
+  "lon": 80.23868,
+  "ward": null,
+  "osm_id": "relation/18689942"
+ },
+ {
+  "name": "Tirusulam",
+  "place": "suburb",
+  "lat": 12.973828,
+  "lon": 80.167078,
+  "ward": null,
+  "osm_id": "node/301135484"
+ },
+ {
+  "name": "Tiruvalluvar Nagar",
+  "place": "locality",
+  "lat": 12.977056,
+  "lon": 80.262537,
+  "ward": null,
+  "osm_id": "node/334201392"
+ },
+ {
+  "name": "Tiruvalluvar Nagar",
+  "place": "neighbourhood",
+  "lat": 13.018147,
+  "lon": 80.245819,
+  "ward": null,
+  "osm_id": "node/410703669"
+ },
+ {
+  "name": "Todhunter Nagar",
+  "place": "neighbourhood",
+  "lat": 13.022615,
+  "lon": 80.230809,
+  "ward": null,
+  "osm_id": "node/256035567"
+ },
+ {
+  "name": "Trustpuram",
+  "place": "neighbourhood",
+  "lat": 13.055565,
+  "lon": 80.223336,
+  "ward": null,
+  "osm_id": "node/314913063"
+ },
+ {
+  "name": "Udhayam Nagar",
+  "place": "neighbourhood",
+  "lat": 12.979168,
+  "lon": 80.23217,
+  "ward": null,
+  "osm_id": "node/4294644656"
+ },
+ {
+  "name": "Unamancherri",
+  "place": "locality",
+  "lat": 12.860232,
+  "lon": 80.107308,
+  "ward": null,
+  "osm_id": "node/313282318"
+ },
+ {
+  "name": "Union Carbide Colony",
+  "place": "neighbourhood",
+  "lat": 12.97398,
+  "lon": 80.193148,
+  "ward": null,
+  "osm_id": "node/308915449"
+ },
+ {
+  "name": "United India Colony",
+  "place": "neighbourhood",
+  "lat": 13.051122,
+  "lon": 80.224758,
+  "ward": null,
+  "osm_id": "node/290734575"
+ },
+ {
+  "name": "Urapakkam",
+  "place": "suburb",
+  "lat": 12.863668,
+  "lon": 80.072162,
+  "ward": null,
+  "osm_id": "node/1180849775"
+ },
+ {
+  "name": "Urur Kuppam",
+  "place": "neighbourhood",
+  "lat": 13.004176,
+  "lon": 80.273289,
+  "ward": null,
+  "osm_id": "node/360894240"
+ },
+ {
+  "name": "Uthandi",
+  "place": "suburb",
+  "lat": 12.868768,
+  "lon": 80.247209,
+  "ward": null,
+  "osm_id": "node/306115841"
+ },
+ {
+  "name": "VGP Santhanammal Nagar",
+  "place": "locality",
+  "lat": 12.92128,
+  "lon": 80.168902,
+  "ward": null,
+  "osm_id": "node/1693509502"
+ },
+ {
+  "name": "VGP Selva Nagar",
+  "place": "neighbourhood",
+  "lat": 12.971222,
+  "lon": 80.221103,
+  "ward": null,
+  "osm_id": "node/4294647427"
+ },
+ {
+  "name": "Vadakandigai",
+  "place": "village",
+  "lat": 12.744623,
+  "lon": 80.161325,
+  "ward": null,
+  "osm_id": "node/5103850811"
+ },
+ {
+  "name": "Vadanemmeli",
+  "place": "village",
+  "lat": 12.746051,
+  "lon": 80.238583,
+  "ward": null,
+  "osm_id": "node/5106036688"
+ },
+ {
+  "name": "Vadapalani",
+  "place": "suburb",
+  "lat": 13.050298,
+  "lon": 80.21183,
+  "ward": null,
+  "osm_id": "node/14074374538"
+ },
+ {
+  "name": "Valmiki Nagar",
+  "place": "locality",
+  "lat": 12.98044,
+  "lon": 80.264558,
+  "ward": null,
+  "osm_id": "node/313139278"
+ },
+ {
+  "name": "Vandalur",
+  "place": "suburb",
+  "lat": 12.892149,
+  "lon": 80.08296,
+  "ward": null,
+  "osm_id": "node/306117874"
+ },
+ {
+  "name": "Vaniya Teynampet",
+  "place": "neighbourhood",
+  "lat": 13.038989,
+  "lon": 80.248111,
+  "ward": null,
+  "osm_id": "node/1702257060"
+ },
+ {
+  "name": "Vannanthurai",
+  "place": "locality",
+  "lat": 12.996864,
+  "lon": 80.26161,
+  "ward": null,
+  "osm_id": "node/300397976"
+ },
+ {
+  "name": "Varadapuram",
+  "place": "neighbourhood",
+  "lat": 13.015421,
+  "lon": 80.245999,
+  "ward": null,
+  "osm_id": "node/410703648"
+ },
+ {
+  "name": "Varadarajapuram",
+  "place": "suburb",
+  "lat": 12.905987,
+  "lon": 80.067655,
+  "ward": null,
+  "osm_id": "node/306118071"
+ },
+ {
+  "name": "Varadarajapuram",
+  "place": "neighbourhood",
+  "lat": 13.049224,
+  "lon": 80.08135,
+  "ward": null,
+  "osm_id": "node/332008385"
+ },
+ {
+  "name": "Vardhaman Nagar",
+  "place": "neighbourhood",
+  "lat": 12.867816,
+  "lon": 80.062308,
+  "ward": null,
+  "osm_id": "node/3263004961"
+ },
+ {
+  "name": "Vardhaman Nagar",
+  "place": "suburb",
+  "lat": 12.867886,
+  "lon": 80.062088,
+  "ward": null,
+  "osm_id": "way/319828746"
+ },
+ {
+  "name": "Vasudevan Nagar",
+  "place": "locality",
+  "lat": 13.028288,
+  "lon": 80.206826,
+  "ward": null,
+  "osm_id": "node/366456171"
+ },
+ {
+  "name": "Vazhuthalambedu",
+  "place": "suburb",
+  "lat": 12.97315,
+  "lon": 80.098967,
+  "ward": null,
+  "osm_id": "node/332004187"
+ },
+ {
+  "name": "Veerabadhra Nagar",
+  "place": "neighbourhood",
+  "lat": 12.906255,
+  "lon": 80.189014,
+  "ward": null,
+  "osm_id": "node/335755630"
+ },
+ {
+  "name": "Veerappa Nagar",
+  "place": "neighbourhood",
+  "lat": 13.042342,
+  "lon": 80.18525,
+  "ward": null,
+  "osm_id": "node/4489923167"
+ },
+ {
+  "name": "Velayudam Colony",
+  "place": "neighbourhood",
+  "lat": 13.049755,
+  "lon": 80.202848,
+  "ward": null,
+  "osm_id": "node/301699453"
+ },
+ {
+  "name": "Vellakkal",
+  "place": "neighbourhood",
+  "lat": 12.933252,
+  "lon": 80.178437,
+  "ward": null,
+  "osm_id": "node/14221313466"
+ },
+ {
+  "name": "Vengadamangalam",
+  "place": "suburb",
+  "lat": 12.865306,
+  "lon": 80.15327,
+  "ward": null,
+  "osm_id": "node/14286250806"
+ },
+ {
+  "name": "Vengaivasal Panchayat office",
+  "place": "locality",
+  "lat": 12.900024,
+  "lon": 80.171564,
+  "ward": null,
+  "osm_id": "node/306116789"
+ },
+ {
+  "name": "Vengambakkam",
+  "place": "locality",
+  "lat": 12.867818,
+  "lon": 80.127327,
+  "ward": null,
+  "osm_id": "node/332382632"
+ },
+ {
+  "name": "Vengambakkam",
+  "place": "suburb",
+  "lat": 12.873831,
+  "lon": 80.133266,
+  "ward": null,
+  "osm_id": "node/14286250805"
+ },
+ {
+  "name": "Venkatapuram",
+  "place": "locality",
+  "lat": 12.993546,
+  "lon": 80.090924,
+  "ward": null,
+  "osm_id": "node/294073706"
+ },
+ {
+  "name": "Venkataraman Nagar",
+  "place": "neighbourhood",
+  "lat": 12.938214,
+  "lon": 80.146885,
+  "ward": null,
+  "osm_id": "node/340082429"
+ },
+ {
+  "name": "Venkateshpuram",
+  "place": "neighbourhood",
+  "lat": 12.968983,
+  "lon": 80.252397,
+  "ward": null,
+  "osm_id": "node/1446415390"
+ },
+ {
+  "name": "Venkateshwara Nagar",
+  "place": "locality",
+  "lat": 12.96737,
+  "lon": 80.260631,
+  "ward": null,
+  "osm_id": "node/1453511779"
+ },
+ {
+  "name": "Venkateshwara Nagar Colony",
+  "place": "neighbourhood",
+  "lat": 12.976997,
+  "lon": 80.244625,
+  "ward": null,
+  "osm_id": "node/1453588716"
+ },
+ {
+  "name": "Venkateswara Nagar",
+  "place": "neighbourhood",
+  "lat": 13.00328,
+  "lon": 80.262057,
+  "ward": null,
+  "osm_id": "node/335535144"
+ },
+ {
+  "name": "Venus Colony",
+  "place": "neighbourhood",
+  "lat": 13.040107,
+  "lon": 80.25492,
+  "ward": null,
+  "osm_id": "node/257898994"
+ },
+ {
+  "name": "Venus Colony",
+  "place": "neighbourhood",
+  "lat": 12.974395,
+  "lon": 80.227722,
+  "ward": null,
+  "osm_id": "node/4294647428"
+ },
+ {
+  "name": "Vijaya Raja Spruce",
+  "place": "neighbourhood",
+  "lat": 12.774655,
+  "lon": 80.196972,
+  "ward": null,
+  "osm_id": "node/11473856817"
+ },
+ {
+  "name": "Vinoba Nagar",
+  "place": "locality",
+  "lat": 12.913917,
+  "lon": 80.128336,
+  "ward": null,
+  "osm_id": "node/335747491"
+ },
+ {
+  "name": "Virugambakkam",
+  "place": "suburb",
+  "lat": 13.052264,
+  "lon": 80.191693,
+  "ward": null,
+  "osm_id": "node/300218898"
+ },
+ {
+  "name": "Voltas Colony",
+  "place": "neighbourhood",
+  "lat": 12.974499,
+  "lon": 80.186368,
+  "ward": null,
+  "osm_id": "node/308914614"
+ },
+ {
+  "name": "West Mambalam",
+  "place": "suburb",
+  "lat": 13.04359,
+  "lon": 80.220809,
+  "ward": null,
+  "osm_id": "node/2241055790"
+ },
+ {
+  "name": "Yeshwanth Nagar",
+  "place": "neighbourhood",
+  "lat": 12.902669,
+  "lon": 80.149245,
+  "ward": null,
+  "osm_id": "node/14224684427"
+ },
+ {
+  "name": "Zam Bazaar",
+  "place": "neighbourhood",
+  "lat": 13.059296,
+  "lon": 80.271022,
+  "ward": null,
+  "osm_id": "node/2218064760"
+ }
+]

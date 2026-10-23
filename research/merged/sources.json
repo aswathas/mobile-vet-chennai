@@ -1,0 +1,221 @@
+[
+  {
+    "n": 1,
+    "label": "Census 2011 enumeration blocks — the Corporation density frame",
+    "publisher": "",
+    "url": "https://data.opencity.in/api/3/action/datastore_search?resource_id=14e58af6-7ed9-4445-bb47-acc931364c12&limit=9000",
+    "also": [
+      "https://data.opencity.in/dataset/db288d43-56e3-48f4-9932-710d80872155"
+    ],
+    "zones": [
+      "A"
+    ]
+  },
+  {
+    "n": 2,
+    "label": "Greater Chennai Corporation boundary and extent — the 174 sq km frame",
+    "publisher": "",
+    "url": "https://chennaicorporation.gov.in/departments/roads/index.htm",
+    "also": [],
+    "zones": [
+      "A"
+    ]
+  },
+  {
+    "n": 3,
+    "label": "GCC press releases and veterinary pages — the licence regime and the free supply",
+    "publisher": "",
+    "url": "https://www.chennaicorporation.gov.in/news/news_20260512_1.pdf",
+    "also": [
+      "https://chennaicorporation.gov.in/news/news_20261022_2.pdf",
+      "https://chennaicorporation.gov.in/news/news_20260810_4.pdf",
+      "https://chennaicorporation.gov.in/gcc/veterinary/about/",
+      "https://chennaicorporation.gov.in/gcc/veterinary/contact/petclinic/",
+      "https://www.newindianexpress.com/cities/chennai/2026/May/13/gcc-extends-deadline-to-get-pet-licence-to-june-15",
+      "https://timesofindia.indiatimes.com/city/chennai/chennai-corpn-extends-pet-licence-regn-renewal-deadline-till-june-15/articleshow/131048375.cms",
+      "https://timesofindia.indiatimes.com/city/chennai/over-13000-pet-dog-licences-yet-to-be-renewed-in-chennai/articleshow/131865414.cms",
+      "https://citizenmatters.in/how-to-apply-for-a-pet-licence-in-chennai-a-step-by-step-guide/"
+    ],
+    "zones": [
+      "A"
+    ]
+  },
+  {
+    "n": 4,
+    "label": "GCC residential property-tax ledger, ward-wise — checked, and deliberately not used",
+    "publisher": "",
+    "url": "https://data.opencity.in/api/3/action/datastore_search?resource_id=27905e77-2ef3-45b6-b14a-562bd3e37944&limit=250",
+    "also": [
+      "https://data.opencity.in/dataset/3107497a-f12a-49a8-bc2a-c92c3ccb0b67"
+    ],
+    "zones": [
+      "A"
+    ]
+  },
+  {
+    "n": 5,
+    "label": "GCC ward street inventory — place identity, checked, and not used for any figure",
+    "publisher": "",
+    "url": "https://data.opencity.in/dataset/18ac8acd-0dbd-4d8d-a7dd-eba4fcf95464/resource/f0577e43-2f14-4233-a922-f0ca08811d99/download/3b816670-2d4b-47fb-a702-9946890d700a.csv",
+    "also": [
+      "https://data.opencity.in/dataset/18ac8acd-0dbd-4d8d-a7dd-eba4fcf95464",
+      "https://chennaicorporation.gov.in/gcc/area_sabha/pdf/gazette.pdf"
+    ],
+    "zones": [
+      "A"
+    ]
+  },
+  {
+    "n": 6,
+    "label": "OpenStreetMap and Nominatim — coordinates, wards, pin codes and the built weight",
+    "publisher": "",
+    "url": "https://nominatim.openstreetmap.org/search?q=CHENNAI&format=json&limit=1&addressdetails=1&countrycodes=in",
+    "also": [
+      "https://nominatim.openstreetmap.org/search?q=CHENNAI&format=json&limit=6&addressdetails=1&countrycodes=in&viewbox=12.76,80.05,13.00,80.30",
+      "https://nominatim.openstreetmap.org/search?q=CHENNAI&format=json&limit=5&addressdetails=1&countrycodes=in",
+      "https://www.openstreetmap.org/"
+    ],
+    "zones": [
+      "A"
+    ]
+  },
+  {
+    "n": 7,
+    "label": "Operator price pages — the market ladder and the competition map",
+    "publisher": "",
+    "url": "https://www.justdial.com/Chennai/Sanchu-Animal-Hospital-Opposite-Vijayanagar-Bus-Stand-Velacheri/044PXX44-XX44-220611033159-E8Z6_BZDET",
+    "also": [
+      "https://www.justdial.com/Chennai/Auro-Multi-Specialty-Pet-Hospital-Above-HDFC-Bank-Ltd-Velacheri/044PXX44-XX44-110707182856-L8E5_BZDET",
+      "https://www.lybrate.com/chennai/clinic/auro-pet-clinic-velachery",
+      "https://www.littleangelspetclinic.com/vet-home-visit-chennai.html",
+      "https://vetic.in/vet-at-home",
+      "https://easzopets.com/services/general-checkup/",
+      "https://www.petter.in/for-vets",
+      "https://bluecrossofindia.org/What-We-Do.html",
+      "https://veterinary-hospital.sanchuanimalhospital.com/sanchu/chennai/velachery/",
+      "https://www.justdial.com/Chennai/K-K-Pet-Clinic-Backside-Sangamam-Hotel-Ashok-Nagar/044PXX44-XX44-160312115354-S1N5_BZDET",
+      "https://www.justdial.com/Chennai/Thanigai-Pet-Care-Hospital-Opposite-to-Chennai-Silks-Velacheri/044PXX44-XX44-171129090830-H9X7_BZDET",
+      "https://www.justdial.com/Chennai/Camp-Road-Animal-Hospital-Near-Bethesda-Hospital-IOB-Colony-K-V-K-Nagar-Selaiyur/044PXX44-XX44-100427120047-R3A5_BZDET",
+      "https://www.justdial.com/Chennai/Chrome-Pet-Clinic-Next-to-Mahesh-Hyper-Market-Chromepet/044PXX44-XX44-190608195509-P6N7_BZDET",
+      "https://www.justdial.com/Chennai/Sks-Veterinary-Hospital-Chromepet/044PXX44-XX44-221120031317-G3Q1_BZDET",
+      "https://www.justdial.com/Chennai/Aurom-Multi-speciality-Pet-Hospital-Velacheri/044PXX44-XX44-220706145824-L9V5_BZDET",
+      "https://www.justdial.com/Chennai/Vels-Pet-Hospital-pet-Shop-pet-Spa-Near-By-Oil-Mill-Bus-Stop-Pallikaranai/044P6101066_BZDET",
+      "https://www.justdial.com/Chennai/Veterinary-Hospitals-in-Velachery-Main-Road-Velacheri/nct-10519292",
+      "https://www.justdial.com/Chennai/Dr-P-Ramadass-Near-Venkateswara-Nagar-Medavakkam/044PXX44-XX44-151028140044-L5Y3_BZDET",
+      "https://www.justdial.com/Chennai/Ashoka-Vet-Clinic-Behind-Grt-Jewellers-Tambaram-Sanatorium/044PXX44-XX44-190531143355-U1K2_BZDET",
+      "https://www.justdial.com/Chennai/Vet-At-Home-Near-Surathamman-Temple-Perungalathur/044PXX44-XX44-160620173514-T1L3_BZDET",
+      "https://www.justdial.com/Chennai/Vet-Xpress-Near-MAV-School-Sembakkam/044PXX44-XX44-190719184924-W2X9_BZDET",
+      "https://gullytails.com/listing/renu-pet-clinic-and-grooming-studio",
+      "https://www.lybrate.com/chennai/clinic/d-g-veterinary-clinic-tambaram",
+      "https://www.lybrate.com/chennai/clinic/dr-chandran-aruldas-clinic-tambaram",
+      "https://www.lybrate.com/chennai/clinic/r-k-pet-clinic-madipakkam",
+      "https://chennaicorporation.gov.in/gcc/veterinary/contact/petclinic/"
+    ],
+    "zones": [
+      "A"
+    ]
+  },
+  {
+    "n": 8,
+    "label": "Property portals (tier A where re-loaded, tier B pointer where not) — the affluence axis and cluster assets",
+    "publisher": "",
+    "url": "https://www.magicbricks.com/property-for-sale/residential-real-estate/velachery/chennai",
+    "also": [
+      "https://chennaigatedcommunity.in/",
+      "https://www.99acres.com/property-for-sale/residential-real-estate/velachery-chennai-p/projects",
+      "https://propspedia.com/chennai/velachery",
+      "https://www.squareyards.com/property-for-sale/residential-real-estate/chennai/velachery"
+    ],
+    "zones": [
+      "A"
+    ]
+  },
+  {
+    "n": 9,
+    "label": "Census 2011 enumeration blocks — the household base",
+    "publisher": "",
+    "url": "https://data.opencity.in/api/3/action/datastore_search?resource_id=14e58af6-7ed9-4445-bb47-acc931364c12&limit=9000`",
+    "also": [],
+    "zones": [
+      "B"
+    ]
+  },
+  {
+    "n": 10,
+    "label": "GCC residential property-tax ledger, ward-wise — the household split",
+    "publisher": "",
+    "url": "https://data.opencity.in/api/3/action/datastore_search?resource_id=27905e77-2ef3-45b6-b14a-562bd3e37944&limit=250`",
+    "also": [],
+    "zones": [
+      "B"
+    ]
+  },
+  {
+    "n": 11,
+    "label": "GCC ward street inventory — ward identity and the independent built-extent check",
+    "publisher": "",
+    "url": "https://data.opencity.in/dataset/18ac8acd-0dbd-4d8d-a7dd-eba4fcf95464/resource/f0577e43-2f14-4233-a922-f0ca08811d99/download/3b816670-2d4b-47fb-a702-9946890d700a.csv`",
+    "also": [
+      "https://chennaicorporation.gov.in`",
+      "https://chennaicorporation.gov.in/gcc/area_sabha/pdf/gazette.pdf`"
+    ],
+    "zones": [
+      "B"
+    ]
+  },
+  {
+    "n": 12,
+    "label": "GCC press releases and veterinary pages — the licence regime and the free supply",
+    "publisher": "",
+    "url": "https://www.chennaicorporation.gov.in/news/news_20260512_1.pdf`",
+    "also": [
+      "https://chennaicorporation.gov.in/news/news_20261022_2.pdf`",
+      "https://chennaicorporation.gov.in/news/news_20260810_4.pdf`",
+      "https://chennaicorporation.gov.in/gcc/veterinary/about/`",
+      "https://chennaicorporation.gov.in/gcc/veterinary/contact/petclinic/`",
+      "https://www.newindianexpress.com/cities/chennai/2026/May/13/gcc-extends-deadline-to-get-pet-licence-to-june-15`",
+      "https://timesofindia.indiatimes.com/city/chennai/chennai-corpn-extends-pet-licence-regn-renewal-deadline-till-june-15/articleshow/131048375.cms`",
+      "https://timesofindia.indiatimes.com/city/chennai/over-13000-pet-dog-licences-yet-to-be-renewed-in-chennai/articleshow/131865414.cms`",
+      "https://citizenmatters.in/how-to-apply-for-a-pet-licence-in-chennai-a-step-by-step-guide/`"
+    ],
+    "zones": [
+      "B"
+    ]
+  },
+  {
+    "n": 13,
+    "label": "OpenStreetMap — coordinates, the built weight and the corridor spine",
+    "publisher": "",
+    "url": "https://overpass-api.de/api/interpreter`",
+    "also": [
+      "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=in`",
+      "https://www.geonames.org/search.html?q=`",
+      "https://api.postalpincode.in/postal/`",
+      "https://www.openstreetmap.org/node?mlat=12.98694&mlon=80.25999`",
+      "https://www.openstreetmap.org/node?mlat=13.00612&mlon=80.26406`"
+    ],
+    "zones": [
+      "B"
+    ]
+  },
+  {
+    "n": 14,
+    "label": "Operator price pages — the market ladder and the competition map",
+    "publisher": "",
+    "url": "https://www.littleangelspetclinic.com/vet-home-visit-chennai.html`",
+    "also": [
+      "https://www.littleangelspetclinic.com/terms-and-conditions.html`",
+      "https://vetic.in/vet-at-home`",
+      "https://easzopets.com/services/general-checkup/`",
+      "https://thepetnest.com/veterinary-at-home`",
+      "https://www.petter.in/for-vets`",
+      "https://petcare.ai/vets`",
+      "https://www.cavinkare.in/`",
+      "https://chennaicorporation.gov.in/gcc/veterinary/contact/petclinic/`",
+      "https://chennaicorporation.gov.in/gcc/veterinary/about/`"
+    ],
+    "zones": [
+      "B"
+    ]
+  }
+]

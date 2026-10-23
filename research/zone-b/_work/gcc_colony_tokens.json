@@ -1,0 +1,2230 @@
+{
+ "NATESAN": {
+  "count": 4,
+  "wards": [
+   "177",
+   "183"
+  ]
+ },
+ "SRI RAM": {
+  "count": 12,
+  "wards": [
+   "172",
+   "181",
+   "183"
+  ]
+ },
+ "BHARATHI": {
+  "count": 22,
+  "wards": [
+   "172",
+   "180",
+   "182",
+   "183",
+   "198"
+  ]
+ },
+ "KALKI": {
+  "count": 5,
+  "wards": [
+   "178",
+   "183"
+  ]
+ },
+ "KARPAGAMBAL": {
+  "count": 8,
+  "wards": [
+   "183",
+   "187"
+  ]
+ },
+ "RAJA": {
+  "count": 9,
+  "wards": [
+   "183",
+   "192"
+  ]
+ },
+ "KAVERI": {
+  "count": 16,
+  "wards": [
+   "171",
+   "183"
+  ]
+ },
+ "KUPPAM GANDHI": {
+  "count": 4,
+  "wards": [
+   "183"
+  ]
+ },
+ "NEHRU": {
+  "count": 80,
+  "wards": [
+   "166",
+   "174",
+   "175",
+   "177",
+   "183",
+   "184",
+   "187",
+   "195",
+   "200"
+  ]
+ },
+ "VENKATESHWARA": {
+  "count": 4,
+  "wards": [
+   "177",
+   "183"
+  ]
+ },
+ "NETCO": {
+  "count": 5,
+  "wards": [
+   "183"
+  ]
+ },
+ "SRINIVASAN": {
+  "count": 3,
+  "wards": [
+   "183",
+   "188"
+  ]
+ },
+ "SANGAM": {
+  "count": 7,
+  "wards": [
+   "183"
+  ]
+ },
+ "ANNAI SATHYA": {
+  "count": 6,
+  "wards": [
+   "183"
+  ]
+ },
+ "JUDGES": {
+  "count": 5,
+  "wards": [
+   "180",
+   "183"
+  ]
+ },
+ "SATHIYA": {
+  "count": 9,
+  "wards": [
+   "170",
+   "183",
+   "190"
+  ]
+ },
+ "SRI VENKATESWARA": {
+  "count": 21,
+  "wards": [
+   "183"
+  ]
+ },
+ "SRINIVASA": {
+  "count": 21,
+  "wards": [
+   "169",
+   "178",
+   "183"
+  ]
+ },
+ "SEKAR": {
+  "count": 6,
+  "wards": [
+   "183"
+  ]
+ },
+ "SAI BALAJI": {
+  "count": 4,
+  "wards": [
+   "184",
+   "189"
+  ]
+ },
+ "GOVINDASAMY": {
+  "count": 29,
+  "wards": [
+   "184",
+   "186",
+   "188"
+  ]
+ },
+ "KOTHANDARAMAN": {
+  "count": 6,
+  "wards": [
+   "184"
+  ]
+ },
+ "SRI JEYANDRA": {
+  "count": 3,
+  "wards": [
+   "184"
+  ]
+ },
+ "THIRUVENGADAM": {
+  "count": 6,
+  "wards": [
+   "184",
+   "189"
+  ]
+ },
+ "NETHAJI": {
+  "count": 21,
+  "wards": [
+   "177",
+   "182",
+   "184"
+  ]
+ },
+ "ANJUKAM AMMIYAR": {
+  "count": 12,
+  "wards": [
+   "184"
+  ]
+ },
+ "KURINJI": {
+  "count": 16,
+  "wards": [
+   "184",
+   "186"
+  ]
+ },
+ "LAKSHMANA": {
+  "count": 10,
+  "wards": [
+   "184"
+  ]
+ },
+ "PERUNTHALAIVAR KAMARAJ": {
+  "count": 4,
+  "wards": [
+   "180",
+   "184",
+   "186",
+   "187"
+  ]
+ },
+ "RAMAPPA": {
+  "count": 5,
+  "wards": [
+   "184"
+  ]
+ },
+ "SEMBON": {
+  "count": 8,
+  "wards": [
+   "184"
+  ]
+ },
+ "TELEPHONES": {
+  "count": 40,
+  "wards": [
+   "184"
+  ]
+ },
+ "JEEVARATHINAM": {
+  "count": 7,
+  "wards": [
+   "176",
+   "185"
+  ]
+ },
+ "BHARADHI": {
+  "count": 5,
+  "wards": [
+   "185"
+  ]
+ },
+ "GOVINDAN": {
+  "count": 8,
+  "wards": [
+   "185"
+  ]
+ },
+ "KAREEM": {
+  "count": 4,
+  "wards": [
+   "185"
+  ]
+ },
+ "KANDASAMY": {
+  "count": 10,
+  "wards": [
+   "185"
+  ]
+ },
+ "KOLAVIZHIAMMAN": {
+  "count": 15,
+  "wards": [
+   "185"
+  ]
+ },
+ "M.G.R": {
+  "count": 25,
+  "wards": [
+   "177",
+   "178",
+   "185",
+   "189"
+  ]
+ },
+ "KRISHNA": {
+  "count": 33,
+  "wards": [
+   "168",
+   "185",
+   "188",
+   "189",
+   "190",
+   "191",
+   "194"
+  ]
+ },
+ "PALKALAI": {
+  "count": 18,
+  "wards": [
+   "185"
+  ]
+ },
+ "PALKALAI NAGAR": {
+  "count": 10,
+  "wards": [
+   "185"
+  ]
+ },
+ "GANDHI": {
+  "count": 36,
+  "wards": [
+   "169",
+   "170",
+   "175",
+   "178",
+   "180",
+   "185",
+   "190",
+   "192",
+   "196",
+   "197"
+  ]
+ },
+ "SHANTHI": {
+  "count": 4,
+  "wards": [
+   "181",
+   "185",
+   "190"
+  ]
+ },
+ "BURMA": {
+  "count": 6,
+  "wards": [
+   "185"
+  ]
+ },
+ "BETHEL": {
+  "count": 9,
+  "wards": [
+   "179",
+   "186",
+   "196"
+  ]
+ },
+ "ELIM": {
+  "count": 14,
+  "wards": [
+   "186"
+  ]
+ },
+ "JANAKIRAMAN": {
+  "count": 8,
+  "wards": [
+   "186"
+  ]
+ },
+ "KAMARAJ": {
+  "count": 53,
+  "wards": [
+   "175",
+   "180",
+   "181",
+   "182",
+   "186"
+  ]
+ },
+ "MANIKODI SRINIVASAN": {
+  "count": 15,
+  "wards": [
+   "186"
+  ]
+ },
+ "NEW INDIA": {
+  "count": 18,
+  "wards": [
+   "169",
+   "186"
+  ]
+ },
+ "INDUSTRIAL": {
+  "count": 4,
+  "wards": [
+   "170",
+   "186",
+   "193"
+  ]
+ },
+ "RAJALAKSHMI": {
+  "count": 28,
+  "wards": [
+   "178",
+   "186",
+   "188",
+   "190"
+  ]
+ },
+ "RAJIV": {
+  "count": 30,
+  "wards": [
+   "177",
+   "186",
+   "194"
+  ]
+ },
+ "SARAVANA": {
+  "count": 9,
+  "wards": [
+   "186"
+  ]
+ },
+ "SENTHIL": {
+  "count": 19,
+  "wards": [
+   "186",
+   "188"
+  ]
+ },
+ "SOUNDARYA": {
+  "count": 3,
+  "wards": [
+   "186"
+  ]
+ },
+ "THIRUMALAI": {
+  "count": 32,
+  "wards": [
+   "186",
+   "189",
+   "190"
+  ]
+ },
+ "VENKATESWARA": {
+  "count": 49,
+  "wards": [
+   "176",
+   "177",
+   "186",
+   "189",
+   "193",
+   "194"
+  ]
+ },
+ "KARUNANITHI": {
+  "count": 4,
+  "wards": [
+   "172",
+   "186"
+  ]
+ },
+ "MARUTHI": {
+  "count": 13,
+  "wards": [
+   "186"
+  ]
+ },
+ "SELVAGANAPATHY": {
+  "count": 11,
+  "wards": [
+   "186"
+  ]
+ },
+ "SRI KUMARAN": {
+  "count": 8,
+  "wards": [
+   "186"
+  ]
+ },
+ "DEIVANAI": {
+  "count": 6,
+  "wards": [
+   "187"
+  ]
+ },
+ "IYAAPPA": {
+  "count": 24,
+  "wards": [
+   "187"
+  ]
+ },
+ "IYYAPPA": {
+  "count": 3,
+  "wards": [
+   "187",
+   "188"
+  ]
+ },
+ "NEW KUBERA": {
+  "count": 18,
+  "wards": [
+   "187",
+   "188"
+  ]
+ },
+ "PEIYAR": {
+  "count": 14,
+  "wards": [
+   "187",
+   "188"
+  ]
+ },
+ "PERIYAR": {
+  "count": 45,
+  "wards": [
+   "167",
+   "177",
+   "180",
+   "187",
+   "188",
+   "189",
+   "190"
+  ]
+ },
+ "SENDHURAM": {
+  "count": 4,
+  "wards": [
+   "187"
+  ]
+ },
+ "ALAYAMMAN": {
+  "count": 4,
+  "wards": [
+   "188"
+  ]
+ },
+ "ARULMURUGAN": {
+  "count": 4,
+  "wards": [
+   "188"
+  ]
+ },
+ "ARUMUGAM": {
+  "count": 13,
+  "wards": [
+   "179",
+   "188",
+   "189",
+   "190",
+   "193"
+  ]
+ },
+ "BALAIYAH": {
+  "count": 6,
+  "wards": [
+   "188"
+  ]
+ },
+ "BALAJI": {
+  "count": 88,
+  "wards": [
+   "167",
+   "168",
+   "169",
+   "170",
+   "174",
+   "177",
+   "188",
+   "194"
+  ]
+ },
+ "ENFIELD": {
+  "count": 4,
+  "wards": [
+   "188"
+  ]
+ },
+ "EZHIL": {
+  "count": 4,
+  "wards": [
+   "188",
+   "197"
+  ]
+ },
+ "JEEVA": {
+  "count": 16,
+  "wards": [
+   "188",
+   "190"
+  ]
+ },
+ "KANCHI KAMATCHI": {
+  "count": 9,
+  "wards": [
+   "188"
+  ]
+ },
+ "KUBERA": {
+  "count": 27,
+  "wards": [
+   "188"
+  ]
+ },
+ "L.I.C.": {
+  "count": 10,
+  "wards": [
+   "188"
+  ]
+ },
+ "LAKSHMI": {
+  "count": 72,
+  "wards": [
+   "167",
+   "168",
+   "177",
+   "188",
+   "191",
+   "194",
+   "195",
+   "197"
+  ]
+ },
+ "THILAGAR": {
+  "count": 3,
+  "wards": [
+   "188"
+  ]
+ },
+ "MAYILAI KARBAGAMBAL": {
+  "count": 4,
+  "wards": [
+   "188"
+  ]
+ },
+ "SAIRAM": {
+  "count": 3,
+  "wards": [
+   "188"
+  ]
+ },
+ "MAHALAKSHMI": {
+  "count": 44,
+  "wards": [
+   "177",
+   "181",
+   "188",
+   "189",
+   "190"
+  ]
+ },
+ "RAJAJI": {
+  "count": 17,
+  "wards": [
+   "182",
+   "188",
+   "189"
+  ]
+ },
+ "RAJARAJESWARI": {
+  "count": 15,
+  "wards": [
+   "188"
+  ]
+ },
+ "RAJESWARI": {
+  "count": 7,
+  "wards": [
+   "169",
+   "188"
+  ]
+ },
+ "RAMALINGA": {
+  "count": 8,
+  "wards": [
+   "169",
+   "188"
+  ]
+ },
+ "RAMAMURTHY": {
+  "count": 6,
+  "wards": [
+   "188"
+  ]
+ },
+ "RESERVE BANK": {
+  "count": 3,
+  "wards": [
+   "188"
+  ]
+ },
+ "SADASIVA": {
+  "count": 29,
+  "wards": [
+   "169",
+   "188"
+  ]
+ },
+ "SAKTHI": {
+  "count": 15,
+  "wards": [
+   "170",
+   "172",
+   "188",
+   "193"
+  ]
+ },
+ "SARATHI": {
+  "count": 11,
+  "wards": [
+   "178",
+   "179",
+   "188"
+  ]
+ },
+ "BANK OF BARODA": {
+  "count": 3,
+  "wards": [
+   "188"
+  ]
+ },
+ "SIGAMANI": {
+  "count": 8,
+  "wards": [
+   "188"
+  ]
+ },
+ "THILAKAR": {
+  "count": 20,
+  "wards": [
+   "188"
+  ]
+ },
+ "UNMAI": {
+  "count": 3,
+  "wards": [
+   "188"
+  ]
+ },
+ "CITY BABU": {
+  "count": 10,
+  "wards": [
+   "188",
+   "190"
+  ]
+ },
+ "MYLAI BALAJI": {
+  "count": 5,
+  "wards": [
+   "188"
+  ]
+ },
+ "KAMATCHIYAMMAN": {
+  "count": 8,
+  "wards": [
+   "188",
+   "189"
+  ]
+ },
+ "RAJALAKSMI": {
+  "count": 10,
+  "wards": [
+   "188",
+   "189"
+  ]
+ },
+ "V.G.P. RAJESH": {
+  "count": 5,
+  "wards": [
+   "188",
+   "189"
+  ]
+ },
+ "RAJESH": {
+  "count": 17,
+  "wards": [
+   "188",
+   "190"
+  ]
+ },
+ "THANTHAI PERIYAR": {
+  "count": 8,
+  "wards": [
+   "188"
+  ]
+ },
+ "M.G.R.": {
+  "count": 12,
+  "wards": [
+   "176",
+   "188",
+   "189",
+   "190"
+  ]
+ },
+ "WEST ANNA": {
+  "count": 15,
+  "wards": [
+   "188"
+  ]
+ },
+ "A.G.S.": {
+  "count": 4,
+  "wards": [
+   "178",
+   "189"
+  ]
+ },
+ "ADHI": {
+  "count": 3,
+  "wards": [
+   "189"
+  ]
+ },
+ "ADHISAMI": {
+  "count": 4,
+  "wards": [
+   "189"
+  ]
+ },
+ "ANNA M.G.R.": {
+  "count": 17,
+  "wards": [
+   "189",
+   "190"
+  ]
+ },
+ "ANNAI SATHIYA": {
+  "count": 8,
+  "wards": [
+   "189"
+  ]
+ },
+ "ARUN": {
+  "count": 6,
+  "wards": [
+   "189",
+   "190"
+  ]
+ },
+ "ASTALAKSHMI": {
+  "count": 19,
+  "wards": [
+   "177",
+   "181",
+   "189"
+  ]
+ },
+ "DHANAM": {
+  "count": 8,
+  "wards": [
+   "189",
+   "190"
+  ]
+ },
+ "DR. AMBETHKAR": {
+  "count": 12,
+  "wards": [
+   "189",
+   "190"
+  ]
+ },
+ "GANAPATHY": {
+  "count": 15,
+  "wards": [
+   "170",
+   "172",
+   "174",
+   "182",
+   "189",
+   "190"
+  ]
+ },
+ "I. I. T": {
+  "count": 19,
+  "wards": [
+   "189",
+   "190"
+  ]
+ },
+ "KAMAKOTTI": {
+  "count": 22,
+  "wards": [
+   "189",
+   "190"
+  ]
+ },
+ "LABOUR": {
+  "count": 28,
+  "wards": [
+   "170",
+   "189"
+  ]
+ },
+ "MA.PO.CI.": {
+  "count": 4,
+  "wards": [
+   "189"
+  ]
+ },
+ "MANOGAR": {
+  "count": 37,
+  "wards": [
+   "189",
+   "190"
+  ]
+ },
+ "MERU": {
+  "count": 9,
+  "wards": [
+   "189"
+  ]
+ },
+ "NAGAMMAL": {
+  "count": 3,
+  "wards": [
+   "189"
+  ]
+ },
+ "PADMAVATHI": {
+  "count": 19,
+  "wards": [
+   "178",
+   "189",
+   "191"
+  ]
+ },
+ "KOVALAN": {
+  "count": 8,
+  "wards": [
+   "189",
+   "190"
+  ]
+ },
+ "PARASURAM": {
+  "count": 5,
+  "wards": [
+   "189",
+   "190"
+  ]
+ },
+ "SELVAM": {
+  "count": 7,
+  "wards": [
+   "189"
+  ]
+ },
+ "PERUMAL": {
+  "count": 6,
+  "wards": [
+   "169",
+   "189"
+  ]
+ },
+ "QUAIDE MILLATH": {
+  "count": 6,
+  "wards": [
+   "189",
+   "190"
+  ]
+ },
+ "SABARI": {
+  "count": 3,
+  "wards": [
+   "178",
+   "189"
+  ]
+ },
+ "V.G.P SHANTHI": {
+  "count": 9,
+  "wards": [
+   "189"
+  ]
+ },
+ "V.G.P. SHANTHI": {
+  "count": 17,
+  "wards": [
+   "189",
+   "190"
+  ]
+ },
+ "VARADHARAJA": {
+  "count": 3,
+  "wards": [
+   "189",
+   "190"
+  ]
+ },
+ "VARATHARAJAN": {
+  "count": 3,
+  "wards": [
+   "189"
+  ]
+ },
+ "ADHIMOOLAM": {
+  "count": 3,
+  "wards": [
+   "190"
+  ]
+ },
+ "AMBAL": {
+  "count": 5,
+  "wards": [
+   "170",
+   "190"
+  ]
+ },
+ "AMBEDKAR": {
+  "count": 9,
+  "wards": [
+   "177",
+   "179",
+   "190"
+  ]
+ },
+ "DEVI KARUMARRIAMMAN": {
+  "count": 3,
+  "wards": [
+   "190"
+  ]
+ },
+ "GOPAL": {
+  "count": 3,
+  "wards": [
+   "190"
+  ]
+ },
+ "INDIRA": {
+  "count": 49,
+  "wards": [
+   "175",
+   "190"
+  ]
+ },
+ "KANNABIRAN": {
+  "count": 4,
+  "wards": [
+   "190"
+  ]
+ },
+ "MEENATCHI": {
+  "count": 6,
+  "wards": [
+   "190"
+  ]
+ },
+ "DEVI KARUMARIAMMAN": {
+  "count": 17,
+  "wards": [
+   "178",
+   "190"
+  ]
+ },
+ "PUDHU": {
+  "count": 7,
+  "wards": [
+   "190",
+   "191"
+  ]
+ },
+ "PRABHU": {
+  "count": 3,
+  "wards": [
+   "190",
+   "193"
+  ]
+ },
+ "SAI GANESH": {
+  "count": 8,
+  "wards": [
+   "190",
+   "191"
+  ]
+ },
+ "VALLAL PARI": {
+  "count": 18,
+  "wards": [
+   "190"
+  ]
+ },
+ "VEERASWAMY": {
+  "count": 7,
+  "wards": [
+   "190"
+  ]
+ },
+ "VIVEKANANTHA": {
+  "count": 10,
+  "wards": [
+   "190"
+  ]
+ },
+ "VIVAKANANTHA": {
+  "count": 4,
+  "wards": [
+   "190"
+  ]
+ },
+ "ANCHANEYA": {
+  "count": 13,
+  "wards": [
+   "191"
+  ]
+ },
+ "THIRUVALLUVAR": {
+  "count": 105,
+  "wards": [
+   "172",
+   "176",
+   "182",
+   "191",
+   "192",
+   "193"
+  ]
+ },
+ "AMARAVATHI": {
+  "count": 4,
+  "wards": [
+   "169",
+   "191"
+  ]
+ },
+ "SERVICEMEN": {
+  "count": 5,
+  "wards": [
+   "191"
+  ]
+ },
+ "JAYACHANDRAN": {
+  "count": 19,
+  "wards": [
+   "191"
+  ]
+ },
+ "SADAGOPAN": {
+  "count": 3,
+  "wards": [
+   "191"
+  ]
+ },
+ "PALLAVAN": {
+  "count": 12,
+  "wards": [
+   "191",
+   "196"
+  ]
+ },
+ "R.G.": {
+  "count": 4,
+  "wards": [
+   "191"
+  ]
+ },
+ "SAIGANESH": {
+  "count": 18,
+  "wards": [
+   "191"
+  ]
+ },
+ "SUBRAMANI": {
+  "count": 6,
+  "wards": [
+   "181",
+   "191"
+  ]
+ },
+ "GAJIRA": {
+  "count": 8,
+  "wards": [
+   "192"
+  ]
+ },
+ "KAPALEESWARA": {
+  "count": 21,
+  "wards": [
+   "192"
+  ]
+ },
+ "KUMARAGURU": {
+  "count": 14,
+  "wards": [
+   "192",
+   "194"
+  ]
+ },
+ "MARAIKAYAR": {
+  "count": 9,
+  "wards": [
+   "192"
+  ]
+ },
+ "RAJENDRA": {
+  "count": 13,
+  "wards": [
+   "192",
+   "196"
+  ]
+ },
+ "RANGA REDDY": {
+  "count": 13,
+  "wards": [
+   "192"
+  ]
+ },
+ "SANTHIP": {
+  "count": 4,
+  "wards": [
+   "192"
+  ]
+ },
+ "SARASWATHY": {
+  "count": 27,
+  "wards": [
+   "169",
+   "192"
+  ]
+ },
+ "SUIYA": {
+  "count": 3,
+  "wards": [
+   "192"
+  ]
+ },
+ "SUNRICE": {
+  "count": 7,
+  "wards": [
+   "192"
+  ]
+ },
+ "WORKERS": {
+  "count": 9,
+  "wards": [
+   "192"
+  ]
+ },
+ "ANANDA": {
+  "count": 5,
+  "wards": [
+   "193"
+  ]
+ },
+ "BALAMURUGAN": {
+  "count": 13,
+  "wards": [
+   "179",
+   "193"
+  ]
+ },
+ "CUSTOMS": {
+  "count": 5,
+  "wards": [
+   "176",
+   "193"
+  ]
+ },
+ "ELLAIAMMAN": {
+  "count": 3,
+  "wards": [
+   "193"
+  ]
+ },
+ "KASTHURIBAI": {
+  "count": 38,
+  "wards": [
+   "175",
+   "193"
+  ]
+ },
+ "MANGALAMBIGA": {
+  "count": 4,
+  "wards": [
+   "193"
+  ]
+ },
+ "MURUGESAN": {
+  "count": 3,
+  "wards": [
+   "169",
+   "193"
+  ]
+ },
+ "PANDIYAN": {
+  "count": 8,
+  "wards": [
+   "193",
+   "196"
+  ]
+ },
+ "SHANTHI NIKETAN": {
+  "count": 4,
+  "wards": [
+   "193"
+  ]
+ },
+ "SUBBARAYAN": {
+  "count": 8,
+  "wards": [
+   "193"
+  ]
+ },
+ "STATE BANK": {
+  "count": 4,
+  "wards": [
+   "167",
+   "176",
+   "193"
+  ]
+ },
+ "VINAYAGA": {
+  "count": 5,
+  "wards": [
+   "193",
+   "195"
+  ]
+ },
+ "ALAGAPPA": {
+  "count": 6,
+  "wards": [
+   "177",
+   "178",
+   "194"
+  ]
+ },
+ "BARATHIYAR": {
+  "count": 5,
+  "wards": [
+   "194"
+  ]
+ },
+ "DEVARAJ": {
+  "count": 11,
+  "wards": [
+   "194",
+   "197"
+  ]
+ },
+ "KOKILAMBAL": {
+  "count": 3,
+  "wards": [
+   "194"
+  ]
+ },
+ "M.R.G.": {
+  "count": 4,
+  "wards": [
+   "194"
+  ]
+ },
+ "SARASWATHI": {
+  "count": 4,
+  "wards": [
+   "194"
+  ]
+ },
+ "SECRETARIAT": {
+  "count": 10,
+  "wards": [
+   "174",
+   "194"
+  ]
+ },
+ "CHANDRASEKARAN": {
+  "count": 13,
+  "wards": [
+   "194",
+   "195"
+  ]
+ },
+ "ROYAL": {
+  "count": 3,
+  "wards": [
+   "195"
+  ]
+ },
+ "V.G.P": {
+  "count": 6,
+  "wards": [
+   "195",
+   "199"
+  ]
+ },
+ "BISMILLA": {
+  "count": 3,
+  "wards": [
+   "196"
+  ]
+ },
+ "KALAIMAGAL": {
+  "count": 14,
+  "wards": [
+   "170",
+   "197"
+  ]
+ },
+ "MUTTAMIL": {
+  "count": 9,
+  "wards": [
+   "197"
+  ]
+ },
+ "KUMARASAMY": {
+  "count": 9,
+  "wards": [
+   "197"
+  ]
+ },
+ "NEW KUMARAN": {
+  "count": 16,
+  "wards": [
+   "197"
+  ]
+ },
+ "BOOPATHY": {
+  "count": 4,
+  "wards": [
+   "197"
+  ]
+ },
+ "ELCOT": {
+  "count": 3,
+  "wards": [
+   "197"
+  ]
+ },
+ "KUDUMIYANDI THOPPU M.G.R.": {
+  "count": 7,
+  "wards": [
+   "198"
+  ]
+ },
+ "KUMARAN": {
+  "count": 4,
+  "wards": [
+   "198"
+  ]
+ },
+ "CHIDHAMBARAM NAGAR J.": {
+  "count": 4,
+  "wards": [
+   "198"
+  ]
+ },
+ "PARAMESWARAN": {
+  "count": 8,
+  "wards": [
+   "198"
+  ]
+ },
+ "VIGNESHWARA": {
+  "count": 4,
+  "wards": [
+   "198"
+  ]
+ },
+ "RAGUNATHA": {
+  "count": 3,
+  "wards": [
+   "199"
+  ]
+ },
+ "B.V.": {
+  "count": 28,
+  "wards": [
+   "166",
+   "167"
+  ]
+ },
+ "BURMA TAMILAR": {
+  "count": 3,
+  "wards": [
+   "166"
+  ]
+ },
+ "K.K.": {
+  "count": 10,
+  "wards": [
+   "166"
+  ]
+ },
+ "RAGHUPATHY": {
+  "count": 9,
+  "wards": [
+   "166"
+  ]
+ },
+ "TEACHERS": {
+  "count": 4,
+  "wards": [
+   "166"
+  ]
+ },
+ "HINDU": {
+  "count": 46,
+  "wards": [
+   "167",
+   "169"
+  ]
+ },
+ "KANNAN": {
+  "count": 10,
+  "wards": [
+   "167"
+  ]
+ },
+ "MANGAYARKARASI": {
+  "count": 3,
+  "wards": [
+   "167"
+  ]
+ },
+ "TNGO": {
+  "count": 8,
+  "wards": [
+   "167"
+  ]
+ },
+ "VIJAY": {
+  "count": 3,
+  "wards": [
+   "167",
+   "178"
+  ]
+ },
+ "VOLTAS": {
+  "count": 10,
+  "wards": [
+   "167"
+  ]
+ },
+ "KANNIGA": {
+  "count": 4,
+  "wards": [
+   "167"
+  ]
+ },
+ "MMTC": {
+  "count": 3,
+  "wards": [
+   "167"
+  ]
+ },
+ "ALWAR": {
+  "count": 5,
+  "wards": [
+   "168"
+  ]
+ },
+ "BALAMMAL": {
+  "count": 7,
+  "wards": [
+   "168"
+  ]
+ },
+ "M.G.": {
+  "count": 3,
+  "wards": [
+   "168"
+  ]
+ },
+ "MACMILLAN": {
+  "count": 7,
+  "wards": [
+   "168"
+  ]
+ },
+ "MOORTHI": {
+  "count": 4,
+  "wards": [
+   "168"
+  ]
+ },
+ "SWAMY": {
+  "count": 4,
+  "wards": [
+   "168"
+  ]
+ },
+ "SAMY": {
+  "count": 15,
+  "wards": [
+   "168"
+  ]
+ },
+ "SANKAR": {
+  "count": 9,
+  "wards": [
+   "168",
+   "170"
+  ]
+ },
+ "THOMAS": {
+  "count": 6,
+  "wards": [
+   "168",
+   "169",
+   "171"
+  ]
+ },
+ "UNION CARBIDE": {
+  "count": 8,
+  "wards": [
+   "168"
+  ]
+ },
+ "USHA": {
+  "count": 6,
+  "wards": [
+   "168"
+  ]
+ },
+ "VIDYA": {
+  "count": 3,
+  "wards": [
+   "168"
+  ]
+ },
+ "VIJAYAGANAPATHY": {
+  "count": 3,
+  "wards": [
+   "168"
+  ]
+ },
+ "AMMAN": {
+  "count": 5,
+  "wards": [
+   "169"
+  ]
+ },
+ "ANNAI THERASA": {
+  "count": 32,
+  "wards": [
+   "169"
+  ]
+ },
+ "ANNAI THERESA": {
+  "count": 5,
+  "wards": [
+   "169"
+  ]
+ },
+ "BAGEERATHI": {
+  "count": 15,
+  "wards": [
+   "169"
+  ]
+ },
+ "JAYA": {
+  "count": 5,
+  "wards": [
+   "169"
+  ]
+ },
+ "MURUGAPPA": {
+  "count": 7,
+  "wards": [
+   "169"
+  ]
+ },
+ "RAVANAN": {
+  "count": 9,
+  "wards": [
+   "169"
+  ]
+ },
+ "RADHA": {
+  "count": 7,
+  "wards": [
+   "169",
+   "177"
+  ]
+ },
+ "RAMAKRISHNARAJI": {
+  "count": 4,
+  "wards": [
+   "169"
+  ]
+ },
+ "SADASIVAM": {
+  "count": 3,
+  "wards": [
+   "169"
+  ]
+ },
+ "SARATHY": {
+  "count": 4,
+  "wards": [
+   "169",
+   "179"
+  ]
+ },
+ "SHEELA": {
+  "count": 10,
+  "wards": [
+   "169"
+  ]
+ },
+ "SIVA PRAKASAM": {
+  "count": 5,
+  "wards": [
+   "169"
+  ]
+ },
+ "VIJAYA": {
+  "count": 29,
+  "wards": [
+   "169",
+   "178"
+  ]
+ },
+ "VIGNESWARA": {
+  "count": 4,
+  "wards": [
+   "169"
+  ]
+ },
+ "ACHUDHAN": {
+  "count": 8,
+  "wards": [
+   "170"
+  ]
+ },
+ "JOTHI": {
+  "count": 5,
+  "wards": [
+   "170"
+  ]
+ },
+ "SARDAR": {
+  "count": 5,
+  "wards": [
+   "170"
+  ]
+ },
+ "VISALAKSHI": {
+  "count": 5,
+  "wards": [
+   "170"
+  ]
+ },
+ "JOTHIAMMAL": {
+  "count": 23,
+  "wards": [
+   "170",
+   "171"
+  ]
+ },
+ "WEST C.I.T.": {
+  "count": 7,
+  "wards": [
+   "171"
+  ]
+ },
+ "SASTRI": {
+  "count": 33,
+  "wards": [
+   "171",
+   "176",
+   "177"
+  ]
+ },
+ "SRINAGAR": {
+  "count": 8,
+  "wards": [
+   "171"
+  ]
+ },
+ "AVVAI": {
+  "count": 3,
+  "wards": [
+   "172",
+   "182"
+  ]
+ },
+ "KOTTUR": {
+  "count": 14,
+  "wards": [
+   "172"
+  ]
+ },
+ "NARIKURAVAR": {
+  "count": 5,
+  "wards": [
+   "172"
+  ]
+ },
+ "CHITRA": {
+  "count": 6,
+  "wards": [
+   "172"
+  ]
+ },
+ "DHANDAYUTHAPANI": {
+  "count": 3,
+  "wards": [
+   "172"
+  ]
+ },
+ "SHRIRAM": {
+  "count": 5,
+  "wards": [
+   "172"
+  ]
+ },
+ "MOSQUE": {
+  "count": 17,
+  "wards": [
+   "174"
+  ]
+ },
+ "RACE VIEW": {
+  "count": 4,
+  "wards": [
+   "174"
+  ]
+ },
+ "SANKARAN": {
+  "count": 3,
+  "wards": [
+   "174"
+  ]
+ },
+ "DHANALAKSHMI": {
+  "count": 6,
+  "wards": [
+   "175"
+  ]
+ },
+ "BHAKTHAVATCHALAM": {
+  "count": 5,
+  "wards": [
+   "175"
+  ]
+ },
+ "CRESCENT": {
+  "count": 3,
+  "wards": [
+   "175"
+  ]
+ },
+ "BESANT": {
+  "count": 44,
+  "wards": [
+   "176"
+  ]
+ },
+ "KARPAGAM": {
+  "count": 11,
+  "wards": [
+   "176"
+  ]
+ },
+ "PADMANABHA": {
+  "count": 6,
+  "wards": [
+   "176"
+  ]
+ },
+ "PARAMESWARI": {
+  "count": 5,
+  "wards": [
+   "176"
+  ]
+ },
+ "KAKKAN": {
+  "count": 10,
+  "wards": [
+   "176",
+   "177"
+  ]
+ },
+ "A.G.S": {
+  "count": 24,
+  "wards": [
+   "177",
+   "178"
+  ]
+ },
+ "A.S.K": {
+  "count": 5,
+  "wards": [
+   "177"
+  ]
+ },
+ "ANDAL": {
+  "count": 24,
+  "wards": [
+   "177",
+   "178",
+   "179"
+  ]
+ },
+ "ASHTALAKSHMI": {
+  "count": 4,
+  "wards": [
+   "177",
+   "181"
+  ]
+ },
+ "BRINDAVAN": {
+  "count": 7,
+  "wards": [
+   "177"
+  ]
+ },
+ "DR. AMBEDKAR": {
+  "count": 232,
+  "wards": [
+   "177"
+  ]
+ },
+ "E.B.": {
+  "count": 17,
+  "wards": [
+   "177"
+  ]
+ },
+ "EX. SERVICEMEN": {
+  "count": 4,
+  "wards": [
+   "177"
+  ]
+ },
+ "TELEPHONE": {
+  "count": 5,
+  "wards": [
+   "177"
+  ]
+ },
+ "GANGAI": {
+  "count": 11,
+  "wards": [
+   "177"
+  ]
+ },
+ "INDIRA GANDHI": {
+  "count": 7,
+  "wards": [
+   "177"
+  ]
+ },
+ "JOSEPH": {
+  "count": 4,
+  "wards": [
+   "177"
+  ]
+ },
+ "KRISHNARAJA": {
+  "count": 7,
+  "wards": [
+   "177"
+  ]
+ },
+ "L.H.": {
+  "count": 10,
+  "wards": [
+   "177"
+  ]
+ },
+ "N.G.O": {
+  "count": 4,
+  "wards": [
+   "177"
+  ]
+ },
+ "NEW SECRETARIAT": {
+  "count": 6,
+  "wards": [
+   "177"
+  ]
+ },
+ "N.N.G.O": {
+  "count": 12,
+  "wards": [
+   "177"
+  ]
+ },
+ "RAMAKRISHNA": {
+  "count": 7,
+  "wards": [
+   "177"
+  ]
+ },
+ "SECRETARIATE": {
+  "count": 4,
+  "wards": [
+   "177"
+  ]
+ },
+ "SHAKTHI VIJAYALAKSHMI": {
+  "count": 3,
+  "wards": [
+   "177"
+  ]
+ },
+ "SHAWALACE": {
+  "count": 3,
+  "wards": [
+   "177"
+  ]
+ },
+ "V.V.": {
+  "count": 4,
+  "wards": [
+   "177"
+  ]
+ },
+ "V.G.P. SELVA": {
+  "count": 5,
+  "wards": [
+   "178",
+   "179"
+  ]
+ },
+ "DHANDEESWARAM": {
+  "count": 4,
+  "wards": [
+   "178",
+   "179"
+  ]
+ },
+ "MURUGU": {
+  "count": 7,
+  "wards": [
+   "178"
+  ]
+ },
+ "V.O.C.": {
+  "count": 3,
+  "wards": [
+   "178",
+   "179"
+  ]
+ },
+ "MAIN ROAD": {
+  "count": 6,
+  "wards": [
+   "178",
+   "179"
+  ]
+ },
+ "SEETHARAM": {
+  "count": 4,
+  "wards": [
+   "178",
+   "179"
+  ]
+ },
+ "SHANKAR": {
+  "count": 4,
+  "wards": [
+   "178"
+  ]
+ },
+ "TANSI": {
+  "count": 23,
+  "wards": [
+   "178",
+   "179"
+  ]
+ },
+ "DEVI KARUMARI AMMAN": {
+  "count": 3,
+  "wards": [
+   "178"
+  ]
+ },
+ "GOLDEN": {
+  "count": 5,
+  "wards": [
+   "178"
+  ]
+ },
+ "BALAKRISHNA": {
+  "count": 6,
+  "wards": [
+   "179"
+  ]
+ },
+ "DHANDEESWARAN": {
+  "count": 3,
+  "wards": [
+   "179"
+  ]
+ },
+ "PARK": {
+  "count": 4,
+  "wards": [
+   "179"
+  ]
+ },
+ "SATCHIDANANDAM": {
+  "count": 4,
+  "wards": [
+   "179"
+  ]
+ },
+ "SEETHAPATHY": {
+  "count": 6,
+  "wards": [
+   "179"
+  ]
+ },
+ "VENUS": {
+  "count": 10,
+  "wards": [
+   "179"
+  ]
+ },
+ "ANNAI INDIRA": {
+  "count": 3,
+  "wards": [
+   "179"
+  ]
+ },
+ "BABY": {
+  "count": 8,
+  "wards": [
+   "179"
+  ]
+ },
+ "BHUVANESWARI": {
+  "count": 9,
+  "wards": [
+   "179"
+  ]
+ },
+ "RAMAGIRI": {
+  "count": 4,
+  "wards": [
+   "179"
+  ]
+ },
+ "SEVA": {
+  "count": 4,
+  "wards": [
+   "179"
+  ]
+ },
+ "SONY": {
+  "count": 3,
+  "wards": [
+   "179"
+  ]
+ },
+ "SUBRAMANIAN": {
+  "count": 4,
+  "wards": [
+   "179",
+   "181"
+  ]
+ },
+ "UDHAYAM": {
+  "count": 6,
+  "wards": [
+   "179"
+  ]
+ },
+ "VGP SELVA": {
+  "count": 5,
+  "wards": [
+   "179"
+  ]
+ },
+ "KALAINGER": {
+  "count": 6,
+  "wards": [
+   "180"
+  ]
+ },
+ "VALLUVAR": {
+  "count": 4,
+  "wards": [
+   "180"
+  ]
+ },
+ "KAMARAJAR": {
+  "count": 11,
+  "wards": [
+   "180",
+   "181",
+   "182"
+  ]
+ },
+ "KAMRAJ": {
+  "count": 3,
+  "wards": [
+   "180"
+  ]
+ },
+ "DR.RADHAKRISHNA": {
+  "count": 4,
+  "wards": [
+   "181"
+  ]
+ },
+ "JOURNALIST": {
+  "count": 11,
+  "wards": [
+   "181",
+   "182"
+  ]
+ },
+ "MARUDEESWARAR": {
+  "count": 22,
+  "wards": [
+   "181"
+  ]
+ },
+ "MARUDESSWARAR": {
+  "count": 6,
+  "wards": [
+   "181"
+  ]
+ },
+ "RADHAKRISHNAN": {
+  "count": 4,
+  "wards": [
+   "181"
+  ]
+ },
+ "RAJA SRINIVASA": {
+  "count": 4,
+  "wards": [
+   "181"
+  ]
+ },
+ "MALAVIYA": {
+  "count": 3,
+  "wards": [
+   "181"
+  ]
+ },
+ "DEVENDRA": {
+  "count": 9,
+  "wards": [
+   "182"
+  ]
+ },
+ "KANNAPPA": {
+  "count": 9,
+  "wards": [
+   "182"
+  ]
+ },
+ "P.T.C": {
+  "count": 5,
+  "wards": [
+   "182"
+  ]
+ }
+}

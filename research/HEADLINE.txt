@@ -1,0 +1,116 @@
+
+================ ZONE A: South-East cluster ================
+localities            50
+households            2,71,686
+pet-owning households 34,728 (12.8% of households)
+licensed / unlicensed 17,347 / 34,445
+cases a month         11,576
+cases a weekday avg   386
+our-mix revenue/mo    Rs 1,50,82,166
+market-mix revenue/mo Rs 1,09,56,338  (our share 137.7%)
+median blended price  Rs 1,304
+median market price   Rs 951
+one route could carry Rs 83,26,440 revenue, Rs 28,98,340 contribution
+two routes could carry Rs 1,26,54,829
+revenue per route-hr  Rs 1,701
+verdicts              GO 47 / HOLD 3 / NO-GO 0
+demand tiers          {"B":50}
+mean saturation       31.8
+localities below Rs 1,100 blended: 0
+peak hour             10:00
+top 3 hours           10:00 (8.1%), 11:00 (7.5%), 09:00 (6.9%)
+weekday split         Mon 12.2%  Tue 12.4%  Wed 12.6%  Thu 12.6%  Fri 13.6%  Sat 18.0%  Sun 18.6%
+best month            Jan (index 117.8, 9.8% of the year)
+worst month           Aug (index 85.0, 7.1%)
+hub                   Velachery — Velachery is the only point in the cluster where three named veterinary operators sit inside the locality itself (Sanchu Animal Hospital 4.4 across 1,217 review
+top 10 by our-mix monthly revenue:
+   1 Velachery main (Vijaya Nagar)      GO    cases  838  blended Rs   1,303  rev Rs 10,91,263  sat  55  hh 16,560
+   2 Medavakkam Town (Munusamy Nagar)   GO    cases  721  blended Rs   1,304  rev Rs  9,40,445  sat  36  hh 14,260
+   3 Pallikaranai (Velachery Main Road, GO    cases  605  blended Rs   1,295  rev Rs  7,83,346  sat  47  hh 11,960
+   4 Thoraipakkam                       GO    cases  451  blended Rs   1,300  rev Rs  5,85,780  sat  23  hh 8,910
+   5 Velachery Ram Nagar North          GO    cases  442  blended Rs   1,303  rev Rs  5,75,926  sat  38  hh 8,740
+   6 Velachery Jaganathapuram           GO    cases  407  blended Rs   1,303  rev Rs  5,30,451  sat  43  hh 8,050
+   7 Madipakkam (Adambakkam)            GO    cases  401  blended Rs   1,300  rev Rs  5,20,780  sat  43  hh 7,920
+   8 Pallikaranai Narayanapuram (IIT Co GO    cases  372  blended Rs   1,295  rev Rs  4,81,999  sat  47  hh 7,360
+   9 Alandur (SIDCO and TNHB)           GO    cases  367  blended Rs   1,304  rev Rs  4,78,829  sat  12  hh 7,260
+  10 Pammal                             GO    cases  334  blended Rs   1,304  rev Rs  4,35,275  sat  24  hh 6,600
+bottom 5 by our-mix monthly revenue:
+  Mangadu Vinayagar Nagar (old town) GO    cases   70  blended Rs   1,306  rev Rs 91,028
+  Nithyanandham Nagar (Tambaram West GO    cases   61  blended Rs   1,308  rev Rs 79,134
+  Taramani                           HOLD  cases   37  blended Rs   1,300  rev Rs 48,100
+  Kadaperi                           HOLD  cases   23  blended Rs   1,308  rev Rs 29,692
+  Mangadu Industrial Estate (NH-4)   HOLD  cases   20  blended Rs   1,306  rev Rs 25,467
+
+================ ZONE B: OMR and ECR corridor, south Chennai ================
+localities            50
+households            1,47,113
+pet-owning households 15,017 (10.2% of households)
+licensed / unlicensed 4,937 / 18,239
+cases a month         5,007
+cases a weekday avg   167
+our-mix revenue/mo    Rs 73,15,332
+market-mix revenue/mo Rs 47,37,253  (our share 154.4%)
+median blended price  Rs 1,440
+median market price   Rs 932
+one route could carry Rs 64,33,801 revenue, Rs 26,98,901 contribution
+two routes could carry Rs 73,13,467
+revenue per route-hr  Rs 1,878
+verdicts              GO 35 / HOLD 13 / NO-GO 2
+demand tiers          {"B":50}
+mean saturation       59.6
+localities below Rs 1,100 blended: 0
+peak hour             11:00
+top 3 hours           11:00 (10.7%), 10:00 (9.4%), 15:00 (9.4%)
+weekday split         Mon 13.5%  Tue 13.4%  Wed 13.4%  Thu 14.0%  Fri 15.0%  Sat 17.8%  Sun 12.9%
+best month            Jan (index 121.2, 10.1% of the year)
+worst month           Jul (index 79.7, 6.6%)
+hub                   Sholinganallur — Sholinganallur is the only candidate that is central to the corridor geometry, the OMR rail line boundary and the GCC free-supply network. Mean distance from th
+top 10 by our-mix monthly revenue:
+   1 Thiruvanmiyur V.O.C. Street        GO    cases  274  blended Rs   1,438  rev Rs  3,93,868  sat  63  hh 7,492
+   2 Thiruvanmiyur Indira Nagar         GO    cases  264  blended Rs   1,438  rev Rs  3,79,776  sat  62  hh 5,221
+   3 Thiruvanmiyur                      GO    cases  261  blended Rs   1,438  rev Rs  3,75,893  sat  63  hh 7,151
+   4 Perungudi Bethel Nagar             GO    cases  264  blended Rs   1,414  rev Rs  3,73,437  sat  54  hh 5,222
+   5 Thiruvanmiyur Sriram Nagar         GO    cases  196  blended Rs   1,438  rev Rs  2,81,560  sat  58  hh 6,924
+   6 Madipakkam Sendhuram Colony        GO    cases  178  blended Rs   1,557  rev Rs  2,77,146  sat  54  hh 3,519
+   7 Palavakkam Bharathi Nagar          GO    cases  190  blended Rs   1,440  rev Rs  2,72,880  sat  62  hh 3,746
+   8 Thiruvanmiyur T. Nagar             GO    cases  189  blended Rs   1,438  rev Rs  2,72,357  sat  63  hh 6,697
+   9 Palavakkam                         GO    cases  178  blended Rs   1,440  rev Rs  2,56,896  sat  58  hh 4,881
+  10 Perungudi                          GO    cases  178  blended Rs   1,414  rev Rs  2,52,258  sat  50  hh 4,881
+bottom 5 by our-mix monthly revenue:
+  Enjambakkam                        HOLD  cases   25  blended Rs   1,440  rev Rs 35,856
+  E.L.C.O.T. Sholinganallur          HOLD  cases   22  blended Rs   1,500  rev Rs 33,600
+  Infosys campus township, Sholingan HOLD  cases   21  blended Rs   1,500  rev Rs 31,650
+  Mappedu                            NO-GO cases   13  blended Rs   1,384  rev Rs 17,715
+  R.M.Z. Ecoworld, Thandalam         NO-GO cases    4  blended Rs   1,500  rev Rs 5,850
+
+================ BOTH ZONES ================
+localities            100
+households            4,18,799
+pet-owning households 49,745
+cases a month         16,583
+our-mix revenue/mo    Rs 2,23,97,498
+market-mix revenue/mo Rs 1,56,93,591
+our share of market   142.7%
+top  5 localities carry   17.8% of our-mix revenue
+top 10 localities carry   28.7% of our-mix revenue
+top 20 localities carry   46.6% of our-mix revenue
+zone A share          67.3% of our-mix revenue
+
+route clusters:
+  A-R7   A   7 localities  cases  2600  blend Rs   1,303  demand Rs 33,87,800  one route (156 visits) contribution Rs   70,668  anchor Velachery main (Vijaya Nagar)
+  A-R5   A   8 localities  cases  2473  blend Rs   1,304  demand Rs 32,24,270  one route (156 visits) contribution Rs   70,824  anchor Medavakkam Town (Munusamy Nagar)
+  A-R6   A   6 localities  cases  1968  blend Rs   1,295  demand Rs 25,48,044  one route (156 visits) contribution Rs   69,420  anchor Pallikaranai (Velachery Main Road, oil mill)
+  B-R7   B   6 localities  cases  1323  blend Rs   1,438  demand Rs 19,01,898  one route (156 visits) contribution Rs   91,728  anchor Thiruvanmiyur
+  A-R3   A   5 localities  cases  1145  blend Rs   1,304  demand Rs 14,92,428  one route (156 visits) contribution Rs   70,824  anchor Selaiyur (Camp Road and Rajeswari Nagar)
+  A-R8   A   4 localities  cases   995  blend Rs   1,300  demand Rs 12,93,240  one route (156 visits) contribution Rs   70,200  anchor Madipakkam (Adambakkam)
+  B-R5   B   5 localities  cases   882  blend Rs   1,414  demand Rs 12,47,714  one route (156 visits) contribution Rs   87,984  anchor Perungudi
+  B-R4   B  10 localities  cases   858  blend Rs   1,440  demand Rs 12,35,520  one route (156 visits) contribution Rs   92,040  anchor Palavakkam
+  A-R1   A   7 localities  cases   908  blend Rs   1,308  demand Rs 11,87,926  one route (156 visits) contribution Rs   71,448  anchor Tambaram West (station and Mettu)
+  A-R4   A   7 localities  cases   895  blend Rs   1,311  demand Rs 11,73,608  one route (156 visits) contribution Rs   71,916  anchor Hasthinapuram (main)
+  B-R1   B   8 localities  cases   653  blend Rs   1,525  demand Rs  9,96,437  one route (156 visits) contribution Rs 1,05,300  anchor Navalur
+  B-R6   B   5 localities  cases   621  blend Rs   1,557  demand Rs  9,66,118  one route (156 visits) contribution Rs 1,10,292  anchor Madipakkam
+  A-R2   A   6 localities  cases   593  blend Rs   1,306  demand Rs  7,74,850  one route (156 visits) contribution Rs   71,136  anchor Mangadu Town (Raghunathapuram and Janani Nagar)
+  B-R3   B   8 localities  cases   344  blend Rs   1,500  demand Rs  5,16,600  one route (156 visits) contribution Rs 1,01,400  anchor Sholinganallur
+  B-R2   B   8 localities  cases   326  blend Rs   1,384  demand Rs  4,51,045  one route (156 visits) contribution Rs   83,304  anchor Thazhuthendur
+
+clusters                15

@@ -1,0 +1,35 @@
+REPAIR.md is executed. All three defects are fixed, all five sanity bands pass, and the three documents are written.
+
+## Zone totals
+
+| | |
+|---|---|
+| Zone household total | **147,113** (ZONE_HH pool of the 15 wards the 50 localities sit in; the 50 figures sum to it exactly, +0.0001%) |
+| Cases a month | **32,172** |
+| Pet-owning households | 25,440 (17.29%) · animals 34,349 (7,318 licensed / 27,025 unlicensed) |
+| Our-mix revenue potential | Rs 4.67 crore/month (market mix at same volume: Rs 3.03 crore) |
+| Verdicts | **46 GO, 4 HOLD, 0 NO-GO** |
+
+## Top five by our-mix monthly revenue (rank = prize, not score)
+
+| # | Locality | Our Rs/mo | Cases/mo | Households | Price | Margin | Sat | Ops |
+|---|---|---|---|---|---|---|---|---|
+| 1 | Thiruvanmiyur V.O.C. Street | 25,87,188 | 1,748 | 7,492 | Rs 1,480 | Rs 630 | 63 | 8 |
+| 2 | Thiruvanmiyur | 25,02,900 | 1,669 | 7,151 | Rs 1,500 | Rs 650 | 63 | 8 |
+| 3 | Thiruvanmiyur Indira Nagar | 21,56,731 | 1,349 | 5,221 | Rs 1,599 | Rs 749 | 62 | 8 |
+| 4 | Perungudi Bethel Nagar | 21,36,816 | 1,349 | 5,222 | Rs 1,584 | Rs 734 | 54 | 6 |
+| 5 | Thiruvanmiyur Sriram Nagar | 18,33,569 | 1,414 | 6,924 | Rs 1,297 | Rs 447 | 58 | 8 |
+
+## Sanity bands — 5 of 5 pass
+
+- **PASS** Band 1 (300–40,000 households): min 340 (R.M.Z. Ecoworld), max 7,492 (Thiruvanmiyur V.O.C. Street)
+- **PASS** Band 2 (zone total within 10% of ZONE_HH): 147,113 vs 147,113
+- **PASS** Band 3 (pet-owning households 15–30%): 17.29% zone-wide
+- **PASS** Band 4 (cases/household 0.05–0.25): 0.2187 zone-wide
+- **PASS** Band 5 (no zero pet-owning households): smallest is 340-household R.M.Z. Ecoworld
+
+Bands 1 and 3 needed model fixes, not band fixes, as instructed. Band 1 needed a minimum built weight of 3 (one locality affected — R.M.Z. Ecoworld has no OSM apartment or residential feature within 4 km; on the bare `+1` rule it would have got 114 households). Band 3 could not be reached by the weight formula at all: the first-pass animal rates imply only ~78,000 city dogs, contradicting the GCC's own 2,00,000-dog campaign target and the one-lakh-microchipped statement, so the tier-C rates were rescaled ×2.4946 and licence penetration re-derived to 21.31% so the same base still reconciles to the spine's 68,736 active licences. That is documented in MODEL.md §3.1.
+
+Two other deviations I made, both flagged: ward 180 was outside the script's 181–200 filter (it holds 3 localities), and the zone-wide allocation conserves the zone pool but not individual ward pools — MODEL.md §2.6 and the dataset caveats state this plainly.
+
+Deliverables: [localities.json](C:\Users\aswat\Downloads\Projects\mobile-vet-report\research\zone-b\localities.json) · [SOURCES.md](C:\Users\aswat\Downloads\Projects\mobile-vet-report\research\zone-b\SOURCES.md) · [MODEL.md](C:\Users\aswat\Downloads\Projects\mobile-vet-report\research\zone-b\MODEL.md) · [ANALYSIS.md](C:\Users\aswat\Downloads\Projects\mobile-vet-report\research\zone-b\ANALYSIS.md) · fixed script [build_localities.py](C:\Users\aswat\Downloads\Projects\mobile-vet-report\research\zone-b\_work\build_localities.py), with `_work/` left in place plus `sanity_bands.py`, `validate_dataset.py` (schema + cross-field arithmetic: passes, one observation that cluster B-R4 has 10 localities against the brief's 3–8 rule, inherited and left alone per the "do not rebuild route clusters" instruction).

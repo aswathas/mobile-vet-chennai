@@ -1,0 +1,794 @@
+{
+  "zone": "B",
+  "zone_name": "OMR and ECR corridor",
+  "hub": {
+    "name": "Sholinganallur junction",
+    "lat": 12.901,
+    "lon": 80.2278,
+    "rationale": "fixture"
+  },
+  "localities": [
+    {
+      "id": "B01",
+      "name": "Sholinganallur",
+      "aliases": [],
+      "ward": "Sholinganallur",
+      "assembly_constituency": "Sholinganallur",
+      "pin_codes": [
+        "600117"
+      ],
+      "lat": 12.901,
+      "lon": 80.2278,
+      "locality_type": "apartment-cluster",
+      "travel_km_to_hub": 2.6,
+      "travel_min_to_hub": 12,
+      "route_cluster": "B-R1",
+      "population": {
+        "households": 21000,
+        "tier": "B",
+        "basis": "fixture"
+      },
+      "pet_base": {
+        "pet_households": 5460,
+        "dogs": 4477,
+        "cats": 983,
+        "other_pets": 0,
+        "licensed_pets": 3877,
+        "unlicensed_pets": 1583,
+        "license_penetration_pct": 71,
+        "tier": "C",
+        "basis": "fixture"
+      },
+      "demand": {
+        "cases_per_month_total": 812,
+        "cases_per_week_avg": 187.5,
+        "peak_cases_per_day": 75,
+        "peak_cover_definition": "fixture",
+        "tier": "C",
+        "basis": "fixture"
+      },
+      "seasonality": {
+        "index": {
+          "Jan": 130.3,
+          "Feb": 135,
+          "Mar": 130.3,
+          "Apr": 117.5,
+          "May": 100,
+          "Jun": 82.5,
+          "Jul": 69.7,
+          "Aug": 65,
+          "Sep": 69.7,
+          "Oct": 82.5,
+          "Nov": 100,
+          "Dec": 117.5
+        },
+        "basis": "fixture"
+      },
+      "weekday": {
+        "Mon": 0.1333,
+        "Tue": 0.1333,
+        "Wed": 0.1333,
+        "Thu": 0.1333,
+        "Fri": 0.14,
+        "Sat": 0.1667,
+        "Sun": 0.16
+      },
+      "weekend_uplift_pct": 25,
+      "hour_curve": {
+        "10": 0.116105,
+        "11": 0.162038,
+        "12": 0.181081,
+        "13": 0.162038,
+        "14": 0.116105,
+        "15": 0.066616,
+        "16": 0.030605,
+        "17": 0.011259,
+        "18": 0.003317,
+        "19": 0.009836,
+        "20": 0.009202,
+        "21": 0.009076,
+        "22": 0.009057,
+        "23": 0.000181,
+        "00": 0.000181,
+        "01": 0.000181,
+        "02": 0.000181,
+        "03": 0.000181,
+        "04": 0.000181,
+        "05": 0.000782,
+        "06": 0.003317,
+        "07": 0.011259,
+        "08": 0.030605,
+        "09": 0.066616
+      },
+      "peak_window": {
+        "start": "10:00",
+        "end": "13:00"
+      },
+      "price": {
+        "market_mix": {
+          "avg_visit_price": 860,
+          "service_lines": [
+            {
+              "line": "Home consultation",
+              "price": 559,
+              "share_pct": 62
+            },
+            {
+              "line": "Extended check-up",
+              "price": 1290,
+              "share_pct": 20
+            },
+            {
+              "line": "Vaccination at home",
+              "price": 774,
+              "share_pct": 12
+            },
+            {
+              "line": "End of life",
+              "price": 6800,
+              "share_pct": 2
+            }
+          ],
+          "monthly_spend_per_customer": 1634,
+          "tier": "C",
+          "basis": "fixture"
+        },
+        "our_mix": {
+          "avg_visit_price": 1199,
+          "blended_price": 1199,
+          "service_lines": [
+            {
+              "line": "Chronic monitoring",
+              "price": 1199,
+              "share_pct": 34
+            },
+            {
+              "line": "Senior wellness bundle",
+              "price": 1999,
+              "share_pct": 18
+            },
+            {
+              "line": "Extended consultation",
+              "price": 1699,
+              "share_pct": 28
+            },
+            {
+              "line": "Licence compliance bundle",
+              "price": 899,
+              "share_pct": 14
+            },
+            {
+              "line": "End of life",
+              "price": 6800,
+              "share_pct": 2
+            },
+            {
+              "line": "General consultation",
+              "price": 699,
+              "share_pct": 4
+            }
+          ],
+          "monthly_spend_per_customer": 3117,
+          "tier": "C",
+          "basis": "fixture"
+        }
+      },
+      "economics": {
+        "market_mix": {
+          "monthly_revenue_potential": 432958,
+          "revenue_per_visit": 860,
+          "revenue_per_weekday": {
+            "Mon": 14432,
+            "Tue": 14432,
+            "Wed": 14432,
+            "Thu": 14432,
+            "Fri": 14432,
+            "Sat": 14432,
+            "Sun": 14432
+          },
+          "revenue_per_route_hour": 16652
+        },
+        "our_mix": {
+          "monthly_revenue_potential": 405262,
+          "revenue_per_visit": 1199,
+          "revenue_per_weekday": {
+            "Mon": 13509,
+            "Tue": 13509,
+            "Wed": 13509,
+            "Thu": 13509,
+            "Fri": 13509,
+            "Sat": 13509,
+            "Sun": 13509
+          },
+          "revenue_per_route_hour": 15587
+        },
+        "serviceable_ceiling": {
+          "one_route": {
+            "cases_per_month": 156,
+            "monthly_revenue": 187044,
+            "contribution": 54444
+          },
+          "two_route": {
+            "cases_per_month": 312,
+            "monthly_revenue": 374088,
+            "contribution": 108888
+          }
+        },
+        "cost_per_visit_clustered": 850,
+        "blended_floor": 1100
+      },
+      "competition": {
+        "competitor_count": 11,
+        "saturation_index": 74,
+        "named": [
+          {
+            "name": "Little Angels Pet Clinic",
+            "type": "clinic-home-arm",
+            "price_observed": 299,
+            "rating": 4.2,
+            "reviews": 180,
+            "url": "https://www.littleangelspetclinic.com/vet-home-visit-chennai.html",
+            "tier": "A"
+          },
+          {
+            "name": "Vetic",
+            "type": "clinic-home-arm",
+            "price_observed": 399,
+            "rating": 4.1,
+            "reviews": 90,
+            "url": "https://vetic.in/vet-at-home",
+            "tier": "A"
+          }
+        ]
+      },
+      "cluster_assets": {
+        "apartment_complexes": 55,
+        "gated_communities": 19,
+        "pet_friendly_associations": 8,
+        "notable_clusters": [
+          "Sholinganallur block 3"
+        ],
+        "tier": "C",
+        "basis": "fixture"
+      },
+      "travel": {
+        "inter_locality_travel_min": 8,
+        "services_per_trip_possible": 5,
+        "scattered_or_clustered": "clustered",
+        "notes": "fixture"
+      },
+      "verdict": {
+        "status": "GO",
+        "reason": "Rs 1199 blended against a Rs 850 cost, 11 competitors on the ground.",
+        "rank": 1,
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "B02",
+      "name": "Navalur",
+      "aliases": [],
+      "ward": "Navalur",
+      "assembly_constituency": "Sholinganallur",
+      "pin_codes": [
+        "600130"
+      ],
+      "lat": 12.8437,
+      "lon": 80.2271,
+      "locality_type": "apartment-cluster",
+      "travel_km_to_hub": 5.4,
+      "travel_min_to_hub": 22,
+      "route_cluster": "B-R1",
+      "population": {
+        "households": 17600,
+        "tier": "B",
+        "basis": "fixture"
+      },
+      "pet_base": {
+        "pet_households": 4224,
+        "dogs": 3464,
+        "cats": 760,
+        "other_pets": 0,
+        "licensed_pets": 2872,
+        "unlicensed_pets": 1352,
+        "license_penetration_pct": 68,
+        "tier": "C",
+        "basis": "fixture"
+      },
+      "demand": {
+        "cases_per_month_total": 704,
+        "cases_per_week_avg": 162.6,
+        "peak_cases_per_day": 65,
+        "peak_cover_definition": "fixture",
+        "tier": "C",
+        "basis": "fixture"
+      },
+      "seasonality": {
+        "index": {
+          "Jan": 130.3,
+          "Feb": 135,
+          "Mar": 130.3,
+          "Apr": 117.5,
+          "May": 100,
+          "Jun": 82.5,
+          "Jul": 69.7,
+          "Aug": 65,
+          "Sep": 69.7,
+          "Oct": 82.5,
+          "Nov": 100,
+          "Dec": 117.5
+        },
+        "basis": "fixture"
+      },
+      "weekday": {
+        "Mon": 0.1337,
+        "Tue": 0.1337,
+        "Wed": 0.1337,
+        "Thu": 0.1337,
+        "Fri": 0.1403,
+        "Sat": 0.1657,
+        "Sun": 0.1593
+      },
+      "weekend_uplift_pct": 24,
+      "hour_curve": {
+        "10": 0.116105,
+        "11": 0.162038,
+        "12": 0.181081,
+        "13": 0.162038,
+        "14": 0.116105,
+        "15": 0.066616,
+        "16": 0.030605,
+        "17": 0.011259,
+        "18": 0.003317,
+        "19": 0.009836,
+        "20": 0.009202,
+        "21": 0.009076,
+        "22": 0.009057,
+        "23": 0.000181,
+        "00": 0.000181,
+        "01": 0.000181,
+        "02": 0.000181,
+        "03": 0.000181,
+        "04": 0.000181,
+        "05": 0.000782,
+        "06": 0.003317,
+        "07": 0.011259,
+        "08": 0.030605,
+        "09": 0.066616
+      },
+      "peak_window": {
+        "start": "10:00",
+        "end": "13:00"
+      },
+      "price": {
+        "market_mix": {
+          "avg_visit_price": 840,
+          "service_lines": [
+            {
+              "line": "Home consultation",
+              "price": 546,
+              "share_pct": 62
+            },
+            {
+              "line": "Extended check-up",
+              "price": 1260,
+              "share_pct": 20
+            },
+            {
+              "line": "Vaccination at home",
+              "price": 756,
+              "share_pct": 12
+            },
+            {
+              "line": "End of life",
+              "price": 6800,
+              "share_pct": 2
+            }
+          ],
+          "monthly_spend_per_customer": 1596,
+          "tier": "C",
+          "basis": "fixture"
+        },
+        "our_mix": {
+          "avg_visit_price": 1199,
+          "blended_price": 1199,
+          "service_lines": [
+            {
+              "line": "Chronic monitoring",
+              "price": 1199,
+              "share_pct": 34
+            },
+            {
+              "line": "Senior wellness bundle",
+              "price": 1999,
+              "share_pct": 18
+            },
+            {
+              "line": "Extended consultation",
+              "price": 1699,
+              "share_pct": 28
+            },
+            {
+              "line": "Licence compliance bundle",
+              "price": 899,
+              "share_pct": 14
+            },
+            {
+              "line": "End of life",
+              "price": 6800,
+              "share_pct": 2
+            },
+            {
+              "line": "General consultation",
+              "price": 699,
+              "share_pct": 4
+            }
+          ],
+          "monthly_spend_per_customer": 3117,
+          "tier": "C",
+          "basis": "fixture"
+        }
+      },
+      "economics": {
+        "market_mix": {
+          "monthly_revenue_potential": 366643,
+          "revenue_per_visit": 840,
+          "revenue_per_weekday": {
+            "Mon": 12221,
+            "Tue": 12221,
+            "Wed": 12221,
+            "Thu": 12221,
+            "Fri": 12221,
+            "Sat": 12221,
+            "Sun": 12221
+          },
+          "revenue_per_route_hour": 14102
+        },
+        "our_mix": {
+          "monthly_revenue_potential": 351307,
+          "revenue_per_visit": 1199,
+          "revenue_per_weekday": {
+            "Mon": 11710,
+            "Tue": 11710,
+            "Wed": 11710,
+            "Thu": 11710,
+            "Fri": 11710,
+            "Sat": 11710,
+            "Sun": 11710
+          },
+          "revenue_per_route_hour": 13512
+        },
+        "serviceable_ceiling": {
+          "one_route": {
+            "cases_per_month": 156,
+            "monthly_revenue": 187044,
+            "contribution": 54444
+          },
+          "two_route": {
+            "cases_per_month": 312,
+            "monthly_revenue": 374088,
+            "contribution": 108888
+          }
+        },
+        "cost_per_visit_clustered": 850,
+        "blended_floor": 1100
+      },
+      "competition": {
+        "competitor_count": 9,
+        "saturation_index": 70,
+        "named": [
+          {
+            "name": "Little Angels Pet Clinic",
+            "type": "clinic-home-arm",
+            "price_observed": 299,
+            "rating": 4.2,
+            "reviews": 180,
+            "url": "https://www.littleangelspetclinic.com/vet-home-visit-chennai.html",
+            "tier": "A"
+          },
+          {
+            "name": "Vetic",
+            "type": "clinic-home-arm",
+            "price_observed": 399,
+            "rating": 4.1,
+            "reviews": 90,
+            "url": "https://vetic.in/vet-at-home",
+            "tier": "A"
+          }
+        ]
+      },
+      "cluster_assets": {
+        "apartment_complexes": 48,
+        "gated_communities": 16,
+        "pet_friendly_associations": 7,
+        "notable_clusters": [
+          "Navalur block 3"
+        ],
+        "tier": "C",
+        "basis": "fixture"
+      },
+      "travel": {
+        "inter_locality_travel_min": 8,
+        "services_per_trip_possible": 5,
+        "scattered_or_clustered": "clustered",
+        "notes": "fixture"
+      },
+      "verdict": {
+        "status": "GO",
+        "reason": "Rs 1199 blended against a Rs 850 cost, 9 competitors on the ground.",
+        "rank": 2,
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "B03",
+      "name": "Thiruvanmiyur",
+      "aliases": [],
+      "ward": "Thiruvanmiyur",
+      "assembly_constituency": "Tiruvanmiyur",
+      "pin_codes": [
+        "600041"
+      ],
+      "lat": 12.9831,
+      "lon": 80.2594,
+      "locality_type": "mixed",
+      "travel_km_to_hub": 9.2,
+      "travel_min_to_hub": 34,
+      "route_cluster": "B-R2",
+      "population": {
+        "households": 15900,
+        "tier": "B",
+        "basis": "fixture"
+      },
+      "pet_base": {
+        "pet_households": 3180,
+        "dogs": 2608,
+        "cats": 572,
+        "other_pets": 0,
+        "licensed_pets": 2035,
+        "unlicensed_pets": 1145,
+        "license_penetration_pct": 64,
+        "tier": "C",
+        "basis": "fixture"
+      },
+      "demand": {
+        "cases_per_month_total": 496,
+        "cases_per_week_avg": 114.5,
+        "peak_cases_per_day": 46,
+        "peak_cover_definition": "fixture",
+        "tier": "C",
+        "basis": "fixture"
+      },
+      "seasonality": {
+        "index": {
+          "Jan": 130.3,
+          "Feb": 135,
+          "Mar": 130.3,
+          "Apr": 117.5,
+          "May": 100,
+          "Jun": 82.5,
+          "Jul": 69.7,
+          "Aug": 65,
+          "Sep": 69.7,
+          "Oct": 82.5,
+          "Nov": 100,
+          "Dec": 117.5
+        },
+        "basis": "fixture"
+      },
+      "weekday": {
+        "Mon": 0.1353,
+        "Tue": 0.1353,
+        "Wed": 0.1353,
+        "Thu": 0.1353,
+        "Fri": 0.142,
+        "Sat": 0.161,
+        "Sun": 0.1558
+      },
+      "weekend_uplift_pct": 19,
+      "hour_curve": {
+        "10": 0.162067,
+        "11": 0.181113,
+        "12": 0.162067,
+        "13": 0.116126,
+        "14": 0.066628,
+        "15": 0.030611,
+        "16": 0.011261,
+        "17": 0.003317,
+        "18": 0.000782,
+        "19": 0.009203,
+        "20": 0.009078,
+        "21": 0.009058,
+        "22": 0.009056,
+        "23": 0.000181,
+        "00": 0.000181,
+        "01": 0.000181,
+        "02": 0.000181,
+        "03": 0.000181,
+        "04": 0.000782,
+        "05": 0.003317,
+        "06": 0.011261,
+        "07": 0.030611,
+        "08": 0.066628,
+        "09": 0.116126
+      },
+      "peak_window": {
+        "start": "10:00",
+        "end": "13:00"
+      },
+      "price": {
+        "market_mix": {
+          "avg_visit_price": 810,
+          "service_lines": [
+            {
+              "line": "Home consultation",
+              "price": 527,
+              "share_pct": 62
+            },
+            {
+              "line": "Extended check-up",
+              "price": 1215,
+              "share_pct": 20
+            },
+            {
+              "line": "Vaccination at home",
+              "price": 729,
+              "share_pct": 12
+            },
+            {
+              "line": "End of life",
+              "price": 6800,
+              "share_pct": 2
+            }
+          ],
+          "monthly_spend_per_customer": 1539,
+          "tier": "C",
+          "basis": "fixture"
+        },
+        "our_mix": {
+          "avg_visit_price": 1199,
+          "blended_price": 1199,
+          "service_lines": [
+            {
+              "line": "Chronic monitoring",
+              "price": 1199,
+              "share_pct": 34
+            },
+            {
+              "line": "Senior wellness bundle",
+              "price": 1999,
+              "share_pct": 18
+            },
+            {
+              "line": "Extended consultation",
+              "price": 1699,
+              "share_pct": 28
+            },
+            {
+              "line": "Licence compliance bundle",
+              "price": 899,
+              "share_pct": 14
+            },
+            {
+              "line": "End of life",
+              "price": 6800,
+              "share_pct": 2
+            },
+            {
+              "line": "General consultation",
+              "price": 699,
+              "share_pct": 4
+            }
+          ],
+          "monthly_spend_per_customer": 3117,
+          "tier": "C",
+          "basis": "fixture"
+        }
+      },
+      "economics": {
+        "market_mix": {
+          "monthly_revenue_potential": 249091,
+          "revenue_per_visit": 810,
+          "revenue_per_weekday": {
+            "Mon": 8303,
+            "Tue": 8303,
+            "Wed": 8303,
+            "Thu": 8303,
+            "Fri": 8303,
+            "Sat": 8303,
+            "Sun": 8303
+          },
+          "revenue_per_route_hour": 9580
+        },
+        "our_mix": {
+          "monthly_revenue_potential": 248193,
+          "revenue_per_visit": 1199,
+          "revenue_per_weekday": {
+            "Mon": 8273,
+            "Tue": 8273,
+            "Wed": 8273,
+            "Thu": 8273,
+            "Fri": 8273,
+            "Sat": 8273,
+            "Sun": 8273
+          },
+          "revenue_per_route_hour": 9546
+        },
+        "serviceable_ceiling": {
+          "one_route": {
+            "cases_per_month": 156,
+            "monthly_revenue": 187044,
+            "contribution": 54444
+          },
+          "two_route": {
+            "cases_per_month": 312,
+            "monthly_revenue": 374088,
+            "contribution": 108888
+          }
+        },
+        "cost_per_visit_clustered": 850,
+        "blended_floor": 1100
+      },
+      "competition": {
+        "competitor_count": 8,
+        "saturation_index": 66,
+        "named": [
+          {
+            "name": "Little Angels Pet Clinic",
+            "type": "clinic-home-arm",
+            "price_observed": 299,
+            "rating": 4.2,
+            "reviews": 180,
+            "url": "https://www.littleangelspetclinic.com/vet-home-visit-chennai.html",
+            "tier": "A"
+          },
+          {
+            "name": "Vetic",
+            "type": "clinic-home-arm",
+            "price_observed": 399,
+            "rating": 4.1,
+            "reviews": 90,
+            "url": "https://vetic.in/vet-at-home",
+            "tier": "A"
+          }
+        ]
+      },
+      "cluster_assets": {
+        "apartment_complexes": 28,
+        "gated_communities": 9,
+        "pet_friendly_associations": 4,
+        "notable_clusters": [
+          "Thiruvanmiyur block 3"
+        ],
+        "tier": "C",
+        "basis": "fixture"
+      },
+      "travel": {
+        "inter_locality_travel_min": 8,
+        "services_per_trip_possible": 5,
+        "scattered_or_clustered": "clustered",
+        "notes": "fixture"
+      },
+      "verdict": {
+        "status": "HOLD",
+        "reason": "Rs 1199 blended against a Rs 850 cost, 8 competitors on the ground.",
+        "rank": 3,
+        "confidence": "medium"
+      }
+    }
+  ],
+  "zone_summary": {
+    "locality_count": 3,
+    "total_households": 54500,
+    "total_pet_households": 12320,
+    "total_cases_per_month": 2012,
+    "our_mix_monthly_revenue_potential": 578000,
+    "top_go_localities": [],
+    "avoid_localities": [],
+    "route_clusters": [],
+    "staffing_by_hour": [],
+    "key_caveats": [
+      "fixture"
+    ]
+  }
+}

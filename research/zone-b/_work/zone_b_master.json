@@ -1,0 +1,1050 @@
+[
+ {
+  "id": "B01",
+  "name": "Navalur",
+  "aliases": [
+   "Navallur",
+   "Navalur Town",
+   "Navalur Junction"
+  ],
+  "ward": "198",
+  "ac": "Sholinganallur (AC 27)",
+  "pins": [
+   "600097"
+  ],
+  "lat": 12.84559,
+  "lon": 80.22722,
+  "geo_tier": "A",
+  "ltype": "apartment-cluster",
+  "cluster": "B-R1",
+  "built": 1.25,
+  "aff": 0.92,
+  "notes": "OSM place node 'Navalur' (suburb) at 12.84559,80.22722 plus 'Navalur' bus stop at 12.84458,80.22646; sits on the OSM-mapped Rajiv Gandhi Salai. GCC ward 198 street list carries Navalur-area colonies (Akkarai Village, Rajiv Gandhi Nagar, Kudimiyandi Thoppu, Sunrise Avenue, Copper Beach Road, East Coast Road)."
+ },
+ {
+  "id": "B02",
+  "name": "Navalur M.G.R. Nagar",
+  "aliases": [
+   "Kudimiyandi Thoppu M.G.R. Nagar",
+   "MGR Nagar Navalur"
+  ],
+  "ward": "198",
+  "ac": "Sholinganallur (AC 27)",
+  "pins": [
+   "600097"
+  ],
+  "lat": 12.843,
+  "lon": 80.22827,
+  "geo_tier": "B",
+  "ltype": "residential",
+  "cluster": "B-R1",
+  "built": 0.85,
+  "aff": 0.74,
+  "notes": "GCC ward 198 lists 7 Kudimiyandi Thoppu M.G.R. Nagar streets (tier A street count). Position placed on the OSM OMR spine at the Navalur chainage, 130 m east."
+ },
+ {
+  "id": "B03",
+  "name": "Navalur Rajiv Gandhi Nagar",
+  "aliases": [
+   "Rajiv Gandhi Nagar Navalur",
+   "R.G. Nagar Navalur"
+  ],
+  "ward": "198",
+  "ac": "Sholinganallur (AC 27)",
+  "pins": [
+   "600097"
+  ],
+  "lat": 12.8487,
+  "lon": 80.22868,
+  "geo_tier": "B",
+  "ltype": "apartment-cluster",
+  "cluster": "B-R1",
+  "built": 1.15,
+  "aff": 0.82,
+  "notes": "GCC ward 198 lists 6 Rajiv Gandhi Nagar streets incl. main road and Mayana Pathai (tier A). Position placed on the OSM OMR spine at the Navalur chainage, 240 m east."
+ },
+ {
+  "id": "B04",
+  "name": "Akkarai",
+  "aliases": [
+   "Akkarai Village",
+   "Akkarai Navalur"
+  ],
+  "ward": "198",
+  "ac": "Sholinganallur (AC 27)",
+  "pins": [
+   "600097"
+  ],
+  "lat": 12.838,
+  "lon": 80.23956,
+  "geo_tier": "B",
+  "ltype": "residential",
+  "cluster": "B-R1",
+  "built": 0.8,
+  "aff": 0.7,
+  "notes": "GCC ward 198 lists 7 Akkarai Village / Akkarai numbered streets (tier A). Position placed on the OSM East Coast Road spine 2.2 km south-west of the Navalur chainage."
+ },
+ {
+  "id": "B05",
+  "name": "Navalur Annai Indiranagar",
+  "aliases": [
+   "Anna Nagar Navalur",
+   "Indira Nagar Navalur"
+  ],
+  "ward": "195",
+  "ac": "Sholinganallur (AC 27)",
+  "pins": [
+   "600097"
+  ],
+  "lat": 12.844,
+  "lon": 80.23442,
+  "geo_tier": "B",
+  "ltype": "residential",
+  "cluster": "B-R1",
+  "built": 0.8,
+  "aff": 0.72,
+  "notes": "GCC ward 195 lists Annai Indiranagar 1st-3rd cross streets and main road (tier A). Position placed on the OSM OMR spine at the Navalur chainage, 820 m east (towards ECR)."
+ },
+ {
+  "id": "B06",
+  "name": "Navalur V.G.P. Avenue",
+  "aliases": [
+   "VGP Avenue Navalur",
+   "V.G.P Avenue"
+  ],
+  "ward": "195",
+  "ac": "Sholinganallur (AC 27)",
+  "pins": [
+   "600097"
+  ],
+  "lat": 12.847,
+  "lon": 80.236,
+  "geo_tier": "B",
+  "ltype": "apartment-cluster",
+  "cluster": "B-R1",
+  "built": 1.3,
+  "aff": 0.95,
+  "notes": "GCC ward 195 lists 6 V.G.P. Avenue streets (tier A). Position placed on the OSM OMR spine at the Navalur chainage, 1.05 km east."
+ },
+ {
+  "id": "B07",
+  "name": "Navalur Santham Avenue",
+  "aliases": [
+   "Santham Avenue Navalur",
+   "Royal Avenue Navalur"
+  ],
+  "ward": "195",
+  "ac": "Sholinganallur (AC 27)",
+  "pins": [
+   "600097"
+  ],
+  "lat": 12.8505,
+  "lon": 80.23646,
+  "geo_tier": "B",
+  "ltype": "apartment-cluster",
+  "cluster": "B-R1",
+  "built": 1.35,
+  "aff": 0.96,
+  "notes": "GCC ward 195 lists Santham Avenue, Royal Avenue 1st-2nd streets, Egret Park and Fords Avenue (tier A). Position placed on the OSM OMR spine, 1.1 km east."
+ },
+ {
+  "id": "B08",
+  "name": "Navalur Chandra Sekhar Avenue",
+  "aliases": [
+   "Chandrasekaran Avenue Navalur",
+   "Sowdeeswari Nagar"
+  ],
+  "ward": "195",
+  "ac": "Sholinganallur (AC 27)",
+  "pins": [
+   "600097"
+  ],
+  "lat": 12.8528,
+  "lon": 80.23264,
+  "geo_tier": "B",
+  "ltype": "residential",
+  "cluster": "B-R1",
+  "built": 0.75,
+  "aff": 0.68,
+  "notes": "GCC ward 195 lists 13 Chandrasekaran Avenue streets plus Sowdeeswari Nagar road and Kasdthuribal Nagar (tier A). Position placed on the OSM OMR spine, 690 m east."
+ },
+ {
+  "id": "B09",
+  "name": "Thazhuthendur",
+  "aliases": [
+   "Thazuthendur",
+   "Thazhuthendur Junction"
+  ],
+  "ward": "193",
+  "ac": "Sholinganallur (AC 27)",
+  "pins": [
+   "600117"
+  ],
+  "lat": 12.8688,
+  "lon": 80.22718,
+  "geo_tier": "B",
+  "ltype": "mixed",
+  "cluster": "B-R2",
+  "built": 0.95,
+  "aff": 0.72,
+  "notes": "Brief-named OMR anchor. No OSM node for the village; positioned on the OSM-mapped Rajiv Gandhi Salai spine at the chainage implied by the brief's OMR sequence Navalur -> Kandanchal -> Thazhuthendur -> Siruthai -> Sholinganallur."
+ },
+ {
+  "id": "B10",
+  "name": "Kandanchal",
+  "aliases": [
+   "Kandanchal OMR",
+   "Kandanchal Junction"
+  ],
+  "ward": "193",
+  "ac": "Sholinganallur (AC 27)",
+  "pins": [
+   "600117"
+  ],
+  "lat": 12.8605,
+  "lon": 80.22773,
+  "geo_tier": "B",
+  "ltype": "mixed",
+  "cluster": "B-R2",
+  "built": 1.0,
+  "aff": 0.75,
+  "notes": "Brief-named OMR anchor. Positioned on the OSM Rajiv Gandhi Salai spine at the chainage implied by the brief's OMR sequence; commercial ribbon along OMR."
+ },
+ {
+  "id": "B11",
+  "name": "Siruthai",
+  "aliases": [
+   "Siruthai OMR",
+   "Siruthai Junction"
+  ],
+  "ward": "197",
+  "ac": "Sholinganallur (AC 27)",
+  "pins": [
+   "600119"
+  ],
+  "lat": 12.877,
+  "lon": 80.22642,
+  "geo_tier": "B",
+  "ltype": "mixed",
+  "cluster": "B-R2",
+  "built": 0.9,
+  "aff": 0.7,
+  "notes": "Brief-named OMR anchor. Positioned on the OSM Rajiv Gandhi Salai spine at the chainage implied by the brief's OMR sequence."
+ },
+ {
+  "id": "B12",
+  "name": "Semmancheri",
+  "aliases": [
+   "Semmancheri OMR"
+  ],
+  "ward": "195",
+  "ac": "Sholinganallur (AC 27)",
+  "pins": [
+   "600097"
+  ],
+  "lat": 12.88032,
+  "lon": 80.22124,
+  "geo_tier": "A",
+  "ltype": "mixed",
+  "cluster": "B-R2",
+  "built": 1.1,
+  "aff": 0.8,
+  "notes": "Nominatim 'Semmancheri metro depot (u/c), Zone 15 Sholinganallur' at 12.88032,80.22124."
+ },
+ {
+  "id": "B13",
+  "name": "Poothapedi",
+  "aliases": [
+   "Poothapedi Siruthai"
+  ],
+  "ward": "197",
+  "ac": "Sholinganallur (AC 27)",
+  "pins": [
+   "600119"
+  ],
+  "lat": 12.8815,
+  "lon": 80.22256,
+  "geo_tier": "B",
+  "ltype": "residential",
+  "cluster": "B-R2",
+  "built": 0.7,
+  "aff": 0.62,
+  "notes": "Residential village abutting the Siruthai OMR junction. No OSM node; positioned on the OSM OMR spine offset 490 m inland (west)."
+ },
+ {
+  "id": "B14",
+  "name": "Kovilambedu",
+  "aliases": [
+   "Koyilambedu",
+   "Kovilambedu Sholinganallur"
+  ],
+  "ward": "194",
+  "ac": "Sholinganallur (AC 27)",
+  "pins": [
+   "600117"
+  ],
+  "lat": 12.869,
+  "lon": 80.21817,
+  "geo_tier": "B",
+  "ltype": "residential",
+  "cluster": "B-R2",
+  "built": 0.65,
+  "aff": 0.58,
+  "notes": "GCC ward 194 carries the Mettu Kuppam / PalLAvan Kudiruppu / M.R.G. Nagar street block that serves Kovilambedu (tier A street counts). Position placed on the OSM OMR spine offset 940 m inland (west)."
+ },
+ {
+  "id": "B15",
+  "name": "Mappedu",
+  "aliases": [
+   "Mappedu Village",
+   "Mappedu Vandalur"
+  ],
+  "ward": "200",
+  "ac": "Sholinganallur (AC 27)",
+  "pins": [
+   "600126"
+  ],
+  "lat": 12.88855,
+  "lon": 80.13753,
+  "geo_tier": "A",
+  "ltype": "residential",
+  "cluster": "B-R2",
+  "built": 0.75,
+  "aff": 0.55,
+  "notes": "OSM place node 'Mappedu, Chennai Metropolitan Area, Vandalur, Chengalpattu' at 12.88855,80.13753 (tier A). Brief-named anchor."
+ },
+ {
+  "id": "B16",
+  "name": "Egumudi",
+  "aliases": [
+   "Egumudi Village",
+   "Egumudi Sholinganallur"
+  ],
+  "ward": "200",
+  "ac": "Sholinganallur (AC 27)",
+  "pins": [
+   "600119"
+  ],
+  "lat": 12.9012,
+  "lon": 80.203,
+  "geo_tier": "B",
+  "ltype": "residential",
+  "cluster": "B-R2",
+  "built": 0.7,
+  "aff": 0.56,
+  "notes": "Brief-named anchor. No OSM node; positioned on the OSM Sholinganallur-Mappedu settlement axis at the chainage between the two OSM place nodes."
+ },
+ {
+  "id": "B17",
+  "name": "Sholinganallur",
+  "aliases": [
+   "Sozhanganallur",
+   "Sholinganallur Town",
+   "Sholinganallur Bazaar"
+  ],
+  "ward": "197",
+  "ac": "Sholinganallur (AC 27)",
+  "pins": [
+   "600097",
+   "600119"
+  ],
+  "lat": 12.89354,
+  "lon": 80.23206,
+  "geo_tier": "A",
+  "ltype": "mixed",
+  "cluster": "B-R3",
+  "built": 1.0,
+  "aff": 0.7,
+  "notes": "OSM place node 'Sholinganallur' at 12.89354,80.23206 (tier A). GCC ward 197 carries NKS Nagar, Kadumbadi Naicker/Amman Koil streets, Arignar Anna and Mahatma Gandhi streets (tier A). Brief-named anchor and candidate zone hub."
+ },
+ {
+  "id": "B18",
+  "name": "Sholinganallur Co-operative Nagar",
+  "aliases": [
+   "Sholinganallur Coop Nagar",
+   "Co-operative Nagar"
+  ],
+  "ward": "200",
+  "ac": "Sholinganallur (AC 27)",
+  "pins": [
+   "600097"
+  ],
+  "lat": 12.8975,
+  "lon": 80.22173,
+  "geo_tier": "B",
+  "ltype": "residential",
+  "cluster": "B-R3",
+  "built": 0.75,
+  "aff": 0.62,
+  "notes": "GCC ward 200 street list opens with SHOLINGANALLUR COOP NAGAR STREETS (tier A). Position placed on the OSM OMR spine, 660 m inland (west)."
+ },
+ {
+  "id": "B19",
+  "name": "Sholinganallur N.K.S. Nagar",
+  "aliases": [
+   "NKS Nagar",
+   "Kalaaimagal Nagar"
+  ],
+  "ward": "197",
+  "ac": "Sholinganallur (AC 27)",
+  "pins": [
+   "600097"
+  ],
+  "lat": 12.895,
+  "lon": 80.22411,
+  "geo_tier": "B",
+  "ltype": "residential",
+  "cluster": "B-R3",
+  "built": 0.8,
+  "aff": 0.6,
+  "notes": "GCC ward 197 lists NKS Nagar main street plus 3 cross streets and Kalaaimagal Nagar 1st-5th streets (tier A). Position placed on the OSM OMR spine, 380 m inland."
+ },
+ {
+  "id": "B20",
+  "name": "Kadumbadi",
+  "aliases": [
+   "Kadumbadi Amma Street",
+   "Kadumbadi Naicker Street"
+  ],
+  "ward": "197",
+  "ac": "Sholinganallur (AC 27)",
+  "pins": [
+   "600119"
+  ],
+  "lat": 13.00279,
+  "lon": 80.20581,
+  "geo_tier": "A",
+  "ltype": "residential",
+  "cluster": "B-R3",
+  "built": 0.85,
+  "aff": 0.62,
+  "notes": "Nominatim 'Kadumbadi Amma Street, Ward 160, Zone 12 Alandur' at 13.00279,80.20581 (tier A). GCC ward 197 also carries KADUMBADI AMMAN KOIL STREET and KADUMBADI NAICKAR STREET, so the toponym straddles wards 160 and 197."
+ },
+ {
+  "id": "B21",
+  "name": "E.L.C.O.T. Sholinganallur",
+  "aliases": [
+   "ELCOT",
+   "ELCOT aerospace",
+   "TNHB Sholinganallur 1500 Flats"
+  ],
+  "ward": "197",
+  "ac": "Sholinganallur (AC 27)",
+  "pins": [
+   "600119"
+  ],
+  "lat": 12.9087,
+  "lon": 80.21936,
+  "geo_tier": "A",
+  "ltype": "industrial",
+  "cluster": "B-R3",
+  "built": 0.95,
+  "aff": 0.85,
+  "notes": "Nominatim 'ELCOT, Ward 197, Zone 15 Sholinganallur' at 12.90870,80.21936 (tier A). OSM ward 197/198 area carries 'TNHB Sholinganallur 1500 Flats' and 'Infosys' (tier A)."
+ },
+ {
+  "id": "B22",
+  "name": "Infosys campus township, Sholinganallur",
+  "aliases": [
+   "Infosys OMR campus",
+   "Infosys Poompuhar"
+  ],
+  "ward": "198",
+  "ac": "Sholinganallur (AC 27)",
+  "pins": [
+   "600119"
+  ],
+  "lat": 12.89573,
+  "lon": 80.23384,
+  "geo_tier": "A",
+  "ltype": "industrial",
+  "cluster": "B-R3",
+  "built": 0.9,
+  "aff": 0.84,
+  "notes": "OSM named feature 'Infosys' inside the Sholinganallur ward block (tier A). Lat/lon is the OSM ward-198 feature centroid. Gated employee housing attached to the campus."
+ },
+ {
+  "id": "B23",
+  "name": "R.M.Z. Ecoworld, Thandalam",
+  "aliases": [
+   "RMZ Ecoworld",
+   "RMZ Galaxy",
+   "Thandalam"
+  ],
+  "ward": "195",
+  "ac": "Sholinganallur (AC 27)",
+  "pins": [
+   "600097"
+  ],
+  "lat": 13.00153,
+  "lon": 80.1182,
+  "geo_tier": "A",
+  "ltype": "industrial",
+  "cluster": "B-R3",
+  "built": 1.0,
+  "aff": 0.88,
+  "notes": "OSM place node 'Thandalam' at 13.00153,80.11820 (tier A). RMZ Ecoworld / RMZ Galaxy sit in Thandalam on the OMR SEZ belt."
+ },
+ {
+  "id": "B24",
+  "name": "Tidel Park / Rajiv Gandhi IT Expressway",
+  "aliases": [
+   "Tidel Park",
+   "TIDEL Park township"
+  ],
+  "ward": "180",
+  "ac": "Velachery (AC 26)",
+  "pins": [
+   "600042"
+  ],
+  "lat": 12.99113,
+  "lon": 80.25067,
+  "geo_tier": "A",
+  "ltype": "industrial",
+  "cluster": "B-R3",
+  "built": 1.1,
+  "aff": 0.96,
+  "notes": "Nominatim 'Tidel Park, Rajiv Gandhi IT Expressway, Ward 180, Zone 13 Adyar' at 12.99113,80.25067 (tier A). Sits on the OMR-ECR connector just north of Thiruvanmiyur, i.e. the Zone A / Zone B boundary seam; flagged in ANALYSIS.md."
+ },
+ {
+  "id": "B25",
+  "name": "Palavakkam",
+  "aliases": [
+   "Palavakkam Town",
+   "Paavakkam"
+  ],
+  "ward": "185",
+  "ac": "Velachery (AC 26)",
+  "pins": [
+   "600041"
+  ],
+  "lat": 12.95999,
+  "lon": 80.25603,
+  "geo_tier": "A",
+  "ltype": "mixed",
+  "cluster": "B-R4",
+  "built": 1.15,
+  "aff": 0.8,
+  "notes": "OSM place node 'Palavakkam' at 12.95999,80.25603 (tier A); OSM 'Paavakkam' residential polygon at 12.96160,80.25754; Nominatim 'Paavakkam, Ward 185, Zone 14 Perungudi'. Brief-named anchor."
+ },
+ {
+  "id": "B26",
+  "name": "Palavakkam Bharathi Nagar",
+  "aliases": [
+   "Bharathi Nagar Palavakkam"
+  ],
+  "ward": "185",
+  "ac": "Velachery (AC 26)",
+  "pins": [
+   "600041"
+  ],
+  "lat": 12.96531,
+  "lon": 80.20765,
+  "geo_tier": "A",
+  "ltype": "apartment-cluster",
+  "cluster": "B-R4",
+  "built": 1.1,
+  "aff": 0.78,
+  "notes": "OSM named ways 'Bharathi Nagar Main Road' and 'Bharathi nagar 2nd street' at 12.96531,80.20765 (tier A); Nominatim resolves the second street to Ward 185, Zone 14 Perungudi."
+ },
+ {
+  "id": "B27",
+  "name": "Palavakkam Palkalai Nagar",
+  "aliases": [
+   "Palkalai Nagar"
+  ],
+  "ward": "185",
+  "ac": "Velachery (AC 26)",
+  "pins": [
+   "600041"
+  ],
+  "lat": 12.9625,
+  "lon": 80.2361,
+  "geo_tier": "B",
+  "ltype": "residential",
+  "cluster": "B-R4",
+  "built": 0.7,
+  "aff": 0.58,
+  "notes": "GCC ward 185 carries 18 Palkalai Nagar streets plus 'PALLAI NAGAR' (tier A). Position placed on the OSM OMR spine offset 990 m inland (west)."
+ },
+ {
+  "id": "B28",
+  "name": "Palavakkam Ram Nagar",
+  "aliases": [
+   "Ram Nagar Palavakkam"
+  ],
+  "ward": "188",
+  "ac": "Velachery (AC 26)",
+  "pins": [
+   "600096"
+  ],
+  "lat": 12.96536,
+  "lon": 80.21181,
+  "geo_tier": "A",
+  "ltype": "residential",
+  "cluster": "B-R4",
+  "built": 0.8,
+  "aff": 0.64,
+  "notes": "OSM place node 'Ram Nagar' assigned to Ward 188 by OSM point-in-polygon (tier A)."
+ },
+ {
+  "id": "B29",
+  "name": "Enjambakkam",
+  "aliases": [
+   "Enjambakkam",
+   "Enjambakkam B V Nagar"
+  ],
+  "ward": "196",
+  "ac": "Velachery (AC 26)",
+  "pins": [
+   "600041"
+  ],
+  "lat": 12.9198,
+  "lon": 80.2511,
+  "geo_tier": "A",
+  "ltype": "mixed",
+  "cluster": "B-R4",
+  "built": 0.95,
+  "aff": 0.72,
+  "notes": "OSM 'East Coast Road' named way at 12.9198,80.2511, on the OSM ECR spine; GCC ward 196 street list is headed ENJAMBAKKAM - VETUVANKENI LINK ROAD and ENJAMBAKKAM MEENAVAR KUPPAM (tier A). Note: the GCC's 'Meenambakkam' pet clinic and ABC centre (Div 166) physically sit at B V Nagar, Nanganallur 600061 - the Enjambakkam B V Nagar pocket. 'Injambakkam' further south is OUTSIDE the zone and is excluded."
+ },
+ {
+  "id": "B30",
+  "name": "Enjambakkam V.G.P. Layout",
+  "aliases": [
+   "VGP Layout",
+   "V.G.P Layout Enjambakkam"
+  ],
+  "ward": "196",
+  "ac": "Velachery (AC 26)",
+  "pins": [
+   "600041"
+  ],
+  "lat": 12.9245,
+  "lon": 80.24812,
+  "geo_tier": "B",
+  "ltype": "apartment-cluster",
+  "cluster": "B-R4",
+  "built": 1.05,
+  "aff": 0.74,
+  "notes": "GCC ward 196 lists VGP LAYOUT 1 TO 9 STREET plus Shesathri Avenue, Pandal Nagar and Poompuhar Street (tier A). Position placed on the OSM ECR spine, 390 m inland."
+ },
+ {
+  "id": "B31",
+  "name": "Enjambakkam Bethel Nagar",
+  "aliases": [
+   "Bethel Nagar Enjambakkam"
+  ],
+  "ward": "196",
+  "ac": "Velachery (AC 26)",
+  "pins": [
+   "600041"
+  ],
+  "lat": 12.927,
+  "lon": 80.2471,
+  "geo_tier": "B",
+  "ltype": "apartment-cluster",
+  "cluster": "B-R4",
+  "built": 1.0,
+  "aff": 0.72,
+  "notes": "GCC ward 196 lists BETHEL NAGAR L and BETHEL NAGAR R (tier A). Position placed on the OSM ECR spine, 530 m inland (west)."
+ },
+ {
+  "id": "B32",
+  "name": "Enjambakkam Cholan Nagar",
+  "aliases": [
+   "Cholan Nagar",
+   "Hanumar Colony"
+  ],
+  "ward": "196",
+  "ac": "Velachery (AC 26)",
+  "pins": [
+   "600041"
+  ],
+  "lat": 12.915,
+  "lon": 80.24732,
+  "geo_tier": "B",
+  "ltype": "residential",
+  "cluster": "B-R4",
+  "built": 0.7,
+  "aff": 0.6,
+  "notes": "GCC ward 196 lists CHOLAN NAGAR, HANUMAR COLONY and TEACHER COLONY 1 TO 4 STREET (tier A). Position placed on the OSM ECR spine, 330 m inland."
+ },
+ {
+  "id": "B33",
+  "name": "Sungudi",
+  "aliases": [
+   "ECR Sungudi",
+   "Sungudi ECR"
+  ],
+  "ward": "196",
+  "ac": "Velachery (AC 26)",
+  "pins": [
+   "600041"
+  ],
+  "lat": 12.94,
+  "lon": 80.25193,
+  "geo_tier": "B",
+  "ltype": "residential",
+  "cluster": "B-R4",
+  "built": 0.75,
+  "aff": 0.64,
+  "notes": "Brief-named ECR anchor. No OSM node for Sungudi; positioned on the OSM East Coast Road spine between the Enjambakkam and Palavakkam chainages."
+ },
+ {
+  "id": "B34",
+  "name": "Sungudi East Coast Road",
+  "aliases": [
+   "ECR commercial belt Sungudi"
+  ],
+  "ward": "196",
+  "ac": "Velachery (AC 26)",
+  "pins": [
+   "600041"
+  ],
+  "lat": 12.9465,
+  "lon": 80.25329,
+  "geo_tier": "B",
+  "ltype": "commercial",
+  "cluster": "B-R4",
+  "built": 0.7,
+  "aff": 0.72,
+  "notes": "The ECR service strip inside the same Sungudi segment: hotels, clinics and the pavement trade that serves the ECR apartment belt. Position placed on the OSM ECR spine between Sungudi and Palavakkam."
+ },
+ {
+  "id": "B35",
+  "name": "Perungudi",
+  "aliases": [
+   "Perungudi Town",
+   "Perungudi OMR"
+  ],
+  "ward": "186",
+  "ac": "Velachery (AC 26)",
+  "pins": [
+   "600042",
+   "600096"
+  ],
+  "lat": 12.97102,
+  "lon": 80.24181,
+  "geo_tier": "A",
+  "ltype": "mixed",
+  "cluster": "B-R5",
+  "built": 1.1,
+  "aff": 0.82,
+  "notes": "OSM place node 'Perungudi' at 12.97102,80.24181 (tier A); Nominatim resolves it to Zone 14 Perungudi. GCC ward 186 carries OMR SALAI PERUNGUDI, Industrial Estate and Panchayat Office Road (tier A)."
+ },
+ {
+  "id": "B36",
+  "name": "Perungudi Bethel Nagar",
+  "aliases": [
+   "Bethel Nagar Perungudi",
+   "Bethel Matriculation"
+  ],
+  "ward": "186",
+  "ac": "Velachery (AC 26)",
+  "pins": [
+   "600042"
+  ],
+  "lat": 12.96303,
+  "lon": 80.23358,
+  "geo_tier": "A",
+  "ltype": "apartment-cluster",
+  "cluster": "B-R5",
+  "built": 1.05,
+  "aff": 0.76,
+  "notes": "OSM named ways 'Bethel Avenue Main Road', 'Bethel Nagar road', 'Bethel Matriculation hr sec school' at 12.96303,80.23358 (tier A)."
+ },
+ {
+  "id": "B37",
+  "name": "Perungudi Seevaram",
+  "aliases": [
+   "Seevaram",
+   "Soundarya Nagar"
+  ],
+  "ward": "186",
+  "ac": "Velachery (AC 26)",
+  "pins": [
+   "600042"
+  ],
+  "lat": 12.9655,
+  "lon": 80.2426,
+  "geo_tier": "B",
+  "ltype": "residential",
+  "cluster": "B-R5",
+  "built": 0.75,
+  "aff": 0.62,
+  "notes": "GCC ward 186 lists SEEVARAM, SOUNDARYA NAGAR, SELVAGANAPATHY and SENTHIL NAGAR (tier A). Position placed on the OSM OMR spine, 280 m inland."
+ },
+ {
+  "id": "B38",
+  "name": "Perungudi New India Colony",
+  "aliases": [
+   "New India Colony",
+   "Elim Nagar"
+  ],
+  "ward": "186",
+  "ac": "Velachery (AC 26)",
+  "pins": [
+   "600042"
+  ],
+  "lat": 12.968,
+  "lon": 80.2406,
+  "geo_tier": "B",
+  "ltype": "residential",
+  "cluster": "B-R5",
+  "built": 0.7,
+  "aff": 0.58,
+  "notes": "GCC ward 186 lists NEW INDIA COLONY (18 streets in the ward block) and ELIM NAGAR (tier A). Position placed on the OSM OMR spine, 490 m inland."
+ },
+ {
+  "id": "B39",
+  "name": "Perungudi Kurinji Nagar",
+  "aliases": [
+   "Kurinji Nagar",
+   "Thirumalai Nagar Perungudi"
+  ],
+  "ward": "186",
+  "ac": "Velachery (AC 26)",
+  "pins": [
+   "600042"
+  ],
+  "lat": 12.974,
+  "lon": 80.2411,
+  "geo_tier": "B",
+  "ltype": "residential",
+  "cluster": "B-R5",
+  "built": 0.75,
+  "aff": 0.6,
+  "notes": "GCC ward 186 lists KURINJI NAGAR and THIRUMALAI NAGAR (tier A). Position placed on the OSM OMR spine, 440 m inland."
+ },
+ {
+  "id": "B40",
+  "name": "Madipakkam",
+  "aliases": [
+   "Madipakkam Town",
+   "Madipakkam OMR side"
+  ],
+  "ward": "187",
+  "ac": "Madipakkam (AC 156)",
+  "pins": [
+   "600093"
+  ],
+  "lat": 12.96113,
+  "lon": 80.20013,
+  "geo_tier": "A",
+  "ltype": "apartment-cluster",
+  "cluster": "B-R6",
+  "built": 1.3,
+  "aff": 0.85,
+  "notes": "OSM place node 'Madipakkam, Zone 14 Perungudi' at 12.96113,80.20013 (tier A). GCC ward 187 lists MADIPAKKAM MAIN ROAD, Lake View, Park Squire and Sendhuram Colony (tier A). Only the OMR-side part of Madipakkam is in Zone B; the Velachery side is out."
+ },
+ {
+  "id": "B41",
+  "name": "Madipakkam Karthikeyapuram",
+  "aliases": [
+   "Karthikeyapuram"
+  ],
+  "ward": "187",
+  "ac": "Madipakkam (AC 156)",
+  "pins": [
+   "600093"
+  ],
+  "lat": 12.96259,
+  "lon": 80.19452,
+  "geo_tier": "A",
+  "ltype": "apartment-cluster",
+  "cluster": "B-R6",
+  "built": 1.2,
+  "aff": 0.8,
+  "notes": "OSM place node 'Karthikeyapuram' at 12.96259,80.19452 (tier A); GCC ward 187 lists KARTHIKEYAPURAM streets (tier A)."
+ },
+ {
+  "id": "B42",
+  "name": "Madipakkam Lake View",
+  "aliases": [
+   "Lake View Madipakkam",
+   "Sabari Salai"
+  ],
+  "ward": "187",
+  "ac": "Madipakkam (AC 156)",
+  "pins": [
+   "600093"
+  ],
+  "lat": 12.9589,
+  "lon": 80.191,
+  "geo_tier": "B",
+  "ltype": "apartment-cluster",
+  "cluster": "B-R6",
+  "built": 1.15,
+  "aff": 0.78,
+  "notes": "GCC ward 187 lists LAKE VIEW, SABARI SALAI and PARK SQUIRE COLONY (tier A). Position placed 0.4 km west of the OSM Karthikeyapuram node, inside the same OSM block."
+ },
+ {
+  "id": "B43",
+  "name": "Madipakkam Sendhuram Colony",
+  "aliases": [
+   "Sendhuram Colony",
+   "New Kubera Nagar"
+  ],
+  "ward": "187",
+  "ac": "Madipakkam (AC 156)",
+  "pins": [
+   "600093"
+  ],
+  "lat": 12.9648,
+  "lon": 80.204,
+  "geo_tier": "B",
+  "ltype": "apartment-cluster",
+  "cluster": "B-R6",
+  "built": 1.2,
+  "aff": 0.78,
+  "notes": "GCC ward 187/188 carry SENDHURAM COLONY and NEW KUBERA NAGAR (tier A). Position placed on the OSM OMR-side settlement block between Madipakkam and Perungudi."
+ },
+ {
+  "id": "B44",
+  "name": "Madipakkam Ayyappa Nagar",
+  "aliases": [
+   "Ayyappa Nagar",
+   "Iyyappa Nagar"
+  ],
+  "ward": "187",
+  "ac": "Madipakkam (AC 156)",
+  "pins": [
+   "600093"
+  ],
+  "lat": 12.9605,
+  "lon": 80.2021,
+  "geo_tier": "B",
+  "ltype": "residential",
+  "cluster": "B-R6",
+  "built": 0.75,
+  "aff": 0.62,
+  "notes": "GCC ward 187 lists AYYAPPAN NAGAR and 24 IYAAPPA Nagar streets (tier A). Position placed in the OSM Madipakkam block, 4.3 km west of the OMR spine."
+ },
+ {
+  "id": "B45",
+  "name": "Thiruvanmiyur",
+  "aliases": [
+   "Thiruvanmiyur Town",
+   "Triplicane South"
+  ],
+  "ward": "182",
+  "ac": "Velachery (AC 26)",
+  "pins": [
+   "600041",
+   "600042"
+  ],
+  "lat": 12.98589,
+  "lon": 80.26442,
+  "geo_tier": "A",
+  "ltype": "mixed",
+  "cluster": "B-R7",
+  "built": 1.3,
+  "aff": 0.88,
+  "notes": "OSM place node 'Thiruvanmiyur, Zone 13 Adyar' at 12.98589,80.26442 (tier A); OSM Thiruvanmiyur bus stop 12.98688,80.25800. Brief-named anchor and candidate zone hub."
+ },
+ {
+  "id": "B46",
+  "name": "Thiruvanmiyur T. Nagar",
+  "aliases": [
+   "T N Nagar",
+   "Radhakrishnan Nagar Thiruvanmiyur"
+  ],
+  "ward": "181",
+  "ac": "Velachery (AC 26)",
+  "pins": [
+   "600041"
+  ],
+  "lat": 12.99434,
+  "lon": 80.25869,
+  "geo_tier": "A",
+  "ltype": "residential",
+  "cluster": "B-R7",
+  "built": 0.95,
+  "aff": 0.72,
+  "notes": "Nominatim 'Radhakrishnan Nagar, Ward 181, Zone 13 Adyar' at 12.99434,80.25869 (tier A)."
+ },
+ {
+  "id": "B47",
+  "name": "Thiruvanmiyur Indira Nagar",
+  "aliases": [
+   "Indira Nagar Thiruvanmiyur"
+  ],
+  "ward": "180",
+  "ac": "Velachery (AC 26)",
+  "pins": [
+   "600041"
+  ],
+  "lat": 12.99631,
+  "lon": 80.25242,
+  "geo_tier": "A",
+  "ltype": "apartment-cluster",
+  "cluster": "B-R7",
+  "built": 1.05,
+  "aff": 0.8,
+  "notes": "OSM place node 'Indira Nagar' at 12.99631,80.25242 (tier A); OSM 'Indira Nagar Park' and Indira Nagar 1st/13th Avenue inside the same block."
+ },
+ {
+  "id": "B48",
+  "name": "Thiruvanmiyur Sriram Nagar",
+  "aliases": [
+   "Sriram Nagar Thiruvanmiyur"
+  ],
+  "ward": "180",
+  "ac": "Velachery (AC 26)",
+  "pins": [
+   "600041"
+  ],
+  "lat": 12.99094,
+  "lon": 80.26061,
+  "geo_tier": "A",
+  "ltype": "residential",
+  "cluster": "B-R7",
+  "built": 0.8,
+  "aff": 0.64,
+  "notes": "OSM place node 'Sriram Nagar' (locality) at 12.99094,80.26061 (tier A)."
+ },
+ {
+  "id": "B49",
+  "name": "Thiruvanmiyur Anchaneya Nagar",
+  "aliases": [
+   "Anchaneya Nagar",
+   "Jagannathapuram"
+  ],
+  "ward": "191",
+  "ac": "Velachery (AC 26)",
+  "pins": [
+   "600041"
+  ],
+  "lat": 12.988,
+  "lon": 80.2291,
+  "geo_tier": "B",
+  "ltype": "residential",
+  "cluster": "B-R7",
+  "built": 0.75,
+  "aff": 0.6,
+  "notes": "GCC ward 191 carries the Anchaneya Nagar block (13 streets), Jagannathapuram Main Road, Amaravathi Nagar and Bathmavathi Nagar (tier A). Position placed on the OSM OMR-side southern corridor, 1.75 km inland."
+ },
+ {
+  "id": "B50",
+  "name": "Thiruvanmiyur V.O.C. Street",
+  "aliases": [
+   "VOC Street",
+   "North Mada Street",
+   "Bhendi Street"
+  ],
+  "ward": "181",
+  "ac": "Velachery (AC 26)",
+  "pins": [
+   "600041"
+  ],
+  "lat": 12.98701,
+  "lon": 80.25911,
+  "geo_tier": "A",
+  "ltype": "mixed",
+  "cluster": "B-R7",
+  "built": 1.05,
+  "aff": 0.82,
+  "notes": "OSM ward-181 feature block resolves to 12.98701,80.25911 and carries North Mada Street, Thiruvalluvar Road and Thiruvalluvar Salai (tier A)."
+ }
+]

@@ -1,0 +1,78 @@
+{
+  "calibration": {
+    "city_households_2026": 1733423,
+    "city_dogs": 200000,
+    "dog_share": 0.62,
+    "cat_share": 0.3,
+    "animals_per_100hh": {
+      "apartment-cluster": 22,
+      "residential": 14,
+      "mixed": 17,
+      "commercial": 6,
+      "industrial": 4
+    },
+    "cases_per_pet_household_year": 4,
+    "animals_per_pet_household": {
+      "apartment-cluster": 1.45,
+      "residential": 1.65,
+      "mixed": 1.55,
+      "commercial": 1.25,
+      "industrial": 1.15
+    },
+    "floor": 1100,
+    "cost": 850
+  },
+  "weighted_rate_per_100_households": 19.053,
+  "implied_city_animals": 330276,
+  "implied_city_dogs": 204771,
+  "gcc_campaign_target": 200000,
+  "rates_per_100_households": {
+    "apartment-cluster": 22,
+    "residential": 14,
+    "mixed": 17,
+    "commercial": 6,
+    "industrial": 4
+  },
+  "zones": {
+    "zone-a": {
+      "before": {
+        "households": 271686,
+        "pet_households": 16029,
+        "cases_per_month": 5378,
+        "our_mix_revenue": 2198011,
+        "go": 25,
+        "hold": 23,
+        "no_go": 2
+      },
+      "after": {
+        "households": 271686,
+        "pet_households": 34728,
+        "cases_per_month": 11576.2,
+        "our_mix_revenue": 4706979,
+        "go": 42,
+        "hold": 2,
+        "no_go": 6
+      }
+    },
+    "zone-b": {
+      "before": {
+        "households": 5567,
+        "pet_households": 458,
+        "cases_per_month": 1310.3,
+        "our_mix_revenue": 1946556,
+        "go": 50,
+        "hold": 0,
+        "no_go": 0
+      },
+      "after": {
+        "households": 5567,
+        "pet_households": 681,
+        "cases_per_month": 227.7,
+        "our_mix_revenue": 343597,
+        "go": 1,
+        "hold": 3,
+        "no_go": 46
+      }
+    }
+  }
+}

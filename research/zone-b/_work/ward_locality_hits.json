@@ -1,0 +1,6374 @@
+{
+ "SHOLINGANALLUR": [
+  [
+   "200",
+   "SHOLINGANALLUR COOP NAGAR STREETS"
+  ]
+ ],
+ "PALAVAKKAM": [
+  [
+   "185",
+   "Palavakkam Kuppam"
+  ]
+ ],
+ "THIRUVANMIYUR": [
+  [
+   "182",
+   "Thiruvanmiyur Kuppam Beach Road"
+  ]
+ ],
+ "MADIPAKKAM": [
+  [
+   "167",
+   "MADIPAKKAM KUTT ROAD"
+  ],
+  [
+   "169",
+   "MADIPAKKAM MAIN ROAD"
+  ],
+  [
+   "187",
+   "Madipakkam Main Road"
+  ],
+  [
+   "187",
+   "Sabari Salai Madipakkam"
+  ]
+ ],
+ "PERUNGUDI": [
+  [
+   "184",
+   "OMR Salai Perungudi"
+  ],
+  [
+   "184",
+   "Old Mahabalipuram Road Perungudi"
+  ],
+  [
+   "186",
+   "OMR Salai Perungudi"
+  ],
+  [
+   "186",
+   "Old Mahabalipuram Road Perungudi"
+  ],
+  [
+   "186",
+   "Industrial Estate Perungudi"
+  ]
+ ],
+ "UTHANDI": [
+  [
+   "57",
+   "Uthandi Street"
+  ]
+ ],
+ "THURAIPAKKAM": [
+  [
+   "193",
+   "ARIGNAR ANNA NAGAR THURAIPAKKAM SALAI"
+  ],
+  [
+   "193",
+   "THURAIPAKKAM COLONY"
+  ],
+  [
+   "196",
+   "PUMPUHAR STREET TO THURAIPAKKAM"
+  ]
+ ],
+ "AMBATTUR": [
+  [
+   "23",
+   "AMBATTUR ROAD"
+  ],
+  [
+   "24",
+   "AMBATTUR ROAD(valluvar nagar)"
+  ],
+  [
+   "24",
+   "AMBATTUR ROAD(shanmugapuram)"
+  ],
+  [
+   "81",
+   "H.T.H. Road Ambattur (Ward 15)(W81)"
+  ],
+  [
+   "81",
+   "RAILWAY YARD AMBATTUR"
+  ],
+  [
+   "86",
+   "AMBATTUR ESTATE THASILDAR KUDIERUPPU"
+  ]
+ ],
+ "ARUMUGAM": [
+  [
+   "46",
+   "Arumugam Street"
+  ],
+  [
+   "48",
+   "Arumugam Lane"
+  ],
+  [
+   "57",
+   "Arumugam Street"
+  ],
+  [
+   "82",
+   "Thirumalai Street (Arumugam Nagar) Ward No.7(W82)"
+  ],
+  [
+   "82",
+   "ARUMUGAM NAGAR"
+  ],
+  [
+   "105",
+   "Vathalakundu Arumugam Nagar 1st St"
+  ],
+  [
+   "105",
+   "Vathalakundu Arumugam Nagar 2nd St"
+  ],
+  [
+   "105",
+   "Vathalakundu Arumugam Nagar 3rd St"
+  ],
+  [
+   "105",
+   "Vathalakundu Arumugam Nagar 4th St"
+  ],
+  [
+   "105",
+   "Vathalakundu Arumugam Nagar Main Road"
+  ],
+  [
+   "125",
+   "Arumugam Street"
+  ],
+  [
+   "139",
+   "Arumugam Street"
+  ],
+  [
+   "139",
+   "Kamarajar Colony Arumugam Street"
+  ],
+  [
+   "151",
+   "ARUMUGAM NAGAR POOTHAPEDU"
+  ],
+  [
+   "152",
+   "ARUMUGAM STREET"
+  ],
+  [
+   "152",
+   "ARUMUGAM ST"
+  ],
+  [
+   "153",
+   "ARUMUGAM STREET"
+  ],
+  [
+   "156",
+   "AARUMUGAM NAGAR"
+  ],
+  [
+   "156",
+   "ARUMUGAM NAGAR"
+  ],
+  [
+   "156",
+   "ARUMUGAM NAGAR 1ST STREET"
+  ],
+  [
+   "156",
+   "ARUMUGAM NAGAR 2ND STREET"
+  ],
+  [
+   "162",
+   "ARUMUGAM STREET"
+  ],
+  [
+   "164",
+   "ARUMUGAM STREET"
+  ],
+  [
+   "170",
+   "Arumugam Street"
+  ],
+  [
+   "179",
+   "Arumugam Nagar"
+  ],
+  [
+   "169",
+   "ARUMUGAM CROSS STREET"
+  ],
+  [
+   "169",
+   "ARUMUGAM STREET"
+  ],
+  [
+   "188",
+   "Arumugam Nagar 2nd Street"
+  ],
+  [
+   "188",
+   "Arumugam Nagar 3rd Street"
+  ],
+  [
+   "188",
+   "Arumugam Nagar 4th Street"
+  ],
+  [
+   "188",
+   "Arumugam Nagar 1st Street"
+  ],
+  [
+   "188",
+   "Arumugam Nagar 2nd Street"
+  ],
+  [
+   "188",
+   "Arumugam Nagar 3rd Street"
+  ],
+  [
+   "189",
+   "Arumugam Nagar 1st Street"
+  ],
+  [
+   "189",
+   "Arumugam Nagar 2nd Street"
+  ],
+  [
+   "189",
+   "Arumugam Nagar 3rd Street"
+  ],
+  [
+   "189",
+   "Arumugam Nagar Main Road"
+  ],
+  [
+   "190",
+   "Arumugam Nagar 1st Street"
+  ],
+  [
+   "191",
+   "ARUMUGAM STREET"
+  ],
+  [
+   "193",
+   "ARUMUGAM AVENUE"
+  ]
+ ],
+ "ELCOT": [
+  [
+   "197",
+   "ELCOT AVENUE IST STREET"
+  ],
+  [
+   "197",
+   "ELCOT AVENUE MAIN ST EXTN"
+  ],
+  [
+   "197",
+   "ELCOT AVENUE MAIN STREET"
+  ]
+ ],
+ "THIRU VI KA": [
+  [
+   "10",
+   "THIRU VI KA NAGAR"
+  ],
+  [
+   "22",
+   "Thiru Vi Ka Street"
+  ],
+  [
+   "25",
+   "Thiru Vi Ka Street"
+  ],
+  [
+   "29",
+   "Thiru Vi Ka Street"
+  ],
+  [
+   "72",
+   "New Thiru Vi Ka Nagar 1st Cross Street"
+  ],
+  [
+   "72",
+   "Thiru Vi Ka Nagar Pallam 1st Lane"
+  ],
+  [
+   "72",
+   "Thiru Vi Ka Nagar Pallam 2nd Lane"
+  ],
+  [
+   "72",
+   "Thiru Vi Ka Nagar Pallam 3rd Lane"
+  ],
+  [
+   "72",
+   "Thiru Vi Ka Nagar Pallam 4th Lane"
+  ],
+  [
+   "72",
+   "Thiru Vi Ka Nagar Pallam 5th Lane"
+  ],
+  [
+   "72",
+   "Thiru Vi Ka Nagar Pallam 6th Lane"
+  ],
+  [
+   "72",
+   "Thiru Vi Ka Nagar Pallam 7th Lane"
+  ],
+  [
+   "72",
+   "Thiru Vi Ka Nagar Pallam 8th Lane"
+  ],
+  [
+   "119",
+   "Thiru Vi Ka Salai Lane"
+  ],
+  [
+   "121",
+   "Rayapet Highroad 1st Street (Alias) Thiru Vi Ka 1st Street"
+  ],
+  [
+   "121",
+   "Rayapet Highroad 2nd Street (Alias) Thiru Vi Ka 2nd Street"
+  ],
+  [
+   "121",
+   "Rayapet Highroad 3rd Street (Alias) Thiru Vi Ka 3rd Street"
+  ]
+ ],
+ "SIRUVALLUR": [
+  [
+   "69",
+   "Siruvallurpuram"
+  ],
+  [
+   "69",
+   "Siruvallur Highroad"
+  ]
+ ],
+ "ARIGNAR ANNA": [
+  [
+   "25",
+   "ARIGNAR ANNA NAGAR"
+  ],
+  [
+   "28",
+   "ARIGNAR ANNA NAGAR"
+  ],
+  [
+   "152",
+   "ARIGNAR ANNA AVENUE"
+  ],
+  [
+   "152",
+   "ARIGNAR ANNA STREET"
+  ],
+  [
+   "172",
+   "Arignar Anna Street"
+  ],
+  [
+   "192",
+   "ARIGNAR ANNA NAGAR II STREET"
+  ],
+  [
+   "192",
+   "ARIGNAR ANNA NAGAR III STREET"
+  ],
+  [
+   "192",
+   "ARIGNAR ANNA NAGAR IV STREET"
+  ],
+  [
+   "192",
+   "ARIGNAR ANNA NAGAR V STREET"
+  ],
+  [
+   "193",
+   "ARIGNAR ANNA NAGAR I STREET"
+  ],
+  [
+   "193",
+   "ARIGNAR ANNA NAGAR THURAIPAKKAM SALAI"
+  ],
+  [
+   "193",
+   "ARIGNAR ANNA NAGAR VII STREET"
+  ],
+  [
+   "193",
+   "ARIGNAR ANNA NAGAR VIII STREET"
+  ]
+ ],
+ "SATHIYAM": [
+  [
+   "6",
+   "SATHIYAMURTHY NAGAR"
+  ],
+  [
+   "6",
+   "THIYAGI SATHIYAMOORTHY 9TH STREET"
+  ],
+  [
+   "6",
+   "THIYAGI SATHIYAMOORTHY NAGAR"
+  ],
+  [
+   "6",
+   "THIYAGI SATHIYAMOORTHY NAGAR 1ST STREET"
+  ],
+  [
+   "6",
+   "THIYAGI SATHIYAMOORTHY NAGAR 2ND STREET"
+  ],
+  [
+   "6",
+   "THIYAGI SATHIYAMOORTHY NAGAR 3RD STREET"
+  ],
+  [
+   "6",
+   "THIYAGI SATHIYAMOORTHY NAGAR 4TH STREET"
+  ],
+  [
+   "6",
+   "THIYAGI SATHIYAMOORTHY NAGAR 5TH STREET"
+  ],
+  [
+   "6",
+   "THIYAGI SATHIYAMOORTHY NAGAR 6TH STREET"
+  ],
+  [
+   "6",
+   "THIYAGI SATHIYAMOORTHY NAGAR 7TH STREET"
+  ],
+  [
+   "6",
+   "THIYAGI SATHIYAMOORTHY NAGAR 8TH STREET"
+  ],
+  [
+   "7",
+   "SATHIYAMURTHY STREET"
+  ],
+  [
+   "47",
+   "Sathiyamurthy Street"
+  ],
+  [
+   "80",
+   "SATHIYAMURTHY STREET"
+  ],
+  [
+   "90",
+   "SATHIYAMOORTHI COLONY"
+  ],
+  [
+   "107",
+   "Mayar Sathiyamoorthy Salai"
+  ],
+  [
+   "174",
+   "Sathiyamurthi Street"
+  ],
+  [
+   "184",
+   "Sathiyamoorthy Street"
+  ],
+  [
+   "189",
+   "Sathiyamoorthi Street"
+  ]
+ ],
+ "GOMATHI": [
+  [
+   "125",
+   "Gomathi Narayana Street"
+  ],
+  [
+   "169",
+   "GOMATHI STREET"
+  ]
+ ],
+ "RANA": [
+  [
+   "33",
+   "ANNAPOORANA NAGAR"
+  ],
+  [
+   "52",
+   "Chitambaranathan Street"
+  ],
+  [
+   "52",
+   "Chitambaranathan Lane"
+  ],
+  [
+   "53",
+   "Chithambaranar Nagar 1st Street"
+  ],
+  [
+   "53",
+   "Chithambaranar Nagar 2nd Street"
+  ],
+  [
+   "53",
+   "Chithambaranar Nagar 3rd Street"
+  ],
+  [
+   "53",
+   "Chithambaranar Nagar 4th Street"
+  ],
+  [
+   "53",
+   "Chithambaranar Nagar 5th Street"
+  ],
+  [
+   "53",
+   "Chithambaranar Nagar 6th Street"
+  ],
+  [
+   "60",
+   "Granary Street"
+  ],
+  [
+   "69",
+   "Chidhambaranar Street"
+  ],
+  [
+   "83",
+   "KALYANA SUNDARANAR STREET"
+  ],
+  [
+   "125",
+   "Paripurana Vinayagar Koil Street"
+  ],
+  [
+   "144",
+   "MADHURANAICKEN 6 TH CROSS ST"
+  ],
+  [
+   "149",
+   "CHIDAMBARANAR STREET"
+  ],
+  [
+   "150",
+   "SINGARANAYAKAR STREET"
+  ],
+  [
+   "157",
+   "PRANAV APARTMENTS"
+  ],
+  [
+   "165",
+   "CHIDAMBARANAR STREET"
+  ],
+  [
+   "165",
+   "CHITHAMBARANAR 1ST CROSS STREET"
+  ],
+  [
+   "165",
+   "CHITHAMBARANAR 2ND CROSS STREET"
+  ],
+  [
+   "184",
+   "Chidambaranar Street"
+  ],
+  [
+   "195",
+   "ANNAI INDIRANAGAR 1ST CROSS ST"
+  ],
+  [
+   "195",
+   "ANNAI INDIRANAGAR 2ND CROSS ST"
+  ],
+  [
+   "195",
+   "ANNAI INDIRANAGAR 3RD CROSS ST"
+  ],
+  [
+   "195",
+   "ANNAI INDIRANAGAR MAIN ROAD"
+  ]
+ ],
+ "ANUGRAHA": [
+  [
+   "83",
+   "ANUGRAHA APARTMENTS V O C STREET"
+  ],
+  [
+   "132",
+   "Anugraha Colony"
+  ]
+ ],
+ "SENTHIL": [
+  [
+   "7",
+   "CHIPPAI SENTHIL STREET"
+  ],
+  [
+   "24",
+   "Senthil Nagar"
+  ],
+  [
+   "33",
+   "SENTHIL AVENUE, PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "Senthil Nagar"
+  ],
+  [
+   "34",
+   "Senthil Nagar 1st Cross Street"
+  ],
+  [
+   "34",
+   "Senthil Nagar 1st Street"
+  ],
+  [
+   "34",
+   "Senthil Nagar 2nd Street"
+  ],
+  [
+   "34",
+   "Senthil Nagar 3rd Street"
+  ],
+  [
+   "65",
+   "Senthil Nagar 10th Cross Street"
+  ],
+  [
+   "65",
+   "Senthil Nagar 11th Cross Street"
+  ],
+  [
+   "65",
+   "Senthil Nagar 12th Cross Street"
+  ],
+  [
+   "65",
+   "Senthil Nagar 13th Cross Street"
+  ],
+  [
+   "65",
+   "Senthil Nagar 14th Cross Street"
+  ],
+  [
+   "65",
+   "Senthil Nagar 15th Cross Street"
+  ],
+  [
+   "65",
+   "Senthil Nagar 3rd Cross Street"
+  ],
+  [
+   "65",
+   "Senthil Nagar 4th Cross Street"
+  ],
+  [
+   "65",
+   "Senthil Nagar 5th Cross Street"
+  ],
+  [
+   "65",
+   "Senthil Nagar 6th Cross Street"
+  ],
+  [
+   "65",
+   "Senthil Nagar 7th Cross Street"
+  ],
+  [
+   "65",
+   "Senthil Nagar 8th Cross Street"
+  ],
+  [
+   "65",
+   "Senthil Nagar 9th Cross Street"
+  ],
+  [
+   "65",
+   "Senthil Nagar I Cross Street"
+  ],
+  [
+   "65",
+   "Senthil Nagar I Main Road"
+  ],
+  [
+   "65",
+   "Senthil Nagar Ii Cross Street"
+  ],
+  [
+   "65",
+   "Senthil Nagar Ii Main Road"
+  ],
+  [
+   "65",
+   "Senthil Nagar Iii Main Road"
+  ],
+  [
+   "82",
+   "SENTHIL MURUGAN NAGAR"
+  ],
+  [
+   "105",
+   "Senthil Nagar 4th Street"
+  ],
+  [
+   "105",
+   "Senthil Nagar 1st Street"
+  ],
+  [
+   "105",
+   "Senthil Nagar 2nd Street"
+  ],
+  [
+   "105",
+   "Senthil Nagar 3rd Street"
+  ],
+  [
+   "129",
+   "Senthil Andvar Street"
+  ],
+  [
+   "145",
+   "SENTHIL NAGAR AMAYAPPAN STREET"
+  ],
+  [
+   "148",
+   "GANDHI STREET, SENTHIL NAGAR"
+  ],
+  [
+   "148",
+   "SENTHIL NAGAR"
+  ],
+  [
+   "148",
+   "SENTHIL NAGAR ANNA STREET"
+  ],
+  [
+   "148",
+   "SENTHIL NAGAR GANDHI STREET"
+  ],
+  [
+   "148",
+   "SENTHIL NAGAR PERIYAR STREET"
+  ],
+  [
+   "151",
+   "SENTHIL NAGAR 1ST CROSS STREET"
+  ],
+  [
+   "151",
+   "SENTHIL NAGAR 1ST MAIN ROAD"
+  ],
+  [
+   "151",
+   "SENTHIL NAGAR 2ND CROSS STREET"
+  ],
+  [
+   "151",
+   "SENTHIL NAGAR 2ND MAIN ROAD"
+  ],
+  [
+   "151",
+   "SENTHIL NAGAR 3RD CROSS STREET"
+  ],
+  [
+   "151",
+   "SENTHIL NAGAR 4TH CROSS STREET"
+  ],
+  [
+   "151",
+   "SENTHIL NAGAR 5TH CROSS STREET"
+  ],
+  [
+   "151",
+   "SENTHIL NAGAR ANNEXE 1ST MAIN ROAD"
+  ],
+  [
+   "151",
+   "SENTHIL NAGAR ANNEXE 5TH CROSS STREET"
+  ],
+  [
+   "151",
+   "SENTHIL NAGAR HOSPITAL SALAI"
+  ],
+  [
+   "156",
+   "SENTHIL NAGAR MAIN ROAD"
+  ],
+  [
+   "165",
+   "THIRUVALLUVAR NAGAR SENTHIL ANDAVAR STREET"
+  ],
+  [
+   "165",
+   "THIRUVALLUVAR NAGAR SENTHIL ANDAVAR STREET CROSS ROAD"
+  ],
+  [
+   "186",
+   "Senthil Nagar"
+  ],
+  [
+   "186",
+   "Senthil Nagar 1st Street"
+  ],
+  [
+   "186",
+   "Senthil Nagar 10th Cross Street"
+  ],
+  [
+   "186",
+   "Senthil Nagar 11th Cross Street"
+  ],
+  [
+   "186",
+   "Senthil Nagar 12th Cross Street"
+  ],
+  [
+   "186",
+   "Senthil Nagar 1st Cross Street"
+  ],
+  [
+   "186",
+   "Senthil Nagar 2nd Cross Street"
+  ],
+  [
+   "186",
+   "Senthil Nagar 3rd Cross Street"
+  ],
+  [
+   "186",
+   "Senthil Nagar 4th Cross Street"
+  ],
+  [
+   "186",
+   "Senthil Nagar 5th Cross Street"
+  ],
+  [
+   "186",
+   "Senthil Nagar 5th cross Street"
+  ],
+  [
+   "186",
+   "Senthil Nagar 6th Cross Street"
+  ],
+  [
+   "186",
+   "Senthil Nagar 7th Cross Street"
+  ],
+  [
+   "186",
+   "Senthil Nagar 8th Cross Street"
+  ],
+  [
+   "186",
+   "Senthil Nagar 9th Cross Street"
+  ],
+  [
+   "186",
+   "Senthil Nagar Main Road"
+  ],
+  [
+   "188",
+   "Senthil Nagar 1st Street"
+  ],
+  [
+   "188",
+   "Senthil Nagar 2nd Street"
+  ],
+  [
+   "188",
+   "Senthil Nagar Main Road"
+  ]
+ ],
+ "SANTHOSH": [
+  [
+   "24",
+   "Santhosh Nagar"
+  ],
+  [
+   "33",
+   "VGP SANTHOSHAM NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "61",
+   "Egmore High Road I Street Lane (Santhosh Hospital Back)"
+  ],
+  [
+   "61",
+   "Santhosh Nagar Road (Slum Clearance Board)"
+  ],
+  [
+   "83",
+   "SANTHOSH NAGAR PHASE II"
+  ],
+  [
+   "92",
+   "SANTHOSH GARDEN"
+  ],
+  [
+   "92",
+   "SANTHOSH APARTMENTS"
+  ],
+  [
+   "150",
+   "SRI PARASNATH NAGAR SANTHOSH BAI STREET"
+  ],
+  [
+   "153",
+   "SANTHOSH NAGAR 1ST STREET"
+  ],
+  [
+   "153",
+   "SANTHOSH NAGAR GANGAI STREET"
+  ],
+  [
+   "153",
+   "SANTHOSH NAGAR KRISHNA STREET"
+  ],
+  [
+   "153",
+   "SANTHOSH NAGAR VAIGAI STREET"
+  ],
+  [
+   "154",
+   "E.V.P SANTHOSH NAGAR"
+  ],
+  [
+   "155",
+   "A.V.P. SANTHOSH NAGAR 3RD MAIN ROAD"
+  ],
+  [
+   "155",
+   "A.V.P. SANTHOSH NAGAR 4TH MAIN ROAD"
+  ],
+  [
+   "155",
+   "E.V.P SANTHOSH NAGAR"
+  ],
+  [
+   "155",
+   "E.V.P SANTHOSH NAGAR 1ST MAIN ROAD"
+  ],
+  [
+   "155",
+   "E.V.P SANTHOSH NAGAR 1ST STREET"
+  ],
+  [
+   "155",
+   "E.V.P SANTHOSH NAGAR 2ND MAIN ROAD"
+  ],
+  [
+   "155",
+   "E.V.P SANTHOSH NAGAR 2ND STREET"
+  ],
+  [
+   "155",
+   "E.V.P SANTHOSH NAGAR 3RD STREET"
+  ],
+  [
+   "155",
+   "E.V.P SANTHOSH NAGAR 4TH STREET"
+  ],
+  [
+   "155",
+   "E.V.P SANTHOSH NAGAR 5TH STREET"
+  ],
+  [
+   "155",
+   "E.V.P SANTHOSH NAGAR 6TH STREET"
+  ],
+  [
+   "155",
+   "E.V.P SANTHOSH NAGAR ANNEX"
+  ],
+  [
+   "156",
+   "SANTHOSH NAGAR"
+  ],
+  [
+   "156",
+   "SANTHOSH NAGAR 1ST CROSS STREET"
+  ],
+  [
+   "156",
+   "SANTHOSH NAGAR 2ND CROSS STREET"
+  ],
+  [
+   "156",
+   "SANTHOSH NAGAR 2ND CROSS STREET"
+  ],
+  [
+   "156",
+   "SANTHOSH NAGAR EXTENSION"
+  ],
+  [
+   "185",
+   "Santhosh main road"
+  ],
+  [
+   "189",
+   "V.G.P Shanthi Nagar Santhosh Street"
+  ],
+  [
+   "189",
+   "V.G.P. Shanthi Nagar Santhosh Street"
+  ]
+ ],
+ "SUNRISE": [
+  [
+   "192",
+   "SUNRISE AVENUE 6TH CROSS ST"
+  ],
+  [
+   "198",
+   "SUNRISE AVENUE"
+  ]
+ ],
+ "OCEAN": [
+  [
+   "182",
+   "Ocean End Drive"
+  ]
+ ],
+ "INDIAN": [
+  [
+   "61",
+   "Anglo Indian Quarters Road"
+  ],
+  [
+   "82",
+   "Vanavil Appartments, Indian Bank Colony 3rd main road, Ward No.6(W82)"
+  ],
+  [
+   "82",
+   "2nd MAIN ROAD INDIAN BANK COLONY."
+  ],
+  [
+   "82",
+   "INDIAN BANK COLONY"
+  ],
+  [
+   "82",
+   "INDIAN BANK COLONY 1 TO 4TH CROSS STREET"
+  ],
+  [
+   "82",
+   "INDIAN BANK COLONY 1 TO 4TH STREET"
+  ],
+  [
+   "82",
+   "INDIAN BANK COLONY 1ST MAIN ROAD"
+  ],
+  [
+   "82",
+   "RAGAVENDRA STREET, INDIAN BANK COLONY"
+  ],
+  [
+   "84",
+   "2nd MAIN ROAD INDIAN BANK COLONY."
+  ],
+  [
+   "108",
+   "Indian Bank Colony 1st Street"
+  ],
+  [
+   "152",
+   "INDIAN BANK KASTHURI BAI MAIN ROAD"
+  ]
+ ],
+ "MARINA": [
+  [
+   "114",
+   "Marina Service Road"
+  ]
+ ],
+ "NANDANAM": [
+  [
+   "122",
+   "Nandanam Colony 1st Street"
+  ],
+  [
+   "122",
+   "Nandanam Colony 2nd Street"
+  ],
+  [
+   "122",
+   "Nandanam Colony 3rd Street"
+  ],
+  [
+   "122",
+   "Nandanam Colony 4th Street"
+  ],
+  [
+   "122",
+   "Nandanam Ext. I Street"
+  ],
+  [
+   "122",
+   "Nandanam Ext. Ii Street"
+  ],
+  [
+   "122",
+   "Nandanam Ext. Iii Street"
+  ],
+  [
+   "122",
+   "Nandanam Ext. Iv Street"
+  ],
+  [
+   "122",
+   "Nandanam Ext. Ix Street"
+  ],
+  [
+   "122",
+   "Nandanam Ext. Main Road"
+  ],
+  [
+   "122",
+   "Nandanam Ext. V Street"
+  ],
+  [
+   "122",
+   "Nandanam Ext. Vi Street"
+  ],
+  [
+   "122",
+   "Nandanam Ext. Vii Street"
+  ],
+  [
+   "122",
+   "Nandanam Ext. Viii Street"
+  ],
+  [
+   "122",
+   "Nandanam Ext. X Street"
+  ],
+  [
+   "122",
+   "Nandanam Ext. Xi Street"
+  ],
+  [
+   "122",
+   "Nandanam Ext. Xii Street"
+  ],
+  [
+   "122",
+   "Nandanam Ext. Xiii Street"
+  ],
+  [
+   "122",
+   "Nandanam Ext. Xiv Street"
+  ]
+ ],
+ "KOLLATHUR": [
+  [
+   "188",
+   "West Anna Nagar -S Kollathur Main Road"
+  ]
+ ],
+ "SANTHANAM": [
+  [
+   "136",
+   "Maha Rajapuram Santhanam Salai"
+  ]
+ ],
+ "RAJA": [
+  [
+   "4",
+   "VARADHARAJA PERUMAL KOIL STREET"
+  ],
+  [
+   "4",
+   "VARADHARAJA PERUMAL NAGAR"
+  ],
+  [
+   "4",
+   "VARADHARAJA PERUMAL NAGAR 1ST STREET"
+  ],
+  [
+   "4",
+   "VARADHARAJA PERUMAL NAGAR 3RD STREET"
+  ],
+  [
+   "4",
+   "VARADHARAJA PERUMAL NAGAR 4TH STREET"
+  ],
+  [
+   "4",
+   "VARADHARAJA PERUMAL NAGAR 5TH STREET"
+  ],
+  [
+   "6",
+   "RAJASHANMUGAM NAGAR"
+  ],
+  [
+   "6",
+   "RAJASHANMUGAM NAGAR 10TH STREET"
+  ],
+  [
+   "6",
+   "RAJASHANMUGAM NAGAR 11 TH CROSS STREET"
+  ],
+  [
+   "6",
+   "RAJASHANMUGAM NAGAR 11TH STREET"
+  ],
+  [
+   "6",
+   "RAJASHANMUGAM NAGAR 12TH STREET"
+  ],
+  [
+   "6",
+   "RAJASHANMUGAM NAGAR 13TH STREET"
+  ],
+  [
+   "6",
+   "RAJASHANMUGAM NAGAR 14TH CROSS STREET"
+  ],
+  [
+   "6",
+   "RAJASHANMUGAM NAGAR 14TH STREET"
+  ],
+  [
+   "6",
+   "RAJASHANMUGAM NAGAR 15TH STREET"
+  ],
+  [
+   "6",
+   "RAJASHANMUGAM NAGAR 1ST STREET"
+  ],
+  [
+   "6",
+   "RAJASHANMUGAM NAGAR 2ND STREET"
+  ],
+  [
+   "6",
+   "RAJASHANMUGAM NAGAR 3RD STREET"
+  ],
+  [
+   "6",
+   "RAJASHANMUGAM NAGAR 4TH STREET"
+  ],
+  [
+   "6",
+   "RAJASHANMUGAM NAGAR 5TH STREET"
+  ],
+  [
+   "6",
+   "RAJASHANMUGAM NAGAR 6TH CROSS STREET"
+  ],
+  [
+   "6",
+   "RAJASHANMUGAM NAGAR 6TH STREET"
+  ],
+  [
+   "6",
+   "RAJASHANMUGAM NAGAR 7TH STREET"
+  ],
+  [
+   "6",
+   "RAJASHANMUGAM NAGAR 8TH STREET"
+  ],
+  [
+   "6",
+   "RAJASHANMUGAM NAGAR 9TH STREET"
+  ],
+  [
+   "7",
+   "CARNAL NATARAJA SALAI"
+  ],
+  [
+   "7",
+   "NATARAJAN RD"
+  ],
+  [
+   "7",
+   "NATARAJAN SALAI"
+  ],
+  [
+   "7",
+   "RAJAJI NAGAR TIRUVALLUVAR STREET"
+  ],
+  [
+   "7",
+   "BHARATHIAR ST RAJAJI NAGAR"
+  ],
+  [
+   "7",
+   "KAMARAJAR NAGAR"
+  ],
+  [
+   "7",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "7",
+   "RAJAJI NAGAR"
+  ],
+  [
+   "7",
+   "RAJASHNMUGAM NAGAR"
+  ],
+  [
+   "8",
+   "TSR NAGAR (A) THEYAGARAJAN STREET"
+  ],
+  [
+   "10",
+   "NADARAJA GRAMANI THOTTAM"
+  ],
+  [
+   "10",
+   "NADARAJA GRAMANI THOTTAM 3RD STREET"
+  ],
+  [
+   "10",
+   "NADARAJA GRAMANI THOTTAM 1ST STREET"
+  ],
+  [
+   "10",
+   "NADARAJA GRAMANI THOTTAM 2ND STREET"
+  ],
+  [
+   "10",
+   "NADARAJA GRAMANI THOTTAM 4TH STREET"
+  ],
+  [
+   "12",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "12",
+   "RAJAJI STREET (CHETTY ST)"
+  ],
+  [
+   "12",
+   "RAJAKADAI"
+  ],
+  [
+   "13",
+   "SATHANGADU VARADHARAJAN STREET"
+  ],
+  [
+   "13",
+   "SATHUMANAGAR VARADARAJAN STREET"
+  ],
+  [
+   "13",
+   "VARADARAJAN COLONY SATHANGADU"
+  ],
+  [
+   "16",
+   "KAMARAJAPURAM"
+  ],
+  [
+   "16",
+   "KAMARAJAPURAM ANNA SALAI"
+  ],
+  [
+   "16",
+   "KAMARAJAPURAM CROSS 1ST STREET"
+  ],
+  [
+   "16",
+   "KAMARAJAPURAM CROSS 2ND STREET"
+  ],
+  [
+   "16",
+   "KAMARAJAPURAM CROSS 3RD STREET"
+  ],
+  [
+   "16",
+   "KAMARAJAPURAM CROSS 4TH STREET"
+  ],
+  [
+   "16",
+   "KAMARAJAPURAM SRI RADHAKRISHAN STREET, PERUMAL KOIL STREET"
+  ],
+  [
+   "16",
+   "ANNA SALAI KAMARAJAPURAM"
+  ],
+  [
+   "16",
+   "SRI RADHAKRISHNAN PERUMAL KOIL STREET KAMARAJAPURAM"
+  ],
+  [
+   "18",
+   "RAJA THOTTAM"
+  ],
+  [
+   "18",
+   "RAJABATHAR 1ST LANE"
+  ],
+  [
+   "18",
+   "RAJABATHAR 2ND LANE"
+  ],
+  [
+   "18",
+   "RAJABATHAR STREET"
+  ],
+  [
+   "19",
+   "KAMARAJAR CROSS STREET"
+  ],
+  [
+   "19",
+   "KAMARAJAR SALAI"
+  ],
+  [
+   "19",
+   "MANALI KAMARAJAR SALAI"
+  ],
+  [
+   "19",
+   "KAMARAJAR NAGAR"
+  ],
+  [
+   "20",
+   "KAMARAJAR SALAI"
+  ],
+  [
+   "21",
+   "VARADHARAJAN STREET"
+  ],
+  [
+   "21",
+   "DR.M.VARADHARAJANAR STREET"
+  ],
+  [
+   "22",
+   "Ethirajammal Avenue"
+  ],
+  [
+   "23",
+   "Thalamuthu Natarajan Street"
+  ],
+  [
+   "24",
+   "Rajammal Nagar"
+  ],
+  [
+   "26",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "26",
+   "NATARAJAN NAGAR"
+  ],
+  [
+   "28",
+   "RAJASEKARA NAGAR"
+  ],
+  [
+   "28",
+   "RAJA NAGAR"
+  ],
+  [
+   "29",
+   "Devarajan 1st Cross Street"
+  ],
+  [
+   "29",
+   "Devarajan 2nd Cross Street"
+  ],
+  [
+   "29",
+   "Devarajan 3rd Cross Street"
+  ],
+  [
+   "29",
+   "Devarajan Street"
+  ],
+  [
+   "29",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "29",
+   "RAJAJI ST"
+  ],
+  [
+   "30",
+   "RAJAJI ST"
+  ],
+  [
+   "30",
+   "RAJAJI STREET ANNEXURE"
+  ],
+  [
+   "30",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "32",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "32",
+   "RAJAJI ST"
+  ],
+  [
+   "33",
+   "VARADARAJA NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "Thanikachalam nagar E BLK Rajaji Nagar"
+  ],
+  [
+   "33",
+   "SELVAM NAGAR EXTN THIYAGARAJANSALAI"
+  ],
+  [
+   "33",
+   "Thanikachalam nagar E BLK Rajaji 1st st"
+  ],
+  [
+   "33",
+   "Thanikachalam nagar E BLK Rajaji 2nd st"
+  ],
+  [
+   "33",
+   "Thanikachalam nagar E BLK Rajaji 3rd st"
+  ],
+  [
+   "33",
+   "Thanikachalam nagar E BLK Rajaji 4th st"
+  ],
+  [
+   "33",
+   "Thanikachalam nagar E BLK Rajaji 5th st"
+  ],
+  [
+   "33",
+   "Thanikachalam nagar E BLK Rajaji st"
+  ],
+  [
+   "35",
+   "Kamarajar Salai 3rd Cross Street"
+  ],
+  [
+   "35",
+   "Kamarajar Salai 4th Cross Street"
+  ],
+  [
+   "35",
+   "Kamarajar Salai 5th Cross Street"
+  ],
+  [
+   "35",
+   "Kamarajar Salai 1st Cross Street"
+  ],
+  [
+   "35",
+   "Kamarajar Salari 2nd Cross Street"
+  ],
+  [
+   "35",
+   "Rajavelu Street"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar B Block 1st Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar B Block 2nd Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar B Block 3rd Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar B Block 4th Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar B Block 5th Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar B Block 6th Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar C Block 1st Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar C Block 2nd Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar C Block 3rd Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar C Block 4th Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar C Block 5th Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar D Block 1st Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar D Block 2nd Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar D Block 3rd Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar E Block 1st Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar E Block 2nd Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar E Block 3rd Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar E Block 4th Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar E Block 5th Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar E Block 6th Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar F Block 1st Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar F Block 2nd Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar F Block 3rd Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar F Block 4th Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar F Block 5th Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar F Block 6th Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar G Block 1st Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar G Block 2nd Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar G Block 3rd Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar G Block 4th Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar G Block 5th Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar G Block 6th Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar H Block 1st Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar H Block 2nd Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar H Block 3rd Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar H Block 4th Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar H Block 5th Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar H Block 6th Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar I Block 1st Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar I Block 2nd Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar I Block 3rd Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar I Block 4th Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar I Block 5th Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar J Block 1st Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar J Block 2nd Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar J Block 3rd Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar K Block 2nd Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar K Block 3rd Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar K Block 4th Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar 1st Main Road"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar 1st Street"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar 2nd Main Road"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar 2nd Street"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar 3rd Main Road"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar 3rd Street"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar 3rd Street"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar 4th Main Road"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar 4th Street"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar 5th Main Road"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar 6th Main Road"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar 6th Street"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar 7th Street"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar 8th Street"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar Tenament A Block 1st Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar Tenament A Block 2nd Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar Tenament A Block 3rd Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar Tenament A Block 4th Lane"
+  ],
+  [
+   "37",
+   "Rajarathinam Nagar Tenament A Block 5th Lane"
+  ],
+  [
+   "37",
+   "Thiyagarajan Street"
+  ],
+  [
+   "38",
+   "Rajasekaran Nagar 1st St"
+  ],
+  [
+   "38",
+   "Rajasekaran Nagar 2nd St"
+  ],
+  [
+   "38",
+   "Rajasekaran Nagar 3rd St"
+  ],
+  [
+   "38",
+   "Rajasekaran Nagar 4th St"
+  ],
+  [
+   "38",
+   "Rajasekaran Nagar 5thd St"
+  ],
+  [
+   "38",
+   "Rajasekaran Nagar Main Road"
+  ],
+  [
+   "40",
+   "Kamarajar Nagar (Burma Agathigal Colony )"
+  ],
+  [
+   "40",
+   "Kamarajar Nagar V.O.C. Meenavar Quarters"
+  ],
+  [
+   "40",
+   "Kamarajar Nagar(Police Department)"
+  ],
+  [
+   "40",
+   "Kamarajar Nagar(V.O.C. Nagar Ellan Koil Huts)"
+  ],
+  [
+   "40",
+   "Varadharajaperumal Koil Lane (Agraharam)"
+  ],
+  [
+   "43",
+   "Varadharajaperumal Koil Street"
+  ],
+  [
+   "44",
+   "Kamarajar Street"
+  ],
+  [
+   "44",
+   "Rajangam Street"
+  ],
+  [
+   "44",
+   "N.V. Natarajan Street"
+  ],
+  [
+   "44",
+   "Rajangam Street"
+  ],
+  [
+   "44",
+   "Rajaji Street"
+  ],
+  [
+   "48",
+   "Varadharajaperumal Street"
+  ],
+  [
+   "48",
+   "Nataraja Street (Varathappa Maistry)"
+  ],
+  [
+   "49",
+   "Gollavar Agraharam 2nd Lane Alias P.A.N Rajarathinam Salai 2nd Lane"
+  ],
+  [
+   "49",
+   "Gollavar Agraharam 3rd Lane Alias P.A.N Rajarathinam Salai 3rd Lane"
+  ],
+  [
+   "49",
+   "Gollavar Agraharam 4th Lane Alias P.A.N Rajarathinam Salai 4th Lane"
+  ],
+  [
+   "49",
+   "Gollavar Agraharam 5th Lane Alias P.A.N Rajarathinam Salai 5th Lane"
+  ],
+  [
+   "49",
+   "Gollavar Agraharam 6th Lane Alias P.A.N Rajarathinam Salai 6th Lane"
+  ],
+  [
+   "49",
+   "Gollavar Agraharam 7th Lane Alias P.A.N Rajarathinam Salai 7th Lane"
+  ],
+  [
+   "49",
+   "Gollavar Agraharam 8th Lane Alias P.A.N Rajarathinam Salai 8th Lane"
+  ],
+  [
+   "49",
+   "Gollavar Agraharam 1st Lane Alias P.A.N Rajarathinam Salai 1st Lane"
+  ],
+  [
+   "49",
+   "Rajagopal (Naidu) Street"
+  ],
+  [
+   "49",
+   "Rajavelu (Mudali) Street"
+  ],
+  [
+   "49",
+   "Rajavelu Lane"
+  ],
+  [
+   "53",
+   "Bojaraja Nagar 1st Lane"
+  ],
+  [
+   "53",
+   "Bojaraja Nagar 1st Street"
+  ],
+  [
+   "53",
+   "Bojaraja Nagar 2nd Lane"
+  ],
+  [
+   "53",
+   "Bojaraja Nagar 3rd Lane"
+  ],
+  [
+   "53",
+   "Bojaraja Nagar 4th Lane"
+  ],
+  [
+   "53",
+   "Bojaraja Nagar 5th Lane"
+  ],
+  [
+   "53",
+   "Bojaraja Nagar 6th Lane"
+  ],
+  [
+   "53",
+   "Bojaraja Nagar 7th Lane"
+  ],
+  [
+   "53",
+   "Bojaraja Nagar 8th Lane"
+  ],
+  [
+   "53",
+   "Bojaraja Nagar Main Street"
+  ],
+  [
+   "53",
+   "Bojaraja Nagar South Lane"
+  ],
+  [
+   "53",
+   "Bojaraja Nagar(Hut Area)"
+  ],
+  [
+   "53",
+   "Bojaraja Nagar 2nd Street"
+  ],
+  [
+   "53",
+   "Bojaraja Nagar 3rd Street"
+  ],
+  [
+   "53",
+   "Dharmarajakoil North Lane"
+  ],
+  [
+   "53",
+   "Dharmarajakoil South Lane"
+  ],
+  [
+   "55",
+   "Dharmaraja Koil 1st Lane"
+  ],
+  [
+   "55",
+   "Dharmaraja Koil 2nd Lane"
+  ],
+  [
+   "58",
+   "Dharmaraja Koil Street"
+  ],
+  [
+   "59",
+   "Varatharaja Lane"
+  ],
+  [
+   "60",
+   "Kamarajar Salai"
+  ],
+  [
+   "60",
+   "Rajaji Salai"
+  ],
+  [
+   "60",
+   "Rajaji Salai Alias North Beach Road"
+  ],
+  [
+   "60",
+   "Varadharajan (Mudali) Street"
+  ],
+  [
+   "61",
+   "Varatharajalu Street"
+  ],
+  [
+   "62",
+   "Dharmaraja Koil Street (Vannan Street)"
+  ],
+  [
+   "62",
+   "Rajagopal (N) Street"
+  ],
+  [
+   "62",
+   "Rajagopal Lane"
+  ],
+  [
+   "64",
+   "Palanisamy Street Rajan Nagar"
+  ],
+  [
+   "64",
+   "Rajan Nagar I Street"
+  ],
+  [
+   "64",
+   "Rajan Nagar Ii Street"
+  ],
+  [
+   "64",
+   "Rajan Nagar Iii Street"
+  ],
+  [
+   "64",
+   "Rajan Nagar Main Road"
+  ],
+  [
+   "64",
+   "Rajarajeswari Nagar I Street"
+  ],
+  [
+   "64",
+   "Rajarajeswari Nagar Ii Street"
+  ],
+  [
+   "64",
+   "Rajarajeswari Nagar Iii Street"
+  ],
+  [
+   "64",
+   "Rajarajeswari Nagar Iv Street"
+  ],
+  [
+   "64",
+   "Rajarajeswari Nagar V Street"
+  ],
+  [
+   "64",
+   "Rajarajeswari Nagar Vi Street"
+  ],
+  [
+   "64",
+   "Rajarajeswari Nagar Vii Street"
+  ],
+  [
+   "64",
+   "Rajarajeswari Nagar Viii Street"
+  ],
+  [
+   "64",
+   "Rajaji Street Thenpalani Nagar"
+  ],
+  [
+   "65",
+   "Subasu Street Rajaji Nagar"
+  ],
+  [
+   "65",
+   "Balaji Street Rajaji Nagar"
+  ],
+  [
+   "65",
+   "Bharathi Street Rajaji Nagar"
+  ],
+  [
+   "65",
+   "Ganga Street Rajaji Nagar"
+  ],
+  [
+   "65",
+   "Jothi Avenue Rajaji Nagar"
+  ],
+  [
+   "65",
+   "Kamaraj Street Rajaji Nagar"
+  ],
+  [
+   "65",
+   "Kaveri Street Rajaji Nagar"
+  ],
+  [
+   "65",
+   "Lakshmi Thilagam Street Rajaji Nagar"
+  ],
+  [
+   "65",
+   "Murali Street Rajaji Nagar"
+  ],
+  [
+   "65",
+   "Muthu Street Rajaji Nagar"
+  ],
+  [
+   "65",
+   "Partheeban Street Rajaji Nagar"
+  ],
+  [
+   "65",
+   "Peter Street Rajaji Nagar"
+  ],
+  [
+   "65",
+   "Rajaji Nagar 1st Street"
+  ],
+  [
+   "65",
+   "Rajaji Nagar 2nd Cross Street"
+  ],
+  [
+   "65",
+   "Rajaji Nagar 2nd Street"
+  ],
+  [
+   "65",
+   "Rajaji Nagar 3rd Cross Street"
+  ],
+  [
+   "65",
+   "Rajaji Nagar 3rd Street"
+  ],
+  [
+   "65",
+   "Rajaji Nagar 4th Street"
+  ],
+  [
+   "65",
+   "Rajaji Nagar 5th Street"
+  ],
+  [
+   "65",
+   "Rajaji Nagar 6th Street"
+  ],
+  [
+   "65",
+   "Rajaji Nagar 7h Street"
+  ],
+  [
+   "65",
+   "Rajaji Nagar 8th Street"
+  ],
+  [
+   "65",
+   "Rajaji Nagar 9th Street"
+  ],
+  [
+   "65",
+   "Rajaji Nagar Gokul I Street"
+  ],
+  [
+   "65",
+   "Rajaji Nagar Gokul Ii Street"
+  ],
+  [
+   "65",
+   "Rajaji Nagar Jaganathan Street"
+  ],
+  [
+   "65",
+   "Rajaji Nagar Palani Street"
+  ],
+  [
+   "65",
+   "Rajaji Nagar Ponni Street"
+  ],
+  [
+   "65",
+   "Rajaji Nagar Sastri Avenue"
+  ],
+  [
+   "65",
+   "Rajaji Nagar Thanigai Street"
+  ],
+  [
+   "65",
+   "Rathinam Street Rajaji Nagar"
+  ],
+  [
+   "65",
+   "Rohini Street Rajaji Nagar"
+  ],
+  [
+   "65",
+   "Sivam Street Rajaji Nagar"
+  ],
+  [
+   "65",
+   "Subramaniam Street Rajaji Nagar"
+  ],
+  [
+   "65",
+   "Thenaruvi Street Rajaji Nagar"
+  ],
+  [
+   "65",
+   "Vaigai Street Rajaji Nagar"
+  ],
+  [
+   "65",
+   "Vegavathy Market Street Rajaji Nagar"
+  ],
+  [
+   "65",
+   "Venkatragavalu Street Rajaji Nagar"
+  ],
+  [
+   "65",
+   "Vinayakar Koil Street Rajaji Nagar"
+  ],
+  [
+   "66",
+   "Raja Garden"
+  ],
+  [
+   "66",
+   "Rajabather Street"
+  ],
+  [
+   "66",
+   "Thiyagarajan Street"
+  ],
+  [
+   "66",
+   "Varadharajan Street"
+  ],
+  [
+   "67",
+   "Baburaja Street"
+  ],
+  [
+   "67",
+   "Chinnasamy Raja Street"
+  ],
+  [
+   "67",
+   "G.K.M. Colony (Rajaji Street) 6th Street"
+  ],
+  [
+   "67",
+   "Jaganatha Raja Street"
+  ],
+  [
+   "67",
+   "Moorthi Raja Street"
+  ],
+  [
+   "67",
+   "Somaiah Raja Street"
+  ],
+  [
+   "67",
+   "Somaya Raja Lane"
+  ],
+  [
+   "69",
+   "Natarajar Koil Street"
+  ],
+  [
+   "69",
+   "Raja Street"
+  ],
+  [
+   "69",
+   "Rajavelu Street"
+  ],
+  [
+   "70",
+   "Rajabhadar Street"
+  ],
+  [
+   "77",
+   "Kumarasamy Rajapuram 1st St.,"
+  ],
+  [
+   "77",
+   "Kumarasamy Rajapuram 2nd St.,"
+  ],
+  [
+   "77",
+   "Kumarasamy Rajapuram 3rd St.,"
+  ],
+  [
+   "77",
+   "Kanagaraja Thotham"
+  ],
+  [
+   "77",
+   "Rajathotham 1st Street"
+  ],
+  [
+   "77",
+   "Rajathotham 2nd Street"
+  ],
+  [
+   "77",
+   "Rajathotham 3rd Street"
+  ],
+  [
+   "77",
+   "Rajathotham Cross Street"
+  ],
+  [
+   "77",
+   "Sivarajapuram 2nd Street"
+  ],
+  [
+   "77",
+   "Sivarajapuram 3rd Street"
+  ],
+  [
+   "77",
+   "Sivarajapuram 4th Street"
+  ],
+  [
+   "77",
+   "Sivarajapuram 4th To 3rd Cr.St"
+  ],
+  [
+   "77",
+   "Sivarajapuram 5th Street"
+  ],
+  [
+   "77",
+   "Sivarajapuram 5th To 2nd Cr.St"
+  ],
+  [
+   "77",
+   "Sivarajapuram 5th To 3rd Cr.St"
+  ],
+  [
+   "77",
+   "Sivarajapuram 6th Street, Common St"
+  ],
+  [
+   "77",
+   "Sivarajapuram Ist Street"
+  ],
+  [
+   "78",
+   "Dharmaraja Koil Street"
+  ],
+  [
+   "78",
+   "Rajamuthaiah Salai (Sydennams Road)"
+  ],
+  [
+   "78",
+   "Sundrarajaperumal Koil Street"
+  ],
+  [
+   "79",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "79",
+   "RAJAJI STREET"
+  ],
+  [
+   "79",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "79",
+   "PADMAVATHY SRINIVASA NAGAR EXTN KAMARAJAR STREET"
+  ],
+  [
+   "79",
+   "RAJA RAJAN STREET"
+  ],
+  [
+   "79",
+   "RAJARAM PILLAI STREET"
+  ],
+  [
+   "79",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "79",
+   "GOVINDARAJALU STREET"
+  ],
+  [
+   "80",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "80",
+   "M C RAJA STREET"
+  ],
+  [
+   "80",
+   "MAHARAJA AVENUE"
+  ],
+  [
+   "80",
+   "RAJAGOPAL STREET"
+  ],
+  [
+   "80",
+   "RAJAJI STREET"
+  ],
+  [
+   "80",
+   "RAJASEKARAN STREET"
+  ],
+  [
+   "81",
+   "RAJARAM STREET"
+  ],
+  [
+   "81",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "82",
+   "Govindarajan street, Lakshmi Colony, Ward No.6 (W82)"
+  ],
+  [
+   "82",
+   "KAMARAJAR STREET, W BALAJI NAGAR"
+  ],
+  [
+   "82",
+   "RAJA GANAPATHI STREET"
+  ],
+  [
+   "82",
+   "SUNDARAJAN STREET"
+  ],
+  [
+   "82",
+   "KAMARAJAR NAGAR"
+  ],
+  [
+   "82",
+   "G. M. NAGAR EXTN,RAJARAM STREET."
+  ],
+  [
+   "82",
+   "RAJAMANICKAM STREET"
+  ],
+  [
+   "82",
+   "RAJARAM 1ST STREET"
+  ],
+  [
+   "82",
+   "RAJARAM 2ND STREET"
+  ],
+  [
+   "82",
+   "RAJARAM 3RD STREET"
+  ],
+  [
+   "82",
+   "RAJARAM 4TH STREET"
+  ],
+  [
+   "82",
+   "RAJARAM STREET."
+  ],
+  [
+   "82",
+   "SUNDARAJAN STREET"
+  ],
+  [
+   "83",
+   "RAJA STREET ELLAIAMMAN NAGAR"
+  ],
+  [
+   "83",
+   "RAJA STREET"
+  ],
+  [
+   "85",
+   "Santri Worker Street Kamarajapuram Ward 31(W85)"
+  ],
+  [
+   "85",
+   "QUARTERS ST, KAMARAJAPURAM"
+  ],
+  [
+   "85",
+   "RAJAMUDALI STREET"
+  ],
+  [
+   "85",
+   "VARADHARAJAPURAM"
+  ],
+  [
+   "86",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "87",
+   "KAMARAJAR CROSS ST"
+  ],
+  [
+   "87",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "87",
+   "RAJA STREET PADI"
+  ],
+  [
+   "87",
+   "RAJAJI STREET"
+  ],
+  [
+   "88",
+   "RAJAJI STREET, KUMARAN NAGAR"
+  ],
+  [
+   "88",
+   "RAJARAJACHOZAN ST, KUMARAN NAGAR EXT-II"
+  ],
+  [
+   "89",
+   "KAMARAJAR 1ST CROSS STREET"
+  ],
+  [
+   "89",
+   "KAMARAJAR 2ND CROSS STREET"
+  ],
+  [
+   "89",
+   "KAMARAJAR 3RD CROSS STREET"
+  ],
+  [
+   "89",
+   "KAMARAJAR 4TH CROSS STREET"
+  ],
+  [
+   "89",
+   "KAMARAJAR STREET SRINIVASA NAGAR"
+  ],
+  [
+   "89",
+   "KAMARAJAR 5TH CROSS STREET"
+  ],
+  [
+   "90",
+   "RAJAJI NAGAR, KALAIVANAR COLONY"
+  ],
+  [
+   "90",
+   "KAMARAJAR NAGAR"
+  ],
+  [
+   "93",
+   "KAMARAJAR ST GANGAIYAM NAGAR"
+  ],
+  [
+   "93",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "93",
+   "SAVITHIRI NATARAJAN ST"
+  ],
+  [
+   "94",
+   "Rajamangalam 1st Street"
+  ],
+  [
+   "94",
+   "Rajamangalam 2nd Street"
+  ],
+  [
+   "94",
+   "Rajamangalam 3rd Street"
+  ],
+  [
+   "94",
+   "Rajamangalam 4th Street"
+  ],
+  [
+   "94",
+   "Rajamangalam 5th Street"
+  ],
+  [
+   "94",
+   "Rajamangalam 6th Street"
+  ],
+  [
+   "94",
+   "Rajamangalam 7th Street"
+  ],
+  [
+   "94",
+   "Rajamangalam 8th Street"
+  ],
+  [
+   "94",
+   "Rajamangalam Main Road"
+  ],
+  [
+   "94",
+   "Rajamangalam 1st Lane"
+  ],
+  [
+   "94",
+   "Rajamangalam 2nd Lane"
+  ],
+  [
+   "94",
+   "Rajamangalam 2nd Main Road"
+  ],
+  [
+   "94",
+   "Rajamangalam 8th 1st Lane"
+  ],
+  [
+   "94",
+   "Rajamangalam 8th 2nd Lane"
+  ],
+  [
+   "95",
+   "Rajagopalan Street"
+  ],
+  [
+   "95",
+   "Raja Lane-I"
+  ],
+  [
+   "95",
+   "Raja Lane-Ii"
+  ],
+  [
+   "95",
+   "Raja Street"
+  ],
+  [
+   "98",
+   "Kamarajar Nagar 1st Street"
+  ],
+  [
+   "98",
+   "Kamarajar Nagar 2nd Street"
+  ],
+  [
+   "98",
+   "Kamarajar Nagar 3rd Street"
+  ],
+  [
+   "98",
+   "Kamarajar 1st Lane"
+  ],
+  [
+   "98",
+   "Kamarajar 2nd Lane"
+  ],
+  [
+   "98",
+   "Kamarajar 3rd Lane"
+  ],
+  [
+   "98",
+   "Kamarajar 4th Lane"
+  ],
+  [
+   "98",
+   "Kamarajar 5th Lane"
+  ],
+  [
+   "98",
+   "Kamarajar Street"
+  ],
+  [
+   "99",
+   "Kamarajar Street"
+  ],
+  [
+   "99",
+   "T.V.Nagar Kamarajar Street"
+  ],
+  [
+   "99",
+   "T.V.Nagar Rajaji Street"
+  ],
+  [
+   "100",
+   "Ambiraja Street"
+  ],
+  [
+   "100",
+   "M.G.R. Colony Kamarajar Street"
+  ],
+  [
+   "100",
+   "M.G.R. Colony Rajaji Street"
+  ],
+  [
+   "102",
+   "Rajammal Street"
+  ],
+  [
+   "103",
+   "Rajarathinam St"
+  ],
+  [
+   "104",
+   "Raja Annamalai Road"
+  ],
+  [
+   "105",
+   "New Natarajapuram"
+  ],
+  [
+   "106",
+   "Old Natarajapuram"
+  ],
+  [
+   "106",
+   "New Natarajapuram"
+  ],
+  [
+   "106",
+   "Rajaram Metha Nagar Main Road"
+  ],
+  [
+   "106",
+   "Peter Raja Street"
+  ],
+  [
+   "107",
+   "Rajambal Street - North"
+  ],
+  [
+   "107",
+   "Rajambal Street-South"
+  ],
+  [
+   "108",
+   "Rajagopalan Street"
+  ],
+  [
+   "108",
+   "Duraisamy Raja Street"
+  ],
+  [
+   "108",
+   "Ramasamy Raja Street"
+  ],
+  [
+   "108",
+   "Annal Kamarajar Street"
+  ],
+  [
+   "109",
+   "Inbarajaburam 1st Street"
+  ],
+  [
+   "109",
+   "Inbarajaburam 2nd Street"
+  ],
+  [
+   "109",
+   "Rajaveethi"
+  ],
+  [
+   "110",
+   "Kamarajapuram Ii Street"
+  ],
+  [
+   "110",
+   "Kamarajapuram Iii Street"
+  ],
+  [
+   "110",
+   "Kamarajapuram Iv Street"
+  ],
+  [
+   "110",
+   "Kamarajapuram Main Road"
+  ],
+  [
+   "110",
+   "Kamarajapuram I Street"
+  ],
+  [
+   "110",
+   "North Rajaji Street"
+  ],
+  [
+   "110",
+   "Rajaji I Street"
+  ],
+  [
+   "110",
+   "Rajaji Ii Street"
+  ],
+  [
+   "110",
+   "Rajaji Iii Street"
+  ],
+  [
+   "112",
+   "Ponnusamy Vadhiyar Street (Varadharajanpet 4th Street)"
+  ],
+  [
+   "112",
+   "Rajapuranikar Street"
+  ],
+  [
+   "112",
+   "Varadarajanpet Main Road"
+  ],
+  [
+   "114",
+   "Rajahydhar Street"
+  ],
+  [
+   "114",
+   "Kamarajar Salai"
+  ],
+  [
+   "115",
+   "Devarajan Lane"
+  ],
+  [
+   "116",
+   "Raja Hanumantha Lala Street"
+  ],
+  [
+   "116",
+   "Kamarajar Salai"
+  ],
+  [
+   "116",
+   "Narayakrishna Rajapuram Street"
+  ],
+  [
+   "116",
+   "Raja Hanumandha Lala Lane"
+  ],
+  [
+   "116",
+   "Raja Hanumandha Lala Street"
+  ],
+  [
+   "116",
+   "Sivarajapuram Slum Area"
+  ],
+  [
+   "117",
+   "Rajan Street"
+  ],
+  [
+   "117",
+   "Kamarajapuram Slum"
+  ],
+  [
+   "117",
+   "Anna Salai From Teynampet Signal To Kamarajar Arangam"
+  ],
+  [
+   "118",
+   "Maharaja Surya Road"
+  ],
+  [
+   "118",
+   "Rajakrishnarao Road"
+  ],
+  [
+   "118",
+   "Varatharajapuram Cross Street"
+  ],
+  [
+   "118",
+   "Varatharajapuram Main Road"
+  ],
+  [
+   "120",
+   "Rajaji Nagar (Gajabathy Lala Garden)"
+  ],
+  [
+   "120",
+   "Kamarajar Salai"
+  ],
+  [
+   "121",
+   "Kamarajar Road (South Beach Road 18)"
+  ],
+  [
+   "121",
+   "Rajasekara Road"
+  ],
+  [
+   "121",
+   "Rajasekaran Lane"
+  ],
+  [
+   "123",
+   "Sundararajan Street"
+  ],
+  [
+   "123",
+   "Raja Colony Beemanna Garden Street"
+  ],
+  [
+   "123",
+   "Raja Annamalaipuram 1st Cross Street"
+  ],
+  [
+   "123",
+   "Raja Annamalaipuram 1st Main Road"
+  ],
+  [
+   "123",
+   "Raja Annamalaipuram 2nd Cross Street"
+  ],
+  [
+   "123",
+   "Raja Annamalaipuram 2nd Main Road"
+  ],
+  [
+   "123",
+   "Raja Annamalaipuram 3rd Cross Street"
+  ],
+  [
+   "123",
+   "Raja Annamalaipuram 3rd Main Road"
+  ],
+  [
+   "123",
+   "Raja Annamalaipuram 4th Cross Street"
+  ],
+  [
+   "123",
+   "Raja Annamalaipuram 4th Main Road"
+  ],
+  [
+   "123",
+   "Raja Annamalaipuram 5th Main Road"
+  ],
+  [
+   "123",
+   "Raja Annamalaipuram 6th Main Road"
+  ],
+  [
+   "123",
+   "Raja Annamalaipuram 7th Main Road"
+  ],
+  [
+   "123",
+   "H.D. Raja Street"
+  ],
+  [
+   "124",
+   "Thiyagarajapuram"
+  ],
+  [
+   "125",
+   "Kamarajar Salai"
+  ],
+  [
+   "125",
+   "Selvarajapuram"
+  ],
+  [
+   "127",
+   "Raja Street Bharathiyar Nagar"
+  ],
+  [
+   "127",
+   "Kamarajar Street"
+  ],
+  [
+   "127",
+   "Raja Street"
+  ],
+  [
+   "128",
+   "Kamarajar Salai"
+  ],
+  [
+   "129",
+   "Devaraj Nagar Raja Street"
+  ],
+  [
+   "129",
+   "Natarajan Street Dhanalashsmi Colony"
+  ],
+  [
+   "129",
+   "Kamarajar Cross Street"
+  ],
+  [
+   "129",
+   "Mathialagan Nagar Kamarajar Street"
+  ],
+  [
+   "129",
+   "Mathialagan Nagar Rajaji Street"
+  ],
+  [
+   "129",
+   "Rajaji Street"
+  ],
+  [
+   "129",
+   "Rajaji Street Gandhi Nagar"
+  ],
+  [
+   "129",
+   "Santhi Colony Kamarajar Street"
+  ],
+  [
+   "129",
+   "Street - Rajaji Colony"
+  ],
+  [
+   "130",
+   "Rajangamathyaveethi"
+  ],
+  [
+   "131",
+   "Bobbiliraja Salai"
+  ],
+  [
+   "131",
+   "P.T. Rajan Road"
+  ],
+  [
+   "131",
+   "P.V.Rajamannar Salai"
+  ],
+  [
+   "131",
+   "Kamarajar Nagar 2nd Street"
+  ],
+  [
+   "132",
+   "P.T. Rajan Salai (20th Avenue)"
+  ],
+  [
+   "133",
+   "Rajagopal Street"
+  ],
+  [
+   "134",
+   "Rajaram Colony"
+  ],
+  [
+   "134",
+   "Rajaram Film Directors Colony"
+  ],
+  [
+   "134",
+   "Rangarajapuram Main Road"
+  ],
+  [
+   "134",
+   "Rangaraja Puram !!!Rd Street"
+  ],
+  [
+   "134",
+   "Rangaraja Puram !!Nd Street"
+  ],
+  [
+   "134",
+   "Rangaraja Puram Ist Street"
+  ],
+  [
+   "134",
+   "Rangaraja Puram Main Road"
+  ],
+  [
+   "135",
+   "Rajagopalan Street"
+  ],
+  [
+   "135",
+   "Rajaji Street"
+  ],
+  [
+   "136",
+   "Maha Rajapuram Santhanam Salai"
+  ],
+  [
+   "136",
+   "Raja Street"
+  ],
+  [
+   "136",
+   "Rajabather Street"
+  ],
+  [
+   "136",
+   "Rajachar Street"
+  ],
+  [
+   "136",
+   "Rajamannar Street"
+  ],
+  [
+   "136",
+   "Rajambal"
+  ],
+  [
+   "136",
+   "Soundara Rajan Street"
+  ],
+  [
+   "137",
+   "Kamarajar Street"
+  ],
+  [
+   "137",
+   "Navalar Colony Kamarajar Street"
+  ],
+  [
+   "137",
+   "Rajamannar Salai"
+  ],
+  [
+   "137",
+   "Bharathi Nagar Rajaji Street"
+  ],
+  [
+   "138",
+   "Annai Sathya Nagar Ph-Ii, Kamarajar Street"
+  ],
+  [
+   "138",
+   "Annai Sathya Nagar Ph-Ii, Varadharajan Street"
+  ],
+  [
+   "138",
+   "S.M.Block - Kamarajar Street"
+  ],
+  [
+   "138",
+   "Kanchi Natarajan Salai"
+  ],
+  [
+   "138",
+   "Raja Raja Chozhan Street"
+  ],
+  [
+   "139",
+   "Kamarajar Colony Arumugam Street"
+  ],
+  [
+   "139",
+   "Devarajan Street"
+  ],
+  [
+   "139",
+   "Rajabadar Street"
+  ],
+  [
+   "139",
+   "Kamarajar Street"
+  ],
+  [
+   "139",
+   "Natarajan Street"
+  ],
+  [
+   "139",
+   "Rajambal Street"
+  ],
+  [
+   "140",
+   "Rajaji Street"
+  ],
+  [
+   "141",
+   "Varadarajan Street"
+  ],
+  [
+   "142",
+   "Dharamaraja Koil Lane"
+  ],
+  [
+   "142",
+   "Dharamaraja Koil Street"
+  ],
+  [
+   "142",
+   "Natarajan Street"
+  ],
+  [
+   "142",
+   "Rajagopal Street"
+  ],
+  [
+   "143",
+   "RAJAJI SALAI"
+  ],
+  [
+   "143",
+   "KAMARAJAR 1ST CROSS STREET"
+  ],
+  [
+   "143",
+   "KAMARAJAR 2ND CROSS STREET"
+  ],
+  [
+   "143",
+   "KAMARAJAR 3RD CROSS STREET"
+  ],
+  [
+   "143",
+   "RAJA GARDEN"
+  ],
+  [
+   "144",
+   "RAJAJI STREET"
+  ],
+  [
+   "144",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "144",
+   "MUTHU RAJAN COLONY"
+  ],
+  [
+   "144",
+   "MUTHURAJAN COLONY"
+  ],
+  [
+   "144",
+   "COUNCILAR DEVARAJANAR STREET"
+  ],
+  [
+   "144",
+   "DIMMARAJAKULAM"
+  ],
+  [
+   "144",
+   "THALAMUTHU NATARAJAN ST."
+  ],
+  [
+   "144",
+   "VARADARAJA PERUMAL KOIL ST."
+  ],
+  [
+   "146",
+   "KAMARAJAR ANNEXE 13TH CROSS STREET"
+  ],
+  [
+   "146",
+   "KAMARAJAR ANNEXE 1ST CROSS STREET"
+  ],
+  [
+   "146",
+   "KAMARAJAR ANNEXE 2ND CROSS STREET"
+  ],
+  [
+   "146",
+   "KAMARAJAN STREET"
+  ],
+  [
+   "146",
+   "KAMARAJAR ANNEXE 2ND STREET"
+  ],
+  [
+   "146",
+   "KAMARAJAR ANNEXE 3RD STREET"
+  ],
+  [
+   "146",
+   "KAMARAJAR NAGAR"
+  ],
+  [
+   "146",
+   "KAMARAJAR NAGAR 2ND STREET"
+  ],
+  [
+   "146",
+   "KAMARAJAR NAGAR IIND CROSS STREET"
+  ],
+  [
+   "146",
+   "KAMARAJAR NAGAR IST CROSS STREET"
+  ],
+  [
+   "146",
+   "KAMARAJAR NAGAR IVTH CROSS STREET"
+  ],
+  [
+   "146",
+   "KAMARAJAR ST., ALAPAKKAM"
+  ],
+  [
+   "146",
+   "KAMARAJAR ST., SRI LAKSHMI NAGAR"
+  ],
+  [
+   "146",
+   "SRI LAKSHMI NAGAR KAMARAJAR STREET"
+  ],
+  [
+   "146",
+   "THALAMUTHU NATARAJAN ST., ALAPAKKAM"
+  ],
+  [
+   "147",
+   "MAAN SAROVAR RAJA,11A ARCOT ROAD"
+  ],
+  [
+   "147",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "147",
+   "VARATHA RAJA SWAMY NAGAR"
+  ],
+  [
+   "147",
+   "VARATHARAJA SWAMY NAGAR 1THSTREET"
+  ],
+  [
+   "147",
+   "VARTHA RAJA SWAMY NAGAR MAIN SALAI"
+  ],
+  [
+   "147",
+   "KAMARAJAR ST.SEEMATHAMMAN KOIL"
+  ],
+  [
+   "147",
+   "MANASARVOR RAJA COMPLEX"
+  ],
+  [
+   "148",
+   "BALA VINAYAKAR NAGAR KAMARAJAR STREET"
+  ],
+  [
+   "148",
+   "BALAVINAYAGAR NAGAR KAMARAJAR CROSS STREET"
+  ],
+  [
+   "148",
+   "BALAVINAYAGAR NAGAR KAMARAJAR MAIN ROAD"
+  ],
+  [
+   "148",
+   "BALAVINAYAGAR NAGAR KAMARAJAR ROAD"
+  ],
+  [
+   "148",
+   "BALAVINAYAGAR NAGAR KAMARAJAR SALAI"
+  ],
+  [
+   "148",
+   "BALAVINAYAGAR NAGAR KAMARAJAR STREET"
+  ],
+  [
+   "148",
+   "BALAVINAYAR NAGAR KAMARAJAR STREET"
+  ],
+  [
+   "148",
+   "KAMARAJAR STREET BALAVINAYAGAR NAGAR"
+  ],
+  [
+   "148",
+   "METTUKUPPAM HIGHWAGS KAMARAJAR SALAI"
+  ],
+  [
+   "148",
+   "KAMARAJAR SALAI"
+  ],
+  [
+   "148",
+   "PERIYAR NAGAR KAMARAJAR HIGH WAY"
+  ],
+  [
+   "148",
+   "PERIYAR NAGAR KAMARAJAR SALAI"
+  ],
+  [
+   "149",
+   "GOVINDARAJAN SALAI"
+  ],
+  [
+   "149",
+   "RAJAGOPALAN ST"
+  ],
+  [
+   "149",
+   "RAJAGOPALAN ST"
+  ],
+  [
+   "149",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "149",
+   "RAJAJI STREET"
+  ],
+  [
+   "150",
+   "DHARMARAJA NAGAR"
+  ],
+  [
+   "150",
+   "RAJA SRI COLLAGE SALAI"
+  ],
+  [
+   "150",
+   "MARUTHI NAGAR KAMARAJAR STREET"
+  ],
+  [
+   "150",
+   "MARUTHI NAGAR RAJAJI STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR RAJARAJAN STREET"
+  ],
+  [
+   "150",
+   "RAJARAJAN STREET"
+  ],
+  [
+   "150",
+   "RAJANAYAKAR STREET"
+  ],
+  [
+   "150",
+   "SIVABOOTHAM RAJA NAIKER STREET"
+  ],
+  [
+   "150",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "150",
+   "NATRAJAR STREET"
+  ],
+  [
+   "150",
+   "THUNDALAM ANNA NAGAR KAMARAJAR STREET"
+  ],
+  [
+   "150",
+   "THUNDALAM ANNA NAGAR NATARAJAN STREET"
+  ],
+  [
+   "151",
+   "RAJAGOPAL STREET"
+  ],
+  [
+   "152",
+   "RAJAJI AVENUE 2ND ST"
+  ],
+  [
+   "152",
+   "RAJAJI AVENUE`2ND EXTN."
+  ],
+  [
+   "152",
+   "MANIRAJAN STREET"
+  ],
+  [
+   "152",
+   "MANIVARAJAN STREET"
+  ],
+  [
+   "152",
+   "KAMARAJAR ST"
+  ],
+  [
+   "152",
+   "RAJAJI AVENUE"
+  ],
+  [
+   "152",
+   "RAJAJI AVENUE 2ND CROSS STREET"
+  ],
+  [
+   "152",
+   "RAJAJI AVENUE 1ST CROSS STREET"
+  ],
+  [
+   "152",
+   "RAJAJI AVENUE 1ST ST"
+  ],
+  [
+   "152",
+   "RAJAJI AVENUE 3RD CROSS STREET"
+  ],
+  [
+   "152",
+   "RAJAJI AVENUE 4TH CROSS STREET"
+  ],
+  [
+   "152",
+   "RAJAJI AVENUE ANNEXURE"
+  ],
+  [
+   "152",
+   "RAJAJI AVENUE`1ST EXTN."
+  ],
+  [
+   "152",
+   "RAJAJI SALAI"
+  ],
+  [
+   "153",
+   "RAJAJI SALAI"
+  ],
+  [
+   "154",
+   "AMBAL NAGAR KAMARAJAR STREET"
+  ],
+  [
+   "154",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "154",
+   "JAI BALAJAI NAGAR ANNEX KAMARAJAR STREET"
+  ],
+  [
+   "154",
+   "KAMARAJAR SALAI KP NAGAR"
+  ],
+  [
+   "154",
+   "KAMARAJAR SALAI"
+  ],
+  [
+   "154",
+   "SHANTHI NAGAR NATARAJAN STREET"
+  ],
+  [
+   "154",
+   "THIRUMALAI NAGAR NATARAJAN SALAI"
+  ],
+  [
+   "154",
+   "VIVEKANANDHA NAGAR RAJARAM STREET"
+  ],
+  [
+   "155",
+   "JAI BALAJI NAGAR ANNEX, KAMARAJAR STREET"
+  ],
+  [
+   "155",
+   "JAI BALAJI NAGAR ANNEX, Kamarajar Street"
+  ],
+  [
+   "155",
+   "MAHARAJA GARDEN"
+  ],
+  [
+   "155",
+   "NEHRU NAGAR KAMARAJAR SALAI"
+  ],
+  [
+   "155",
+   "NEHRU NAGAR KAMARAJARSALAI"
+  ],
+  [
+   "155",
+   "KAMARAJAR SALAI"
+  ],
+  [
+   "155",
+   "KAMARAJAR SALAI KP NAGAR"
+  ],
+  [
+   "155",
+   "NATARAJAN SALAI 1ST STREET"
+  ],
+  [
+   "155",
+   "NATARAJAN SALAI 2ND STREET"
+  ],
+  [
+   "155",
+   "NATARAJAN SALAI 3RD STREET"
+  ],
+  [
+   "155",
+   "NATARAJAN SALAI 4TH STREET"
+  ],
+  [
+   "155",
+   "NATARAJAN SALAI CROSS STREET"
+  ],
+  [
+   "155",
+   "NATARAJAN SALAI MAIN ROAD"
+  ],
+  [
+   "155",
+   "NATRAJAN SALAI/THIRUMALAI NAGAR"
+  ],
+  [
+   "155",
+   "NEHRU NAGAR KAMARAJAN SALAI"
+  ],
+  [
+   "155",
+   "SANTHI NAGAR NATARAJAN STREET"
+  ],
+  [
+   "155",
+   "NATARAJAN CROSS STREET"
+  ],
+  [
+   "155",
+   "THIRUMALAI NAGAR NATARAJAN SALAI"
+  ],
+  [
+   "155",
+   "THIRUMALAI NAGAR NATARAJAN SALAI 1ST CROSS STREET"
+  ],
+  [
+   "155",
+   "THIRUMALAI NAGAR NATARAJAN SALAI 2ND STREET"
+  ],
+  [
+   "155",
+   "THIRUMALAI NAGAR NATARAJAN SALAI MAIN ROAD"
+  ],
+  [
+   "155",
+   "THIRUMALAI NAGAR NATRAJAN SALAI"
+  ],
+  [
+   "155",
+   "VIVEKANANDHA NAGAR RAJAN STREET"
+  ],
+  [
+   "155",
+   "VIVEKANANDHA NAGAR RAJARAM STREET"
+  ],
+  [
+   "156",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "156",
+   "NANDAGOPAL RAJA STREET"
+  ],
+  [
+   "156",
+   "NATARAJAN AVENUE"
+  ],
+  [
+   "156",
+   "NATARAJAN NAGAR"
+  ],
+  [
+   "156",
+   "RAJA LAKSHMI NAGAR"
+  ],
+  [
+   "156",
+   "RAJA RAJESWARI NAGAR"
+  ],
+  [
+   "156",
+   "RAJA STREET"
+  ],
+  [
+   "156",
+   "SHRI NADARAJAN NAGAR"
+  ],
+  [
+   "156",
+   "SRI RAJA RAJESWARI NAGAR"
+  ],
+  [
+   "156",
+   "SRI RAJA RAJESWARI STREET"
+  ],
+  [
+   "156",
+   "THILLAI NATARAJAN STREET"
+  ],
+  [
+   "157",
+   "DHARMA RAJAPURAM"
+  ],
+  [
+   "157",
+   "DHARMARAJAPURAM 2ND CROSS STREET"
+  ],
+  [
+   "157",
+   "DHARMARAJAPURAM FIRST MAIN ROAD"
+  ],
+  [
+   "157",
+   "DHARMARAJAPURAM MAIN ROAD"
+  ],
+  [
+   "157",
+   "DHARMARAJAPURAM SALAI ROAD"
+  ],
+  [
+   "158",
+   "DHANAKOTTI RAJA STREET"
+  ],
+  [
+   "159",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "160",
+   "DHARMARAJA KOIL STREET"
+  ],
+  [
+   "161",
+   "NORTH RAJA STREET"
+  ],
+  [
+   "161",
+   "POLICE QUARTERS RAJA STREET"
+  ],
+  [
+   "161",
+   "RAJA STREET 2ND LANE"
+  ],
+  [
+   "161",
+   "RAJA STREET 3RD LANE"
+  ],
+  [
+   "161",
+   "RAJA STREET 4TH LANE"
+  ],
+  [
+   "161",
+   "RAJA STREET 5TH LANE"
+  ],
+  [
+   "161",
+   "RAJA STREET IST LANE"
+  ],
+  [
+   "161",
+   "SOUTH RAJA STREET"
+  ],
+  [
+   "161",
+   "WEST RAJA STREET"
+  ],
+  [
+   "163",
+   "RAJABADUR STREET"
+  ],
+  [
+   "165",
+   "THIRUVALLUVAR NAGAR RAJAJI STREET"
+  ],
+  [
+   "166",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "166",
+   "RAJAJI STREET"
+  ],
+  [
+   "166",
+   "BV NAGAR KAMARAJAR STREET"
+  ],
+  [
+   "167",
+   "JAIN COLLEGE COLONY RAJAJI SALAI"
+  ],
+  [
+   "170",
+   "Dhanakotti Raja Street"
+  ],
+  [
+   "170",
+   "Rajaji Street"
+  ],
+  [
+   "170",
+   "Shanmugaraja Street"
+  ],
+  [
+   "170",
+   "Rajarajan Street"
+  ],
+  [
+   "171",
+   "Selva Rangaraja Street"
+  ],
+  [
+   "171",
+   "Rangarajapuram Cross Street"
+  ],
+  [
+   "171",
+   "Rangarajapuram I Street"
+  ],
+  [
+   "171",
+   "Rangarajapuram Ii Street"
+  ],
+  [
+   "171",
+   "Rangarajapuram Iii Street"
+  ],
+  [
+   "171",
+   "Rangarajapuram Iv Street"
+  ],
+  [
+   "171",
+   "Rangarajapuram V Street"
+  ],
+  [
+   "171",
+   "Rangarajapuram Vi Street"
+  ],
+  [
+   "173",
+   "Raja Street"
+  ],
+  [
+   "173",
+   "Raja Street Extn.,"
+  ],
+  [
+   "173",
+   "Raja Thottam Slum"
+  ],
+  [
+   "173",
+   "Velayudha Raja Street"
+  ],
+  [
+   "173",
+   "Raja Muthiahpuram"
+  ],
+  [
+   "173",
+   "P.S.Kumarasamy Raja Salai"
+  ],
+  [
+   "175",
+   "Govindarajapuram 1st Street"
+  ],
+  [
+   "175",
+   "Govindarajapuram 2nd Street"
+  ],
+  [
+   "177",
+   "Krishnaraja Nagar 1st Street"
+  ],
+  [
+   "177",
+   "Krishnaraja Nagar 2nd Street"
+  ],
+  [
+   "177",
+   "Krishnaraja Nagar 3rd Street"
+  ],
+  [
+   "177",
+   "Krishnaraja Nagar 4th Street"
+  ],
+  [
+   "177",
+   "Krishnaraja Nagar Extn. 1st St"
+  ],
+  [
+   "177",
+   "Krishnaraja Nagar Extn. 2nd St"
+  ],
+  [
+   "177",
+   "Krishnaraja Nagar Extn. 3rd St"
+  ],
+  [
+   "177",
+   "Nehru Nagar Kamarajar Street (Alias) T.N.H.B 5th Avenue"
+  ],
+  [
+   "177",
+   "Raja Sethupathypuram 1st Cross Street"
+  ],
+  [
+   "177",
+   "Raja Sethupathypuram 2nd Cross Street"
+  ],
+  [
+   "178",
+   "Rajalakshmi Nagar 1st Main Road"
+  ],
+  [
+   "178",
+   "Rajalakshmi Nagar 2nd Main Road"
+  ],
+  [
+   "178",
+   "Rajalakshmi Nagar 3rd Main Road"
+  ],
+  [
+   "178",
+   "Jeganathapuram (Rajalakshmi Nagar) 1st Main Road"
+  ],
+  [
+   "178",
+   "Jeganathapuram (Rajalakshmi Nagar) 2nd Main Road"
+  ],
+  [
+   "178",
+   "Jeganathapuram (Rajalakshmi Nagar) 3rd Main Road"
+  ],
+  [
+   "178",
+   "Rajalakshmi Avenue"
+  ],
+  [
+   "178",
+   "Rajalakshmi Nagar 10th Cross St"
+  ],
+  [
+   "178",
+   "Rajalakshmi Nagar 3rd Main Road"
+  ],
+  [
+   "178",
+   "Rajalakshmi Nagar 4th Main Road"
+  ],
+  [
+   "178",
+   "Rajalakshmi Nagar 5th Cross Street"
+  ],
+  [
+   "178",
+   "Rajalakshmi Nagar 6th Cross St"
+  ],
+  [
+   "178",
+   "Rajalakshmi Nagar 7th Cross St"
+  ],
+  [
+   "178",
+   "Rajalakshmi Nagar 8th Cross St"
+  ],
+  [
+   "178",
+   "Rajalakshmi Nagar 9th Cross Street"
+  ],
+  [
+   "179",
+   "Rajambal Street (Dhandeeswaran Nagar)"
+  ],
+  [
+   "179",
+   "Kamarajar Street"
+  ],
+  [
+   "179",
+   "Kamarajar Street(Gandhi Salai)"
+  ],
+  [
+   "179",
+   "Raja Street"
+  ],
+  [
+   "179",
+   "Raja Lane"
+  ],
+  [
+   "179",
+   "Raja Street"
+  ],
+  [
+   "179",
+   "Rajambal Street (Seethapathy Nagar)"
+  ],
+  [
+   "179",
+   "Varadharajapuram"
+  ],
+  [
+   "179",
+   "Varadharajapuram Officers Colony"
+  ],
+  [
+   "179",
+   "Varatharajapuram Lane I"
+  ],
+  [
+   "179",
+   "Varatharajapuram Lane I"
+  ],
+  [
+   "180",
+   "Kamarajar Street"
+  ],
+  [
+   "180",
+   "Rajaji Street"
+  ],
+  [
+   "180",
+   "Rajaji Street"
+  ],
+  [
+   "180",
+   "Kamarajar Nagar 15th West Street"
+  ],
+  [
+   "180",
+   "Thangaraj Ias St, Ilayaraja Colony"
+  ],
+  [
+   "181",
+   "Rajarajan Street"
+  ],
+  [
+   "181",
+   "Kamarajar Nagar 1st East Street"
+  ],
+  [
+   "181",
+   "Kamarajar Nagar 2nd East Street"
+  ],
+  [
+   "181",
+   "Kamarajar Nagar 3rd East Street"
+  ],
+  [
+   "181",
+   "Kamarajar Nagar 4th East Street"
+  ],
+  [
+   "181",
+   "Kamarajar Salai"
+  ],
+  [
+   "181",
+   "Raja Srinivasa Nagar 1st Street"
+  ],
+  [
+   "181",
+   "Raja Srinivasa Nagar 2nd Street"
+  ],
+  [
+   "181",
+   "Raja Srinivasa Nagar 3rd Street"
+  ],
+  [
+   "181",
+   "Raja Srinivasa Nagar Main Road"
+  ],
+  [
+   "182",
+   "Kamarajar Nagar 5th East Street"
+  ],
+  [
+   "182",
+   "Kamarajar Nagar 6th East Street"
+  ],
+  [
+   "182",
+   "Kamarajar Nagar 7th East Street"
+  ],
+  [
+   "182",
+   "Kamarajar Nagar 8th East Street"
+  ],
+  [
+   "182",
+   "Kamarajar Nagar 9th East Street"
+  ],
+  [
+   "182",
+   "Rajaji Nagar 1st Street"
+  ],
+  [
+   "182",
+   "Kamarajar Nagar"
+  ],
+  [
+   "182",
+   "Raja Rangaswamy Avenue"
+  ],
+  [
+   "182",
+   "Rajaji Nagar 2nd Street,"
+  ],
+  [
+   "182",
+   "Rajaji Nagar Extn."
+  ],
+  [
+   "182",
+   "Rajaji Nagar Lane"
+  ],
+  [
+   "182",
+   "Rajaji Nagar Main Street,"
+  ],
+  [
+   "182",
+   "Rajagopalan 1st Street"
+  ],
+  [
+   "182",
+   "Rajagopalan Lane"
+  ],
+  [
+   "182",
+   "Rajagopalan Street"
+  ],
+  [
+   "182",
+   "Rajagopalan 2nd Street"
+  ],
+  [
+   "168",
+   "KAMARAJAR 1st CROSS STREET"
+  ],
+  [
+   "168",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "168",
+   "RAJAMANI 2ND CROSS STREET"
+  ],
+  [
+   "168",
+   "RAJAGOPALAN STREET"
+  ],
+  [
+   "168",
+   "RAJAJI STREET"
+  ],
+  [
+   "168",
+   "Rajarathinam 3rd Street"
+  ],
+  [
+   "168",
+   "RAJARATHINAM 1ST STREET"
+  ],
+  [
+   "168",
+   "RAJARATHINAM 1st CROSS STREET"
+  ],
+  [
+   "168",
+   "RAJARATHINAM 2nd CROSS STREET"
+  ],
+  [
+   "168",
+   "RAJARATHINAM 2nd STREET"
+  ],
+  [
+   "168",
+   "RAJARATHINAM 3rd CROSS STREET"
+  ],
+  [
+   "168",
+   "RAJARATHINAM 4 CROSS STREET"
+  ],
+  [
+   "168",
+   "RAJARATHINAM 4th STREET"
+  ],
+  [
+   "168",
+   "RAJARATHINAM MAIN ROAD"
+  ],
+  [
+   "168",
+   "RAJAMANI 1ST CROSS STREET"
+  ],
+  [
+   "168",
+   "Rajamani Cross Street"
+  ],
+  [
+   "168",
+   "Rajamani Street"
+  ],
+  [
+   "169",
+   "BAGEERATHI NAGAR SUNDARRAJAN 1ST CROSS"
+  ],
+  [
+   "169",
+   "BAGEERATHI NAGAR SUNDARRAJAN 2ND MAIN RO"
+  ],
+  [
+   "169",
+   "BAGEERATHI NAGAR SUNDARRAJAN MAIN STREET"
+  ],
+  [
+   "169",
+   "M.P. RAJAGOPAL STREET"
+  ],
+  [
+   "169",
+   "P.A.NATARAJAN SALAI (MANIMEGALAI STREET)"
+  ],
+  [
+   "169",
+   "RAJAGOPAL CROSS STREET"
+  ],
+  [
+   "169",
+   "SRINIVASA NAGAR, SUNDARAJAN SALAI"
+  ],
+  [
+   "183",
+   "Raja Garden"
+  ],
+  [
+   "183",
+   "Raja Garden 1st Street"
+  ],
+  [
+   "183",
+   "Raja Garden 2nd Street"
+  ],
+  [
+   "183",
+   "Raja Garden 3rd Street"
+  ],
+  [
+   "183",
+   "Kamarajar Main Road"
+  ],
+  [
+   "183",
+   "RAJA GARDEN"
+  ],
+  [
+   "183",
+   "RAJA STREET"
+  ],
+  [
+   "184",
+   "Sai Balaji Nagar - Kamarajar Street"
+  ],
+  [
+   "184",
+   "K.P.Rajamani Street"
+  ],
+  [
+   "184",
+   "Karathe Thiyagarajan Street"
+  ],
+  [
+   "184",
+   "Rajaji Street"
+  ],
+  [
+   "185",
+   "Kamarajar salai"
+  ],
+  [
+   "186",
+   "Rajalakshmi Avenue Main Road"
+  ],
+  [
+   "186",
+   "Rajalakshmi Avenue 1st Cross Street"
+  ],
+  [
+   "186",
+   "Rajalakshmi Avenue 2nd Cross Street"
+  ],
+  [
+   "186",
+   "Rajalakshmi Avenue 3rd Cross Street"
+  ],
+  [
+   "188",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "188",
+   "N.V. Rajan Street"
+  ],
+  [
+   "188",
+   "Natarajan Street"
+  ],
+  [
+   "188",
+   "Raja Street"
+  ],
+  [
+   "188",
+   "Rajaji Nagar 1st Cross Street"
+  ],
+  [
+   "188",
+   "Rajaji Nagar 1st Street"
+  ],
+  [
+   "188",
+   "Rajaji Nagar 2nd Cross Street"
+  ],
+  [
+   "188",
+   "Rajaji Nagar 2nd Street"
+  ],
+  [
+   "188",
+   "Rajaji Nagar 3rd Cross Street"
+  ],
+  [
+   "188",
+   "Rajaji Nagar 3rd Main Road"
+  ],
+  [
+   "188",
+   "Rajaji Nagar 3rd Street"
+  ],
+  [
+   "188",
+   "Rajaji Nagar 4th Cross Street"
+  ],
+  [
+   "188",
+   "Rajaji Nagar 4th Street"
+  ],
+  [
+   "188",
+   "Rajaji Nagar 1st Main Road"
+  ],
+  [
+   "188",
+   "Rajaji Nagar Main Road"
+  ],
+  [
+   "188",
+   "Rajalakshmi Nagar"
+  ],
+  [
+   "188",
+   "Rajalakshmi Nagar 1st Main Road"
+  ],
+  [
+   "188",
+   "Rajalakshmi Nagar 2nd Cross Street"
+  ],
+  [
+   "188",
+   "Rajalakshmi Nagar 3rd Cross Street"
+  ],
+  [
+   "188",
+   "Rajalakshmi Nagar 4th Cross Street"
+  ],
+  [
+   "188",
+   "Rajalakshmi Nagar 4th Street"
+  ],
+  [
+   "188",
+   "Rajalakshmi Nagar 9th Main Road"
+  ],
+  [
+   "188",
+   "Rajarajeswari Nagar 1st Cross St,"
+  ],
+  [
+   "188",
+   "Rajarajeswari Nagar 1st Main Road"
+  ],
+  [
+   "188",
+   "Rajarajeswari Nagar 1st Street"
+  ],
+  [
+   "188",
+   "Rajarajeswari Nagar 2nd Cross St,"
+  ],
+  [
+   "188",
+   "Rajarajeswari Nagar 2nd Street"
+  ],
+  [
+   "188",
+   "Rajarajeswari Nagar 3rd Cross St,"
+  ],
+  [
+   "188",
+   "Rajarajeswari Nagar 3rd Street"
+  ],
+  [
+   "188",
+   "Rajarajeswari Nagar 4th Cross St,"
+  ],
+  [
+   "188",
+   "Rajarajeswari Nagar 5th Cross St."
+  ],
+  [
+   "188",
+   "Rajarajeswari Nagar 5th St."
+  ],
+  [
+   "188",
+   "Rajarajeswari Nagar 6th Cross St."
+  ],
+  [
+   "188",
+   "Rajarajeswari Nagar 7th Cross St."
+  ],
+  [
+   "188",
+   "Rajarajeswari Nagar 7th St."
+  ],
+  [
+   "188",
+   "Rajarajeswari Nagar 12th Cross St"
+  ],
+  [
+   "188",
+   "Rajarajeswari Nagar 12th St"
+  ],
+  [
+   "188",
+   "Rajalaksmi Nagar"
+  ],
+  [
+   "189",
+   "Rajaji Avenue"
+  ],
+  [
+   "189",
+   "Rajalaksmi Nagar"
+  ],
+  [
+   "189",
+   "Rajalaksmi Nagar 1st Cross Street"
+  ],
+  [
+   "189",
+   "Rajalaksmi Nagar 2nd Cross Street"
+  ],
+  [
+   "189",
+   "Rajalaksmi Nagar 3rd Cross Street"
+  ],
+  [
+   "189",
+   "Rajalaksmi Nagar 4th Cross Street"
+  ],
+  [
+   "189",
+   "Rajalaksmi Nagar 5th Cross Street"
+  ],
+  [
+   "189",
+   "Rajalaksmi Nagar 2nd Main Road"
+  ],
+  [
+   "189",
+   "Rajalaksmi Nagar 8th Cross Street"
+  ],
+  [
+   "189",
+   "Rajalaksmi Nagar Main Road"
+  ],
+  [
+   "189",
+   "Rajasekaran Nagar"
+  ],
+  [
+   "189",
+   "Sai Balaji Nagar - Kamarajar Street"
+  ],
+  [
+   "189",
+   "V.G.P. Shanthi Nagar Raja Veethi"
+  ],
+  [
+   "189",
+   "1st Street - Varadharaja Nagar"
+  ],
+  [
+   "189",
+   "Varatharajan Nagar"
+  ],
+  [
+   "189",
+   "Varatharajan Nagar 1st Street"
+  ],
+  [
+   "189",
+   "Varatharajan Nagar 2nd Street"
+  ],
+  [
+   "190",
+   "Varatharajapuram 4th Street"
+  ],
+  [
+   "190",
+   "Rajalakshmi Nagar- 9th Street"
+  ],
+  [
+   "190",
+   "Rajalakshmi Nagar- Ambathgar Cross Street"
+  ],
+  [
+   "190",
+   "Rajasekaran Nagar"
+  ],
+  [
+   "190",
+   "1st Street - Varadharaja Nagar"
+  ],
+  [
+   "190",
+   "2nd Street - Varadharaja Nagar"
+  ],
+  [
+   "190",
+   "Varadharajapuram Main Road"
+  ],
+  [
+   "190",
+   "Varadharajapuram 1st Street"
+  ],
+  [
+   "190",
+   "Varadharajapuram 2nd Street"
+  ],
+  [
+   "190",
+   "Varadharajapuram 3rd Street"
+  ],
+  [
+   "190",
+   "Varadharajapuram Main Road"
+  ],
+  [
+   "190",
+   "Varatharajapuram 2nd Cross Street"
+  ],
+  [
+   "190",
+   "Varatharajapuram 3rdCross Street"
+  ],
+  [
+   "190",
+   "Varatharajapuram 5th Street"
+  ],
+  [
+   "191",
+   "Amaravathi Nagar Rajaji Street"
+  ],
+  [
+   "191",
+   "Kamarajar Street"
+  ],
+  [
+   "191",
+   "Jayanthi Natarajan Street"
+  ],
+  [
+   "191",
+   "Rajaji Street Nesavalar nagar"
+  ],
+  [
+   "191",
+   "PADMAVATHI NAGAR RAJATHI STREET"
+  ],
+  [
+   "192",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "192",
+   "RAJA NAGAR 1ST MAIN ROAD"
+  ],
+  [
+   "192",
+   "RAJA NAGAR 2ND CROSS STREET"
+  ],
+  [
+   "192",
+   "RAJA NAGAR 2ND MAIN ROAD"
+  ],
+  [
+   "192",
+   "RAJA NAGAR IST CROSS STREET"
+  ],
+  [
+   "193",
+   "RAJAMANI ST"
+  ],
+  [
+   "196",
+   "RAJAN NAGAR"
+  ],
+  [
+   "197",
+   "KAJARAJAN STREET"
+  ],
+  [
+   "197",
+   "KAJARAJAN STREET EXTN"
+  ],
+  [
+   "197",
+   "DHARMARAJA KOIL STREET"
+  ],
+  [
+   "197",
+   "DHARMARAJA KOIL CROSS ST"
+  ],
+  [
+   "197",
+   "DHARMARAJA KOIL STREET"
+  ],
+  [
+   "197",
+   "S.V.NATARAJA NAICAKR STREET"
+  ],
+  [
+   "198",
+   "V.G.P RAJA STREET"
+  ],
+  [
+   "198",
+   "ELLA.RAJAMANICKAM ROAD"
+  ],
+  [
+   "198",
+   "KAMARAJAR CROSS STREET"
+  ],
+  [
+   "198",
+   "KAMARAJAR STREET"
+  ],
+  [
+   "198",
+   "PONNIAMMAN KOIL 1ST MAIN - KAMARAJAR STREET LINK"
+  ],
+  [
+   "199",
+   "RAJA SALAI"
+  ],
+  [
+   "200",
+   "KAMARAJAR STREET"
+  ]
+ ],
+ "ANNAMALAI": [
+  [
+   "6",
+   "ANNAMALAI NAGAR 7TH STREET"
+  ],
+  [
+   "7",
+   "ANNAMALAI NAGAR"
+  ],
+  [
+   "7",
+   "ANNAMALAI NAGAR 2ND CROSS STREET"
+  ],
+  [
+   "7",
+   "ANNAMALAI NAGAR 2ND STREET"
+  ],
+  [
+   "7",
+   "ANNAMALAI NAGAR 3RD CROSS STREET"
+  ],
+  [
+   "7",
+   "ANNAMALAI NAGAR 3RD STREET"
+  ],
+  [
+   "7",
+   "ANNAMALAI NAGAR 4TH CROSSS STREET"
+  ],
+  [
+   "7",
+   "ANNAMALAI NAGAR 4TH STREET"
+  ],
+  [
+   "7",
+   "ANNAMALAI NAGAR 5TH STREET"
+  ],
+  [
+   "7",
+   "ANNAMALAI NAGAR 6TH STREET"
+  ],
+  [
+   "7",
+   "ANNAMALAI NAGAR 7TH STREET"
+  ],
+  [
+   "7",
+   "ANNAMALAI NAGAR IST CROSS STREET"
+  ],
+  [
+   "7",
+   "ANNAMALAI NAGAR IST STREET"
+  ],
+  [
+   "7",
+   "ANNAMALAI NAGAR 3RD LANE"
+  ],
+  [
+   "59",
+   "Annamalai Lane"
+  ],
+  [
+   "82",
+   "ANNAMALAIAR ST"
+  ],
+  [
+   "86",
+   "ANNAMALAI AVENUE"
+  ],
+  [
+   "91",
+   "ANNAMALAI PLOTS"
+  ],
+  [
+   "91",
+   "JASWANTH NAGAR ANNAMALAI AVENUE SRI PRASAD FLAT"
+  ],
+  [
+   "104",
+   "Raja Annamalai Road"
+  ],
+  [
+   "108",
+   "Annamalai Cross Street"
+  ],
+  [
+   "123",
+   "Raja Annamalaipuram 1st Cross Street"
+  ],
+  [
+   "123",
+   "Raja Annamalaipuram 1st Main Road"
+  ],
+  [
+   "123",
+   "Raja Annamalaipuram 2nd Cross Street"
+  ],
+  [
+   "123",
+   "Raja Annamalaipuram 2nd Main Road"
+  ],
+  [
+   "123",
+   "Raja Annamalaipuram 3rd Cross Street"
+  ],
+  [
+   "123",
+   "Raja Annamalaipuram 3rd Main Road"
+  ],
+  [
+   "123",
+   "Raja Annamalaipuram 4th Cross Street"
+  ],
+  [
+   "123",
+   "Raja Annamalaipuram 4th Main Road"
+  ],
+  [
+   "123",
+   "Raja Annamalaipuram 5th Main Road"
+  ],
+  [
+   "123",
+   "Raja Annamalaipuram 6th Main Road"
+  ],
+  [
+   "123",
+   "Raja Annamalaipuram 7th Main Road"
+  ],
+  [
+   "124",
+   "Vaithiyar Annamalai Street"
+  ],
+  [
+   "129",
+   "1st Street - Annamalai Colony"
+  ],
+  [
+   "129",
+   "2nd Street - Annamalai Colony"
+  ],
+  [
+   "129",
+   "3rd Street - Annamalai Colony"
+  ],
+  [
+   "139",
+   "Annamalai Nagar Cross Street"
+  ],
+  [
+   "139",
+   "Annamalai Nagar I Street"
+  ],
+  [
+   "139",
+   "Annamalai Nagar Ii Street"
+  ],
+  [
+   "139",
+   "Annamalai Nagar Iii Street"
+  ],
+  [
+   "143",
+   "ANNAMALAI AVENUE"
+  ],
+  [
+   "169",
+   "ANNAMALAI STREET"
+  ],
+  [
+   "191",
+   "ANNAMALAI STREET"
+  ]
+ ],
+ "AYYAPPAN": [
+  [
+   "80",
+   "AYYAPPAN STREET WEST BANU NAGAR"
+  ],
+  [
+   "80",
+   "AYYAPPAN STREET"
+  ],
+  [
+   "85",
+   "AYYAPPAN 1ST CROSS STREET"
+  ],
+  [
+   "85",
+   "AYYAPPAN CROSS STREET"
+  ],
+  [
+   "148",
+   "KADAMPADI NAGAR AYYAPPAN STREET"
+  ],
+  [
+   "148",
+   "KADAMPADIAMMAN NAGAR AYYAPPAN STREET"
+  ],
+  [
+   "187",
+   "Ayyappan Koil Street"
+  ]
+ ],
+ "MAHALAKSHMI": [
+  [
+   "4",
+   "MAHALAKSHMI NAGAR"
+  ],
+  [
+   "4",
+   "MAHALAKSHMI NAGAR 1ST STREET"
+  ],
+  [
+   "4",
+   "MAHALAKSHMI NAGAR 2ND STREET"
+  ],
+  [
+   "4",
+   "MAHALAKSHMI NAGAR MAIN STREET"
+  ],
+  [
+   "22",
+   "MAHALAKSHMI NAGAR"
+  ],
+  [
+   "22",
+   "Mahalakshmi Nagar 1st Street"
+  ],
+  [
+   "22",
+   "Mahalakshmi Nagar 2nd Street"
+  ],
+  [
+   "25",
+   "MAHALAKSHMI NAGAR"
+  ],
+  [
+   "70",
+   "Mahalakshmi Street"
+  ],
+  [
+   "80",
+   "MAHALAKSHMI STREET"
+  ],
+  [
+   "83",
+   "MAHALAKSHMI NAGAR"
+  ],
+  [
+   "88",
+   "MAHALAKSHMI NAGAR"
+  ],
+  [
+   "88",
+   "MAHALAKSHMI STREET KALAIVANAR NAGAR"
+  ],
+  [
+   "136",
+   "Mahalakshmi Street"
+  ],
+  [
+   "147",
+   "MAHALAKSHMI AVENUE"
+  ],
+  [
+   "147",
+   "MAHALAKSHMI NAGAR"
+  ],
+  [
+   "149",
+   "MAHALAKSHMI NAGAR"
+  ],
+  [
+   "149",
+   "MAHALAKSHMI STREET"
+  ],
+  [
+   "150",
+   "KARAMBAKKAM MAHALAKSHMI NAGAR 2ND STREET"
+  ],
+  [
+   "150",
+   "KARAMBAKKAM MAHALAKSHMI NAGAR IST STREET"
+  ],
+  [
+   "150",
+   "KARAMBAKKAM MAHALAKSHMI NAGAR MAIN ROAD"
+  ],
+  [
+   "150",
+   "MAHALAKSHMI NAGAR FLATS 2ND CROSS STREET"
+  ],
+  [
+   "150",
+   "MAHALAKSHMI NAGAR"
+  ],
+  [
+   "150",
+   "THUNDALAM MAHALAKSHMI NAGAR"
+  ],
+  [
+   "152",
+   "MAHALAKSHMI ST"
+  ],
+  [
+   "154",
+   "MAHALAKSHMI NAGAR"
+  ],
+  [
+   "154",
+   "MAHALAKSHMI NAGAR ANNEX"
+  ],
+  [
+   "154",
+   "MAHALAKSHMI NAGAR CROSS STREET"
+  ],
+  [
+   "155",
+   "GANDHI NAGAR ANNEX MAHALAKSHMI STREET"
+  ],
+  [
+   "155",
+   "MAHALAKSHMI NAGAR ANNEX"
+  ],
+  [
+   "155",
+   "MAHALAKSHMI NAGAR ANNEXE"
+  ],
+  [
+   "155",
+   "MAHALAKSHMI NAGAR CROSS STREET"
+  ],
+  [
+   "155",
+   "MAHALAKSHMI NAGAR MAIN ROAD"
+  ],
+  [
+   "156",
+   "MAHALAKSHMI ENCLAV"
+  ],
+  [
+   "156",
+   "MAHALAKSHMI NAGAR"
+  ],
+  [
+   "156",
+   "MAHALAKSHMI NAGAR 1ST STREET"
+  ],
+  [
+   "156",
+   "MAHALAKSHMI NAGAR 2ND STREET"
+  ],
+  [
+   "156",
+   "MAHALAKSHMI NAGAR 3RD STREET"
+  ],
+  [
+   "156",
+   "MAHALAKSHMI NAGAR 4TH STREET"
+  ],
+  [
+   "156",
+   "MAHALAKSHMI NAGAR EXTN."
+  ],
+  [
+   "156",
+   "MAHALAKSHMI NAGAR MAIN ROAD"
+  ],
+  [
+   "156",
+   "MAHALAKSHMI STREET"
+  ],
+  [
+   "165",
+   "MAHALAKSHMI NAGAR 3RD CROSS STREET"
+  ],
+  [
+   "165",
+   "MAHALAKSHMI NAGAR CROSS ROAD"
+  ],
+  [
+   "166",
+   "MAHALAKSHMI STREET"
+  ],
+  [
+   "177",
+   "Mahalakshmi Nagar 8th Cross Street"
+  ],
+  [
+   "177",
+   "Mahalakshmi Nagar 10th Cross Street"
+  ],
+  [
+   "177",
+   "Mahalakshmi Nagar 11th Cross Street"
+  ],
+  [
+   "177",
+   "Mahalakshmi Nagar 12th Cross Street"
+  ],
+  [
+   "177",
+   "Mahalakshmi Nagar 13th Cross Street"
+  ],
+  [
+   "177",
+   "Mahalakshmi Nagar 14th Cross Street"
+  ],
+  [
+   "177",
+   "Mahalakshmi Nagar 15th Cross Street"
+  ],
+  [
+   "177",
+   "Mahalakshmi Nagar 16th Cross Street"
+  ],
+  [
+   "177",
+   "Mahalakshmi Nagar 1st Cross St"
+  ],
+  [
+   "177",
+   "Mahalakshmi Nagar 1st Main Road"
+  ],
+  [
+   "177",
+   "Mahalakshmi Nagar 2nd Main Road"
+  ],
+  [
+   "177",
+   "Mahalakshmi Nagar 3rd Main Road"
+  ],
+  [
+   "177",
+   "Mahalakshmi Nagar 4th Main Road"
+  ],
+  [
+   "177",
+   "Mahalakshmi Nagar 4th Main Road Lane"
+  ],
+  [
+   "177",
+   "Mahalakshmi Nagar 6th Cross Street"
+  ],
+  [
+   "177",
+   "Mahalakshmi Nagar 7th Cross Street1"
+  ],
+  [
+   "177",
+   "Mahalakshmi Nagar 9th Cross Street"
+  ],
+  [
+   "177",
+   "Mahalakshmi Nagar East Extn. 1st Street"
+  ],
+  [
+   "177",
+   "Mahalakshmi Nagar East Extn. 2nd Street"
+  ],
+  [
+   "179",
+   "Mahalakshmi Street"
+  ],
+  [
+   "181",
+   "Mahalakshmi Cross Street"
+  ],
+  [
+   "181",
+   "Mahalakshmi Avenue"
+  ],
+  [
+   "169",
+   "MAHALAKSHMI STREET"
+  ],
+  [
+   "169",
+   "MAHALAKSHMI STREET EXTENSION"
+  ],
+  [
+   "188",
+   "Mahalakshmi Nagar 1st Cross Street"
+  ],
+  [
+   "188",
+   "Mahalakshmi Nagar 1st Street"
+  ],
+  [
+   "188",
+   "Mahalakshmi Nagar 2nd Cross Street"
+  ],
+  [
+   "188",
+   "Mahalakshmi Nagar 2nd Street"
+  ],
+  [
+   "188",
+   "Mahalakshmi Nagar 3rd Street"
+  ],
+  [
+   "188",
+   "Mahalakshmi Nagar 4th Street"
+  ],
+  [
+   "188",
+   "Mahalakshmi Nagar 5th Cross Street"
+  ],
+  [
+   "188",
+   "Mahalakshmi Nagar 5th Main Road"
+  ],
+  [
+   "188",
+   "Mahalakshmi Nagar 5th Street"
+  ],
+  [
+   "188",
+   "Mahalakshmi Nagar 6th Street"
+  ],
+  [
+   "188",
+   "Mahalakshmi Nagar 7th Street"
+  ],
+  [
+   "188",
+   "Mahalakshmi Nagar 8th Street"
+  ],
+  [
+   "188",
+   "Mahalakshmi Nagar 9th Street"
+  ],
+  [
+   "188",
+   "Mahalakshmi Nagar Bharathiar Salai"
+  ],
+  [
+   "188",
+   "Mahalakshmi Nagar Extn. 1st Cross Street]"
+  ],
+  [
+   "188",
+   "Mahalakshmi Nagar Extn. 2nd Cross street"
+  ],
+  [
+   "188",
+   "Mahalakshmi Nagar Extn. 4th Street"
+  ],
+  [
+   "188",
+   "Mahalakshmi Nagar Extn 2nd Street"
+  ],
+  [
+   "188",
+   "Mahalakshmi Nagar"
+  ],
+  [
+   "188",
+   "Mahalakshmi Nagar Extn."
+  ],
+  [
+   "188",
+   "Mahalakshmi Nagar Main Road"
+  ],
+  [
+   "188",
+   "Bank of Baroda Colony Mahalakshmi Nagar"
+  ],
+  [
+   "189",
+   "Mahalakshmi Nagar"
+  ],
+  [
+   "190",
+   "Mahalakshmi Nagar"
+  ]
+ ],
+ "MALLIGAI": [
+  [
+   "4",
+   "MALLIGAI STREET"
+  ],
+  [
+   "24",
+   "MALLIGAI STREET"
+  ],
+  [
+   "65",
+   "Malligai Avenue Main I Lane"
+  ],
+  [
+   "65",
+   "Malligai Avenue Main Ii Lane"
+  ],
+  [
+   "65",
+   "Malligai Avenue Main Road"
+  ],
+  [
+   "67",
+   "Malligai Thottam"
+  ],
+  [
+   "67",
+   "Malligaipuram"
+  ],
+  [
+   "127",
+   "Malligai Street - Brindavan Nagar"
+  ],
+  [
+   "145",
+   "MALLIGAI AVANUE"
+  ],
+  [
+   "145",
+   "MALLIGAI AVENUE 1ST STREET"
+  ],
+  [
+   "145",
+   "MALLIGAI AVENUE"
+  ],
+  [
+   "153",
+   "AMBAL NAGAR MALLIGAI STREET"
+  ],
+  [
+   "153",
+   "AMBAL NAGAR MALLIGAI STREET (WEST)"
+  ],
+  [
+   "153",
+   "KURUNJI NAGAR MALLIGAI STREET"
+  ],
+  [
+   "153",
+   "MALLIGAI STREET"
+  ],
+  [
+   "156",
+   "V & D AVENUE ¿ MALLIGAI 1ST CROSS STREET"
+  ],
+  [
+   "156",
+   "V & D AVENUE ¿ MALLIGAI STREET"
+  ],
+  [
+   "165",
+   "SAKTHI NAGAR MALLIGAI STREET"
+  ],
+  [
+   "175",
+   "Malligaipoo Nagar"
+  ],
+  [
+   "191",
+   "THIRUVALLUVAR NAGARMALLIGAI STREET"
+  ]
+ ],
+ "VIJAYALAKSHMI": [
+  [
+   "24",
+   "Vijayalakshmi Nagar"
+  ],
+  [
+   "34",
+   "Vijayalakshmi Nagar 1st Street"
+  ],
+  [
+   "34",
+   "Vijayalakshmi Nagar 2nd Street"
+  ],
+  [
+   "34",
+   "Vijayalakshmi Nagar Main Road"
+  ],
+  [
+   "80",
+   "VIJAYALAKSHMI STREET WEST BANU NAGAR"
+  ],
+  [
+   "80",
+   "KAMARAJ STREET, VIJAYALAKSHMI PURAM"
+  ],
+  [
+   "80",
+   "VIJAYALAKSHMI MAIN ROAD"
+  ],
+  [
+   "80",
+   "VIJAYALAKSHMIPURAM"
+  ],
+  [
+   "80",
+   "VIJAYALAKSHMIPURAM MAIN ROAD"
+  ],
+  [
+   "95",
+   "Vijayalakshmi Puram 1 To 4 Street"
+  ],
+  [
+   "95",
+   "Vijayalakshmipuram 2nd Lane"
+  ],
+  [
+   "110",
+   "Vijayalakshmi Street"
+  ],
+  [
+   "150",
+   "VIJAYALAKSHMI NAGAR"
+  ],
+  [
+   "177",
+   "Shakthi Vijayalakshmi Nagar 1st Street"
+  ],
+  [
+   "177",
+   "Shakthi Vijayalakshmi Nagar 2nd Street"
+  ],
+  [
+   "177",
+   "Shakthi Vijayalakshmi Nagar 3rd Street"
+  ]
+ ],
+ "SARADHA": [
+  [
+   "37",
+   "Saradha Nagar"
+  ],
+  [
+   "128",
+   "1st Street - Saradha Nagar"
+  ],
+  [
+   "128",
+   "2nd Street - Saradha Nagar"
+  ],
+  [
+   "128",
+   "3rd Street - Saradha Nagar"
+  ]
+ ],
+ "PONNI": [
+  [
+   "6",
+   "PONNI AMMAN NAGAR"
+  ],
+  [
+   "6",
+   "PONNI AMMAN NAGAR 1ST CROSS STREET"
+  ],
+  [
+   "6",
+   "PONNI AMMAN NAGAR 1ST STREET"
+  ],
+  [
+   "6",
+   "PONNI AMMAN NAGAR 2ND CROSS STREET"
+  ],
+  [
+   "6",
+   "PONNI AMMAN NAGAR 3RD CROSS STREET"
+  ],
+  [
+   "6",
+   "PONNI AMMAN NAGAR 3RD STREET"
+  ],
+  [
+   "6",
+   "PONNI AMMAN NAGAR 4TH STREET"
+  ],
+  [
+   "6",
+   "PONNI AMMAN NAGAR 5TH STREET"
+  ],
+  [
+   "15",
+   "PONNIAMMAN NAGAR 1ST CROSS STREET"
+  ],
+  [
+   "15",
+   "PONNIAMMAN NAGAR 1ST STREET"
+  ],
+  [
+   "15",
+   "PONNIAMMAN NAGAR 2ND CROSS STREET"
+  ],
+  [
+   "15",
+   "PONNIAMMAN NAGAR 2ND STREET"
+  ],
+  [
+   "15",
+   "PONNIAMMAN NAGAR 3RD CROSS STREET"
+  ],
+  [
+   "15",
+   "PONNIAMMAN NAGAR 3RD STREET"
+  ],
+  [
+   "15",
+   "PONNIAMMAN NAGAR 4TH CROSS STREET"
+  ],
+  [
+   "15",
+   "PONNIAMMAN NAGAR"
+  ],
+  [
+   "19",
+   "MATHUR PONNIAMMAN KOIL STREET"
+  ],
+  [
+   "19",
+   "PONNIAMMAN KOIL STREET"
+  ],
+  [
+   "25",
+   "200 FEET ROAD PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "100 FEET ROAD,PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "200 FEET ROAD PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "DEVAKI NAGAR, PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "IYYAPPA NAGAR(Ponniammanmedu)"
+  ],
+  [
+   "26",
+   "THANIKACHALAM NAGAR F BLK,PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "WEST THANIKACHALAM NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "JYOTHI NAGAR(PONNIAMMANMEDU)"
+  ],
+  [
+   "26",
+   "MAHAVISHNU NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "SAMY NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "SUBASH NAGAR, PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "VANASAKTHI NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "VASANTHA NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "CHAMUNDEESWARI NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "DEVAKI NAGAR 3RD ST, PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "LAKSHMI NAGAR 1ST ST,PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "SAKTHIVEL NAGAR, PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "THANGAVEL NAGAR, PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "THANIGAI NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "THIRUMALAI NAGAR(ponniammanmedu)"
+  ],
+  [
+   "26",
+   "IYYAPPA NAGAR 1ST ST, PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "PARASURAM NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "PRABAKARAN NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "DILLI AVENUE, PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "DURGA NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "GAYATHRI NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "MOHAN NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "NEW SASTHRI NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "SASTHRI NAGAR ANNEXE-1,PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "SASTRI NAGAR EXT,PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "MAJESTIC COLONY, PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "PONNUSAMY NAGAR, PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "THIRUMALAI NAGAR 1ST st,PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "THIRUMALAI NAGAR 2ND ST,PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "THIRUMALAI NAGAR 3rd ST,PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "THIRUMALAI NAGAR 4TH ST,PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "THIRUMALAI NAGAR 5TH ST,PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "THIRUMALAI NAGAR EXTN,PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "VADIVEL NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "26",
+   "VAJJIRAVEL NAGAR 3RD ST,PONNIAMMANMEDU"
+  ],
+  [
+   "27",
+   "THANIKACHALAM NAGAR F BLK,PONNIAMMANMEDU"
+  ],
+  [
+   "27",
+   "THIRUMALAI NAGAR(ponniammanmedu)"
+  ],
+  [
+   "27",
+   "THANIKACHALAM NAGAR E BLK,PONNIAMMANMEDU"
+  ],
+  [
+   "27",
+   "THANIKACHALAM NAGAR G BLK,PONNIAMMANMEDU"
+  ],
+  [
+   "27",
+   "THIRUMALAI NAGAR 3rd ST,PONNIAMMANMEDU"
+  ],
+  [
+   "27",
+   "THIRUMALAI NAGAR 5TH ST,PONNIAMMANMEDU"
+  ],
+  [
+   "28",
+   "VASANTHA NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "ANNAPOORANI NAGAR , PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "IYYAPPA NAGAR 2ND crS(ponniyammanmedu)T"
+  ],
+  [
+   "33",
+   "IYYAR THOTTAM 2ND ST PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "IYYAR THOTTAM IST ST PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "KAMATCHIAMMAN NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "PRAKASH NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "RAMALINGACOLONY , PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "SRIRAMAN SALAI, PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "THANIKACHALAM NAGAR F BLK,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "BRINDAVAN GARDEN,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "MUNUSAMY NAGAR EXT , PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "AMBUJAMMAL ST, PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "BALAKRISHNA NAGAR , PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "CHELLAIYA NAGAR , PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "ETTIAPPAN SALAI, PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "GANDHI NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "GOWRI NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "KARPAGAM NAGAR , PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "KASIAMMAL NAGAR , PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "MANAVALAN NAGAR , PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "MGR ST, PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "MUNUSAMY NAGAR , PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "NAGAVALLI AVENUE , PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "PATEL ST, PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "PERIYA SALAI, PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "SAMIYAR THOTTAM, PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "SANJAY NAGAR , PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "SELVAM NAGAR , PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "SRI KRISHNA NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "SRI SRINIVASA NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "SRIKANDHAN NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "SRIRAGAVENDRA NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "THILAGAR ST, PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "TIRUPUR KUMARAN ST, PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "V.O.C. 1ST STREET, PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "VALLIAMMAI NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "VARADARAJA NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "VASU NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "VASUDEVAN THOTTAM, PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "VEERAPANDIAN ST, PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "VGP SANTHOSHAM NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "VIDYA NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "VINOBAJI ST, PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "VPC NAGAR,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "PRAKASH NAGAR 10TH ST,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "PRAKASH NAGAR 11TH ST,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "PRAKASH NAGAR 12TH ST,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "PRAKASH NAGAR 1ST ST , PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "PRAKASH NAGAR 2ND ST,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "PRAKASH NAGAR 3RD ST,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "PRAKASH NAGAR 7TH ST,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "PRAKASH NAGAR 8TH ST,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "PRAKASH NAGAR 13TH ST,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "PRAKASH NAGAR 4TH ST,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "PRAKASH NAGAR 9TH ST,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "RAMALINGACOLONY B BLK,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "RAMALINGACOLONY D BLK,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "SELVAM NAGAR EXTENSION,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "SABIR AVENUE,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "SENTHIL AVENUE, PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "SHANTHI COLONY, PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "SRINIVASA NAGAR, PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "THANIKACHALAM NAGAR C BLK,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "THANIKACHALAM NAGAR E BLK,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "THANIKACHALAM NAGAR G BLK,PONNIAMMANMEDU"
+  ],
+  [
+   "33",
+   "VASU NAGAR 1ST STREET,PONNIAMMANMEDU"
+  ],
+  [
+   "56",
+   "Ponni Amman Koil Street"
+  ],
+  [
+   "61",
+   "Ponni Amman Koil Street"
+  ],
+  [
+   "65",
+   "Rajaji Nagar Ponni Street"
+  ],
+  [
+   "75",
+   "Ponni Amman Koil 1st Street"
+  ],
+  [
+   "75",
+   "Ponni Amman Koil Street"
+  ],
+  [
+   "88",
+   "PONNIAMMAN KOIL STREET KALAIVANAR NAGAR"
+  ],
+  [
+   "99",
+   "Ponni Colony Lane"
+  ],
+  [
+   "99",
+   "Ponni Colony Main Road"
+  ],
+  [
+   "129",
+   "Ponni Amman Koil Street"
+  ],
+  [
+   "144",
+   "PONNIAMMAN KOIL LINK RD."
+  ],
+  [
+   "147",
+   "PONNIAMMAN KOIL 2ND CROSS & 3RD CROSS STREETS"
+  ],
+  [
+   "147",
+   "PONNIAMMAN KOIL ST 1ST STREET"
+  ],
+  [
+   "147",
+   "PONNIAMMAN KOIL ST 2ND STREET"
+  ],
+  [
+   "147",
+   "PONNIAMMAN KOIL ST MAIN SALAI"
+  ],
+  [
+   "147",
+   "PONNIYAMMAN KOIL 1ST CROSS ST"
+  ],
+  [
+   "147",
+   "PONNIYAMMAN KOIL STREET"
+  ],
+  [
+   "150",
+   "PONNI FLATS"
+  ],
+  [
+   "150",
+   "PONNI NAGAR AGATHIYAR STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR ATHIYAMAN STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR AVVAIYAR STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR BHARATHI SALAI"
+  ],
+  [
+   "150",
+   "PONNI NAGAR BHARATHI SALAI 3RD CROSS STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR BHARATHI STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR C.V.K. STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR JAIN KOIL STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR KAMBAR STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR KURINJI STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR MAHAVEER STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR MAMALLAN STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR MARAGATHAM 1ST STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR MARAGATHAM 2ND STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR MULLAI STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR NEITHAL STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR PARI STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR PONNIAMMAN KOIL 1ST STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR PONNIAMMAN KOIL STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR POOMBUGAR STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR RAJARAJAN STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR RAJIVGANDHI STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR SENKUTTUVAN CROSS STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR SENKUTTUVAN STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR T.V.K. STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR THIRUVALLUVAR STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR V.O.C. STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR VALLALAR STREET"
+  ],
+  [
+   "150",
+   "PONNI NAGAR VIVEKANANTH STREET"
+  ],
+  [
+   "150",
+   "PONNIAMMAN KOIL STREET"
+  ],
+  [
+   "150",
+   "PONNIYAMMAN KOIL STREET"
+  ],
+  [
+   "155",
+   "PONNIAMMAN NAGAR"
+  ],
+  [
+   "155",
+   "PRITHIVIRAJ AVENUE, K.K.P. SALAI PONNIPPAN NAGAR"
+  ],
+  [
+   "156",
+   "PONNI NAGAR"
+  ],
+  [
+   "156",
+   "PONNIAMMAN KOIL 2ND CROSS STREET"
+  ],
+  [
+   "156",
+   "PONNIAMMAN KOIL STREET"
+  ],
+  [
+   "156",
+   "PONNIAMMAN KOIL STREET MAIN ROAD"
+  ],
+  [
+   "156",
+   "PONNIAMMAN NAGAR"
+  ],
+  [
+   "161",
+   "PONNIYAMMAN KOIL STREET"
+  ],
+  [
+   "171",
+   "Ponni Amman Koil Street"
+  ],
+  [
+   "172",
+   "Ponni Amman Koil Street"
+  ],
+  [
+   "176",
+   "Ponni Amman Koil Street"
+  ],
+  [
+   "180",
+   "Ponni Street"
+  ],
+  [
+   "169",
+   "PONNIAMMAN KOIL STREET"
+  ],
+  [
+   "187",
+   "Ponniamman 1st Cross Street"
+  ],
+  [
+   "187",
+   "Ponniamman 2nd Cross Street"
+  ],
+  [
+   "187",
+   "Ponniamman East Street"
+  ],
+  [
+   "187",
+   "Ponniamman Koil 1St Main Road"
+  ],
+  [
+   "187",
+   "Ponniamman Koil Street"
+  ],
+  [
+   "187",
+   "Sabari Salai Ponniyamman Nagar"
+  ],
+  [
+   "188",
+   "Iyya Nagar - Ponniamman Street"
+  ],
+  [
+   "196",
+   "PONNIAMMAN KOIL STREET"
+  ],
+  [
+   "198",
+   "PARAMESWARAN NAGAR MAYANA PATHAI PONNIAMMAN KOIL MAYANA PATHAI LINK ROAD"
+  ],
+  [
+   "198",
+   "PONNIAMMAN KOIL 1ST MAIN - KAMARAJAR STREET LINK"
+  ],
+  [
+   "198",
+   "PONNIAMMAN KOIL 1ST ST 1ST CROSS STREET"
+  ],
+  [
+   "198",
+   "PONNIAMMAN KOIL 2ND ST 1ST CROSS STREET"
+  ],
+  [
+   "198",
+   "PONNIAMMAN KOIL 2ND ST 2ND CROSS STREET"
+  ],
+  [
+   "198",
+   "PONNIAMMAN KOIL 2ND ST 3RD CROSS STREET"
+  ],
+  [
+   "198",
+   "PONNIAMMAN KOIL 2ND ST 4TH CROSS STREET"
+  ],
+  [
+   "198",
+   "PONNIAMMAN KOIL 2ND ST 5TH CROSS STREET"
+  ],
+  [
+   "198",
+   "PONNIAMMAN KOIL 2ND ST 6TH CROSS STREET"
+  ],
+  [
+   "198",
+   "PONNIAMMAN KOIL 2ND STREET - KUMARAN NAGAR MAYANA SALAI LINK ROAD"
+  ],
+  [
+   "198",
+   "PONNIAMMAN KOIL 3RD ST"
+  ],
+  [
+   "198",
+   "PONNIAMMAN KOIL ERRIKARAI SALAI"
+  ],
+  [
+   "198",
+   "PONNIAMMAN KOIL IIND ST"
+  ],
+  [
+   "198",
+   "PONNIAMMAN KOIL IST CROSS STREET EXTN"
+  ],
+  [
+   "198",
+   "PONNIAMMAN KOIL MAYANA PATHAI CROSS STREET"
+  ],
+  [
+   "198",
+   "PONNIAMMAN KOIL MAYANAM PATHAI"
+  ],
+  [
+   "198",
+   "PONNIAMMAN KOIL STREET"
+  ]
+ ]
+}

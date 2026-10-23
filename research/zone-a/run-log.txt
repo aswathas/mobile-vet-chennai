@@ -1,0 +1,33 @@
+REPAIR.md executed in full. Here is the required output.
+
+**Zone totals:** 2,71,686 households · 5,378 cases a month · Rs 21,98,011 our-mix revenue a month.
+
+**Verdicts: 1 GO, 5 HOLD, 44 NO-GO.** Localities below the Rs 1,100 floor: **49 of 50.**
+
+**Top five by our-mix monthly revenue:**
+
+| # | Locality | Cases/mo | Households | Rs/mo | Blended | Margin | Sat | Status |
+|---|---|---|---|---|---|---|---|---|
+| 1 | Velachery main (Vijaya Nagar) | 445 | 16,560 | 2,02,842 | 1,302 | 452 | 55 | GO |
+| 2 | Medavakkam Town | 305 | 14,260 | 1,35,102 | 1,099 | 249 | 36 | HOLD |
+| 3 | Pallikaranai (oil mill) | 257 | 11,960 | 1,10,207 | 1,024 | 174 | 47 | HOLD |
+| 4 | Velachery Ram Nagar North | 235 | 8,740 | 1,05,286 | 1,012 | 162 | 38 | HOLD |
+| 5 | Velachery Jaganathapuram | 216 | 8,050 | 96,049 | 984 | 134 | 43 | HOLD |
+
+**How the density arithmetic was closed.** 1,450 and 2,700 were never the same quantity: 1,450 is the *township archetype parameter* (one row's footprint), while 272,000 ÷ 100.7 km² = **2,698** is the *area-weighted mean of the six archetype densities*. The zone total and every archetype density did not move. The figure a reader would have taken for the zone density moved from 1,450 to 2,698 — **+1,248 households/km², +86.1%** — and every `population.basis` now carries both, with the arithmetic shown (archetype table, 100.7 km², 2,71,686 households) plus the Corporation frame (46,21,135 people over the 174 sq km extent = 6,989 hh/km² → **39 percent**, tightened from the old "about 40 percent"). Sources for that frame were loaded live: the Census 2011 enumeration blocks and the Corporation's roads page.
+
+**Defect 1.** The composite score is gone. The rule is now the explicit four gates, ranked by our-mix revenue. The composite score let Alandur (Rs 934), Thoraipakkam (Rs 956) and Medavakkam Town (Rs 1,099) through as GO — all under the floor. `price.our_mix.blended_price` now holds the locality's realised route blend, the same number the gate reads and the same number the dossier's "margin over Rs 850" column uses; the cluster round blend moved into the basis text. **Defect 2:** the summary is regenerated from the corrected verdicts and every summary reason string is byte-identical to its row's reason.
+
+**Three things I found and fixed beyond the three defects** (all disclosed in MODEL.md §15): the seasonality index was being run through the *share* normaliser and published **January at −120** against its own basis text (now scaled to an average of 100); the zone cases and revenue totals did not equal the sum of the published rows (now exactly additive); and a hard-coded "24 of the 50 localities returned no named operator" caveat contradicted the data (now computed: 20).
+
+**One pipeline finding you should know about.** `scripts/harmonize.mjs` re-bases `price.our_mix.blended_price` to the route-cluster blend and preserves this research file's number beside it as `locality_fill_blended_price` — so it expects exactly the fill-diluted value I now produce. Running it on this output yields **47 GO / 3 HOLD / 0 NO-GO** for Zone A, because the re-based cluster price (Rs 1,295–1,311) never falls under the floor. I left `localities.json` as the regenerated research file, per the brief; run the harmoniser when you want the shipped dossier.
+
+`scripts/audit-dataset.mjs` reports **0 errors** — 51 warnings (50 pre-existing Zone B travel, 1 Zone A) and 49 notes, which are exactly the below-floor localities now surfaced rather than silently GO.
+
+<deliver-assets>
+<media type="file" src="C:\Users\aswat\Downloads\Projects\mobile-vet-report\research\zone-a\localities.json" name="Zone A localities.json (regenerated)" />
+<media type="file" src="C:\Users\aswat\Downloads\Projects\mobile-vet-report\research\zone-a\SOURCES.md" name="Zone A SOURCES.md" />
+<media type="file" src="C:\Users\aswat\Downloads\Projects\mobile-vet-report\research\zone-a\MODEL.md" name="Zone A MODEL.md" />
+<media type="file" src="C:\Users\aswat\Downloads\Projects\mobile-vet-report\research\zone-a\ANALYSIS.md" name="Zone A ANALYSIS.md" />
+<media type="file" src="C:\Users\aswat\Downloads\Projects\mobile-vet-report\research\zone-a\tools\build.mjs" name="Zone A build.mjs (repaired in place)" />
+</deliver-assets>

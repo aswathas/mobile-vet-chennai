@@ -1,0 +1,61 @@
+{
+ "Navalur MGR Nagar, Chennai, Tamil Nadu, India": [],
+ "Navalur Anna Nagar, Chennai, Tamil Nadu, India": [],
+ "Akkarai, Chennai, Tamil Nadu, India": [],
+ "Thazhuthendur, Chennai, Tamil Nadu, India": [],
+ "Kandanchal, Chennai, Tamil Nadu, India": [],
+ "Siruthai, Chennai, Tamil Nadu, India": [],
+ "Poothapedi, Chennai, Tamil Nadu, India": [],
+ "Kovilambedu, Chennai, Tamil Nadu, India": [],
+ "Egumudi, Chennai, Tamil Nadu, India": [],
+ "Enjambakkam, Chennai, Tamil Nadu, India": [],
+ "Sungudi, Chennai, Tamil Nadu, India": [],
+ "RMZ Ecoworld, Chennai, Tamil Nadu, India": [],
+ "Ascendas Tech Park, Chennai, Tamil Nadu, India": [],
+ "Chokkanathar, Chennai, Tamil Nadu, India": [],
+ "Kalavathi, Chennai, Tamil Nadu, India": [],
+ "Kaveri Nagar, Uthandi, Chennai, Tamil Nadu, India": [
+  {
+   "place_id": 253260409,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "node",
+   "osm_id": 1453511772,
+   "lat": "12.9703044",
+   "lon": "80.2637555",
+   "category": "place",
+   "type": "locality",
+   "place_rank": 25,
+   "importance": 0.06673947127489127,
+   "addresstype": "locality",
+   "name": "Kaveri Nagar",
+   "display_name": "Kaveri Nagar, Ward 183, Zone 14 Perungudi, Chennai, Chennai Metropolitan Area, Sholinganallur, Chennai District, Tamil Nadu, 600041, India",
+   "address": {
+    "locality": "Kaveri Nagar",
+    "neighbourhood": "Ward 183",
+    "suburb": "Zone 14 Perungudi",
+    "city": "Chennai",
+    "county": "Sholinganallur",
+    "state_district": "Chennai District",
+    "state": "Tamil Nadu",
+    "ISO3166-2-lvl4": "IN-TN",
+    "postcode": "600041",
+    "country": "India",
+    "country_code": "in"
+   },
+   "boundingbox": [
+    "12.9603044",
+    "12.9803044",
+    "80.2537555",
+    "80.2737555"
+   ]
+  }
+ ],
+ "Sunnivasalpatti, Chennai, Tamil Nadu, India": [],
+ "Manoraj, Chennai, Tamil Nadu, India": [],
+ "Kollathur, Chennai, Tamil Nadu, India": [],
+ "Kotturvakkam, Chennai, Tamil Nadu, India": [],
+ "Thazhuthendur, Kanchipuram, Tamil Nadu, India": [],
+ "Udhagam, Chennai, Tamil Nadu, India": [],
+ "Annavi street Navalur Chennai Tamil Nadu India": [],
+ "Pazhassi Raja street Sholinganallur Chennai Tamil Nadu India": []
+}

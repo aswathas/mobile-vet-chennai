@@ -1,0 +1,97 @@
+{
+  "calibration": {
+    "city_households_2026": 1733423,
+    "city_dogs": 200000,
+    "dog_share": 0.62,
+    "cat_share": 0.3,
+    "animals_per_100hh": {
+      "apartment-cluster": 22,
+      "residential": 14,
+      "mixed": 17,
+      "commercial": 6,
+      "industrial": 4
+    },
+    "cases_per_pet_household_year": 4,
+    "animals_per_pet_household": {
+      "apartment-cluster": 1.45,
+      "residential": 1.65,
+      "mixed": 1.55,
+      "commercial": 1.25,
+      "industrial": 1.15
+    },
+    "floor": 1100,
+    "cost": 850
+  },
+  "weighted_rate_per_100_households": 17.9,
+  "implied_city_animals": 310279,
+  "implied_city_dogs": 192373,
+  "gcc_campaign_target": 200000,
+  "rates_per_100_households": {
+    "apartment-cluster": 22,
+    "residential": 14,
+    "mixed": 17,
+    "commercial": 6,
+    "industrial": 4
+  },
+  "zones": {
+    "zone-a": {
+      "before": {
+        "households": 271686,
+        "pet_households": 34728,
+        "cases_per_month": 11576.2,
+        "our_mix_revenue": 15082166,
+        "go": 47,
+        "hold": 3,
+        "no_go": 0
+      },
+      "after": {
+        "households": 271686,
+        "pet_households": 34728,
+        "cases_per_month": 11576.2,
+        "our_mix_revenue": 15082166,
+        "go": 47,
+        "hold": 3,
+        "no_go": 0
+      },
+      "cluster_blends": {
+        "A-R1": 1308,
+        "A-R2": 1306,
+        "A-R3": 1304,
+        "A-R4": 1311,
+        "A-R5": 1304,
+        "A-R6": 1295,
+        "A-R7": 1303,
+        "A-R8": 1300
+      }
+    },
+    "zone-b": {
+      "before": {
+        "households": 147113,
+        "pet_households": 15017,
+        "cases_per_month": 5007.2,
+        "our_mix_revenue": 7315332,
+        "go": 35,
+        "hold": 13,
+        "no_go": 2
+      },
+      "after": {
+        "households": 147113,
+        "pet_households": 15017,
+        "cases_per_month": 5007.2,
+        "our_mix_revenue": 7315332,
+        "go": 35,
+        "hold": 13,
+        "no_go": 2
+      },
+      "cluster_blends": {
+        "B-R1": 1525,
+        "B-R2": 1384,
+        "B-R3": 1500,
+        "B-R4": 1440,
+        "B-R5": 1414,
+        "B-R6": 1557,
+        "B-R7": 1438
+      }
+    }
+  }
+}
