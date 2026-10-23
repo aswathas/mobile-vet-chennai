@@ -187,7 +187,17 @@ const zoneNames = agg.zones.map((z) => z.name).join(' and ');
           }
         };
 
-        for (const s of selects) s.addEventListener('change', paint);
+        for (const s of selects) {
+          s.addEventListener('change', () => {
+            paint();
+            // The one authored moment on this surface: the board flips as the
+            // reader re-filters, and every row re-reads itself in one frame.
+            board.classList.remove('is-flipping');
+            void board.offsetWidth;
+            board.classList.add('is-flipping');
+            window.setTimeout(() => board.classList.remove('is-flipping'), 360);
+          });
+        }
         paint();
       }
 

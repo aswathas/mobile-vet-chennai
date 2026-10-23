@@ -1,0 +1,119 @@
+{
+  "title": "Choose the visual world",
+  "question": "The roll assigned the Laboratory Results Panel. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Laboratory Results Panel",
+      "kicker": "THE ROLL",
+      "lineage": "clinical pathology reports and veterinary laboratory result forms",
+      "thesis": "The assessment presented as a lab results panel, where every claim is a measured value sitting in a reference range.",
+      "palette": ["#0D3A45", "#A8470B", "#16191C", "#F6F5F1", "#C7CDD3"],
+      "materials": ["pre-printed form rules", "tabular data", "specimen labelling"],
+      "viewport": "A petrol masthead carrying the report as a form header, a left margin rail of panel letters, and the verdict set as a flagged result beside its reference-range band.",
+      "risk": "Reads clinical-cold and procedural, so the commercial argument can feel like a chart rather than advice.",
+      "raised": [
+        { "from": "challenger-daylight-section", "raise": "A graduated illumination wash runs down the frame rail, so the depth of the document is visible in the frame itself." },
+        { "from": "challenger-cutting-bench", "raise": "A folded place-mark on the rail records exactly where the reader stopped, and survives a reload." },
+        { "from": "challenger-data-sublime", "raise": "Figures are set at tabular density with units and ranges aligned, never centred and never decoratively spaced." },
+        { "from": "challenger-house-label", "raise": "The verdict panel carries a hand-set approval stamp, the way a signed form does." }
+      ],
+      "html": ".impeccable/mocks/decision/assigned.html"
+    },
+    {
+      "id": "model-pick",
+      "label": "Decision Memo with Exhibits",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "strategy consulting decision memos with numbered exhibits and source notes",
+      "thesis": "The report as the crisp board document its authors would actually hand over, with numbered exhibits and a source-note apparatus.",
+      "palette": ["#16181C", "#1D4ED8", "#FFFFFF", "#8A8F98", "#DCDDE0"],
+      "materials": ["letterpress exhibit numbering", "appendix source notes"],
+      "viewport": "A memo masthead with the verdict boxed at the top, exhibit numbers in the left margin, a two-column exhibit table, and source notes at the foot of the page.",
+      "risk": "Familiar. This is where most runs of this category land, and against a documented, specialised report a reader may find it generic.",
+      "html": ".impeccable/mocks/decision/model-pick.html"
+    },
+    {
+      "id": "challenger-patent-sheet",
+      "label": "Utility Patent Drawing Sheet",
+      "verdict": "competitive",
+      "lineage": "utility patent application sheets",
+      "thesis": "The assessment drawn as an invention to be patented, every exhibit numbered and every caveat marked in the reserved annotation ink.",
+      "palette": ["#101418", "#B3202C", "#FFFFFF", "#9AA0A6"],
+      "materials": ["india ink line", "section hatching", "single ruled border"],
+      "viewport": "One bordered bond sheet, Fig. 1 as the verdict drawn as an exploded figure, reference numerals hung on curved leader lines, carmine reserved for what is under examination.",
+      "case": "Fuses cleanly onto the investor reader and gives the unresolved items a reserved colour; loses on clarity, because the core of this report is a threshold, not an object.",
+      "risk": "Reads legalistic and cold for a team making a commercial decision.",
+      "html": ".impeccable/mocks/decision/challenger-patent-sheet.html"
+    },
+    {
+      "id": "challenger-tensegrity",
+      "label": "Tension Figure",
+      "verdict": "competitive",
+      "lineage": "kinetic tension structures and structural engineering force diagrams",
+      "thesis": "The market shown as a load path, where the gap between what a visit costs and what it can charge is drawn as a visible tension.",
+      "palette": ["#1A1A18", "#B3202A", "#E8E6E0", "#8A8A85"],
+      "materials": ["matte rod geometry", "concrete ground"],
+      "viewport": "A carbon masthead, and beside the verdict the break-even drawn as a strut-and-cord figure with the Rs 850 cost and the Rs 1,100 floor in tension.",
+      "case": "Fuses cleanly onto the economics, which genuinely are a force problem; loses on audience identification, because a structural diagram does not read as advice to a veterinary team.",
+      "risk": "Reads like an engineering drawing and asks the reader to learn a second literacy.",
+      "html": ".impeccable/mocks/decision/challenger-tensegrity.html"
+    },
+    {
+      "id": "challenger-daylight-section",
+      "label": "Daylight Section",
+      "verdict": "declined",
+      "lineage": "inhabitable-space daylight sections",
+      "palette": ["#EDE9E0", "#1C1C1A", "#C8A24A", "#7E8894"],
+      "materials": ["limewash ground", "section-cut poche"],
+      "kept": "Environmental commitment in which the frame carries the reader's position rather than a flat page.",
+      "case": "Fuses poorly: a section through a building says nothing about a route-density business.",
+      "hero": "https://impeccable.style/worlds/cards/architecture-inhabitable-space-daylight-section-hero.webp"
+    },
+    {
+      "id": "challenger-cutting-bench",
+      "label": "Cutting Bench Select Rail",
+      "verdict": "declined",
+      "lineage": "film cutting benches and select rails",
+      "palette": ["#0B0B0B", "#E2611C", "#FFFFFF"],
+      "materials": ["coarse film grain", "perforated rail"],
+      "kept": "A physical, unmistakable mark of exactly where the reader stopped.",
+      "case": "Fuses poorly: the film world arrives as a costume on a page meant for reading.",
+      "hero": "https://impeccable.style/worlds/cards/operate-a-cutting-bench-select-rail-hero.webp"
+    },
+    {
+      "id": "challenger-data-sublime",
+      "label": "Data-Sublime Field",
+      "verdict": "declined",
+      "lineage": "Ikeda datamatics",
+      "palette": ["#000000", "#FFFFFF"],
+      "materials": ["flat pixel-crisp bars", "hairline rules"],
+      "kept": "Uncompromising numerical density and the refusal to soften data.",
+      "case": "Fuses poorly: pure black and white with strobing inversion is anti-read for a 7,000-word decision.",
+      "hero": "https://impeccable.style/worlds/cards/ikeda-datamatics-hero.webp"
+    },
+    {
+      "id": "challenger-house-label",
+      "label": "House Label Sleeve",
+      "verdict": "declined",
+      "lineage": "French house label sleeves",
+      "palette": ["#1A1A1A", "#F2E9DC", "#E4572E"],
+      "materials": ["blown flash photography", "marker scrawl"],
+      "kept": "One deliberate human gesture carrying the signature.",
+      "case": "Fuses poorly: a defaced sleeve undercuts the evidence-led tone the report depends on.",
+      "hero": "https://impeccable.style/worlds/cards/posters-covers-sleeves-flash-scrawl-club-sleeve-hero.webp"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "code", "toggle": false },
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "What this category ships, executed impeccably.",
+    "palette": ["#FFFFFF", "#111827", "#2563EB"],
+    "materials": ["clean grid", "product photography"],
+    "viewport": "The arrangement a visitor expects, at full craft.",
+    "risk": "Indistinguishable from the competition by design."
+  },
+  "steer": true,
+  "followup": true
+}

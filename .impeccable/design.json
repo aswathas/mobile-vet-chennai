@@ -1,0 +1,482 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-24T00:00:00.000Z",
+  "title": "Design System: The Sign Band",
+  "extensions": {
+    "colorMeta": {
+      "signal": {
+        "role": "primary",
+        "displayName": "Signal Yellow",
+        "canonical": "#f2c200",
+        "tonalRamp": [
+          "oklch(15% 0.045 89)",
+          "oklch(28% 0.085 89)",
+          "oklch(41% 0.115 89)",
+          "oklch(54% 0.145 89)",
+          "oklch(66% 0.155 89)",
+          "oklch(78% 0.160 89)",
+          "oklch(88% 0.110 89)",
+          "oklch(96% 0.045 89)"
+        ]
+      },
+      "signal-deep": {
+        "role": "primary",
+        "displayName": "Signal Deep (hover)",
+        "canonical": "#c19c00",
+        "tonalRamp": [
+          "oklch(12% 0.035 89)",
+          "oklch(25% 0.070 89)",
+          "oklch(38% 0.095 89)",
+          "oklch(51% 0.120 89)",
+          "oklch(64% 0.130 89)",
+          "oklch(76% 0.130 89)",
+          "oklch(87% 0.095 89)",
+          "oklch(96% 0.040 89)"
+        ]
+      },
+      "signal-ink": {
+        "role": "primary",
+        "displayName": "Signal Ink",
+        "canonical": "#111111",
+        "tonalRamp": [
+          "oklch(6% 0 0)",
+          "oklch(16% 0 0)",
+          "oklch(28% 0 0)",
+          "oklch(42% 0 0)",
+          "oklch(58% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(85% 0 0)",
+          "oklch(96% 0 0)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0.004 90)",
+          "oklch(28% 0.004 90)",
+          "oklch(41% 0.005 90)",
+          "oklch(55% 0.006 90)",
+          "oklch(68% 0.006 90)",
+          "oklch(80% 0.006 90)",
+          "oklch(90% 0.005 90)",
+          "oklch(100% 0 0)"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Warm Ground",
+        "canonical": "#e8e6e0",
+        "tonalRamp": [
+          "oklch(15% 0.008 90)",
+          "oklch(28% 0.008 90)",
+          "oklch(41% 0.009 90)",
+          "oklch(55% 0.010 90)",
+          "oklch(68% 0.011 90)",
+          "oklch(80% 0.011 90)",
+          "oklch(90% 0.010 90)",
+          "oklch(97% 0.008 90)"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Panel",
+        "canonical": "#f6f5f1",
+        "tonalRamp": [
+          "oklch(15% 0.006 90)",
+          "oklch(28% 0.006 90)",
+          "oklch(41% 0.007 90)",
+          "oklch(55% 0.008 90)",
+          "oklch(68% 0.009 90)",
+          "oklch(80% 0.009 90)",
+          "oklch(90% 0.009 90)",
+          "oklch(98% 0.006 90)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#111111",
+        "tonalRamp": [
+          "oklch(6% 0 0)",
+          "oklch(16% 0 0)",
+          "oklch(28% 0 0)",
+          "oklch(42% 0 0)",
+          "oklch(58% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(85% 0 0)",
+          "oklch(96% 0 0)"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Ink 2 (prose)",
+        "canonical": "#3a3a36",
+        "tonalRamp": [
+          "oklch(6% 0 0)",
+          "oklch(16% 0 0)",
+          "oklch(28% 0 0)",
+          "oklch(42% 0 0)",
+          "oklch(58% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(85% 0 0)",
+          "oklch(96% 0 0)"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Ink 3 (labels)",
+        "canonical": "#6e6a62",
+        "tonalRamp": [
+          "oklch(6% 0 0)",
+          "oklch(16% 0 0)",
+          "oklch(28% 0 0)",
+          "oklch(42% 0 0)",
+          "oklch(58% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(85% 0 0)",
+          "oklch(96% 0 0)"
+        ]
+      },
+      "ink-4": {
+        "role": "neutral",
+        "displayName": "Ink 4 (source id suffix only; 3.6:1, below AA for small text)",
+        "canonical": "#8b867d",
+        "tonalRamp": [
+          "oklch(6% 0 0)",
+          "oklch(16% 0 0)",
+          "oklch(28% 0 0)",
+          "oklch(42% 0 0)",
+          "oklch(58% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(85% 0 0)",
+          "oklch(96% 0 0)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule",
+        "canonical": "#111111",
+        "tonalRamp": [
+          "oklch(6% 0 0)",
+          "oklch(16% 0 0)",
+          "oklch(28% 0 0)",
+          "oklch(42% 0 0)",
+          "oklch(58% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(85% 0 0)",
+          "oklch(96% 0 0)"
+        ]
+      },
+      "rule-soft": {
+        "role": "neutral",
+        "displayName": "Rule Soft",
+        "canonical": "#cbc7be",
+        "tonalRamp": [
+          "oklch(15% 0.008 90)",
+          "oklch(28% 0.008 90)",
+          "oklch(41% 0.009 90)",
+          "oklch(55% 0.010 90)",
+          "oklch(68% 0.011 90)",
+          "oklch(80% 0.011 90)",
+          "oklch(90% 0.010 90)",
+          "oklch(97% 0.008 90)"
+        ]
+      },
+      "rule-hair": {
+        "role": "neutral",
+        "displayName": "Rule Hair",
+        "canonical": "#dedbd4",
+        "tonalRamp": [
+          "oklch(15% 0.007 90)",
+          "oklch(28% 0.007 90)",
+          "oklch(41% 0.008 90)",
+          "oklch(55% 0.009 90)",
+          "oklch(68% 0.010 90)",
+          "oklch(80% 0.010 90)",
+          "oklch(90% 0.009 90)",
+          "oklch(97% 0.007 90)"
+        ]
+      },
+      "closed": {
+        "role": "neutral",
+        "displayName": "Closed",
+        "canonical": "#6e6a62",
+        "tonalRamp": [
+          "oklch(6% 0 0)",
+          "oklch(16% 0 0)",
+          "oklch(28% 0 0)",
+          "oklch(42% 0 0)",
+          "oklch(58% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(85% 0 0)",
+          "oklch(96% 0 0)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Masthead title only, 64px at the widest, capped at 22ch."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "The verdict message and the section opener bands."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "h3 inside the sheet, corridor button names and panel values at 20px."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running prose at 17px inside a 68ch measure."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Mono uppercase labels: spec plate keys, result key, board key, rail headings."
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "Roboto Mono for every parameter, numeral, code, unit, id, tick and caption, at 13px."
+      },
+      "section": {
+        "displayName": "Section",
+        "purpose": "The section opener bands, 27px, the loudest type on the sheet after the masthead."
+      },
+      "stage": {
+        "displayName": "Stage",
+        "purpose": "The flow diagram's stage values."
+      },
+      "base": {
+        "displayName": "Base",
+        "purpose": "The 16px the page sits on before a role takes over."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Short lead-in lines and table bodies that need a step between body and data."
+      },
+      "table": {
+        "displayName": "Table",
+        "purpose": "Table body text at 14px."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Figure captions, remarks-column text and rail labels."
+      },
+      "micro": {
+        "displayName": "Micro",
+        "purpose": "Axis ticks, source-id suffixes and the smallest mono labels."
+      },
+      "figure": {
+        "displayName": "Figure",
+        "purpose": "The monumental key figure in the result panel."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.16, 0.84, 0.44, 1)",
+        "purpose": "The only easing in the system. Exponential ease-out from an already-visible default."
+      },
+      {
+        "name": "dur-standard",
+        "value": "220ms",
+        "purpose": "State changes only: hover, focus, the ruler flag, the arrow slide."
+      },
+      {
+        "name": "dur-route-draw",
+        "value": "1400ms",
+        "purpose": "The one authored moment: the route map's corridors draw themselves on entry."
+      },
+      {
+        "name": "dur-reduced",
+        "value": "0ms",
+        "purpose": "prefers-reduced-motion: --dur becomes 0ms, scroll-behavior becomes auto, the route draw is shown already drawn."
+      },
+      {
+        "name": "dur-board-flip",
+        "value": "320ms",
+        "purpose": "The decision board flips as the reader re-filters: a two-frame rotateX on every visible row, triggered by the reader's own control and never on page entry."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "margin-column",
+        "value": "1180px"
+      },
+      {
+        "name": "tablet",
+        "value": "860px"
+      },
+      {
+        "name": "phone",
+        "value": "720px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Masthead Band",
+      "kind": "custom",
+      "refersTo": "band",
+      "description": "The full-bleed yellow overhead band: title, subtitle, deck and the mono count line.",
+      "html": "<header class=\"ds-band\"><div class=\"ds-band__inner\"><h1 class=\"ds-band__title\">Mobile Veterinary Practice in Chennai and Coimbatore<span class=\"ds-band__sub2\">Market Structure, Competitive Position, and Launch Plan</span></h1><p class=\"ds-band__deck\">A go/no-go on a house-call veterinary practice, with the unit economics that decide it.<span class=\"ds-band__note\">7,120 words &middot; 83 sources &middot; 9 sections</span></p></div></header>",
+      "css": ".ds-band { background: var(--signal, #f2c200); color: var(--signal-ink, #111); border-bottom: 3px solid var(--rule, #111); font-family: var(--face, 'Public Sans', Arial, sans-serif); } .ds-band__inner { max-width: var(--window-w, 1020px); margin: 0 auto; padding: 34px var(--gutter, 32px) 0; } .ds-band__title { font-size: clamp(34px, 6.2vw, 64px); line-height: 0.98; letter-spacing: -0.025em; font-weight: 600; margin: 0; max-width: 22ch; } .ds-band__sub2 { display: block; font-weight: 400; font-size: 0.46em; line-height: 1.12; margin-top: 10px; max-width: 34ch; } .ds-band__deck { margin: 20px 0 0; font-size: 17px; line-height: 1.45; max-width: 56ch; } .ds-band__note { display: block; margin-top: 10px; font-family: var(--face-data, 'Roboto Mono', monospace); font-size: 12px; letter-spacing: 0.04em; }"
+    },
+    {
+      "name": "Gantry Frame",
+      "kind": "nav",
+      "refersTo": "frame",
+      "description": "A section sign in the sticky gantry: yellow band, mono ordinal, black flag beneath when current.",
+      "html": "<nav class=\"ds-rail\"><div class=\"ds-rail__cells\"><a class=\"ds-frame\" href=\"#launch-decision\"><span class=\"ds-frame__n\">01</span><span>Launch Decision</span></a><a class=\"ds-frame ds-frame--current\" href=\"#market-structure\" aria-current=\"true\"><span class=\"ds-frame__n\">02</span><span>Market Structure</span></a></div></nav>",
+      "css": ".ds-rail { background: var(--ground, #e8e6e0); border-bottom: 3px solid var(--rule, #111); padding: 10px 0; font-family: var(--face, 'Public Sans', Arial, sans-serif); } .ds-rail__cells { display: flex; gap: 6px; } .ds-frame { position: relative; display: flex; align-items: center; gap: 8px; height: 34px; padding: 0 14px; background: var(--signal, #f2c200); color: var(--signal-ink, #111); border: 1px solid var(--rule, #111); text-decoration: none; font-size: 13px; font-weight: 600; white-space: nowrap; transition: background 220ms cubic-bezier(0.16, 0.84, 0.44, 1), color 220ms cubic-bezier(0.16, 0.84, 0.44, 1); } .ds-frame:hover { background: var(--signal-deep, #c19c00); } .ds-frame:focus-visible { outline: 2px solid var(--ink, #111); outline-offset: 2px; } .ds-frame__n { font-family: var(--face-data, 'Roboto Mono', monospace); font-size: 11px; font-weight: 500; letter-spacing: 0.06em; } .ds-frame--current { background: var(--ink, #111); color: var(--signal, #f2c200); border-color: var(--ink, #111); } .ds-frame--current::after { content: ''; position: absolute; left: 50%; bottom: -12px; transform: translateX(-50%); width: 0; height: 0; border-left: 7px solid transparent; border-right: 7px solid transparent; border-top: 9px solid var(--ink, #111); } .ds-frame[data-read='true'] .ds-frame__n { text-decoration: line-through; text-decoration-thickness: 1px; }"
+    },
+    {
+      "name": "Verdict Band",
+      "kind": "custom",
+      "refersTo": "verdict",
+      "description": "One message in black on yellow, spanning the sheet, closed by a 3px black rule.",
+      "html": "<div class=\"ds-verdict\"><p>Launch in Chennai, as a clinician-owned house-call practice restricted to chronic, senior and end-of-life work. Do not launch in Coimbatore.</p></div>",
+      "css": ".ds-verdict { background: var(--signal, #f2c200); color: var(--signal-ink, #111); padding: 30px clamp(18px, 4vw, 46px) 28px; border-bottom: 3px solid var(--rule, #111); font-family: var(--face, 'Public Sans', Arial, sans-serif); } .ds-verdict p { margin: 0; font-size: clamp(19px, 2.3vw, 25px); line-height: 1.34; letter-spacing: -0.012em; font-weight: 600; max-width: 60ch; }"
+    },
+    {
+      "name": "Key Result Panel",
+      "kind": "card",
+      "refersTo": "result",
+      "description": "The white ruled panel holding the monumental figure, its flag and the painted price scale.",
+      "html": "<section class=\"ds-result\"><div class=\"ds-result__head\"><span class=\"ds-result__k\">Minimum blended price per visit</span><span class=\"ds-result__num\">Rs 1,100<span class=\"ds-result__flag\"></span></span></div><p class=\"ds-result__sub\">Against a cost of about Rs 850 to deliver one clustered visit in Chennai traffic.</p><div class=\"ds-scale\"><div class=\"ds-scale__strip\" style=\"--floor:65.5%;--target:89.2%\"></div><div class=\"ds-scale__ticks\"><span class=\"ds-scale__tick\" style=\"left:11.9%\"><i></i><b>Rs 200</b><u>observed floor</u></span><span class=\"ds-scale__tick ds-scale__tick--flag\" style=\"left:65.5%\"><i></i><b>Rs 1,100</b><u>break-even floor</u></span></div></div></section>",
+      "css": ".ds-result { margin: 34px 0 40px; padding: 22px 24px 20px; border: 1px solid var(--rule, #111); background: var(--paper, #fff); font-family: var(--face, 'Public Sans', Arial, sans-serif); } .ds-result__head { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; flex-wrap: wrap; } .ds-result__k { font-family: var(--face-data, 'Roboto Mono', monospace); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3, #6e6a62); } .ds-result__num { font-size: clamp(40px, 6.4vw, 68px); line-height: 0.92; font-weight: 600; letter-spacing: -0.03em; color: var(--ink, #111); } .ds-result__flag { display: inline-block; width: 14px; height: 14px; margin-left: 10px; background: var(--signal, #f2c200); border: 1px solid var(--rule, #111); vertical-align: 6px; } .ds-result__sub { margin: 12px 0 0; font-size: 15px; line-height: 1.55; color: var(--ink-2, #3a3a36); max-width: 74ch; } .ds-scale { margin-top: 20px; } .ds-scale__strip { position: relative; height: 30px; border-bottom: 2px solid var(--rule, #111); background: linear-gradient(to right, var(--rule-soft, #cbc7be) 0 var(--floor), var(--ink, #111) var(--floor) var(--target), var(--signal, #f2c200) var(--target) 100%); } .ds-scale__ticks { position: relative; height: 64px; margin-top: 4px; } .ds-scale__tick { position: absolute; top: 0; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 2px; text-align: center; } .ds-scale__tick i { display: block; width: 1px; height: 7px; background: var(--rule, #111); } .ds-scale__tick b { font-family: var(--face-data, 'Roboto Mono', monospace); font-size: 11px; font-weight: 500; color: var(--ink, #111); } .ds-scale__tick u { font-family: var(--face-data, 'Roboto Mono', monospace); font-size: 9.5px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: var(--ink-3, #6e6a62); max-width: 12ch; } .ds-scale__tick--flag i { height: 11px; width: 2px; } .ds-scale__tick--flag b { padding: 1px 5px; background: var(--signal, #f2c200); border: 1px solid var(--rule, #111); }"
+    },
+    {
+      "name": "Gate Row",
+      "kind": "card",
+      "refersTo": "gate",
+      "description": "One route cluster on the decision board: id, anchor, three mono figures and the arrow.",
+      "html": "<ol class=\"ds-gates\"><li class=\"ds-gate ds-gate--target\"><span class=\"ds-gate__id\">A-R7</span><span class=\"ds-gate__name\">Velachery main</span><span class=\"ds-gate__v\"><b>2,600</b><i>cases a month</i></span><span class=\"ds-gate__v\"><b>Rs 1,303</b><i>blend</i></span><span class=\"ds-gate__v\"><b>Rs 70,668</b><i>one route</i></span><span class=\"ds-gate__arrow\"></span></li><li class=\"ds-gate ds-gate--closed\"><span class=\"ds-gate__id\">B-R1</span><span class=\"ds-gate__name\">Navlur</span><span class=\"ds-gate__v\"><b>653</b><i>cases a month</i></span><span class=\"ds-gate__v\"><b>Rs 1,525</b><i>blend</i></span><span class=\"ds-gate__v\"><b>Rs 1,05,380</b><i>one route</i></span></li></ol>",
+      "css": ".ds-gates { list-style: none; margin: 0; padding: 0; font-family: var(--face, 'Public Sans', Arial, sans-serif); } .ds-gate { display: grid; grid-template-columns: 56px minmax(0, 1fr) 84px 104px 84px 36px; align-items: center; gap: 12px; padding: 0 18px; border-top: 1px solid var(--rule-hair, #dedbd4); min-height: 46px; background: var(--paper, #fff); color: var(--ink, #111); } .ds-gate__id { font-family: var(--face-data, 'Roboto Mono', monospace); font-size: 12px; letter-spacing: 0.06em; } .ds-gate__name { font-size: 14.5px; font-weight: 600; line-height: 1.25; } .ds-gate__v { font-family: var(--face-data, 'Roboto Mono', monospace); font-size: 12px; color: var(--ink-2, #3a3a36); text-align: right; } .ds-gate__v b { display: block; font-weight: 500; color: var(--ink, #111); } .ds-gate__v i { font-style: normal; font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3, #6e6a62); white-space: nowrap; } .ds-gate__arrow { justify-self: end; width: 0; height: 0; border-top: 6px solid transparent; border-bottom: 6px solid transparent; border-left: 10px solid var(--ink, #111); } .ds-gate--target { background: var(--signal, #f2c200); color: var(--signal-ink, #111); } .ds-gate--target .ds-gate__id, .ds-gate--target .ds-gate__name, .ds-gate--target .ds-gate__v b { color: var(--signal-ink, #111); } .ds-gate--target .ds-gate__arrow { border-left-color: var(--signal-ink, #111); } .ds-gate--closed { color: var(--closed, #6e6a62); } .ds-gate--closed .ds-gate__name { color: var(--closed, #6e6a62); text-decoration: line-through; text-decoration-thickness: 1px; }"
+    },
+    {
+      "name": "Corridor Button",
+      "kind": "button",
+      "refersTo": "zonebtn",
+      "description": "The way into a corridor. The only three-dimensional move in the system: it leans back four degrees on hover and rests flat.",
+      "html": "<a class=\"ds-zonebtn\" href=\"#zone-a\"><span class=\"ds-zonebtn__id\">Zone A</span><span class=\"ds-zonebtn__name\">The south-east cluster</span><span class=\"ds-zonebtn__v\">50 localities &middot; 11,576 cases a month</span></a>",
+      "css": ".ds-zonebtn { display: grid; gap: 8px; padding: 18px 20px 20px; border: 1px solid var(--rule, #111); background: var(--paper, #fff); color: var(--ink, #111); text-decoration: none; font-family: var(--face, 'Public Sans', Arial, sans-serif); transform: perspective(900px) rotateX(4deg); transform-origin: bottom center; transition: transform 220ms cubic-bezier(0.16, 0.84, 0.44, 1), background 220ms cubic-bezier(0.16, 0.84, 0.44, 1); } .ds-zonebtn:hover, .ds-zonebtn:focus-visible { background: var(--signal, #f2c200); transform: perspective(900px) rotateX(0deg) translateY(-2px); } .ds-zonebtn:focus-visible { outline: 2px solid var(--ink, #111); outline-offset: 2px; } .ds-zonebtn__id { justify-self: start; padding: 3px 9px; background: var(--ink, #111); color: var(--signal, #f2c200); font-family: var(--face-data, 'Roboto Mono', monospace); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; } .ds-zonebtn__name { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; line-height: 1.15; } .ds-zonebtn__v { font-family: var(--face-data, 'Roboto Mono', monospace); font-size: 12px; color: var(--ink-2, #3a3a36); }"
+    },
+    {
+      "name": "Next Document Band",
+      "kind": "button",
+      "refersTo": "gobtn",
+      "description": "The yellow band that points at the other document, with a drawn arrow.",
+      "html": "<a class=\"ds-gobtn\" href=\"/zones/\"><span class=\"ds-gobtn__k\">Next document</span><span class=\"ds-gobtn__t\">Locality dossier</span><span class=\"ds-gobtn__n\">100 localities scored, two corridors, fifteen route clusters</span><span class=\"ds-gobtn__arrow\"></span></a>",
+      "css": ".ds-gobtn { display: grid; grid-template-columns: 1fr auto; grid-template-areas: 'k arrow' 't arrow' 'n arrow'; align-items: center; column-gap: 20px; padding: 16px var(--gutter, 32px) 18px; background: var(--signal, #f2c200); color: var(--signal-ink, #111); border-bottom: 3px solid var(--rule, #111); text-decoration: none; font-family: var(--face, 'Public Sans', Arial, sans-serif); transition: background 220ms cubic-bezier(0.16, 0.84, 0.44, 1); } .ds-gobtn:hover { background: var(--signal-deep, #c19c00); } .ds-gobtn:focus-visible { outline: 2px solid var(--ink, #111); outline-offset: 2px; } .ds-gobtn__k { grid-area: k; font-family: var(--face-data, 'Roboto Mono', monospace); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.72; } .ds-gobtn__t { grid-area: t; font-size: 26px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; } .ds-gobtn__n { grid-area: n; font-family: var(--face-data, 'Roboto Mono', monospace); font-size: 12px; opacity: 0.8; } .ds-gobtn__arrow { grid-area: arrow; width: 0; height: 0; border-top: 11px solid transparent; border-bottom: 11px solid transparent; border-left: 17px solid var(--signal-ink, #111); transition: transform 220ms cubic-bezier(0.16, 0.84, 0.44, 1); } .ds-gobtn:hover .ds-gobtn__arrow { transform: translateX(6px); }"
+    },
+    {
+      "name": "Source Panel",
+      "kind": "card",
+      "refersTo": "trim",
+      "description": "One source: a black square in place of a pictogram, its id and publisher in mono, its URL beneath.",
+      "html": "<li class=\"ds-trim\"><span class=\"ds-trim__pin\"></span><span class=\"ds-trim__n\">12</span><span class=\"ds-trim__label\">Little Angels Pet Clinic, Navallur</span><a class=\"ds-trim__url\" href=\"#\">https://example.invalid/source</a></li>",
+      "css": ".ds-trim { display: grid; grid-template-columns: 16px 30px 1fr; align-items: baseline; gap: 10px; padding: 9px 0; border-top: 1px solid var(--rule-soft, #cbc7be); font-family: var(--face, 'Public Sans', Arial, sans-serif); font-size: 13.5px; line-height: 1.4; color: var(--ink, #111); } .ds-trim__pin { width: 14px; height: 14px; background: var(--ink, #111); display: inline-block; transform: translateY(1px); } .ds-trim__n { font-family: var(--face-data, 'Roboto Mono', monospace); font-size: 11px; color: var(--ink-3, #6e6a62); } .ds-trim__url { grid-column: 3; font-family: var(--face-data, 'Roboto Mono', monospace); font-size: 11px; color: var(--ink-3, #6e6a62); word-break: break-all; text-decoration: none; } .ds-trim__url:hover { color: var(--ink, #111); text-decoration: underline; } .ds-trim:focus-within { outline: 2px solid var(--ink, #111); outline-offset: 3px; }"
+    },
+    {
+      "name": "Citation Mark",
+      "kind": "chip",
+      "refersTo": "cite",
+      "description": "A citation: a plain mono superscript that inverts on hover. Never a yellow chip.",
+      "html": "<a class=\"ds-cite\" href=\"#ref-47\" aria-label=\"Source 47\">47</a>",
+      "css": ".ds-cite { font-family: var(--face-data, 'Roboto Mono', monospace); font-size: 0.64em; font-weight: 500; color: var(--ink-2, #3a3a36); background: none; border: 0; padding: 0 1px; text-decoration: none; vertical-align: super; line-height: 0; } .ds-cite:hover { background: var(--ink, #111); color: var(--paper, #fff); } .ds-cite:focus-visible { outline: 2px solid var(--ink, #111); outline-offset: 2px; }"
+    },
+    {
+      "name": "Board Filter Select",
+      "kind": "input",
+      "refersTo": "board-filters",
+      "description": "The board's only control: a drawn select with a two-triangle chevron and no OS chrome.",
+      "html": "<label class=\"ds-filter\">Zone <select class=\"ds-select\"><option value=\"\">Both</option><option value=\"A\">Zone A</option><option value=\"B\">Zone B</option></select></label>",
+      "css": ".ds-filter { display: inline-flex; align-items: center; gap: 6px; font-family: var(--face-data, 'Roboto Mono', monospace); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3, #6e6a62); } .ds-select { appearance: none; -webkit-appearance: none; font-family: var(--face-data, 'Roboto Mono', monospace); font-size: 12px; padding: 4px 26px 4px 8px; border: 1px solid var(--rule, #111); border-radius: 0; background-color: var(--paper, #fff); color: var(--ink, #111); background-image: linear-gradient(45deg, transparent 50%, var(--ink, #111) 50%), linear-gradient(135deg, var(--ink, #111) 50%, transparent 50%); background-position: calc(100% - 14px) 52%, calc(100% - 9px) 52%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; } .ds-select:hover { background-color: var(--panel, #f6f5f1); border-color: var(--ink, #111); } .ds-select:focus-visible { outline: 2px solid var(--ink, #111); outline-offset: 1px; }"
+    },
+    {
+      "name": "Board Empty State",
+      "kind": "custom",
+      "refersTo": "board-empty",
+      "description": "Shown when a filter combination matches no gate: mono on panel with a 3px left rule.",
+      "html": "<p class=\"ds-board-empty\">No gate matches this filter. Widen it to see the rest.</p>",
+      "css": ".ds-board-empty { margin: 0; padding: 18px; border: 1px solid var(--rule, #111); border-left-width: 3px; background: var(--panel, #f6f5f1); font-family: var(--face-data, 'Roboto Mono', monospace); font-size: 13px; color: var(--ink-2, #3a3a36); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Sign Band",
+    "overview": "The world is an international airport sign system: an overhead band you read at a distance, a gantry of section signs, a white sheet of rules, and an arrow that tells you where to go next. Nothing in this system is a card, a panel with a soft edge, or a floating object. Every edge is a drawn rule — 3px black where a band begins or ends, 1px hairlines inside a table, 2px where a figure's axis is.\n\nThe personality is blunt, engineered, unhurried. The whole visual argument rests on a single saturated yellow that is spent only on things that point — the masthead band, the section gantry and its current-section inversion, the section opener bands, the destination gate on the decision board, the peak hour in the demand curve, the peak day, the peak month, the top-ranked locality, and the break-even flag on the price scale. Everything else is black type on white over a warm paper ground.\n\nTwo voices do all the work. Public Sans, a humanist sans, carries prose, band messages and the monumental numbers. Roboto Mono carries everything that is a fact: parameters, numerals in tables, unit conventions, ward and cluster codes, source ids, axis labels, ticks and captions.",
+    "keyCharacteristics": [
+      "One yellow, one meaning: wayfinding. It never sits behind body text and never fills a page.",
+      "Flat by construction. box-shadow appears once in the whole codebase, as none.",
+      "Depth is drawn, not cast: borders, rules, inverted bands, tonal grounds.",
+      "Two type voices with a hard job split: Public Sans for words, Roboto Mono for facts.",
+      "A 68-character reading measure that never yields to a figure or a table.",
+      "The arrow is the memorable moment: one black triangle, re-pointed whenever a filter changes."
+    ],
+    "rules": [
+      {
+        "name": "The One Signal Rule",
+        "body": "--signal is reserved for wayfinding and for nothing else: the masthead band, the section openers, the gantry's current section, the gate the arrow points at, the one hour, day, month or locality the demand data says to go to, and the break-even flag. If a new surface wants yellow for emphasis on something that is not a destination, it does not get yellow.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink Stays Ink Rule",
+        "body": "On a yellow ground the text is --signal-ink (black), never a tint of the yellow and never a grey. The one exception is deliberate and local: .gate--target .gate__v and .gate__v i drop to rgba(17,17,17,0.72) because those are secondary labels inside a yellow row.",
+        "section": "colors"
+      },
+      {
+        "name": "The Paper Rule",
+        "body": "The reading surface is --paper. --ground is the world outside the sheet and --panel is the world inside a component that is inert. Nothing else is a background.",
+        "section": "colors"
+      },
+      {
+        "name": "The Fact Is Monospaced Rule",
+        "body": "If a string is a number, a code, a unit, an id or a parameter, it is set in Roboto Mono with tabular numerals. Prose is Public Sans. The exception is the monumental figure in the key result panel, which is a headline and speaks in the display voice, carrying a 14x14px yellow flag square as its only ornament.",
+        "section": "typography"
+      },
+      {
+        "name": "The Monospace Is Not Costume Rule",
+        "body": "Mono is used for measurement and data, never as a technical texture. There is no monospaced label where a word would do better.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat-By-Default Rule",
+        "body": "Nothing floats. If a surface needs to separate itself from another, it is separated by a rule, a rule weight, or a tonal step — never by a shadow.",
+        "section": "elevation"
+      },
+      {
+        "name": "The One Move Rule",
+        "body": "One three-dimensional gesture exists in this system: the corridor button's resting four-degree perspective tilt, which flattens and lifts two pixels on hover and focus. Do not add a second. If a new surface wants depth, it gets a border.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do spend --signal only on something that points: a band, a gate, a peak, a flag, a target.",
+      "Do set any number, code, unit, id or parameter in Roboto Mono, with tabular-nums.",
+      "Do separate surfaces with a drawn rule — 3px --rule for structure, 1px --rule-soft inside, 1px --rule-hair between table rows.",
+      "Do keep prose inside --measure: 68ch and let .result, .chart, .tbl-scroll, figure, .board, .flow, .routemap, .zonebtn, .doc__grid and .verdict break out of it.",
+      "Do paint a scale's colour from the same values that place its ticks, so the two can never disagree.",
+      "Do give every figure a role=\"img\" and a written label, and every wide table a keyboard-reachable role=\"region\" wrapper.",
+      "Do give every interactive element a visible :focus-visible outline (2px --ink, 2px offset).",
+      "Do use --ink-3 (5.4:1) as the floor for small text and --ink-2 (11.4:1) for running prose.",
+      "Do keep the two zone series distinguishable by weight and hatch so every figure survives greyscale print."
+    ],
+    "donts": [
+      "Don't put yellow behind running text, use it as a page background, or spend it on emphasis that is not wayfinding.",
+      "Don't add a shadow. The system has none, and every separation is already a rule.",
+      "Don't round a corner. The only radius in the system is 0.",
+      "Don't use a glyph, an emoji or an icon font for the arrow, the pictogram or the chevron. They are drawn: CSS triangles, black squares, gradient chevrons.",
+      "Don't put a kicker or eyebrow above a heading. The heading carries its own weight.",
+      "Don't turn a citation into a highlighted chip. .cite is a plain mono superscript.",
+      "Don't colour two data series by hue. Use weight and hatch.",
+      "Don't invent a second three-dimensional move.",
+      "Don't scroll a wide table off the edge of the sheet at desktop widths, or cut it off on a phone — wrap it in .tbl-scroll and let it scroll.",
+      "Don't print the gantry, or let a yellow band lose its colour in print.",
+      "Don't launder a caveat into a footnote."
+    ]
+  }
+}

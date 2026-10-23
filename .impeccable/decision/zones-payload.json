@@ -1,0 +1,121 @@
+{
+  "title": "Choose the visual world",
+  "question": "The roll assigned the Dispensary Register. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Dispensary Register",
+      "kicker": "THE ROLL",
+      "lineage": "the veterinary dispensary clinical record, bound as a register",
+      "thesis": "A hundred case sheets, a stock register of published prices, a day log, a licence pool, a route card and a docket drawer. The corpus is a clinical corpus, and no other world in the roll is closer to it without pretending to be a civic record, a statistical publication, a newspaper, a survey or a poster.",
+      "palette": ["#F1EDE3", "#FBF9F3", "#16191F", "#9A6E3C", "#A62B1E", "#2C6A4C"],
+      "materials": ["register buff paper", "ballpoint blue-black ink", "copper name plate", "grease pencil"],
+      "viewport": "The copper name plate over a typed subject block: Subject, Area, Decision, Prepared, Dataset of 100 localities, 2 zones, 15 route clusters and 615 competitor rows. The verdict is a rubber stamp impression, slightly off-register, above the key figure on a ruled ledger scale with three labelled ticks: Rs 1,440 blended against Rs 850 clustered cost and the Rs 1,100 floor. The reading column is the form body at 65 characters, with a margin column down the right holding the tier legend and the caveats that qualify the figure beside them.",
+      "risk": "It can turn a capital decision into a pet's medical record. Controlled by four non-negotiables: no clinic branding, no patient-facing voice, no softening of the verdicts, and no chart that outruns its provenance.",
+      "raised": [
+        {
+          "from": "challenger-cloud-edge",
+          "raise": "DISPERSION BAND. Every modelled figure is drawn with the band the model itself states, as ruled geometry around the point estimate, collapsible to the point estimate. The tier mark travels with it."
+        },
+        {
+          "from": "challenger-brick-book",
+          "raise": "ROUTE ASSEMBLY ORDER. Each of the 15 route clusters gains an exploded, numbered view of its localities in travel order, each step carrying its cases, price, margin and saturation, closing on the cluster total."
+        },
+        {
+          "from": "challenger-cutting-bench",
+          "raise": "THE CLIPPED DOCKET. Every source becomes a docket clipped to the page edge, tier-stamped on the clip, publisher in mono, URL live. The source list is a drawer of dockets, countable and physical."
+        }
+      ],
+      "hero": "https://impeccable.style/worlds/cards/rw-manual-acetate-tab-board-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/rw-manual-acetate-tab-board.webp"
+    },
+    {
+      "id": "challenger-ikeda",
+      "label": "Ikeda Datamatics",
+      "verdict": "competitive",
+      "lineage": "Ikeda datamatics: barcode fields and sine lattices in pure black and white",
+      "thesis": "The corpus as a data field. Pure black and pure white only, no grey, no colour, hairline rules, tabular mono at data density, and one full-frame inversion on demand.",
+      "palette": ["#000000", "#ffffff"],
+      "materials": ["pixel-crisp bars", "hairline rules", "monospace numerics"],
+      "viewport": "A wall of hairline vertical bars, some black and some white, holds like a frozen barcode, with dense monospace numbers packing the margin. Navigation moves by data column, frequency band and frame index.",
+      "case": "Fuses cleanly: a hundred localities are literally a column of records, and the tier mark becomes a bar pattern rather than a colour. Loses on identification: the reader is asked to read a field, not a register, and the corpus has a warm Indian commercial story that pure monochrome refuses.",
+      "risk": "Reads as an instrument rather than a document, and the inversion is a pattern swap rather than a state change.",
+      "hero": "https://impeccable.style/worlds/cards/ikeda-datamatics-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/ikeda-datamatics.webp"
+    },
+    {
+      "id": "challenger-civic-bureau",
+      "label": "Civic Bureau Prospectus",
+      "verdict": "competitive",
+      "lineage": "civic bureau prospectus, late-modern corporate manner",
+      "thesis": "The corpus as a prospectus. Bone-white ground, one violet ink, a teal-to-violet ribbon, six council seals in grey, a sticky decision bar and hairline-split bands.",
+      "palette": ["#F7F7FA", "#1B1547", "#6B5CE7", "#7FD8D0", "#E6E7EE"],
+      "materials": ["bone-white plate", "lacquered bench", "council seals"],
+      "viewport": "A sticky 72px bar holds the verdict and the key figure while a hundred rows scroll under it, with a rail of hairline-split bands below.",
+      "case": "Best raw table legibility of the six, and the seals become the six institutions that actually source this material. Loses on identification: a civic prospectus says a government body is publishing about its own area, and the reader is a private practice deciding on capital.",
+      "risk": "A seal cannot carry a price, and a grey seal quietly laundered model verdicts into civic authority.",
+      "hero": "https://impeccable.style/worlds/cards/civic-bureau-prospectus-late-modern-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/civic-bureau-prospectus-late-modern.webp"
+    },
+    {
+      "id": "challenger-manual",
+      "label": "Boxed Software Manual",
+      "verdict": "competitive",
+      "lineage": "boxed software reference manual, acetate leaves over a colour-wheel board",
+      "thesis": "The corpus as a manual. Milk acetate over a board of one section hue at full strength, ten divisions, a stepped tab rail down the fore edge, and nothing that eases or fades.",
+      "palette": ["#F5F2EA", "#C1440E", "#E8C547", "#3F7D6E", "#2A4B8D", "#16191F"],
+      "materials": ["milk acetate", "tab board", "punched leaves"],
+      "viewport": "A stepped tab rail down the fore edge, one tab per division, hue from the wheel, the current tab extended and taking the board colour. The reading column is 62 characters with the heads in a margin column.",
+      "case": "Excellent on reading and the best table of contents anyone has proposed for a hundred-row register. Loses on identification: a software manual promises to teach the reader to use a tool, and this is research.",
+      "risk": "Reads as documentation, and the arguments inside become features.",
+      "hero": "https://impeccable.style/worlds/cards/rw-manual-acetate-tab-board-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/rw-manual-acetate-tab-board.webp"
+    },
+    {
+      "id": "challenger-cloud-edge",
+      "label": "Iridescent Cloud Edge",
+      "verdict": "declined",
+      "lineage": "iridescent cloud edge, droplets refracting sunlight",
+      "palette": ["#ffffff", "#5b6470", "#8fd8c4", "#e2a5c4", "#a48fd8"],
+      "case": "Fuses poorly: a soft spectral fringe cannot carry a hundred rows or a price.",
+      "kept": "Kept as RAISE 1, DISPENSATION BAND, where the band around every modelled figure is drawn as ruled geometry.",
+      "hero": "https://impeccable.style/worlds/cards/clouds-storms-auroras-iridescent-cloud-edge-hero.webp"
+    },
+    {
+      "id": "challenger-brick-book",
+      "label": "Brick Build-Instruction Book",
+      "verdict": "declined",
+      "lineage": "brick build-instruction book, numbered exploded steps",
+      "palette": ["#bcd8f0", "#111111", "#c0392b", "#e8c547"],
+      "case": "Fuses poorly on a reading surface: wordless arrows teach assembly, not a market.",
+      "kept": "Kept as RAISE 2, ROUTE ASSEMBLY ORDER, the exploded numbered view of each route cluster in travel order.",
+      "hero": "https://impeccable.style/worlds/cards/games-toys-physics-play-brick-build-instructions-hero.webp"
+    },
+    {
+      "id": "challenger-cutting-bench",
+      "label": "Cutting Bench Select Rail",
+      "verdict": "declined",
+      "lineage": "the incumbent: a film cutting bench flattened into a sheet",
+      "palette": ["#0a0a0a", "#e2611c", "#ffffff"],
+      "case": "Proven on the reader, and it identified the reader better than anything else in the roll. Declined because the corpus outgrew its frame: the world was built for ten tables and 83 sources, and now holds a hundred localities and 615 competitor rows, and the black ground would make the appendix a hundred punched windows rather than a register.",
+      "kept": "Kept as RAISE 3, THE CLIPPED DOCKET, sources as countable physical objects hung from the page below the document.",
+      "hero": "https://impeccable.style/worlds/cards/operate-a-cutting-bench-select-rail-hero.webp"
+    }
+  ],
+  "reroll": {
+    "registers": ["safer", "bolder"]
+  },
+  "buildPath": {
+    "value": "code"
+  },
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "What this category ships, executed impeccably: a clean grid, a headline, a chart, a table.",
+    "palette": ["#ffffff", "#111827", "#2563eb"],
+    "materials": ["clean grid", "product photography"],
+    "viewport": "The arrangement a visitor expects, at full craft.",
+    "risk": "Indistinguishable from the competition by design."
+  },
+  "steer": true
+}

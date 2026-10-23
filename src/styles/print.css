@@ -123,17 +123,6 @@
     max-width: none;
   }
 
-  .verdict__stamp {
-    position: static;
-    display: inline-flex;
-    flex-direction: row;
-    gap: 4mm;
-    margin: 0 0 3mm;
-    padding: 1.5mm 2mm;
-    background: #111 !important;
-    color: #f2c200 !important;
-    font-size: 7.4pt;
-  }
 
   .doc h2 {
     margin: 8mm -13mm 4mm;

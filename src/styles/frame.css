@@ -309,7 +309,7 @@ body {
 
 .verdict p {
   margin: 0;
-  font-size: clamp(19px, 2.3vw, 25px);
+  font-size: clamp(20px, 2.2vw, 22px);
   line-height: 1.34;
   letter-spacing: -0.012em;
   font-weight: 600;
@@ -319,35 +319,6 @@ body {
 @media (min-width: 861px) {
   .verdict {
     padding-right: 190px;
-  }
-}
-
-/* the spec plate: a small black panel, not a rotated stamp */
-
-.verdict__stamp {
-  position: absolute;
-  top: 18px;
-  right: clamp(18px, 4vw, 46px);
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  padding: 8px 10px;
-  background: var(--ink);
-  color: var(--signal);
-  font-family: var(--face-data);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  line-height: 1.35;
-}
-
-@media (max-width: 860px) {
-  .verdict__stamp {
-    position: static;
-    display: inline-flex;
-    flex-direction: row;
-    gap: 10px;
-    margin: 0 0 16px;
   }
 }
 
@@ -378,7 +349,7 @@ body {
 
 .result__num {
   position: relative;
-  font-size: clamp(40px, 6.4vw, 68px);
+  font-size: clamp(40px, 6.4vw, 64px);
   line-height: 0.92;
   font-weight: 600;
   letter-spacing: -0.03em;
@@ -520,7 +491,7 @@ body {
 
 .bin__note {
   margin: 0 0 22px;
-  font-size: 14.5px;
+  font-size: 14px;
   line-height: 1.5;
   color: var(--ink-2);
   max-width: 62ch;
@@ -545,18 +516,30 @@ body {
   gap: 10px;
   padding: 9px 0;
   border-top: 1px solid var(--rule-soft);
-  font-size: 13.5px;
+  font-size: 13px;
   line-height: 1.4;
 }
 
 /* the pictogram square: a black plate in place of a pin */
 
 .trim__pin {
+  position: relative;
   width: 14px;
   height: 14px;
   background: var(--ink);
   display: inline-block;
   transform: translateY(1px);
+}
+
+/* the white mark inside the plate */
+.trim__pin::after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  top: 6px;
+  height: 2px;
+  background: var(--paper);
 }
 
 .trim__n {
@@ -664,7 +647,7 @@ body {
 
 .gobtn__t {
   grid-area: t;
-  font-size: 26px;
+  font-size: 27px;
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.1;
@@ -712,7 +695,7 @@ body {
 
 @media (max-width: 720px) {
   .gobtn__t {
-    font-size: 21px;
+    font-size: 20px;
   }
 }
 

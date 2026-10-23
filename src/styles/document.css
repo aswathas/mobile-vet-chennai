@@ -143,7 +143,7 @@
   border-collapse: collapse;
   margin: 0 0 30px;
   max-width: none;
-  font-size: 14.5px;
+  font-size: 14px;
 }
 
 .doc thead th {
@@ -186,7 +186,7 @@
   color: var(--ink);
   font-weight: 600;
   font-family: var(--face-data);
-  font-size: 13.5px;
+  font-size: 13px;
 }
 
 .doc tbody td[data-flag='high']::after {
@@ -254,7 +254,7 @@
   }
 
   .doc p {
-    font-size: 16.5px;
+    font-size: 17px;
   }
 
   .doc table {

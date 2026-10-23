@@ -85,4 +85,4 @@ Nothing else is available. There are no logos, no photographs, no charts as imag
 - Minimum 16px body text, comfortable line height and a 65 to 75 character measure for long reading.
 - Full keyboard operation of navigation, table of contents and any interactive element.
 - The PDF must preserve heading structure and reading order, and must remain legible in greyscale print.
-- Mobile-first at 360px wide; the tables reflow rather than requiring horizontal scroll.
+- Mobile-first at 360px wide. Tables reflow into wrapped cells and scroll as one region on a phone, so no word is ever clipped. The hundred-row appendix keeps its columns on purpose: a locality's cases, price, margin and verdict only mean anything side by side.

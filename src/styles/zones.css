@@ -94,7 +94,7 @@
 }
 
 .gate__name {
-  font-size: 14.5px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.25;
   color: var(--ink);
@@ -580,7 +580,7 @@
   }
 
   .se__v {
-    font-size: 9px;
+    font-size: 9.5px;
   }
 }
 
@@ -640,7 +640,7 @@
   background: var(--paper);
   text-decoration: none;
   color: var(--ink);
-  transform: perspective(900px) rotateX(4deg);
+  transform: perspective(900px) rotateX(0deg);
   transform-origin: bottom center;
   transition:
     transform var(--dur) var(--ease),
@@ -650,7 +650,7 @@
 .zonebtn__link:hover,
 .zonebtn__link:focus-visible {
   background: var(--signal);
-  transform: perspective(900px) rotateX(0deg) translateY(-2px);
+  transform: perspective(900px) rotateX(4deg) translateY(-3px);
 }
 
 .zonebtn__id {
@@ -924,7 +924,7 @@
 /* A long money figure gets its own size so it stays inside its panel. */
 
 .fl-v--long {
-  font-size: 19px;
+  font-size: 20px;
 }
 
 /* The board's filters carry the world: no OS chrome, a drawn chevron. */
@@ -1013,7 +1013,7 @@
 
 @media (min-width: 1180px) {
   .doc__grid {
-    grid-template-columns: minmax(0, 1fr) 13rem;
+    grid-template-columns: minmax(0, 1fr) var(--margin-w);
   }
 
   .doc__rail {

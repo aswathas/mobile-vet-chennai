@@ -1,0 +1,111 @@
+{
+  "title": "Choose the visual world — bolder register",
+  "question": "You asked for bolder. The deal put the sign band first. Keep it, take an alternate, or roll again.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "The Sign Band",
+      "kicker": "THE DEAL",
+      "lineage": "an international airport sign system: saturated yellow panels, black humanist sans, white pictograms",
+      "thesis": "The corpus is a chain of decisions. Fifteen route clusters are fifteen gates; the reader is choosing where to send a vehicle, and every gate carries only what lies ahead and how many minutes away it is. A sign band states a destination and the time to it. So does this report.",
+      "palette": ["#F2C200", "#111111", "#FFFFFF", "#E8E6E0"],
+      "materials": ["powder-coated panel", "vinyl-cut letters", "enamel pictograms"],
+      "viewport": "The masthead band carries the report title in black on saturated yellow. Beneath it the decision board: the two corridors as two boards of gate bands, A-R1 to A-R8 then B-R1 to B-R7, each band carrying the cluster name monumental, the cases a month, the route blend and the one-route contribution, with the recommended route's band held in black and white. Below the board, the reading column on white, black on white, and the bands stay the only yellow on the page. The way forward is the board itself: every gate is a link.",
+      "risk": "A sign band tells you where to go and never argues, and this report has to argue why the Velachery route earns Rs 70,668 against the Thiruvanmiyur route's Rs 91,728 while Velachery holds more prize. The deeper risk is that yellow and black are the most coded pair in transport design: a reader may see an airport rather than a veterinary dossier.",
+      "raised": [
+        {
+          "from": "challenger-tensegrity",
+          "raise": "TRACING THE COUNTERFORCE. Every revenue figure on a gate band links to the Rs 850 cost that offsets it, so the margin is reachable in one click from the number that makes it."
+        },
+        {
+          "from": "challenger-depot-blind",
+          "raise": "THE STALLED COURSE. A gate whose figures fail a rule shows two clipped legends across one seam rather than a quiet empty cell."
+        },
+        {
+          "from": "challenger-cracktro",
+          "raise": "RANK AS DEPTH. The ranked lists on the board set the best cluster forward and brightest, and nothing on the page is enclosed by a box."
+        }
+      ],
+      "hero": "https://impeccable.style/worlds/cards/wayfinding-cartography-signage-terminal-yellow-wayfinding-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/wayfinding-cartography-signage-terminal-yellow-wayfinding.webp"
+    },
+    {
+      "id": "challenger-botanical",
+      "label": "The Botanical Folio",
+      "verdict": "competitive",
+      "lineage": "a botanical folio following one plant through seed, leaf, flower, fruit and winter husk",
+      "thesis": "Five cream plates align on one stem at the same exact scale and ground: a tight green bud opens scarlet, swells into black fruit, then remains as a dry silver cage.",
+      "palette": ["#F6F1E4", "#2F4A32", "#A8261F", "#6E6A5E", "#C9BFA8"],
+      "materials": ["cream plate stock", "hairline sepia rules", "hand-coloured engraving"],
+      "viewport": "Five fixed-scale plates banded on one shared baseline with the captions ranked beneath, the stage name in small caps under an engraved italic name.",
+      "case": "Fuses cleanly on the season: the year of a locality becomes a specimen you look at rather than an index you read. Loses on identification: a botanical folio is a naturalist's object, and this is a decision about where to put a van.",
+      "risk": "A folio is a thing you admire, not one you plan a route with, and five plates per locality across a hundred localities is a hundred folios.",
+      "hero": "https://impeccable.style/worlds/cards/editorial-sequence-montage-botanical-folio-season-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/editorial-sequence-montage-botanical-folio-season.webp"
+    },
+    {
+      "id": "challenger-tensegrity",
+      "label": "The Tensegrity Column",
+      "verdict": "competitive",
+      "lineage": "a tensegrity column of carbon rods and red cord, opposing forces making a rigid body inhale and lengthen",
+      "thesis": "Black rods float apart without touching and the cords tighten in sequence, so any load can be traced to the force that balances it.",
+      "palette": ["#D9D6CE", "#1A1A18", "#B3251C", "#8C8A84"],
+      "materials": ["carbon rods", "red cord", "pale concrete"],
+      "viewport": "An engineering diagram of a strut network: monospaced labels with force values, annotations pinned to nodes on leader lines, the layout obeying the network rather than a page grid.",
+      "case": "The strongest of the six for the economic argument: demand is tension, the Rs 850 cost is the counterforce, and contribution is the balance a reader can see. Loses on identification: it is a sculpture, and the reader is underwriting a business.",
+      "risk": "A strut network cannot carry 7,000 words, and red cord on a page where most numbers are healthy reads as alarm.",
+      "hero": "https://impeccable.style/worlds/cards/kinetic-sculpture-automata-tensegrity-breathing-column-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/kinetic-sculpture-automata-tensegrity-breathing-column.webp"
+    },
+    {
+      "id": "challenger-depot-blind",
+      "label": "The Depot Destination Blind",
+      "verdict": "competitive",
+      "lineage": "a depot destination blind, bias-cut courses of dyed duck cloth stepping under one fixed window",
+      "thesis": "Green duck cloth halted between two courses, the top half of one destination and the bottom half of the next meeting at a single seam, every thread glowing through the chrome-yellow letters.",
+      "palette": ["#0F3B2E", "#E8C33A", "#F4F1E8", "#7A7466"],
+      "materials": ["dyed duck cloth", "chrome-yellow legends", "bleached calico"],
+      "viewport": "Content rides a roll of stacked cloth courses stepping under one fixed window inset from the trim, with a punched eyelet tape down one edge as the index. Rank is inversion: the lead panel alone prints dark on pale cloth.",
+      "case": "The mechanism matches the need exactly: a hundred-row appendix wants rows that step under a window, an index that runs down the edge, and a row that can stall to show why it failed. Loses on identification: a depot blind is a logistics object.",
+      "risk": "A 12-degree bias and drenched cloth fight a reading column, and dark green behind tabular figures is hard on the eye.",
+      "hero": "https://impeccable.style/worlds/cards/operate-c-depot-blind-courses-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/operate-c-depot-blind-courses.webp"
+    },
+    {
+      "id": "challenger-creased-shell",
+      "label": "The Curved-Crease Shell",
+      "verdict": "declined",
+      "lineage": "a circular sheet folded along one sweeping curved crease into a rigid shell",
+      "palette": ["#F2EDE2", "#3A3A38", "#8E8B84"],
+      "case": "Fuses poorly: a layout ruled by one arc cannot carry a reference table, and the crease is a mechanism in front of the argument.",
+      "kept": "Kept as a discipline: one sweeping curve rules the route diagrams, never the text grid.",
+      "hero": "https://impeccable.style/worlds/cards/paper-folds-pleats-deployable-curved-crease-shell-hero.webp"
+    },
+    {
+      "id": "challenger-cracktro",
+      "label": "The Cracktro Scroller Queue",
+      "verdict": "declined",
+      "lineage": "a worked queue on an emissive black void, rank carried by depth",
+      "palette": ["#000000", "#E8E4DA", "#C08A1E", "#6E6A62"],
+      "case": "Fuses poorly: a queue has no reading order, and this surface is a document read once, carefully, then argued about in a room.",
+      "kept": "Kept as a discipline: rank is depth and brightness rather than type size, and the front plane holds still while it is read.",
+      "hero": "https://impeccable.style/worlds/cards/operate-c-cracktro-scroller-queue-hero.webp"
+    }
+  ],
+  "reroll": {
+    "registers": ["safer", "bolder"]
+  },
+  "buildPath": {
+    "value": "code"
+  },
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "What this category ships, executed impeccably: a clean grid, a headline, a chart, a table.",
+    "palette": ["#ffffff", "#111827", "#2563eb"],
+    "materials": ["clean grid", "product photography"],
+    "viewport": "The arrangement a visitor expects, at full craft.",
+    "risk": "Indistinguishable from the competition by design."
+  },
+  "steer": true
+}

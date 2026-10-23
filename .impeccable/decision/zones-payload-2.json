@@ -1,0 +1,134 @@
+{
+  "title": "Choose the visual world — round 2",
+  "question": "The roll assigned The Schedule of Risks. Keep it, take an alternate, or re-roll again.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "The Schedule of Risks",
+      "kicker": "THE ROLL",
+      "lineage": "the insurance policy schedule and the adjuster's claim form",
+      "thesis": "The corpus is a schedule of one hundred risks, each with a quantity, a rate, an amount and a note that qualifies it. The dossier reads as the adjuster's own claim form: every number is a line item with a basis, and the margin holds the pencil note that keeps the estimate honest.",
+      "palette": ["#F2EFE6", "#FBFAF4", "#1A1A17", "#B23A2E", "#2F4B7C", "#C9C6BC"],
+      "materials": ["policy stock", "carbon duplicate", "ballpoint ink", "adjuster's red pencil"],
+      "viewport": "The schedule header: Insured, Policy, Period, Territory (the two corridors), Limit (Rs 2,24 lakh a month of addressable demand), Deductible (Rs 850 a clustered visit), Premium floor (Rs 1,100). Under it the first claim form: the ten strongest localities as line items, each with a basis, a quantity, a rate and an amount, and the adjuster's note in the right margin. The verdict is an underwriting stamp, slightly off-register, above the key figure. The way forward is the schedule index: fifteen route clusters, each with its acceptance mark.",
+      "risk": "A policy schedule reads as a contract, and a contract is a promise. Half this corpus rests on a modelled household base, and a stamped schedule makes tier C look as settled as tier A. Three rules are not negotiable: no figure shown without its tier, the note column never becomes a footnote, and the stamp never claims a figure is measured.",
+      "raised": [
+        {
+          "from": "challenger-poster-wall",
+          "raise": "THE HOUSE SET. The ten divisions take ten sheet tints from one fixed house palette, hard-cut between them, never a fade, so a reader knows where they are before they read the rail."
+        },
+        {
+          "from": "challenger-miura-fold",
+          "raise": "THE FOLD-OUT APPENDIX. The hundred-row register deploys from a folded summary into the full sheet, and the full table is always present for print and for assistive technology."
+        },
+        {
+          "from": "challenger-zine",
+          "raise": "THE ONE DIAGRAM THAT TEACHES. The twenty-four hour curve arrives as a single annotated diagram a reader can follow without the prose, drawn with the adjuster's pencil and nothing else."
+        }
+      ],
+      "hero": "https://impeccable.style/worlds/cards/rw-manual-acetate-tab-board-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/rw-manual-acetate-tab-board.webp"
+    },
+    {
+      "id": "model-pick",
+      "label": "The Chennai Street Directory",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "the bound city directory of classified entries",
+      "thesis": "A hundred localities are a hundred entries: name, ward, category, address, telephone, hours. The dossier becomes the directory a pet parent would look up, with the analyst's ratings and notes in the margin.",
+      "palette": ["#F0EDE4", "#1C1B18", "#2E4A7D", "#C8A24A"],
+      "materials": ["directory newsprint", "glue-bound signatures", "blue ink"],
+      "viewport": "The directory's front matter: the edition, the territory it covers, and the index of one hundred entries by ward. Each entry is a ruled block with its name, ward, category, count and note.",
+      "risk": "A searchable list of places is the obvious shape for a hundred localities, and most runs in this category land here. It is effective and it is the safe answer.",
+      "hero": "https://impeccable.style/worlds/cards/rw-manual-acetate-tab-board-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/rw-manual-acetate-tab-board.webp"
+    },
+    {
+      "id": "challenger-centre-rail",
+      "label": "Centre-Rail Reference Setting",
+      "verdict": "competitive",
+      "lineage": "a reference-setting page drawn by a ruling engine",
+      "thesis": "Two short columns twinned around a fixed centre rail of keys, the whole block held small inside a wide annotation margin where the apparatus hangs and overlaps the block's edge.",
+      "palette": ["#F4F0E4", "#1A1A17", "#B23A1E", "#6E6A5E"],
+      "materials": ["unbleached bone", "iron-black ink", "rubric vermilion"],
+      "viewport": "A ruled block: two columns of small roman round a vermilion centre rail carrying keys and square detents cut wherever the flow changes footing. The annotation margin holds the apparatus, overlapping the block's edge.",
+      "case": "Fuses cleanly: the centre rail is a real table of contents for a hundred risks and the annotation margin is exactly where caveats belong. Loses narrowly: a setting apparatus says the reader is reading a work of reference, and this is a decision.",
+      "risk": "The vermilion rail competes with the notes it is meant to carry, and a two-column block at 34 characters a column is slow on a phone.",
+      "hero": "https://impeccable.style/worlds/cards/rw-centre-rail-reference-setting-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/rw-centre-rail-reference-setting.webp"
+    },
+    {
+      "id": "challenger-daylight",
+      "label": "Daylight Section",
+      "verdict": "competitive",
+      "lineage": "a daylight section, the sun cutting luminous rooms through a building",
+      "thesis": "The working day drawn in section. The sunbeam's gold is the active band, shadow blue is the withdrawn hour, and the reading is a long continuous section with architect's inclined lettering and tabular time stamps.",
+      "palette": ["#F6F4EE", "#2B2B28", "#D9A441", "#8FA3C4"],
+      "materials": ["limewash wall", "section poche", "travelling light"],
+      "viewport": "One long section ruled across the sheet, the hours as a horizontal datum, the peak window picked out in gold and the closed hours in shadow blue, annotations pinned to the light angles.",
+      "case": "Fuses cleanly on the hour story, and time as the organising axis is the right spine for a dossier about when demand happens. Loses on identification: a daylight section says architecture, and this is a market.",
+      "risk": "A drawing with one golden band can imply a precision the hour data does not have.",
+      "hero": "https://impeccable.style/worlds/cards/architecture-inhabitable-space-daylight-section-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/architecture-inhabitable-space-daylight-section.webp"
+    },
+    {
+      "id": "challenger-jackfield",
+      "label": "Normalled Jackfield",
+      "verdict": "competitive",
+      "lineage": "a jackfield normalling schedule on unlit black glass",
+      "thesis": "Every item tied to its default by an amber link line that is unbroken, cross-ticked, gapped, doubled or ended in an open ring. State is drawn by stroke pattern, never by hue.",
+      "palette": ["#0A0A0C", "#E8A33D", "#FFFFFF"],
+      "materials": ["black glass", "signal amber", "numbered lanes"],
+      "viewport": "An endless lane grid drifting under a fixed left legend strip, each row's link rail carrying its own state by stroke pattern. Dark gutters at both edges mean nothing spans full width.",
+      "case": "Best of the six at carrying state without colour, and the broken-line discipline is exactly right for a corpus that must never imply a live figure is a settled one. Loses on identification: it is an instrument, and the reader is underwriting a business.",
+      "risk": "Black glass behind a hundred rows is heavy on a phone, and a link rail reads as configuration rather than evidence.",
+      "hero": "https://impeccable.style/worlds/cards/operate-b-normalled-jackfield-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/operate-b-normalled-jackfield.webp"
+    },
+    {
+      "id": "challenger-poster-wall",
+      "label": "Plakatstil Object Poster Wall",
+      "verdict": "declined",
+      "lineage": "a Berlin poster house's trade-mark wall",
+      "palette": ["#7A1F1F", "#C79A2B", "#4A5D3A", "#4A5568"],
+      "case": "Fuses poorly: a wall of saturated grounds and heroic flat objects reads as a showcase of goods, and this corpus is a hundred risks with notes attached.",
+      "kept": "Kept as RAISE 1, THE HOUSE SET, a fixed palette of sheet tints as a per-unit custom property, hard-cut and never faded.",
+      "hero": "https://impeccable.style/worlds/cards/posters-covers-sleeves-plakatstil-object-poster-hero.webp"
+    },
+    {
+      "id": "challenger-miura-fold",
+      "label": "Miura-Fold Deployable Sheet",
+      "verdict": "declined",
+      "lineage": "a vast pleated sheet unfolding from a hand-sized packet",
+      "palette": ["#FFFFFF", "#C9A227", "#8A8A87", "#A9BBD4"],
+      "case": "Fuses poorly: a fold is an instrument, and on a reading surface it becomes a mechanism in front of the argument.",
+      "kept": "Kept as RAISE 2, THE FOLD-OUT APPENDIX, the hundred-row register deployed from a folded summary with the full table always present for print and for assistive technology.",
+      "hero": "https://impeccable.style/worlds/cards/paper-folds-pleats-deployable-miura-orbit-sheet-hero.webp"
+    },
+    {
+      "id": "challenger-zine",
+      "label": "Hand-Drawn Technical Zine",
+      "verdict": "declined",
+      "lineage": "a marker-and-doodle explainer zine",
+      "palette": ["#FBF3DC", "#111111", "#FFE066", "#FF9EC4", "#6FD5C8"],
+      "case": "Fuses poorly: mascots and marker lettering would launder a research corpus into an explainer, and this brand states that the market floor is loss-making.",
+      "kept": "Kept as RAISE 3, THE ONE DIAGRAM THAT TEACHES, the hour curve as a single annotated diagram readable without the prose.",
+      "hero": "https://impeccable.style/worlds/cards/hand-drawn-zine-explainer-hero.webp"
+    }
+  ],
+  "reroll": {
+    "registers": ["safer", "bolder"]
+  },
+  "buildPath": {
+    "value": "code"
+  },
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "What this category ships, executed impeccably: a clean grid, a headline, a chart, a table.",
+    "palette": ["#ffffff", "#111827", "#2563eb"],
+    "materials": ["clean grid", "product photography"],
+    "viewport": "The arrangement a visitor expects, at full craft.",
+    "risk": "Indistinguishable from the competition by design."
+  },
+  "steer": true
+}
