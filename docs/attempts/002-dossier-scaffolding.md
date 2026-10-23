@@ -29,6 +29,6 @@ no fixture at all, because it hides the difference between a placeholder and a
 finding. The fixture was demoted to a test input behind an environment
 variable, and the real corpus replaced it at the route.
 
-The review agent's note stayed in the repository as `EXCLUDED-SCAFFOLDING.md`
-until the corpus was real, at which point it was rewritten to say what the
-dossier actually is now.
+The review agent's note stayed in the repository until the corpus
+was real, at which point it was replaced by `docs/DOSSIER-STATUS.md`, which
+says what the dossier is now and where its evidence lives.
