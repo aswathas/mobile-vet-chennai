@@ -111,7 +111,7 @@ an accurate one.
 
 A final pass drove the site rather than reading it.
 
-**The interaction path was walked.**  opens the dossier, reads the board's initial state, filters to Zone B and checks the arrow moves to a Zone B gate, filters to a combination that matches nothing and checks the empty state appears, clears the filters and checks all fifteen gates come back, clicks the Zone B corridor button and checks the heading lands below the gantry, reads the focus order, then walks the report to the dossier and the dossier back to the report. It also fails on any console error. It passes.
+**The interaction path was walked.** `scripts/verify-interactions.mjs` opens the dossier, reads the board's initial state, filters to Zone B and checks the arrow moves to a Zone B gate, filters to a combination that matches nothing and checks the empty state appears, clears the filters and checks all fifteen gates come back, clicks the Zone B corridor button and checks the heading lands below the gantry, reads the focus order, then walks the report to the dossier and the dossier back to the report. It also fails on any console error. It passes.
 
 **The palette was measured against itself.** Every ink on white clears 4.5:1 and every ink on the yellow clears 3:1, with one exception found and fixed: the source ids under the price scale were set in the lightest ink at 3.62:1 and are now in the mid ink at 5.38:1.
 
