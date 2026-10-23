@@ -1,0 +1,62 @@
+/* ==========================================================================
+   The Sign Band — design tokens
+   --------------------------------------------------------------------------
+   The world: an international airport sign system. One saturated yellow,
+   reserved for wayfinding and nothing else: the masthead band, the section
+   gantry, the gate bands on the decision board, and the one hour the demand
+   curve says to go. Everything else is black type on white over a warm paper
+   ground, ruled with black hairlines.
+
+   Yellow never fills a page and never sits behind body text. No grain, no
+   perforation, no film, no rounded card, no shadow. Every edge is a drawn
+   rule.
+   ========================================================================== */
+
+:root {
+  /* --- the one signal ---------------------------------------------------- */
+  --signal: #f2c200;
+  --signal-deep: #c19c00;
+  --signal-ink: #111111;
+
+  /* --- grounds ----------------------------------------------------------- */
+  --paper: #ffffff;
+  --ground: #e8e6e0;
+  --panel: #f6f5f1;
+
+  /* --- ink --------------------------------------------------------------- */
+  --ink: #111111;
+  --ink-2: #3a3a36;
+  --ink-3: #6e6a62;
+  --ink-4: #8b867d;
+
+  /* --- rules ------------------------------------------------------------- */
+  --rule: #111111;
+  --rule-soft: #cbc7be;
+  --rule-hair: #dedbd4;
+
+  /* --- closed ------------------------------------------------------------ */
+  --closed: #6e6a62;
+
+  /* --- type -------------------------------------------------------------- */
+  /* One humanist sans for words, band messages and the monumental numbers.
+     A monospace for parameters and every numeral that is a fact. */
+  --face: 'Public Sans', 'Helvetica Neue', Arial, sans-serif;
+  --face-data: 'Roboto Mono', ui-monospace, SFMono-Regular, Consolas, monospace;
+
+  /* --- measure and rhythm ------------------------------------------------ */
+  --window-w: 1020px;
+  --measure: 68ch;
+  --margin-w: 13rem;
+  --gutter: clamp(14px, 4vw, 52px);
+  --band-h: 74px;
+
+  /* --- motion ------------------------------------------------------------ */
+  --ease: cubic-bezier(0.16, 0.84, 0.44, 1);
+  --dur: 220ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur: 0ms;
+  }
+}

@@ -1,0 +1,47 @@
+---
+import defaultReferences from '../content/references.json';
+
+const {
+  references = defaultReferences,
+  heading = 'Trims',
+  note = 'Every source the report leans on, with its number, its publisher and its address. {n} in all. Numbers in the text link straight to the entry behind them.',
+} = Astro.props;
+
+const noteText = note.replace('{n}', references.length);
+
+// The trims hang in two columns, each column a film strip with an orange pin
+// head marking every source.
+const half = Math.ceil(references.length / 2);
+const columns = [references.slice(0, half), references.slice(half)];
+---
+
+<section class="bin" id="references">
+  <div class="bin__inner">
+    <div class="bin__lip" aria-hidden="true"></div>
+    <h2>{heading}</h2>
+    <p class="bin__note">
+      {noteText}
+    </p>
+
+    <div class="trims">
+      {
+        columns.map((col) => (
+          <ol class="trims__strip">
+            {col.map((r) => (
+              <li class="trim" id={`ref-${r.n}`}>
+                <span class="trim__pin" aria-hidden="true" />
+                <span class="trim__n">{String(r.n).padStart(2, '0')}</span>
+                <span class="trim__label">{r.label}</span>
+                {r.url && (
+                  <a class="trim__url" href={r.url} target="_blank" rel="noopener noreferrer">
+                    {r.url}
+                  </a>
+                )}
+              </li>
+            ))}
+          </ol>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,82 @@
+---
+import meta from '../content/meta.json';
+
+// The scale is a run of frames. Position encodes magnitude; the marked
+// positions are exact, the frames between them are indicative. The zone
+// boundaries are the two marked values themselves, so the colouring can never
+// disagree with the ticks printed under it.
+const TOP = 1680;
+const FLOOR = 1100;
+const TARGET = 1499;
+
+const pct = (v) => ((v / TOP) * 100).toFixed(4);
+
+// The prices Chennai operators actually publish, taken from the report's own
+// observed price ladder with the service each one buys and the source id it
+// came from. They are marked on the scale without labels, because they crowd
+// the left of it, and listed underneath where the service and the source can
+// be read.
+const PUBLISHED = [
+  { at: 200, label: 'Rs 200', service: 'Home consultation', src: '[12]' },
+  { at: 299, label: 'Rs 299', service: 'Home consultation', src: '[18][19]' },
+  { at: 399, label: 'Rs 399', service: 'Home visit, 30 minutes', src: '[22]' },
+  { at: 599, label: 'Rs 599', service: 'Vaccination at home', src: '[19]' },
+  { at: 699, label: 'Rs 699', service: 'Home visit including consultation', src: '[28]' },
+  { at: 999, label: 'Rs 999', service: 'General check-up at home', src: '[29]' },
+  { at: 1199, label: 'Rs 1,199', service: 'Vaccination at home, package', src: '[28]' },
+  { at: 1699, label: 'Rs 1,699', service: 'Extended check-up with blood panel', src: '[29]' },
+];
+
+const TICKS = [
+  { at: 200, label: 'Rs 200', note: 'observed floor', tone: 'plain' },
+  { at: 850, label: 'Rs 850', note: 'cost per visit', tone: 'plain' },
+  { at: FLOOR, label: 'Rs 1,100', note: 'break-even floor', tone: 'flag' },
+  { at: TARGET, label: 'Rs 1,499', note: 'target', tone: 'plain' },
+];
+---
+
+<section class="result" aria-labelledby="result-k">
+  <div class="result__head">
+    <span class="result__k" id="result-k">Minimum blended price per visit</span>
+    <span class="result__num">Rs 1,100<span class="result__flag" aria-hidden="true"></span></span>
+  </div>
+  <p class="result__sub">
+    Against a cost of about Rs 850 to deliver one clustered visit in Chennai traffic, and six
+    visits a day being the ceiling. Below this price the route cannot carry itself.
+  </p>
+
+  <div class="scale">
+    <div
+      class="scale__strip"
+      style={`--floor:${pct(FLOOR)}%;--target:${pct(TARGET)}%`}
+      role="img"
+      aria-label="Price scale from Rs 0 to Rs 1,680. Below Rs 1,100 the visit does not cover its cost. Between Rs 1,100 and Rs 1,499 the route carries itself. Marked positions: Rs 200 observed floor, Rs 850 cost per visit, Rs 1,100 break-even floor, Rs 1,499 target."
+    >
+      {
+        PUBLISHED.map((p) => (
+          <span class="scale__minor" style={`left:${((p.at / TOP) * 100).toFixed(2)}%`} title={`Published price ${p.label}`} />
+        ))
+      }
+    </div>
+    <div class="scale__ticks">
+      {
+        TICKS.map((t) => (
+          <span class="scale__tick" data-tone={t.tone} style={`left:${((t.at / TOP) * 100).toFixed(2)}%`}>
+            <i />
+            <b>{t.label}</b>
+            <u>{t.note}</u>
+          </span>
+        ))
+      }
+    </div>
+    <p class="scale__published">
+      {
+        PUBLISHED.map((p) => (
+          <span class="scale__pub">
+            <b>{p.label}</b> {p.service} <i>{p.src}</i>
+          </span>
+        ))
+      }
+    </p>
+  </div>
+</section>

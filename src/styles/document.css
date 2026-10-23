@@ -1,0 +1,266 @@
+/* ==========================================================================
+   The reading column — set inside the white sheet
+   One humanist sans for words. Rank by cell count, not by type size. Every
+   table is ruled in black. The section openers are bands: yellow, because a
+   section opener is wayfinding.
+   ========================================================================== */
+
+.doc {
+  padding: 0 clamp(18px, 4vw, 46px) 40px;
+  max-width: var(--window-w);
+  margin: 0 auto;
+}
+
+.doc > * {
+  max-width: var(--measure);
+}
+
+/* panels, figures and wide tables span the sheet; the prose stays in the
+   reading column */
+
+.doc > .result,
+.doc > .chart,
+.doc > .tbl-scroll,
+.doc > figure,
+.doc > .board,
+.doc > .flow,
+.doc > .routemap,
+.doc > .zonebtn,
+.doc > .doc__grid,
+.doc > .verdict {
+  max-width: none;
+}
+
+/* --- the section band ----------------------------------------------------- */
+
+.doc h2 {
+  position: relative;
+  max-width: none;
+  scroll-margin-top: calc(var(--band-h) + 24px);
+  margin: 60px calc(clamp(18px, 4vw, 46px) * -1) 26px;
+  padding: 14px clamp(18px, 4vw, 46px) 15px;
+  background: var(--signal);
+  color: var(--signal-ink);
+  border-top: 3px solid var(--rule);
+  border-bottom: 3px solid var(--rule);
+  font-size: clamp(22px, 3.1vw, 32px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.doc h3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.24;
+  letter-spacing: -0.01em;
+  margin: 44px 0 12px;
+  text-wrap: balance;
+}
+
+.doc h2:first-child,
+.doc h3:first-child {
+  margin-top: 0;
+}
+
+.doc h2 + p,
+.doc h3 + p {
+  margin-top: 0;
+}
+
+.doc h4 {
+  font-family: var(--face-data);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 30px 0 10px;
+}
+
+/* --- prose ---------------------------------------------------------------- */
+
+.doc p {
+  margin: 0 0 20px;
+  font-size: 17px;
+  line-height: 1.62;
+  color: var(--ink-2);
+}
+
+.doc strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.doc em {
+  font-style: italic;
+}
+
+.doc ul,
+.doc ol {
+  margin: 0 0 22px;
+  padding-left: 1.3em;
+  color: var(--ink-2);
+}
+
+.doc li {
+  margin-bottom: 9px;
+  padding-left: 3px;
+}
+
+.doc li::marker {
+  font-family: var(--face-data);
+  font-size: 0.82em;
+  color: var(--ink-3);
+}
+
+.doc hr {
+  border: 0;
+  border-top: 1px solid var(--rule-soft);
+  margin: 44px 0;
+}
+
+.doc blockquote {
+  margin: 0 0 22px;
+  padding: 4px 0 4px 20px;
+  border-left: 3px solid var(--signal);
+  color: var(--ink-2);
+}
+
+.doc code {
+  font-family: var(--face-data);
+  font-size: 0.88em;
+  background: var(--panel);
+  border: 1px solid var(--rule-soft);
+  padding: 1px 5px;
+}
+
+/* --- tables --------------------------------------------------------------- */
+
+.doc table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 30px;
+  max-width: none;
+  font-size: 14.5px;
+}
+
+.doc thead th {
+  text-align: left;
+  font-family: var(--face-data);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  padding: 0 14px 7px 0;
+  border-bottom: 2px solid var(--rule);
+  vertical-align: bottom;
+}
+
+.doc tbody td {
+  padding: 8px 14px 8px 0;
+  border-bottom: 1px solid var(--rule-hair);
+  color: var(--ink-2);
+  vertical-align: top;
+}
+
+.doc tbody tr:last-child td {
+  border-bottom: 1px solid var(--rule);
+}
+
+.doc td:last-child,
+.doc th:last-child {
+  padding-right: 0;
+}
+
+/* numerals are parameters: a monospace set, right aligned */
+
+.doc td:has(> p),
+.doc td {
+  font-variant-numeric: tabular-nums;
+}
+
+.doc tbody td[data-flag='high'] {
+  color: var(--ink);
+  font-weight: 600;
+  font-family: var(--face-data);
+  font-size: 13.5px;
+}
+
+.doc tbody td[data-flag='high']::after {
+  content: '';
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-left: 7px;
+  background: var(--signal);
+  border: 1px solid var(--rule);
+  vertical-align: 1px;
+}
+
+/* --- citations ------------------------------------------------------------ */
+
+/* A citation is a mark, not a chip: yellow is reserved for wayfinding, and a
+   highlighter behind every source id would make it the site's accent. */
+.cite {
+  font-family: var(--face-data);
+  font-size: 0.64em;
+  font-weight: 500;
+  color: var(--ink-2);
+  background: none;
+  border: 0;
+  padding: 0 1px;
+  text-decoration: none;
+  vertical-align: super;
+  line-height: 0;
+}
+
+.cite + .cite {
+  margin-left: 0.24em;
+}
+
+.cite:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.trim:target,
+.trim[data-hit='true'] {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+/* --- misc ----------------------------------------------------------------- */
+
+.doc a:not(.cite) {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+@media (max-width: 720px) {
+  .doc {
+    padding: 0 18px;
+  }
+
+  .doc h2 {
+    margin-left: -18px;
+    margin-right: -18px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .doc p {
+    font-size: 16.5px;
+  }
+
+  .doc table {
+    font-size: 13px;
+    display: block;
+    overflow-x: auto;
+    min-width: 620px;
+  }
+}

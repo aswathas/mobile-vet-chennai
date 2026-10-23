@@ -1,0 +1,753 @@
+/* ==========================================================================
+   The Sign Band — the frame
+   --------------------------------------------------------------------------
+   The masthead is an overhead band. The navigation is a gantry of section
+   bands. The document is a white sheet ruled in black. The sources are a stack
+   of panels. Nothing is a card and nothing is a shadow.
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: calc(var(--band-h) + 24px);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--face);
+  font-size: 16px;
+  line-height: 1.6;
+  font-variant-numeric: tabular-nums;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    scroll-behavior: auto;
+  }
+}
+
+::selection {
+  background: var(--signal);
+  color: var(--signal-ink);
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 10px 16px;
+  z-index: 100;
+  font-size: 14px;
+}
+
+.skip:focus {
+  left: 0;
+}
+
+/* --- the masthead band ---------------------------------------------------- */
+
+.band {
+  background: var(--signal);
+  color: var(--signal-ink);
+  border-bottom: 3px solid var(--rule);
+}
+
+.band__inner {
+  max-width: var(--window-w);
+  margin: 0 auto;
+  padding: 34px var(--gutter) 0;
+}
+
+.band h1 {
+  font-size: clamp(34px, 6.2vw, 64px);
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+  margin: 0;
+  max-width: 22ch;
+}
+
+.band__sub2 {
+  display: block;
+  font-weight: 400;
+  font-size: 0.46em;
+  line-height: 1.12;
+  letter-spacing: -0.005em;
+  margin-top: 10px;
+  max-width: 34ch;
+}
+
+.band__deck {
+  margin: 20px 0 0;
+  font-size: 17px;
+  line-height: 1.45;
+  max-width: 56ch;
+}
+
+.band__note {
+  display: block;
+  margin-top: 10px;
+  font-family: var(--face-data);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+/* the spec plate pinned under the band: four parameters, mono, on white */
+
+.slate {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin: 26px calc(var(--gutter) * -1) 0;
+  background: var(--paper);
+  border-top: 3px solid var(--rule);
+  border-bottom: 3px solid var(--rule);
+}
+
+.slate__cell {
+  padding: 12px var(--gutter) 14px 0;
+  border-right: 1px solid var(--rule-soft);
+}
+
+.slate__cell:last-child {
+  border-right: 0;
+}
+
+.slate__k {
+  display: block;
+  font-family: var(--face-data);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.slate__v {
+  display: block;
+  margin-top: 5px;
+  font-family: var(--face-data);
+  font-size: 13px;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+/* --- the gantry: a row of section bands ----------------------------------- */
+
+.rail {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--ground);
+  border-bottom: 3px solid var(--rule);
+}
+
+.rail__strip {
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+
+.rail__strip::-webkit-scrollbar {
+  display: none;
+}
+
+.rail__inner {
+  position: relative;
+  max-width: var(--window-w);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* the scrub ruler: a hairline with a flag that marks where the reader is */
+
+.rail__ruler {
+  position: relative;
+  height: 11px;
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.rail__ruler-ticks {
+  position: absolute;
+  inset: 0 0 5px 0;
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--rule-soft) 0 1px,
+    transparent 1px 14px
+  );
+  opacity: 0.9;
+}
+
+.rail__ruler-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 9px solid var(--ink);
+  transition: left var(--dur) var(--ease);
+}
+
+.rail__cells {
+  display: flex;
+  align-items: stretch;
+  gap: 6px;
+  padding: 10px 0;
+  min-width: max-content;
+}
+
+.rail__cells > li {
+  display: contents;
+}
+
+.frame {
+  scroll-snap-align: start;
+  position: relative;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 34px;
+  padding: 0 14px;
+  background: var(--signal);
+  color: var(--signal-ink);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  border: 1px solid var(--rule);
+  white-space: nowrap;
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+
+.frame__n {
+  font-family: var(--face-data);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+
+.frame:hover {
+  background: var(--signal-deep);
+}
+
+/* the current section: the band inverted, with the flag beneath it */
+
+.frame[aria-current='true'] {
+  background: var(--ink);
+  color: var(--signal);
+  border-color: var(--ink);
+}
+
+.frame[aria-current='true'] .frame__n {
+  color: var(--signal);
+}
+
+.frame[aria-current='true']::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  width: 0;
+  height: 0;
+  transform: translateX(-50%);
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 9px solid var(--ink);
+}
+
+/* a frame already read carries a struck rule through its number */
+
+.frame[data-read='true'] .frame__n {
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+/* --- the sheet ------------------------------------------------------------ */
+
+.sheet {
+  padding: 34px var(--gutter) 64px;
+}
+
+.window {
+  max-width: var(--window-w);
+  margin: 0 auto;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+}
+
+.window--sheet {
+  box-shadow: none;
+}
+
+.doc {
+  padding: 0 clamp(18px, 4vw, 46px) 40px;
+}
+
+/* --- the verdict band ----------------------------------------------------- */
+
+.verdict {
+  position: relative;
+  max-width: none;
+  margin: 0 calc(clamp(18px, 4vw, 46px) * -1);
+  padding: 30px clamp(18px, 4vw, 46px) 28px;
+  background: var(--signal);
+  color: var(--signal-ink);
+  border-bottom: 3px solid var(--rule);
+}
+
+.verdict p {
+  margin: 0;
+  font-size: clamp(19px, 2.3vw, 25px);
+  line-height: 1.34;
+  letter-spacing: -0.012em;
+  font-weight: 600;
+  max-width: 60ch;
+}
+
+@media (min-width: 861px) {
+  .verdict {
+    padding-right: 190px;
+  }
+}
+
+/* the spec plate: a small black panel, not a rotated stamp */
+
+.verdict__stamp {
+  position: absolute;
+  top: 18px;
+  right: clamp(18px, 4vw, 46px);
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 8px 10px;
+  background: var(--ink);
+  color: var(--signal);
+  font-family: var(--face-data);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.35;
+}
+
+@media (max-width: 860px) {
+  .verdict__stamp {
+    position: static;
+    display: inline-flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 0 0 16px;
+  }
+}
+
+/* --- the key result ------------------------------------------------------- */
+
+.result {
+  margin: 34px 0 40px;
+  padding: 22px 24px 20px;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+}
+
+.result__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.result__k {
+  font-family: var(--face-data);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.result__num {
+  position: relative;
+  font-size: clamp(40px, 6.4vw, 68px);
+  line-height: 0.92;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.result__flag {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-left: 10px;
+  background: var(--signal);
+  border: 1px solid var(--rule);
+  vertical-align: 6px;
+}
+
+.result__sub {
+  margin: 12px 0 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  max-width: 74ch;
+}
+
+/* the price scale: black ticks on white, the floor marked in yellow */
+
+.scale {
+  margin-top: 20px;
+}
+
+/* The zones are painted from the two marked values themselves, so the colour
+   can never disagree with the ticks printed under it. */
+.scale__strip {
+  position: relative;
+  height: 30px;
+  border-bottom: 2px solid var(--rule);
+  background: linear-gradient(
+    to right,
+    var(--rule-soft) 0 var(--floor),
+    var(--ink) var(--floor) var(--target),
+    var(--signal) var(--target) 100%
+  );
+}
+
+/* the marks of the prices operators actually publish, unlabelled so they do
+   not crowd the left of the scale */
+.scale__minor {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--paper);
+  opacity: 0.85;
+}
+
+.scale__published {
+  font-family: var(--face-data);
+  font-size: 11px;
+  color: var(--ink-3);
+  margin: 6px 0 0;
+}
+
+.scale__ticks {
+  position: relative;
+  height: 46px;
+  margin-top: 4px;
+}
+
+.scale__tick {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  text-align: center;
+}
+
+.scale__tick i {
+  display: block;
+  width: 1px;
+  height: 7px;
+  background: var(--rule);
+}
+
+.scale__tick b {
+  font-family: var(--face-data);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.scale__tick u {
+  font-family: var(--face-data);
+  font-size: 9.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink-3);
+  max-width: 12ch;
+}
+
+.scale__tick[data-tone='flag'] i {
+  height: 11px;
+  width: 2px;
+  background: var(--ink);
+}
+
+.scale__tick[data-tone='flag'] b {
+  padding: 1px 5px;
+  background: var(--signal);
+  border: 1px solid var(--rule);
+}
+
+/* --- the source panels ---------------------------------------------------- */
+
+.bin {
+  background: var(--ground);
+  border-top: 3px solid var(--rule);
+  padding: 34px var(--gutter) 46px;
+}
+
+.bin__inner {
+  max-width: var(--window-w);
+  margin: 0 auto;
+}
+
+.bin__lip {
+  height: 3px;
+  background: var(--rule);
+  margin-bottom: 20px;
+}
+
+.bin h2 {
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px;
+}
+
+.bin__note {
+  margin: 0 0 22px;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--ink-2);
+  max-width: 62ch;
+}
+
+.trims {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 26px;
+}
+
+.trims__strip {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.trim {
+  display: grid;
+  grid-template-columns: 16px 30px 1fr;
+  align-items: baseline;
+  gap: 10px;
+  padding: 9px 0;
+  border-top: 1px solid var(--rule-soft);
+  font-size: 13.5px;
+  line-height: 1.4;
+}
+
+/* the pictogram square: a black plate in place of a pin */
+
+.trim__pin {
+  width: 14px;
+  height: 14px;
+  background: var(--ink);
+  display: inline-block;
+  transform: translateY(1px);
+}
+
+.trim__n {
+  font-family: var(--face-data);
+  font-size: 11px;
+  color: var(--ink-3);
+}
+
+.trim__label {
+  color: var(--ink);
+}
+
+.trim__url {
+  grid-column: 3;
+  font-family: var(--face-data);
+  font-size: 11px;
+  color: var(--ink-3);
+  word-break: break-all;
+  text-decoration: none;
+}
+
+.trim__url:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+/* --- the foot ------------------------------------------------------------- */
+
+.foot {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 14px var(--gutter);
+}
+
+.foot__inner {
+  max-width: var(--window-w);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-family: var(--face-data);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: #bdb9b1;
+}
+
+/* --- focus ---------------------------------------------------------------- */
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.band :focus-visible {
+  outline-color: var(--ink);
+}
+
+@media (max-width: 860px) {
+  .slate {
+    grid-template-columns: 1fr 1fr;
+    /* on a phone the band has no room to give, so the strip stays inside the
+       band rather than pulling its first cell off the edge of the screen */
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .slate__cell:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .trims {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- the way to the other document ----------------------------------------- */
+
+.gobtn {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    'k arrow'
+    't arrow'
+    'n arrow';
+  align-items: center;
+  column-gap: 20px;
+  max-width: var(--window-w);
+  margin: 0 auto;
+  padding: 16px var(--gutter) 18px;
+  background: var(--signal);
+  color: var(--signal-ink);
+  border-bottom: 3px solid var(--rule);
+  text-decoration: none;
+}
+
+.gobtn__k {
+  grid-area: k;
+  font-family: var(--face-data);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+
+.gobtn__t {
+  grid-area: t;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.gobtn__n {
+  grid-area: n;
+  font-family: var(--face-data);
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.gobtn__arrow {
+  grid-area: arrow;
+  width: 0;
+  height: 0;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+  border-left: 17px solid var(--signal-ink);
+  transition: transform var(--dur) var(--ease);
+}
+
+.gobtn:hover .gobtn__arrow {
+  transform: translateX(6px);
+}
+
+.gobtn:hover {
+  background: var(--signal-deep);
+}
+
+.backlink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0 0;
+  font-family: var(--face-data);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--signal-ink);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+}
+
+@media (max-width: 720px) {
+  .gobtn__t {
+    font-size: 21px;
+  }
+}
+
+/* The published prices are a list, not a run of text: each carries its service
+   and its source, because a number a reader can challenge needs one. */
+
+.scale__published {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  margin: 10px 0 0;
+  font-size: 11.5px;
+  color: var(--ink-3);
+}
+
+.scale__pub b {
+  font-family: var(--face-data);
+  font-weight: 500;
+  color: var(--ink);
+  margin-right: 4px;
+}
+
+.scale__pub i {
+  font-style: normal;
+  font-family: var(--face-data);
+  font-size: 10px;
+  color: var(--ink-4);
+}
+
+.scale__ticks {
+  height: 64px;
+}
+
+.scale__pub:not(:last-child)::after {
+  content: '·';
+  margin-left: 16px;
+  color: var(--rule-soft);
+}

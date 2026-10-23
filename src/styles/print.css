@@ -1,0 +1,251 @@
+/* ==========================================================================
+   The Sign Band — print
+   --------------------------------------------------------------------------
+   The sheet is the paper. The yellow bands print as yellow, because a sign
+   band that loses its colour is not a sign band. The gantry does not print;
+   the document's own headings carry the wayfinding.
+   ========================================================================== */
+
+@page {
+  size: A4;
+  margin: 15mm 13mm 18mm;
+}
+
+@media print {
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 10.2pt;
+    line-height: 1.5;
+  }
+
+  * {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .skip,
+  .rail {
+    display: none !important;
+  }
+
+  /* the masthead band prints as a band */
+
+  .band {
+    margin: 0 0 6mm;
+    padding: 0 0 5mm;
+    background: #f2c200 !important;
+    color: #111 !important;
+    border-bottom: 1.5pt solid #111;
+  }
+
+  .band__inner {
+    max-width: none;
+    padding: 0;
+  }
+
+  .band h1 {
+    font-size: 25pt;
+    color: #111 !important;
+    max-width: none;
+    margin-bottom: 3mm;
+  }
+
+  .band__sub2 {
+    font-size: 12.5pt;
+    margin-top: 1.5mm;
+    color: #111 !important;
+  }
+
+  .band__deck {
+    color: #111 !important;
+    font-size: 10pt;
+    margin-bottom: 4mm;
+  }
+
+  .band__note {
+    color: #111 !important;
+    font-size: 8.2pt;
+  }
+
+  .slate {
+    margin: 4mm 0 0;
+    border-top: 1.5pt solid #111;
+    border-bottom: 1.5pt solid #111;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .slate__cell {
+    padding: 3mm 5mm 3mm 0;
+    border-right: 0.5pt solid #cbc7be;
+  }
+
+  .slate__k {
+    color: #6e6a62 !important;
+  }
+
+  .slate__v {
+    color: #111 !important;
+    font-size: 8.4pt;
+  }
+
+  /* the window becomes the paper */
+
+  .sheet {
+    padding: 6mm 0 0;
+  }
+
+  .window {
+    max-width: none;
+    border: 0;
+    background: #fff;
+    box-shadow: none;
+  }
+
+  .doc {
+    padding: 0;
+    max-width: none;
+  }
+
+  .verdict {
+    margin: 0 0 5mm;
+    padding: 4mm 5mm;
+    border: 0;
+    border-bottom: 1.5pt solid #111;
+    background: #f2c200 !important;
+    color: #111 !important;
+  }
+
+  .verdict p {
+    color: #111 !important;
+    font-size: 13pt;
+    max-width: none;
+  }
+
+  .verdict__stamp {
+    position: static;
+    display: inline-flex;
+    flex-direction: row;
+    gap: 4mm;
+    margin: 0 0 3mm;
+    padding: 1.5mm 2mm;
+    background: #111 !important;
+    color: #f2c200 !important;
+    font-size: 7.4pt;
+  }
+
+  .doc h2 {
+    margin: 8mm -13mm 4mm;
+    padding: 2.5mm 13mm;
+    font-size: 15pt;
+    border-top: 1.5pt solid #111;
+    border-bottom: 1.5pt solid #111;
+    background: #f2c200 !important;
+    color: #111 !important;
+    break-after: avoid;
+  }
+
+  .doc h3 {
+    font-size: 11.5pt;
+    margin: 6mm 0 2.5mm;
+    break-after: avoid;
+  }
+
+  .doc p {
+    font-size: 10.2pt;
+    line-height: 1.5;
+    orphans: 3;
+    widows: 3;
+  }
+
+  .result {
+    margin: 5mm 0 6mm;
+    padding: 4mm 5mm;
+    border: 1pt solid #111;
+    break-inside: avoid;
+  }
+
+  .result__num {
+    font-size: 26pt;
+  }
+
+  .result__sub {
+    font-size: 9.4pt;
+  }
+
+  .scale {
+    break-inside: avoid;
+  }
+
+  .doc table {
+    font-size: 8.4pt;
+    break-inside: auto;
+  }
+
+  .doc thead th {
+    font-size: 7.4pt;
+    border-bottom: 1.2pt solid #111;
+  }
+
+  .doc tbody td {
+    padding: 1.6mm 3mm 1.6mm 0;
+    border-bottom: 0.5pt solid #dedbd4;
+  }
+
+  .doc tbody tr {
+    break-inside: avoid;
+  }
+
+  .cite {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    color: #111;
+    text-decoration: underline;
+  }
+
+  .bin {
+    background: #fff;
+    border-top: 1.5pt solid #111;
+    padding: 5mm 0 0;
+  }
+
+  .bin__inner {
+    max-width: none;
+  }
+
+  .bin__lip {
+    background: #111;
+  }
+
+  .bin h2 {
+    font-size: 13pt;
+  }
+
+  .bin__note {
+    font-size: 8.6pt;
+  }
+
+  .trim {
+    font-size: 8.4pt;
+    padding: 1.4mm 0;
+    break-inside: avoid;
+  }
+
+  .trim__pin {
+    background: #111;
+  }
+
+  .foot {
+    background: #111;
+    padding: 2.5mm 13mm;
+    margin: 6mm -13mm 0;
+  }
+
+  .foot__inner {
+    max-width: none;
+    color: #bdb9b1;
+    font-size: 7.4pt;
+  }
+}

@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.astro/
+.shots/
+.impeccable/review/
+.impeccable/mocks/
+graphify-out/
+.DS_Store
+*.log

@@ -1,0 +1,132 @@
+---
+import defaultOutline from '../content/outline.json';
+
+const {
+  outline = defaultOutline,
+  storageKey = 'mvt-last-frame',
+  shorts = {},
+} = Astro.props;
+
+const sections = outline.filter((o) => o.level === 2);
+
+const SHORT = {
+  'launch-decision': 'Launch Decision',
+  'demand-base-and-market-structure': 'Market Structure',
+  'competitive-landscape-and-price-architecture': 'Competition',
+  'route-density-and-unit-economics': 'Economics',
+  'differentiation-wedges': 'Differentiation',
+  'service-design-and-pricing': 'Services',
+  'regulatory-frame-and-pre-launch-confirmations': 'Regulatory',
+  'risk-register-and-decision-gates': 'Risk & Gates',
+  '90-day-launch-sequence': '90-Day Plan',
+};
+
+const label = (s) => SHORT[s.id] ?? shorts[s.id] ?? s.text.split(' and ')[0].split(' & ')[0];
+---
+
+<nav class="rail" aria-label="Report sections" data-key={storageKey}>
+  <div class="rail__strip" id="railStrip">
+    <div class="rail__inner">
+      <div class="rail__ruler" aria-hidden="true">
+        <span class="rail__ruler-ticks"></span>
+        <span class="rail__ruler-mark" id="railMark"></span>
+      </div>
+      <ol class="rail__cells">
+        {
+          sections.map((s, i) => (
+            <li>
+              <a class="frame" href={`#${s.id}`} data-target={s.id}>
+                <span class="frame__n">{String(i + 1).padStart(2, '0')}</span>
+                <span>{label(s)}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const frames = Array.from(document.querySelectorAll('.frame'));
+  const strip = document.getElementById('railStrip');
+  const mark = document.getElementById('railMark');
+  const sections = frames
+    .map((f) => ({ frame: f, el: document.getElementById(f.dataset.target) }))
+    .filter((s) => s.el);
+
+  const LAST = document.querySelector('.rail')?.dataset.key || 'mvt-last-frame';
+
+  function markFrame(frame) {
+    for (const f of frames) {
+      if (f === frame) f.setAttribute('aria-current', 'true');
+      else f.removeAttribute('aria-current');
+    }
+  }
+
+  function remember(frame) {
+    try {
+      localStorage.setItem(LAST, frame.dataset.target);
+    } catch {}
+  }
+
+  // The frame you are in is the last section whose heading has passed under
+  // the rail. It is computed on scroll rather than observed, so the flag can
+  // never drift out of step with the page.
+  let current = null;
+  let ticking = false;
+
+  function sync() {
+    ticking = false;
+    if (!sections.length) return;
+
+    let active = null;
+    for (const s of sections) {
+      if (s.el.getBoundingClientRect().top - 120 <= 0) active = s.frame;
+      else break;
+    }
+    if (!active) active = sections[0].frame;
+
+    if (active === current) return;
+    current = active;
+    markFrame(active);
+    remember(active);
+
+    // the flag on the scrub ruler, and the frame itself brought into view
+    const centre = active.offsetLeft + active.offsetWidth / 2;
+    if (mark) mark.style.left = `${centre}px`;
+    if (strip) {
+      const target = centre - strip.clientWidth / 2;
+      strip.scrollTo({ left: Math.max(0, target), behavior: 'smooth' });
+    }
+  }
+
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(sync);
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  sync();
+
+  // Every frame you have been through is struck through with grease on the
+  // next visit, so the rail shows how far into the report you have read.
+  let last = null;
+  try {
+    last = localStorage.getItem(LAST);
+  } catch {}
+  const upto = frames.findIndex((f) => f.dataset.target === last);
+  if (upto !== -1) {
+    for (let i = 0; i <= upto; i++) frames[i].setAttribute('data-read', 'true');
+  }
+
+  for (const f of frames) {
+    f.addEventListener('click', () => {
+      remember(f);
+      const i = frames.indexOf(f);
+      for (let k = 0; k <= i; k++) frames[k].setAttribute('data-read', 'true');
+    });
+  }
+</script>

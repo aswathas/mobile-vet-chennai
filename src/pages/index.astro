@@ -1,0 +1,108 @@
+---
+import meta from '../content/meta.json';
+import lede from '../content/lede.html?raw';
+import Body from '../content/body.md';
+import Rail from '../components/Rail.astro';
+import Bin from '../components/Bin.astro';
+import KeyResult from '../components/KeyResult.astro';
+import '../styles/tokens.css';
+import '../styles/frame.css';
+import '../styles/document.css';
+
+const [titleMain, titleSub] = meta.title.split(/: (.+)/);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{meta.title}</title>
+    <meta
+      name="description"
+      content="A market assessment, go/no-go verdict and launch plan for a house-call veterinary practice in Chennai and Coimbatore, with 83 cited sources."
+    />
+    <meta name="color-scheme" content="light" />
+    <meta property="og:title" content={meta.title} />
+    <meta
+      property="og:description"
+      content="Launch in Chennai, above Rs 1,100 per visit, restricted to chronic, senior and end-of-life work."
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="fonts/fonts.css" />
+  </head>
+
+  <body>
+    <a class="skip" href="#doc">Skip to the report</a>
+
+    <header class="band">
+      <div class="band__inner">
+        <h1>
+          {titleMain}
+          {titleSub && <span class="band__sub2">{titleSub}</span>}
+        </h1>
+        <p class="band__deck">
+          A go/no-go on a house-call veterinary practice, with the unit economics that decide it.
+          <span class="band__note"
+            >{meta.words.toLocaleString('en-IN')} words &middot; {meta.sources} sources &middot;
+            {meta.sections} sections</span
+          >
+        </p>
+
+        <div class="slate">
+          <div class="slate__cell">
+            <span class="slate__k">Subject</span>
+            <span class="slate__v">House-call practice, no vehicle, no fixed clinic</span>
+          </div>
+          <div class="slate__cell">
+            <span class="slate__k">Cities</span>
+            <span class="slate__v">Chennai, Coimbatore</span>
+          </div>
+          <div class="slate__cell">
+            <span class="slate__k">Decision</span>
+            <span class="slate__v">Launch in Chennai only</span>
+          </div>
+          <div class="slate__cell">
+            <span class="slate__k">Prepared</span>
+            <span class="slate__v">23 October 2026</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <a class="gobtn" href="/zones/">
+      <span class="gobtn__k">Next document</span>
+      <span class="gobtn__t">Locality dossier</span>
+      <span class="gobtn__n">100 localities scored, two corridors, fifteen route clusters</span>
+      <span class="gobtn__arrow" aria-hidden="true"></span>
+    </a>
+
+    <Rail />
+
+    <main class="sheet">
+      <article class="window window--sheet">
+        <div class="doc" id="doc">
+          <div class="verdict">
+            <Fragment set:html={lede} />
+          </div>
+
+          <KeyResult />
+
+          <Body />
+        </div>
+      </article>
+    </main>
+
+    <Bin />
+
+    <footer class="foot">
+      <div class="foot__inner">
+        <span>MVT-CHN-001 &middot; Mobile Veterinary Practice, Chennai and Coimbatore</span>
+        <span>
+          {meta.sections} sections &middot; {meta.words.toLocaleString('en-IN')} words &middot;
+          {meta.sources} sources &middot; {meta.tableRows} table rows
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>

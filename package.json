@@ -1,0 +1,23 @@
+{
+  "name": "mobile-vet-report",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "content": "node scripts/build-content.mjs",
+    "zones": "node scripts/build-zones.mjs",
+    "harmonise": "node scripts/harmonize.mjs",
+    "pdf": "node scripts/make-pdf.mjs",
+    "pdf:zones": "node scripts/make-pdf.mjs /zones-print/index.html mobile-vet-locality-dossier.pdf \"Locality Dossier &mdash; South Chennai &nbsp;&middot;&nbsp; MVT-CHN-002\""
+  },
+  "dependencies": {
+    "astro": "^5.14.1"
+  },
+  "devDependencies": {
+    "pngjs": "^7.0.0",
+    "puppeteer-core": "^25.16.0"
+  }
+}

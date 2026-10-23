@@ -1,0 +1,100 @@
+---
+import meta from '../content/meta.json';
+import lede from '../content/lede.html?raw';
+import references from '../content/references.json';
+import Body from '../content/body.md';
+import KeyResult from '../components/KeyResult.astro';
+import '../styles/tokens.css';
+import '../styles/frame.css';
+import '../styles/document.css';
+import '../styles/print.css';
+
+const [titleMain, titleSub] = meta.title.split(/: (.+)/);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{meta.title}</title>
+    <link rel="stylesheet" href="../fonts/fonts.css" />
+  </head>
+
+  <body>
+    <header class="band">
+      <div class="band__inner">
+        <h1>
+          {titleMain}
+          {titleSub && <span class="band__sub2">{titleSub}</span>}
+        </h1>
+        <p class="band__deck">
+          A go/no-go on a house-call veterinary practice, with the unit economics that decide it.
+          <span class="band__note"
+            >{meta.words.toLocaleString('en-IN')} words &middot; {meta.sources} sources &middot;
+            {meta.sections} sections</span
+          >
+        </p>
+
+        <div class="slate">
+          <div class="slate__cell">
+            <span class="slate__k">Subject</span>
+            <span class="slate__v">House-call practice, no vehicle, no fixed clinic</span>
+          </div>
+          <div class="slate__cell">
+            <span class="slate__k">Cities</span>
+            <span class="slate__v">Chennai, Coimbatore</span>
+          </div>
+          <div class="slate__cell">
+            <span class="slate__k">Decision</span>
+            <span class="slate__v">Launch in Chennai only</span>
+          </div>
+          <div class="slate__cell">
+            <span class="slate__k">Prepared</span>
+            <span class="slate__v">23 October 2026</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="sheet">
+      <article class="window">
+        <div class="doc">
+          <div class="verdict">
+            <Fragment set:html={lede} />
+          </div>
+
+          <KeyResult />
+
+          <Body />
+        </div>
+      </article>
+    </main>
+
+    <section class="bin">
+      <div class="bin__inner">
+        <h2>Trims</h2>
+        <p class="bin__note">
+          Every source the report leans on, hung on the pin where it was cut from. {references.length}
+          in all. Numbers in the text link straight to the entry behind them.
+        </p>
+        <ol class="trims">
+          {
+            references.map((r) => (
+              <li class="trim" id={`ref-${r.n}`}>
+                <span class="trim__pin" aria-hidden="true" />
+                <span class="trim__n">{String(r.n).padStart(2, '0')}</span>
+                <span class="trim__label">{r.label}</span>
+                {r.url && (
+                  <a class="trim__url" href={r.url}>
+                    {r.url}
+                  </a>
+                )}
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+    </section>
+  </body>
+</html>
