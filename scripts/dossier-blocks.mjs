@@ -521,10 +521,11 @@ function gatesBlock(agg) {
     // say where to go even with JavaScript off.
     const arrow = i === 0 ? '<span class="gate__arrow" aria-hidden="true"></span>' : '';
 
-    return `<li class="gate${i === 0 ? ' gate--target' : ''}" data-zone="${esc(c.zone)}" data-verdict="${verdict}" data-tier="${tier}" data-cases="${Math.round(c.cases_per_month)}">
+    const closed = verdict === 'NO-GO' ? ' gate--closed' : '';
+    return `<li class="gate${i === 0 ? ' gate--target' : ''}${closed}" data-zone="${esc(c.zone)}" data-verdict="${verdict}" data-tier="${tier}" data-cases="${Math.round(c.cases_per_month)}">
       <span class="gate__id">${esc(c.id)}</span>
       <span class="gate__name"><span>${esc(c.anchor)}</span></span>
-      <span class="gate__v"><b>${num(Math.round(c.cases_per_month))}</b><i>cases a month</i></span>
+      <span class="gate__v"><b>${num(Math.round(c.cases_per_month))}</b><i>cases / month</i></span>
       <span class="gate__v"><b>${rs(c.blended_price)}</b><i>blend</i></span>
       <span class="gate__v"><b>${rs(c.one_route_contribution)}</b><i>one route</i></span>
       ${arrow}
@@ -544,6 +545,7 @@ function gatesBlock(agg) {
     <label>Tier <select data-filter="tier"><option value="">All</option><option value="A">A</option><option value="B">B</option><option value="C">C</option></select></label>
   </div>
   <ol class="gates">${gates.join('')}</ol>
+  <p class="board__empty" hidden>No gate matches this filter. Widen it to see the rest.</p>
 </div>`.replace(/\n\s*\n/g, '\n');
 }
 

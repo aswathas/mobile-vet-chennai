@@ -1010,35 +1010,6 @@
   margin: 10px 0 0;
 }
 
-.railbox__table table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 12.5px;
-}
-
-.railbox__table thead th {
-  font-family: var(--face-data);
-  font-size: 9.5px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink-3);
-  text-align: left;
-  padding: 0 8px 6px 0;
-  border-bottom: 1px solid var(--rule);
-}
-
-.railbox__table tbody td {
-  padding: 6px 8px 6px 0;
-  border-bottom: 1px solid var(--rule-hair);
-  color: var(--ink-2);
-  vertical-align: top;
-}
-
-.railbox__table tbody td:first-child {
-  font-family: var(--face-data);
-  color: var(--ink);
-  white-space: nowrap;
-}
 
 @media (min-width: 1180px) {
   .doc__grid {
@@ -1137,4 +1108,47 @@
   stroke: var(--paper);
   stroke-width: 4px;
   stroke-linejoin: round;
+}
+
+/* The board can be filtered down to nothing. Say so rather than showing an
+   empty list. */
+
+.board__empty {
+  margin: 0;
+  padding: 18px;
+  border: 1px solid var(--rule);
+  border-left-width: 3px;
+  background: var(--panel);
+  font-family: var(--face-data);
+  font-size: 13px;
+  color: var(--ink-2);
+}
+
+/* The wide table's scrollbar is part of the surface: theme it rather than
+   shipping the browser's default chrome inside a ruled table. */
+
+.tbl-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ink-3) var(--panel);
+}
+
+.tbl-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.tbl-scroll::-webkit-scrollbar-track {
+  background: var(--panel);
+}
+
+.tbl-scroll::-webkit-scrollbar-thumb {
+  background: var(--ink-3);
+}
+
+.board__filters select:hover {
+  background-color: var(--panel);
+  border-color: var(--ink);
+}
+
+.gate__v i {
+  white-space: nowrap;
 }
