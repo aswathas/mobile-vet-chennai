@@ -117,6 +117,13 @@ A final pass drove the site rather than reading it.
 
 **The detector ran once over the changed targets** and returned an empty array.
 
+**The type scale was pulled into a ladder.** The detector read the design record's
+ramp and found thirty-seven literal font sizes sitting off it. Nine near-twins
+were snapped onto their neighbours, the ramp was written out in full as a
+fourteen-role ladder in the design record's frontmatter, and the sidecar was
+brought into step. The detector now returns zero findings on the changed
+targets.
+
 **Dead rules were removed.** The rail's table rules went when the provenance legend became a list, and the one permitted three-dimensional move was named in the contract rather than left as an accident.
 
 **The faces are preloaded.** The hash jump on the corridor buttons used to land on a page that reflowed when the display face swapped in. The face is now preloaded, so the jump lands where it was aimed.
