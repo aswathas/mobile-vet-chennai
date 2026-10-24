@@ -92,6 +92,77 @@ try {
     }
   }
 
+  // the Corridor Bench figure interactions
+  const figure = await page.$('[data-figure]');
+  if (!figure) {
+    problems.push('the Corridor Bench figure is not on the page');
+  } else {
+    // 1. Select a stop
+    const stopA01 = await page.$('[data-place][data-place-id="A01"]');
+    if (!stopA01) problems.push('no stop element for A01');
+    else {
+      await stopA01.click();
+      await new Promise((r) => setTimeout(r, 100));
+      const isSel = await page.evaluate(() => document.querySelector('[data-place][data-place-id="A01"]')?.classList.contains('is-selected'));
+      const name = await page.evaluate(() => document.querySelector('[data-readout] [data-readout-field="name"]')?.textContent);
+      note(`figure stop selection  A01 selected: ${isSel}, readout: "${name}"`);
+      if (!isSel) problems.push('clicking A01 did not mark it as selected');
+      if (!name || !name.includes('Tambaram West')) problems.push(`readout for A01 reads "${name}", expected Tambaram West`);
+    }
+
+    // 2. Move the price token
+    const token = await page.$('[data-token]');
+    if (!token) problems.push('no token element in figure');
+    else {
+      const pBefore = await page.evaluate(() => Number(document.querySelector('[data-token]')?.getAttribute('data-token-value')));
+      await page.evaluate(() => document.querySelector('[data-token]')?.focus());
+      await page.keyboard.press('ArrowRight');
+      await page.keyboard.press('ArrowRight');
+      await new Promise((r) => setTimeout(r, 100));
+      const pAfter = await page.evaluate(() => Number(document.querySelector('[data-token]')?.getAttribute('data-token-value')));
+      const rContrib = await page.evaluate(() => document.querySelector('[data-cluster="A-R1"][data-route-contribution]')?.getAttribute('data-route-contribution'));
+      note(`figure price token     ${pBefore} -> ${pAfter}, route A-R1 contrib: ${rContrib}`);
+      if (pAfter <= pBefore) problems.push(`ArrowRight did not increase token price (${pBefore} -> ${pAfter})`);
+    }
+
+    // 3. Filter from the decision board
+    await page.select('select[data-filter="zone"]', 'B');
+    await new Promise((r) => setTimeout(r, 100));
+    const filterDimA = await page.evaluate(() => {
+      const stopsA = Array.from(document.querySelectorAll('[data-place][data-zone="A"]'));
+      return stopsA.every((s) => s.hasAttribute('data-dimmed'));
+    });
+    const filterLitB = await page.evaluate(() => {
+      const stopsB = Array.from(document.querySelectorAll('[data-place][data-zone="B"]'));
+      return stopsB.every((s) => !s.hasAttribute('data-dimmed'));
+    });
+    note(`figure board filter    Zone A dimmed: ${filterDimA}, Zone B lit: ${filterLitB}`);
+    if (!filterDimA) problems.push('Zone A stops were not dimmed under Zone B filter');
+    if (!filterLitB) problems.push('Zone B stops were dimmed under Zone B filter');
+    await page.select('select[data-filter="zone"]', '');
+    await new Promise((r) => setTimeout(r, 100));
+
+    // 4. Keyboard navigation along route
+    await page.evaluate(() => {
+      const stop = document.querySelector('[data-place][data-place-id="A01"]');
+      if (stop) stop.focus();
+    });
+    await page.keyboard.press('ArrowRight');
+    await new Promise((r) => setTimeout(r, 80));
+    const activeId = await page.evaluate(() => document.activeElement?.getAttribute('data-place-id'));
+    note(`figure keyboard        focused A01 -> ArrowRight focused ${activeId}`);
+    if (activeId !== 'A02') problems.push(`ArrowRight on A01 focused ${activeId}, expected A02`);
+
+    // 5. Follow a deep link
+    await page.goto(`${server.origin}/zones/?place=A05`, { waitUntil: 'networkidle0' });
+    await new Promise((r) => setTimeout(r, 100));
+    const deepSel = await page.evaluate(() => document.querySelector('[data-place][data-place-id="A05"]')?.classList.contains('is-selected'));
+    const deepName = await page.evaluate(() => document.querySelector('[data-readout] [data-readout-field="name"]')?.textContent);
+    note(`figure deep link       ?place=A05 selected: ${deepSel}, readout: "${deepName}"`);
+    if (!deepSel) problems.push('?place=A05 did not select A05 on load');
+    if (!deepName || !deepName.includes('Kadaperi')) problems.push(`deep link readout for A05 reads "${deepName}", expected Kadaperi`);
+  }
+
   // keyboard order on the dossier
   await page.goto(`${server.origin}/zones/`, { waitUntil: 'networkidle0' });
   const tabbed = await page.evaluate(async () => {
