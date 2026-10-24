@@ -130,13 +130,13 @@ async function main() {
     "A milled dispatch bench showing the two corridors, all hundred localities as machined stop pins standing at their true coordinates, the fifteen routes as brass link bars in travel order, and a movable price token that re-reads every route's margin. Positions are placed from coordinates (cos(lat) correction at 13°N) and are not a survey. Zone A's household base is modelled (tier C) while Zone B's is derived (tier B).";
 
   // Build figure HTML card
-  const figureHtml = `<figure class="iso-figure corridor-bench" id="corridor-bench">
+  const figureHtml = `<figure class="iso-figure corridor-bench" id="corridor-bench" data-figure>
   <div class="iso-plate">
     <div class="iso-plate-corners" aria-hidden="true">
       <span class="iso-plate-corner" data-corner="fig">Fig 4</span>
       <span class="iso-plate-corner" data-corner="title">The Corridor Bench</span>
       <span class="iso-plate-corner" data-corner="hint">Click a stop &middot; drag token &middot; arrow keys</span>
-      <span class="iso-plate-corner" data-corner="readout" data-readout>${defaultLoc.id} ${defaultLoc.name} &middot; Rs ${Math.round(initialMargin).toLocaleString('en-IN')} margin</span>
+      <span class="iso-plate-corner" data-corner="readout">${defaultLoc.id} ${defaultLoc.name} &middot; Rs ${Math.round(initialMargin).toLocaleString('en-IN')} margin</span>
     </div>
     <div class="iso-stage bench-stage" tabindex="0" role="group" aria-label="The Corridor Bench dispatch table. Arrow keys move between stops in route order, Enter selects a stop.">
       ${benchResult.svg}
@@ -156,7 +156,7 @@ async function main() {
 </figure>`;
 
   // Print twin figure HTML (platen open, still)
-  const printFigureHtml = `<figure class="iso-figure corridor-bench corridor-bench--print" id="corridor-bench-print">
+  const printFigureHtml = `<figure class="iso-figure corridor-bench corridor-bench--print" id="corridor-bench-print" data-figure>
   <div class="iso-plate">
     <div class="iso-plate-corners" aria-hidden="true">
       <span class="iso-plate-corner" data-corner="fig">Fig 4</span>
@@ -431,14 +431,15 @@ async function main() {
     localities: allLocs.map((l) => ({
       id: l.id,
       name: l.name,
-      zone: l.id[0],
+      zone: l.zone || l.id[0],
       cluster: l.route_cluster,
       ward: l.ward,
       lat: l.lat,
       lon: l.lon,
-      cases: Math.round(l.demand?.cases_per_month_total || 0),
-      blend: Math.round(l.price?.our_mix?.blended_price || 1300),
-      margin: Math.round(l.economics?.our_mix?.margin_per_visit_clustered ?? (l.price?.our_mix?.blended_price || 1300) - 850),
+      cases: Number(l.demand?.cases_per_month_total || 0),
+      blend: Math.round(l.price?.our_mix?.blended_price || 1308),
+      cost: l.economics?.cost_per_visit_clustered || 850,
+      margin: Math.round((l.price?.our_mix?.blended_price || 1308) - (l.economics?.cost_per_visit_clustered || 850)),
       saturation: l.competition?.saturation_index || 30,
       verdict: l.verdict?.status || 'GO',
       reason: l.verdict?.reason || '',
@@ -459,7 +460,7 @@ async function main() {
   const needle = document.querySelector('.bench-gauge__needle');
   const platen = document.querySelector('.bench-platen');
   const token = document.querySelector('.bench-token');
-  const stops = Array.from(document.querySelectorAll('.bench-stop'));
+  const stops = Array.from(document.querySelectorAll('[data-place]'));
 
   if (!stage) return;
 
@@ -486,7 +487,7 @@ async function main() {
     if (!needle) return;
     const fraction = Math.max(0, Math.min(1, margin / 600));
     const deg = -135 + fraction * 270;
-    needle.setAttribute('transform', 'rotate(' + deg.toFixed(1) + ' 440 385)');
+    needle.setAttribute('transform', 'rotate(' + deg.toFixed(1) + ' 440 415)');
   }
 
   function selectStop(id, updateUrl) {
@@ -495,18 +496,36 @@ async function main() {
     currentLoc = loc;
 
     stops.forEach((s) => {
-      const match = s.dataset.stop === id;
+      const match = s.getAttribute('data-place-id') === id;
       s.classList.toggle('is-selected', match);
+      s.setAttribute('aria-selected', match ? 'true' : 'false');
+      if (match) s.setAttribute('data-selected', '');
+      else s.removeAttribute('data-selected');
       const hi = s.querySelector('.bench-stop__highlight');
       if (hi) hi.setAttribute('opacity', match ? '1' : '0');
     });
 
     if (platen) {
       platen.classList.add('is-open');
+      const fName = platen.querySelector('[data-readout-field="name"]');
+      const fCases = platen.querySelector('[data-readout-field="cases"]');
+      const fPrice = platen.querySelector('[data-readout-field="price"]');
+      const fMargin = platen.querySelector('[data-readout-field="margin"]');
+      const fSat = platen.querySelector('[data-readout-field="saturation"]');
+      const fVerdict = platen.querySelector('[data-readout-field="verdict"]');
+      const pMeta = platen.querySelector('.platen-meta');
+
+      if (fName) fName.textContent = loc.name;
+      if (fCases) fCases.textContent = loc.cases.toFixed(1);
+      if (fPrice) fPrice.textContent = loc.blend.toLocaleString('en-IN');
+      if (fMargin) fMargin.textContent = loc.margin.toLocaleString('en-IN');
+      if (fSat) fSat.textContent = String(loc.saturation);
+      if (fVerdict) fVerdict.textContent = loc.verdict;
+      if (pMeta) pMeta.textContent = loc.id + ' \u00b7 ' + loc.cluster + ' \u00b7 ' + (loc.ward || '').split('(')[0].trim();
     }
 
     setReadout(currentLoc, currentPrice);
-    setNeedle(currentPrice - 850);
+    setNeedle(loc.margin);
 
     if (updateUrl) {
       const url = new URL(window.location);
@@ -528,6 +547,7 @@ async function main() {
 
     if (token) {
       token.setAttribute('transform', 'translate(' + xOffset.toFixed(1) + ', 0)');
+      token.setAttribute('data-token-value', String(Math.round(currentPrice)));
       token.setAttribute('aria-valuenow', String(Math.round(currentPrice)));
       token.setAttribute('aria-valuetext', 'Rs ' + Math.round(currentPrice).toLocaleString('en-IN'));
     }
@@ -535,51 +555,93 @@ async function main() {
     setReadout(currentLoc, currentPrice);
     setNeedle(currentPrice - 850);
 
-    // Update A-R7 bar plate readout
-    const barPlateText = document.querySelector('.bench-bar[data-cluster="A-R7"] text');
-    if (barPlateText) {
-      const contrib = Math.round(156 * (currentPrice - 850));
-      barPlateText.textContent = 'A-R7 \u00b7 Rs ' + contrib.toLocaleString('en-IN');
-    }
+    // Update all route contributions
+    const routeContrib = Math.round(156 * (currentPrice - 850));
+    document.querySelectorAll('[data-route-contribution]').forEach((el) => {
+      el.setAttribute('data-route-contribution', String(routeContrib));
+      const txt = el.querySelector('text');
+      if (txt) {
+        const cid = el.getAttribute('data-cluster') || '';
+        txt.textContent = cid + ' \u00b7 Rs ' + routeContrib.toLocaleString('en-IN');
+      }
+    });
   }
 
-  // Stop click listeners
+  // Stop pins: click, touch, and keyboard listeners
   stops.forEach((s) => {
+    const id = s.getAttribute('data-place-id');
     s.addEventListener('click', (e) => {
       e.stopPropagation();
       stopTour();
-      selectStop(s.dataset.stop, true);
+      selectStop(id, true);
     });
     s.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         stopTour();
-        selectStop(s.dataset.stop, true);
+        selectStop(id, true);
+      } else if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+        e.preventDefault();
+        stopTour();
+        const loc = locMap.get(id);
+        if (!loc) return;
+        const inCluster = DATA.localities.filter((l) => l.cluster === loc.cluster);
+        const idx = inCluster.findIndex((l) => l.id === id);
+        let nextIdx = idx;
+        if (e.key === 'ArrowRight') {
+          nextIdx = idx < inCluster.length - 1 ? idx + 1 : 0;
+        } else {
+          nextIdx = idx > 0 ? idx - 1 : inCluster.length - 1;
+        }
+        const nextId = inCluster[nextIdx].id;
+        const targetEl = document.querySelector('[data-place][data-place-id="' + nextId + '"]');
+        if (targetEl) targetEl.focus();
+      } else if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        stopTour();
+        const loc = locMap.get(id);
+        if (!loc) return;
+        const cIdx = DATA.clusters.indexOf(loc.cluster);
+        const nextCIdx = e.key === 'ArrowDown'
+          ? (cIdx < DATA.clusters.length - 1 ? cIdx + 1 : 0)
+          : (cIdx > 0 ? cIdx - 1 : DATA.clusters.length - 1);
+        const nextClusterLocs = DATA.localities.filter((l) => l.cluster === DATA.clusters[nextCIdx]);
+        if (nextClusterLocs.length) {
+          const nextId = nextClusterLocs[0].id;
+          const targetEl = document.querySelector('[data-place][data-place-id="' + nextId + '"]');
+          if (targetEl) targetEl.focus();
+        }
       }
     });
   });
 
-  // Token dragging
+  // Token dragging & keyboard
   let dragging = false;
   let dragStartX = 0;
   let dragStartPrice = 1100;
 
   if (token) {
-    token.addEventListener('pointerdown', (e) => {
+    const startDrag = (e) => {
       stopTour();
       dragging = true;
       dragStartX = e.clientX;
       dragStartPrice = currentPrice;
-      token.setPointerCapture(e.pointerId);
+      try { token.setPointerCapture(e.pointerId); } catch (_) {}
       e.preventDefault();
-    });
+    };
 
-    token.addEventListener('pointermove', (e) => {
+    token.addEventListener('pointerdown', startDrag);
+    token.addEventListener('mousedown', startDrag);
+
+    const onMove = (e) => {
       if (!dragging) return;
       const dx = e.clientX - dragStartX;
       const priceDelta = dx * 2.5;
       setTokenPrice(dragStartPrice + priceDelta);
-    });
+    };
+
+    window.addEventListener('pointermove', onMove);
+    window.addEventListener('mousemove', onMove);
 
     const stopDrag = (e) => {
       if (dragging) {
@@ -587,8 +649,10 @@ async function main() {
         try { token.releasePointerCapture(e.pointerId); } catch (_) {}
       }
     };
-    token.addEventListener('pointerup', stopDrag);
-    token.addEventListener('pointercancel', stopDrag);
+
+    window.addEventListener('pointerup', stopDrag);
+    window.addEventListener('mouseup', stopDrag);
+    window.addEventListener('pointercancel', stopDrag);
 
     token.addEventListener('keydown', (e) => {
       stopTour();
@@ -606,61 +670,37 @@ async function main() {
     });
   }
 
-  // Keyboard navigation across stops
-  stage.addEventListener('keydown', (e) => {
-    if (!currentLoc) return;
-    const curCluster = currentLoc.cluster;
-    const inCluster = DATA.localities.filter((l) => l.cluster === curCluster);
-    const idx = inCluster.findIndex((l) => l.id === currentLoc.id);
-
-    let nextId = null;
-    if (e.key === 'ArrowRight' && idx < inCluster.length - 1) {
-      nextId = inCluster[idx + 1].id;
-    } else if (e.key === 'ArrowLeft' && idx > 0) {
-      nextId = inCluster[idx - 1].id;
-    } else if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
-      const cIdx = DATA.clusters.indexOf(curCluster);
-      const nextCIdx = e.key === 'ArrowDown'
-        ? Math.min(DATA.clusters.length - 1, cIdx + 1)
-        : Math.max(0, cIdx - 1);
-      const nextClusterLocs = DATA.localities.filter((l) => l.cluster === DATA.clusters[nextCIdx]);
-      if (nextClusterLocs.length) {
-        nextId = nextClusterLocs[0].id;
-      }
-    }
-
-    if (nextId) {
-      e.preventDefault();
-      stopTour();
-      selectStop(nextId, true);
-      const targetEl = document.querySelector('.bench-stop[data-stop="' + nextId + '"]');
-      if (targetEl) targetEl.focus();
-    }
-  });
-
   // Decision board cross-filter listener
   function syncWithBoard() {
-    const board = document.getElementById('board');
-    if (!board) return;
-    const selects = Array.from(board.querySelectorAll('select[data-filter]'));
-    const f = Object.fromEntries(selects.map((s) => [s.dataset.filter, s.value]));
+    const zoneSelect = document.querySelector('select[data-filter="zone"]');
+    const verdictSelect = document.querySelector('select[data-filter="verdict"]');
+    const fZone = zoneSelect ? zoneSelect.value : '';
+    const fVerdict = verdictSelect ? verdictSelect.value.toUpperCase() : '';
 
     let visibleCount = 0;
     stops.forEach((s) => {
-      const match =
-        (!f.zone || s.dataset.zone === f.zone) &&
-        (!f.verdict || s.dataset.verdict === f.verdict) &&
-        (!f.tier || s.dataset.tier === f.tier);
+      const sz = s.getAttribute('data-zone');
+      const sv = (s.getAttribute('data-verdict') || '').toUpperCase();
+      const match = (!fZone || sz === fZone) && (!fVerdict || sv === fVerdict);
 
-      s.classList.toggle('is-dimmed', !match);
-      if (match) visibleCount++;
+      if (match) {
+        s.removeAttribute('data-dimmed');
+        s.classList.remove('is-dimmed');
+        visibleCount++;
+      } else {
+        s.setAttribute('data-dimmed', 'true');
+        s.classList.add('is-dimmed');
+      }
     });
 
     stage.classList.toggle('is-empty', visibleCount === 0);
   }
 
-  const boardSelects = document.querySelectorAll('#board select[data-filter]');
-  boardSelects.forEach((s) => s.addEventListener('change', syncWithBoard));
+  document.addEventListener('change', (e) => {
+    if (e.target && e.target.matches && e.target.matches('select[data-filter]')) {
+      syncWithBoard();
+    }
+  });
   syncWithBoard();
 
   // Deep linking: read URL parameter ?place= or hash #place-
@@ -677,11 +717,23 @@ async function main() {
     }
   }
   checkDeepLink();
+  window.addEventListener('popstate', checkDeepLink);
   window.addEventListener('hashchange', checkDeepLink);
 
   // Idle tour
+  let tourFrame = 0;
+  let tourClock = 0;
+  function tourTick() {
+    if (!touring || prefersStill) return;
+    tourClock += 0.015;
+    const tourPrice = 1100 + Math.sin(tourClock * 0.7) * 160;
+    setTokenPrice(tourPrice);
+    tourFrame = requestAnimationFrame(tourTick);
+  }
+
   function stopTour() {
     touring = false;
+    cancelAnimationFrame(tourFrame);
     clearTimeout(idleTimer);
   }
 
@@ -690,6 +742,8 @@ async function main() {
     clearTimeout(idleTimer);
     idleTimer = setTimeout(() => {
       touring = true;
+      cancelAnimationFrame(tourFrame);
+      tourFrame = requestAnimationFrame(tourTick);
     }, 8000);
   }
 

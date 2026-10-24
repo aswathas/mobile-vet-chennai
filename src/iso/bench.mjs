@@ -357,8 +357,10 @@ export function buildBench({
       barSegments.push(k.lineOnTop(p1, p2, CHANNEL_Z + 1.2, P));
     }
 
+    const clusterRouteCases = 156;
+    const initialRouteContrib = Math.round(clusterRouteCases * (tokenPrice - 850));
     barParts.push(
-      `<g class="bench-bar" data-cluster="${clusterId}">` +
+      `<g class="bench-bar" data-cluster="${clusterId}" data-route-contribution="${initialRouteContrib}">` +
         `<path d="${barSegments.join('')}" stroke="var(--ink, #111111)" stroke-opacity="0.75" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>` +
         `</g>`
     );
@@ -428,31 +430,37 @@ export function buildBench({
 
     // Head shape based on verdict: GO = disc, HOLD = square, NO-GO = disc with cross notch
     const verdict = loc.verdict.status;
+    let headMarkup = '';
     if (verdict === 'GO') {
       // Flat disc head
-      stopInner.push(S(k.cylinder(sx, sy, 2.4, headZ, headH, P, 18), { tone: 'hi' }));
-      stopInner.push(D([at([sx, sy, headZ + headH])], { size: 0.45, tone: 'mid' }));
+      headMarkup =
+        S(k.cylinder(sx, sy, 2.4, headZ, headH, P, 18), { tone: 'hi' }) +
+        D([at([sx, sy, headZ + headH])], { size: 0.45, tone: 'mid' });
     } else if (verdict === 'HOLD') {
       // Square head
       const squareHead = { x: sx - 2.0, y: sy - 2.0, w: 4.0, d: 4.0, r: 0.6 };
-      stopInner.push(S(k.slabOf(squareHead, headZ, headH, P, 3), { tone: 'hi' }));
+      headMarkup = S(k.slabOf(squareHead, headZ, headH, P, 3), { tone: 'hi' });
     } else {
       // NO-GO: disc with cross notch
-      stopInner.push(S(k.cylinder(sx, sy, 2.4, headZ, headH, P, 18), { tone: 'hi' }));
       const notch = [
         k.lineOnTop([sx - 1.8, sy], [sx + 1.8, sy], headZ + headH, P),
         k.lineOnTop([sx, sy - 1.8], [sx, sy + 1.8], headZ + headH, P),
       ];
-      stopInner.push(Ln(notch.join(''), { tone: 'lo', free: true }));
+      headMarkup =
+        S(k.cylinder(sx, sy, 2.4, headZ, headH, P, 18), { tone: 'hi' }) +
+        Ln(notch.join(''), { tone: 'lo', free: true });
     }
+    stopInner.push(`<g class="bench-head">${headMarkup}</g>`);
 
     // Highlight collar for selection
     const isSelected = loc.id === selectedId;
     const highlightRing = at([sx, sy, baseZ]);
     const highlightSvg = `<circle class="bench-stop__highlight" cx="${highlightRing[0].toFixed(1)}" cy="${highlightRing[1].toFixed(1)}" r="5.0" fill="none" stroke="var(--signal, #f2c200)" stroke-width="2.0" opacity="${isSelected ? '1' : '0'}"/>`;
+    const hitCircle = `<circle cx="${highlightRing[0].toFixed(1)}" cy="${highlightRing[1].toFixed(1)}" r="14" fill="transparent" pointer-events="all"/>`;
 
     const stopGroup =
-      `<g class="bench-stop${isSelected ? ' is-selected' : ''}" data-stop="${loc.id}" data-zone="${loc.id[0]}" data-cluster="${loc.route_cluster}" data-verdict="${verdict}" data-tier="${tier}" tabindex="0" role="button" aria-label="${loc.name} (${loc.id}): ${verdict}, ${Math.round(cases)} cases/month">` +
+      `<g class="bench-stop${isSelected ? ' is-selected' : ''}" data-place data-place-id="${loc.id}" data-zone="${loc.zone || loc.id[0]}" data-cluster="${loc.route_cluster}" data-verdict="${verdict}" data-tier="${tier}" data-place-x="${sx.toFixed(2)}" data-place-y="${sy.toFixed(2)}" tabindex="0" role="button" aria-selected="${isSelected ? 'true' : 'false'}"${isSelected ? ' data-selected' : ''} aria-label="${loc.name} (${loc.id}): ${verdict}, ${Math.round(cases)} cases/month">` +
+      hitCircle +
       highlightSvg +
       stopInner.join('') +
       `</g>`;
@@ -502,7 +510,7 @@ export function buildBench({
   tokenParts.push(Ln(tokenPointer, { tone: 'hi', free: true }));
 
   instrumentParts.push(
-    `<g class="bench-token" tabindex="0" role="slider" aria-label="Price token. Arrow keys slide along the price ladder" aria-valuemin="50" aria-valuemax="1600" aria-valuenow="${tokenPrice}" aria-valuetext="Rs ${tokenPrice.toLocaleString('en-IN')}">` +
+    `<g class="bench-token" data-token data-token-value="${Math.round(tokenPrice)}" tabindex="0" role="slider" aria-label="Price token. Arrow keys slide along the price ladder" aria-valuemin="50" aria-valuemax="1600" aria-valuenow="${Math.round(tokenPrice)}" aria-valuetext="Rs ${Math.round(tokenPrice).toLocaleString('en-IN')}">` +
       tokenParts.join('') +
       `</g>`
   );
@@ -558,8 +566,26 @@ export function buildBench({
   ];
   platenParts.push(Ln(platenRules.join(''), { tone: 'lo', free: true }));
 
+  const matrix = k.topMatrix([currPlaten.x + 14, currPlaten.y + 12], 3.2, P, 'x');
+  const selTier = selectedLoc.demand?.tier || selectedLoc.pet_base?.tier || 'C';
+  const selCases = Number(selectedLoc.demand?.cases_per_month_total || 0);
+  const selPrice = Math.round(selectedLoc.price?.our_mix?.blended_price || 1308);
+  const selMargin = Math.round(selPrice - (selectedLoc.economics?.cost_per_visit_clustered || 850));
+  const selSat = selectedLoc.competition?.saturation_index || 30;
+  const wardShort = (selectedLoc.ward || '').split('(')[0].trim();
+
+  platenParts.push(
+    `<g transform="${matrix}" class="bench-platen__data" fill="var(--ink, #111111)" font-family="var(--face-data, 'Roboto Mono', monospace)">` +
+      `<text x="0" y="14" class="platen-name" data-readout-field="name" font-weight="600" font-size="14">${selectedLoc.name}</text>` +
+      `<text x="0" y="28" class="platen-meta" font-size="10.5" fill="var(--ink-3, #6e6a62)">${selectedLoc.id} &middot; ${selectedLoc.route_cluster} &middot; ${wardShort}</text>` +
+      `<text x="0" y="50" class="platen-cases" font-size="11"><tspan data-readout-field="cases">${selCases.toFixed(1)}</tspan> cases/mo &middot; Tier ${selTier} &middot; ${selectedLoc.travel_min_to_hub}m to hub</text>` +
+      `<text x="0" y="68" class="platen-econ" font-size="11">Rs <tspan data-readout-field="price">${selPrice.toLocaleString('en-IN')}</tspan> blend &middot; Rs <tspan data-readout-field="margin">${selMargin.toLocaleString('en-IN')}</tspan> margin</text>` +
+      `<text x="0" y="86" class="platen-verdict" font-size="11">Verdict: <tspan data-readout-field="verdict">${selectedLoc.verdict.status}</tspan> &middot; Saturation: <tspan data-readout-field="saturation">${selSat}</tspan>/100</text>` +
+      `</g>`
+  );
+
   instrumentParts.push(
-    `<g class="bench-platen${platenOpen ? ' is-open' : ''}" data-platen>` + platenParts.join('') + `</g>`
+    `<g class="bench-platen${platenOpen ? ' is-open' : ''}" data-platen data-readout>` + platenParts.join('') + `</g>`
   );
 
   // Combine SVG markup
