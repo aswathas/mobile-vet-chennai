@@ -22,7 +22,7 @@ export const CHANNEL_Z = PLATE_H - CHANNEL_DEPTH; // 5.5
 export const RAIL = { x: -340, y: 395, w: 680, d: 20, r: 2 };
 export const RAIL_H = 3.5;
 
-export const GAUGE = { x: 440, y: 385, r: 32, h: 12 };
+export const GAUGE = { x: 440, y: 415, r: 30, h: 12 };
 export const PLATEN = { x: 380, y: 445, w: 260, d: 130, r: 3 };
 
 export const LAMP = { x: -620, y: -390, z: 0, r: 12, postR: 3.5, postH: 140 };
@@ -365,7 +365,7 @@ export function buildBench({
 
     // Terminal collars at first and last stop
     for (const endPt of [pts[0], pts[pts.length - 1]]) {
-      barParts.push(S(k.cylinder(endPt[0], endPt[1], 4.2, CHANNEL_Z, 1.4, P, 16), { tone: 'hi' }));
+      barParts.push(S(k.cylinder(endPt[0], endPt[1], 2.8, CHANNEL_Z, 1.4, P, 16), { tone: 'hi' }));
     }
 
     // Engraved plate on the recommended route bar (A-R7)
@@ -402,27 +402,27 @@ export function buildBench({
     const stopInner = [];
 
     // Base collar
-    stopInner.push(S(k.cylinder(sx, sy, 3.8, baseZ, collarH, P, 18), { tone: 'mid' }));
+    stopInner.push(S(k.cylinder(sx, sy, 2.6, baseZ, collarH, P, 18), { tone: 'mid' }));
 
     // Post stem
     if (!isZero) {
-      stopInner.push(S(k.cylinder(sx, sy, 2.2, stemZ, stemH, P, 16), { tone: 'hi' }));
+      stopInner.push(S(k.cylinder(sx, sy, 1.6, stemZ, stemH, P, 16), { tone: 'hi' }));
     }
 
     // Tier bracket cut under head
     const tier = loc.demand.tier || loc.pet_base.tier || 'C';
     const tierRingZ = headZ - 0.6;
     if (tier === 'A') {
-      stopInner.push(Ln(k.ring(sx, sy, 2.4, tierRingZ, P, 16), { tone: 'lo' }));
+      stopInner.push(Ln(k.ring(sx, sy, 1.8, tierRingZ, P, 16), { tone: 'lo' }));
     } else if (tier === 'B') {
       // Dashed tier ring
       stopInner.push(
-        `<path d="${k.ring(sx, sy, 2.4, tierRingZ, P, 16)}" stroke="var(--ink-3, #6e6a62)" stroke-width="0.6" stroke-dasharray="2,2"/>`
+        `<path d="${k.ring(sx, sy, 1.8, tierRingZ, P, 16)}" stroke="var(--ink-3, #6e6a62)" stroke-width="0.6" stroke-dasharray="2,2"/>`
       );
     } else {
       // Dotted tier ring
       stopInner.push(
-        `<path d="${k.ring(sx, sy, 2.4, tierRingZ, P, 16)}" stroke="var(--ink-4, #8b867d)" stroke-width="0.6" stroke-dasharray="1,2"/>`
+        `<path d="${k.ring(sx, sy, 1.8, tierRingZ, P, 16)}" stroke="var(--ink-4, #8b867d)" stroke-width="0.6" stroke-dasharray="1,2"/>`
       );
     }
 
@@ -430,18 +430,18 @@ export function buildBench({
     const verdict = loc.verdict.status;
     if (verdict === 'GO') {
       // Flat disc head
-      stopInner.push(S(k.cylinder(sx, sy, 3.8, headZ, headH, P, 20), { tone: 'hi' }));
+      stopInner.push(S(k.cylinder(sx, sy, 2.4, headZ, headH, P, 18), { tone: 'hi' }));
       stopInner.push(D([at([sx, sy, headZ + headH])], { size: 0.45, tone: 'mid' }));
     } else if (verdict === 'HOLD') {
       // Square head
-      const squareHead = { x: sx - 3.2, y: sy - 3.2, w: 6.4, d: 6.4, r: 0.8 };
+      const squareHead = { x: sx - 2.0, y: sy - 2.0, w: 4.0, d: 4.0, r: 0.6 };
       stopInner.push(S(k.slabOf(squareHead, headZ, headH, P, 3), { tone: 'hi' }));
     } else {
       // NO-GO: disc with cross notch
-      stopInner.push(S(k.cylinder(sx, sy, 3.8, headZ, headH, P, 20), { tone: 'hi' }));
+      stopInner.push(S(k.cylinder(sx, sy, 2.4, headZ, headH, P, 18), { tone: 'hi' }));
       const notch = [
-        k.lineOnTop([sx - 2.8, sy], [sx + 2.8, sy], headZ + headH, P),
-        k.lineOnTop([sx, sy - 2.8], [sx, sy + 2.8], headZ + headH, P),
+        k.lineOnTop([sx - 1.8, sy], [sx + 1.8, sy], headZ + headH, P),
+        k.lineOnTop([sx, sy - 1.8], [sx, sy + 1.8], headZ + headH, P),
       ];
       stopInner.push(Ln(notch.join(''), { tone: 'lo', free: true }));
     }
@@ -449,7 +449,7 @@ export function buildBench({
     // Highlight collar for selection
     const isSelected = loc.id === selectedId;
     const highlightRing = at([sx, sy, baseZ]);
-    const highlightSvg = `<circle class="bench-stop__highlight" cx="${highlightRing[0].toFixed(1)}" cy="${highlightRing[1].toFixed(1)}" r="7.5" fill="none" stroke="var(--signal, #f2c200)" stroke-width="2.2" opacity="${isSelected ? '1' : '0'}"/>`;
+    const highlightSvg = `<circle class="bench-stop__highlight" cx="${highlightRing[0].toFixed(1)}" cy="${highlightRing[1].toFixed(1)}" r="5.0" fill="none" stroke="var(--signal, #f2c200)" stroke-width="2.0" opacity="${isSelected ? '1' : '0'}"/>`;
 
     const stopGroup =
       `<g class="bench-stop${isSelected ? ' is-selected' : ''}" data-stop="${loc.id}" data-zone="${loc.id[0]}" data-cluster="${loc.route_cluster}" data-verdict="${verdict}" data-tier="${tier}" tabindex="0" role="button" aria-label="${loc.name} (${loc.id}): ${verdict}, ${Math.round(cases)} cases/month">` +
