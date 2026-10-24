@@ -73,6 +73,7 @@ docs/05-mvp.md                what it does, and what it deliberately does not
 docs/06-verification.md       what was measured, and what is still untested
 docs/07-retro.md               what we would do differently
 docs/08-design-history.md     how the thinking ran: the worlds, the re-rolls, the build
+docs/knowledge-graph.md       the repository as a graph: 924 nodes, 71 communities
 docs/DOSSIER-STATUS.md        what the dossier is and is not
 docs/attempts/                the failed paths
 docs/decisions/               the changes to locked beats
