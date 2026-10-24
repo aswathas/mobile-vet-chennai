@@ -185,6 +185,120 @@ async function main() {
   --bench-ink-4: var(--ink-4, #8b867d);
   --bench-signal: var(--signal, #f2c200);
   --bench-rule: var(--rule, #111111);
+
+  /* The kit's rendering ramp, remapped to the Sign Band world.
+     The kit ships a grey ramp; this world forbids grey and shadows, so the
+     four tones from facing are the site's ink at four opacities on the paper
+     ground. One accent only: the yellow is the instrument and the selection. */
+  --anatomy-paper: var(--bench-paper);
+  --anatomy-face: #fbfbfa;
+  --anatomy-top: var(--bench-paper);
+  --anatomy-shade-0: rgba(17, 17, 17, 0.17);
+  --anatomy-shade-1: rgba(17, 17, 17, 0.12);
+  --anatomy-shade-2: rgba(17, 17, 17, 0.07);
+  --anatomy-shade-3: rgba(17, 17, 17, 0.04);
+  --anatomy-hi: var(--bench-ink);
+  --anatomy-mid: var(--bench-ink-2);
+  --anatomy-lo: var(--bench-ink-3);
+  /* ink-4 measures 3.62:1 on white and the dossier's rule is 4.5:1 for every
+     ink on the paper ground, so the faintest line tone is a step darker. */
+  --anatomy-faint: #76736d;
+  --anatomy-lit: var(--bench-signal);
+  --anatomy-dot: var(--bench-ink);
+  --anatomy-weight: 0.7px;
+}
+
+/* --- the kit's solid, line and dot rules, scoped to this figure -------------
+   The kit writes these under a .iso class with a dark and a light theme. The
+   site carries one world, so the rules are scoped to the figure and the ramp
+   above supplies the colours. Without these the solids inherit a black fill
+   and the lines inherit no stroke at all. */
+.corridor-bench .iso-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.corridor-bench .iso-svg path,
+.corridor-bench .iso-svg circle {
+  vector-effect: non-scaling-stroke;
+}
+
+.corridor-bench .iso-fill {
+  fill: var(--anatomy-paper);
+  stroke: none;
+}
+
+.corridor-bench .iso-shade,
+.corridor-bench .iso-top {
+  stroke: none;
+}
+
+.corridor-bench .iso-shade[data-shade="0"] { fill: var(--anatomy-shade-0); }
+.corridor-bench .iso-shade[data-shade="1"] { fill: var(--anatomy-shade-1); }
+.corridor-bench .iso-shade[data-shade="2"] { fill: var(--anatomy-shade-2); }
+.corridor-bench .iso-shade[data-shade="3"] { fill: var(--anatomy-shade-3); }
+.corridor-bench .iso-top { fill: var(--anatomy-top); }
+
+.corridor-bench .iso-solid[data-lit] > .iso-fill { fill: var(--anatomy-face); }
+.corridor-bench .iso-solid[data-lit] > .iso-top { fill: var(--anatomy-lit-top, var(--anatomy-paper)); }
+
+.corridor-bench .iso-line {
+  fill: none;
+  stroke: var(--anatomy-lo);
+  stroke-width: var(--anatomy-weight);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.corridor-bench .iso-line[data-tone="hi"] { stroke: var(--anatomy-hi); }
+.corridor-bench .iso-line[data-tone="mid"] { stroke: var(--anatomy-mid); }
+.corridor-bench .iso-line[data-tone="lo"] { stroke: var(--anatomy-lo); }
+.corridor-bench .iso-line[data-tone="faint"] { stroke: var(--anatomy-faint); }
+.corridor-bench .iso-line[data-tone="lit"] { stroke: var(--anatomy-lit); }
+.corridor-bench .iso-line[data-dotted] { stroke-dasharray: 0.01 3.5; stroke-width: 1; }
+.corridor-bench .iso-line[data-dashed] { stroke-dasharray: 3 3; }
+
+.corridor-bench .iso-dots circle {
+  fill: var(--anatomy-dot);
+  stroke: none;
+  opacity: 0.32;
+}
+
+.corridor-bench .iso-dots[data-tone="hi"] circle { opacity: 0.85; }
+.corridor-bench .iso-dots[data-tone="mid"] circle { opacity: 0.45; }
+.corridor-bench .iso-dots[data-tone="lo"] circle { opacity: 0.22; }
+.corridor-bench .iso-dots[data-tone="faint"] circle { opacity: 0.12; }
+
+.corridor-bench .iso-face-text {
+  fill: var(--anatomy-mid);
+  font-family: var(--face-data, 'Roboto Mono', monospace);
+  letter-spacing: 0.04em;
+}
+
+.corridor-bench .iso-face-text[data-tone="hi"] { fill: var(--anatomy-hi); }
+.corridor-bench .iso-face-text[data-tone="lo"] { fill: var(--anatomy-lo); }
+.corridor-bench .iso-face-text[data-tone="faint"] { fill: var(--anatomy-faint); }
+
+.corridor-bench .iso-wire-end {
+  fill: var(--anatomy-paper);
+  stroke: var(--anatomy-lo);
+  stroke-width: var(--anatomy-weight);
+}
+
+/* The selection ring is decoration. It must never take a press that belongs
+   to a neighbouring stop, so it takes no pointer events at all. */
+.corridor-bench .bench-stop__highlight {
+  pointer-events: none;
+}
+
+/* Every stop carries an invisible disc the size of a fingertip's worth of
+   plate, so a stop can be pressed without aiming at a pin head. */
+.corridor-bench .bench-stop__hit {
+  fill: transparent;
+  stroke: none;
+  pointer-events: all;
 }
 
 .corridor-bench .iso-plate {
@@ -240,6 +354,14 @@ async function main() {
   color: var(--bench-ink);
   font-variant-numeric: tabular-nums;
   font-weight: 600;
+}
+
+/* Narrow screens: the hint and the readout cannot share one baseline without
+   colliding, so the readout takes its own line above the hint. */
+@media (max-width: 680px) {
+  .corridor-bench .iso-plate-corner[data-corner="readout"] {
+    white-space: normal;
+  }
 }
 
 .bench-stage {
@@ -376,14 +498,14 @@ async function main() {
 .bench-key-mark--bar {
   width: 16px;
   height: 4px;
-  background: rgba(17, 17, 17, 0.7);
+  background: rgba(17, 17, 17, 0.5);
   border: none;
 }
 
 .bench-key-mark--tier {
   width: 14px;
   height: 2px;
-  border-bottom: 2px dashed var(--bench-ink-3);
+  border-bottom: 2px dashed var(--bench-ink-2);
   border-top: none;
   border-left: none;
   border-right: none;
@@ -422,6 +544,31 @@ async function main() {
   }
   .corridor-bench .iso-keys {
     gap: 6px 12px;
+  }
+}
+
+/* Narrow screens: the hint and the readout cannot share one baseline without
+   colliding, and the readout is too long for one line, so it takes its own
+   lines above the hint. This block comes last so it wins over the smaller
+   phone sizes above. */
+@media (max-width: 680px) {
+  .corridor-bench .iso-plate {
+    padding: 44px 8px 54px;
+  }
+  .corridor-bench .iso-plate-corners {
+    inset: 12px 14px;
+  }
+  .corridor-bench .iso-plate-corner[data-corner="readout"] {
+    bottom: 24px;
+    right: auto;
+    left: 0;
+    max-width: 100%;
+    white-space: normal;
+    line-height: 1.35;
+  }
+  .corridor-bench .iso-plate-corner[data-corner="hint"] {
+    bottom: 0;
+    left: 0;
   }
 }
 `;
@@ -470,9 +617,16 @@ async function main() {
   let idleTimer = null;
   const prefersStill = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Rail bounds for token drag
-  const RAIL_LEFT = -320;
-  const RAIL_RIGHT = 320;
+  // Rail bounds for token drag, in the figure's own screen units. The build
+  // measured them; the client never guesses.
+  const RAIL_LEFT = ${benchResult.instrument.railLeft[0].toFixed(2)};
+  const RAIL_TOP = ${benchResult.instrument.railLeft[1].toFixed(2)};
+  const RAIL_RIGHT = ${benchResult.instrument.railRight[0].toFixed(2)};
+  const RAIL_BOTTOM = ${benchResult.instrument.railRight[1].toFixed(2)};
+  const TOKEN_BASE_X = ${benchResult.instrument.tokenBase[0].toFixed(2)};
+  const TOKEN_BASE_Y = ${benchResult.instrument.tokenBase[1].toFixed(2)};
+  const GAUGE_X = ${benchResult.instrument.gauge[0].toFixed(2)};
+  const GAUGE_Y = ${benchResult.instrument.gauge[1].toFixed(2)};
   const PRICE_MIN = 50;
   const PRICE_MAX = 1600;
 
@@ -487,7 +641,7 @@ async function main() {
     if (!needle) return;
     const fraction = Math.max(0, Math.min(1, margin / 600));
     const deg = -135 + fraction * 270;
-    needle.setAttribute('transform', 'rotate(' + deg.toFixed(1) + ' 440 415)');
+    needle.setAttribute('transform', 'rotate(' + deg.toFixed(1) + ' ' + GAUGE_X.toFixed(2) + ' ' + GAUGE_Y.toFixed(2) + ')');
   }
 
   function selectStop(id, updateUrl) {
@@ -543,10 +697,15 @@ async function main() {
   function setTokenPrice(price) {
     currentPrice = Math.max(PRICE_MIN, Math.min(PRICE_MAX, price));
     const frac = (currentPrice - PRICE_MIN) / (PRICE_MAX - PRICE_MIN);
-    const xOffset = (frac - 0.5) * (RAIL_RIGHT - RAIL_LEFT);
+    // The token slides along the rail's screen line, not along the screen's x
+    // axis: the rail runs diagonally in an isometric view.
+    const x = RAIL_LEFT + frac * (RAIL_RIGHT - RAIL_LEFT);
+    const y = RAIL_TOP + frac * (RAIL_BOTTOM - RAIL_TOP);
+    const xOffset = x - TOKEN_BASE_X;
+    const yOffset = y - TOKEN_BASE_Y;
 
     if (token) {
-      token.setAttribute('transform', 'translate(' + xOffset.toFixed(1) + ', 0)');
+      token.setAttribute('transform', 'translate(' + xOffset.toFixed(2) + ', ' + yOffset.toFixed(2) + ')');
       token.setAttribute('data-token-value', String(Math.round(currentPrice)));
       token.setAttribute('aria-valuenow', String(Math.round(currentPrice)));
       token.setAttribute('aria-valuetext', 'Rs ' + Math.round(currentPrice).toLocaleString('en-IN'));
@@ -621,6 +780,7 @@ async function main() {
   // Token dragging & keyboard
   let dragging = false;
   let dragStartX = 0;
+  let dragStartY = 0;
   let dragStartPrice = 1100;
 
   if (token) {
@@ -628,6 +788,7 @@ async function main() {
       stopTour();
       dragging = true;
       dragStartX = e.clientX;
+      dragStartY = e.clientY;
       dragStartPrice = currentPrice;
       try { token.setPointerCapture(e.pointerId); } catch (_) {}
       e.preventDefault();
@@ -638,8 +799,25 @@ async function main() {
 
     const onMove = (e) => {
       if (!dragging) return;
-      const dx = e.clientX - dragStartX;
-      const priceDelta = dx * 2.5;
+      // Pointer movement is measured along the rail's own screen direction and
+      // converted to the figure's units, so a drag on a phone moves the token
+      // by the same price as the same drag on a desktop.
+      const svg = document.querySelector('.bench-svg');
+      const stage = document.querySelector('.bench-stage');
+      if (!svg || !stage) return;
+      const box = svg.getAttribute('viewBox');
+      if (!box) return;
+      const vbWidth = parseFloat(box.split(/[\\s,]+/)[2]);
+      const stageWidth = stage.getBoundingClientRect().width;
+      if (!vbWidth || !stageWidth) return;
+      const perPx = vbWidth / stageWidth;
+      const dx = (e.clientX - dragStartX) * perPx;
+      const dy = (e.clientY - dragStartY) * perPx;
+      const railVecX = RAIL_RIGHT - RAIL_LEFT;
+      const railVecY = RAIL_BOTTOM - RAIL_TOP;
+      const railLen = Math.hypot(railVecX, railVecY) || 1;
+      const along = (dx * railVecX + dy * railVecY) / railLen;
+      const priceDelta = (along / railLen) * (PRICE_MAX - PRICE_MIN);
       setTokenPrice(dragStartPrice + priceDelta);
     };
 

@@ -10,22 +10,22 @@ import * as G from './lathe.mjs';
 import * as A from './audit.mjs';
 import { place, fitProjection } from './projection.mjs';
 
-export const BENCH = { x: -700, y: -470, w: 1400, d: 940, r: 8 };
+export const BENCH = { x: -640, y: -380, w: 1280, d: 760, r: 8 };
 export const BENCH_H = 18;
 export const FOOT_H = 10;
 
-export const PLATE = { x: -590, y: -380, w: 1180, d: 760, r: 4 };
+export const PLATE = { x: -560, y: -300, w: 1120, d: 540, r: 4 };
 export const PLATE_H = 8;
 export const CHANNEL_DEPTH = 2.5;
 export const CHANNEL_Z = PLATE_H - CHANNEL_DEPTH; // 5.5
 
-export const RAIL = { x: -340, y: 395, w: 680, d: 20, r: 2 };
+export const RAIL = { x: -520, y: 292, w: 600, d: 18, r: 2 };
 export const RAIL_H = 3.5;
 
-export const GAUGE = { x: 440, y: 415, r: 30, h: 12 };
-export const PLATEN = { x: 380, y: 445, w: 260, d: 130, r: 3 };
+export const GAUGE = { x: 150, y: 296, r: 28, h: 12 };
+export const PLATEN = { x: 250, y: 248, w: 360, d: 132, r: 3 };
 
-export const LAMP = { x: -620, y: -390, z: 0, r: 12, postR: 3.5, postH: 140 };
+export const LAMP = { x: -604, y: -344, z: 0, r: 12, postR: 3.5, postH: 120 };
 
 export const THEME_PALETTE = {
   ground: 'var(--paper, #ffffff)',
@@ -142,8 +142,8 @@ export function buildBench({
 
   // --- Base (10 solids) ---
   const baseParts = [];
-  // Halo under the bench
-  baseParts.push(`<path class="iso-halo" d="${k.haloOf(BENCH, -BENCH_H - FOOT_H, BENCH_H, P)}"/>`);
+  // No halo under the bench: this world has no shadows. The bench sits on the
+  // paper with a drawn edge, and every edge is a rule.
 
   // Levelling feet (4)
   const footCorners = k.corners(BENCH, 42);
@@ -172,7 +172,7 @@ export function buildBench({
   }
 
   // Maker's plate with 3 engraved rule lines
-  const MAKER = { x: -540, y: 400, w: 90, d: 40, r: 2 };
+  const MAKER = { x: -600, y: 250, w: 90, d: 40, r: 2 };
   baseParts.push(S(k.slabOf(MAKER, 0, 1.0, P, 4, 0.4), { tone: 'mid' }));
   baseParts.push(Ln(k.planOutline(k.insetPlan(MAKER, 3), 1.0, P, 4), { tone: 'lo' }));
   const makerScrews = [at([MAKER.x + 4, MAKER.y + MAKER.d / 2, 1.0]), at([MAKER.x + MAKER.w - 4, MAKER.y + MAKER.d / 2, 1.0])];
@@ -185,7 +185,7 @@ export function buildBench({
   baseParts.push(Ln(makerRules.join(''), { tone: 'lo', free: true }));
 
   // Cable gland at rear
-  const GLAND = [0, -460];
+  const GLAND = [0, -368];
   baseParts.push(S(k.cylinder(GLAND[0], GLAND[1], 10, 0, 3.5, P, 24), { tone: 'lo' }));
   baseParts.push(S(k.cylinder(GLAND[0], GLAND[1], 6.5, 3.5, 6.0, P, 16), { tone: 'mid' }));
   // Gland cable running back
@@ -200,18 +200,56 @@ export function buildBench({
     return at([LAMP_BASE[0] + 8 * Math.cos(rad), LAMP_BASE[1] + 8 * Math.sin(rad), 3.0]);
   });
   baseParts.push(D(lampBolts, { size: 0.45 }));
-  // Vertical arm
-  baseParts.push(S(k.cylinder(LAMP_BASE[0], LAMP_BASE[1], 3.8, 3.0, 100, P, 16), { tone: 'mid' }));
-  // Curved neck reaching over the plate
-  const LAMP_HEAD = [LAMP_BASE[0] + 45, LAMP_BASE[1] + 45, 120];
-  baseParts.push(S(k.cylinder(LAMP_HEAD[0], LAMP_HEAD[1], 14, LAMP_HEAD[2], 8, P, 24), { tone: 'mid' }));
-  // Knurled rim on lamp head
-  baseParts.push(Ln(k.knurl(LAMP_HEAD[0], LAMP_HEAD[1], 14, LAMP_HEAD[2], LAMP_HEAD[2] + 4, 28, P), { tone: 'lo' }));
-  // Lamp shade (conical flare)
-  baseParts.push(S(k.cylinder(LAMP_HEAD[0] + 4, LAMP_HEAD[1] + 4, 18, LAMP_HEAD[2] - 10, 10, P, 24), { tone: 'hi' }));
+  // Vertical post
+  baseParts.push(S(k.cylinder(LAMP_BASE[0], LAMP_BASE[1], 3.8, 3.0, 120, P, 16), { tone: 'mid' }));
+  // Collar where the post is clamped
+  baseParts.push(S(k.cylinder(LAMP_BASE[0], LAMP_BASE[1], 6.0, 108, 5.0, P, 16), { tone: 'hi' }));
+  // Arm: one reach along the bench, then one over the plate. A single reach
+  // along the world diagonal would point straight at the viewer, which reads
+  // as a stick rather than an arm.
+  const ARM_KNEE = [-420, -344, 123];
+  const ARM_HEAD = [-420, -250, 123];
+  const armPaths = [
+    k.segment([LAMP_BASE[0], LAMP_BASE[1], 123], ARM_KNEE, P),
+    k.segment(ARM_KNEE, ARM_HEAD, P),
+  ];
+  for (const d of armPaths) {
+    baseParts.push(
+      `<path class="bench-lamp__arm" d="${d}" fill="none" stroke="var(--bench-ink-2, #3a3a36)" stroke-width="3.2" stroke-linecap="round"/>`
+    );
+    baseParts.push(
+      `<path class="bench-lamp__arm" d="${d}" fill="none" stroke="rgba(17, 17, 17, 0.10)" stroke-width="2.2" stroke-linecap="round"/>`
+    );
+  }
+  // Knuckle at the bend
+  baseParts.push(S(k.cylinder(ARM_KNEE[0], ARM_KNEE[1], 4.8, ARM_KNEE[2] - 3.5, 7, P, 16), { tone: 'hi' }));
+  // Lamp head and its knurled rim
+  const LAMP_HEAD = [ARM_HEAD[0], ARM_HEAD[1], 123];
+  baseParts.push(S(k.cylinder(LAMP_HEAD[0], LAMP_HEAD[1], 4.6, 110, 14, P, 16), { tone: 'mid' }));
+  baseParts.push(Ln(k.knurl(LAMP_HEAD[0], LAMP_HEAD[1], 4.6, 110, 115, 24, P), { tone: 'lo' }));
+  // Lamp shade: a cone flaring down over the plate, so it reads as a shade and
+  // not as a disc floating on the arm.
+  const shadeFrame = G.frameAlong([LAMP_HEAD[0], LAMP_HEAD[1], 94], [0, 0, 1]);
+  const shade = G.lathe(
+    [
+      [0, 4.6],
+      [12, 19],
+      [15, 19],
+      [15, 0],
+    ],
+    shadeFrame,
+    P,
+    { steps: 30 }
+  );
+  baseParts.push(
+    `<path class="iso-fill" d="${shade.fill}" fill="var(--anatomy-paper, #ffffff)" stroke="none"/>`
+  );
+  baseParts.push(
+    `<path class="iso-line iso-edge" data-tone="hi" d="${shade.outline}" fill="none" stroke="var(--bench-ink, #111111)" stroke-width="0.9"/>`
+  );
 
   // Small parts tray holding spare token
-  const TRAY = { x: 500, y: -440, w: 90, d: 45, r: 4 };
+  const TRAY = { x: 470, y: -344, w: 90, d: 45, r: 4 };
   baseParts.push(S(k.slabOf(TRAY, 0, 2.0, P, 4, 0.5), { tone: 'mid' }));
   baseParts.push(Ln(k.planOutline(k.insetPlan(TRAY, 4), 2.0, P, 4), { tone: 'lo' }));
   // Spare token in tray
@@ -222,20 +260,88 @@ export function buildBench({
   // --- Plate & Channels (14 parts) ---
   const channelParts = [];
 
-  // Corridor A points and channel
-  const ptsA = localitiesA.map((l) => stopPoints.get(l.id));
-  const hullA = expandPoly(convexHull(ptsA), 16);
-  // Channel floor A
+  const channelPolygon = (hull, z, fill, stroke, width) =>
+    `<polygon class="bench-channel" points="${hull
+      .map((pt) => at([pt[0], pt[1], z]).map((v) => v.toFixed(1)).join(','))
+      .join(' ')}" fill="${fill}"${stroke ? ` stroke="${stroke}" stroke-width="${width}"` : ''}/>`;
+
+  // The milled face of the plate, a hair off the bench top so the two planes
+  // read apart without a shadow.
   channelParts.push(
-    `<polygon class="bench-channel bench-channel--a" points="${hullA.map((pt) => at([pt[0], pt[1], CHANNEL_Z]).map((v) => v.toFixed(1)).join(',')).join(' ')}" fill="var(--panel, #f6f5f1)" stroke="var(--ink-2, #3a3a36)" stroke-width="0.8"/>`
+    channelPolygon(
+      [
+        [PLATE.x, PLATE.y],
+        [PLATE.x + PLATE.w, PLATE.y],
+        [PLATE.x + PLATE.w, PLATE.y + PLATE.d],
+        [PLATE.x, PLATE.y + PLATE.d],
+      ],
+      PLATE_H,
+      'rgba(17, 17, 17, 0.035)',
+      null,
+      0
+    )
   );
 
-  // Corridor B points and channel
-  const ptsB = localitiesB.map((l) => stopPoints.get(l.id));
-  const hullB = expandPoly(convexHull(ptsB), 16);
-  // Channel floor B
+  // A corridor is a channel milled into the plate, and it follows the routes:
+  // one ribbon per route, and the ribbons of a zone merge into that zone's
+  // corridor. A hull would say "the area between these points", which is not
+  // what a corridor is.
+  const ribbon = (points, half) => {
+    const n = points.length;
+    const left = [];
+    const right = [];
+    for (let i = 0; i < n; i++) {
+      const prev = points[Math.max(0, i - 1)];
+      const next = points[Math.min(n - 1, i + 1)];
+      let dx = next[0] - prev[0];
+      let dy = next[1] - prev[1];
+      const len = Math.hypot(dx, dy) || 1;
+      dx /= len;
+      dy /= len;
+      const nx = -dy;
+      const ny = dx;
+      left.push([points[i][0] + nx * half, points[i][1] + ny * half]);
+      right.push([points[i][0] - nx * half, points[i][1] - ny * half]);
+    }
+    return k.pathOf(left.concat(right.reverse()), true);
+  };
+
+  const zoneRibbons = (locs, half) => {
+    const byCluster = new Map();
+    for (const loc of locs) {
+      if (!byCluster.has(loc.route_cluster)) byCluster.set(loc.route_cluster, []);
+      byCluster.get(loc.route_cluster).push(loc);
+    }
+    const paths = [];
+    for (const clusterLocs of byCluster.values()) {
+      const pts = clusterLocs.map((l) => stopPoints.get(l.id));
+      if (pts.length < 2) continue;
+      paths.push(ribbon(pts.map((p) => at([p[0], p[1], PLATE_H])), half));
+    }
+    return paths.join('');
+  };
+
+  const zoneFloors = (locs, half) => {
+    const byCluster = new Map();
+    for (const loc of locs) {
+      if (!byCluster.has(loc.route_cluster)) byCluster.set(loc.route_cluster, []);
+      byCluster.get(loc.route_cluster).push(loc);
+    }
+    const paths = [];
+    for (const clusterLocs of byCluster.values()) {
+      const pts = clusterLocs.map((l) => stopPoints.get(l.id));
+      if (pts.length < 2) continue;
+      paths.push(ribbon(pts.map((p) => at([p[0], p[1], CHANNEL_Z])), half));
+    }
+    return paths.join('');
+  };
+
+  // The rim at plate height, the floor below it: two cut surfaces, not a patch.
   channelParts.push(
-    `<polygon class="bench-channel bench-channel--b" points="${hullB.map((pt) => at([pt[0], pt[1], CHANNEL_Z]).map((v) => v.toFixed(1)).join(',')).join(' ')}" fill="var(--panel, #f6f5f1)" stroke="var(--ink-2, #3a3a36)" stroke-width="0.8"/>`
+    `<path class="bench-channel bench-channel--rim" d="${zoneRibbons(localitiesA, 15)}" fill="rgba(17, 17, 17, 0.085)" fill-rule="nonzero" stroke="none"/>` +
+      `<path class="bench-channel bench-channel--floor" d="${zoneFloors(localitiesA, 11.5)}" fill="rgba(17, 17, 17, 0.05)" fill-rule="nonzero" stroke="none"/>` +
+      `<path class="bench-channel bench-channel--rim" d="${zoneRibbons(localitiesB, 15)}" fill="rgba(17, 17, 17, 0.085)" fill-rule="nonzero" stroke="none"/>` +
+      `<path class="bench-channel bench-channel--floor" d="${zoneFloors(localitiesB, 11.5)}" fill="rgba(17, 17, 17, 0.05)" fill-rule="nonzero" stroke="none"/>`
   );
 
   // --- Engraving and Inlays ---
@@ -302,7 +408,7 @@ export function buildBench({
   }
 
   // Compass rose & North pointer at plate upper right
-  const COMPASS = [480, -310];
+  const COMPASS = [-430, -170];
   engraveParts.push(Ln(k.ring(COMPASS[0], COMPASS[1], 24, PLATE_H, P, 32), { tone: 'lo' }));
   engraveParts.push(Ln(k.ring(COMPASS[0], COMPASS[1], 18, PLATE_H, P, 24), { tone: 'faint' }));
   const compassTicks = k.radialTicks(COMPASS[0], COMPASS[1], 24, 16, 4, PLATE_H, [2.5, 4.5], P);
@@ -320,7 +426,7 @@ export function buildBench({
   // Scale bar with major and minor ticks (at plate lower left: x = -480, y = 310)
   // In equirectangular projection at 13°N: 1 km = 18.09 world units.
   // 10 km = 181 world units.
-  const SCALE_BAR = { x0: -500, x1: -319, y: 320 };
+  const SCALE_BAR = { x0: -520, x1: -339, y: 210 };
   const scaleStrip = { x: SCALE_BAR.x0, y: SCALE_BAR.y - 4, w: SCALE_BAR.x1 - SCALE_BAR.x0, d: 8, r: 1 };
   engraveParts.push(S(k.slabOf(scaleStrip, PLATE_H, 0.4, P, 2), { tone: 'lo' }));
   // 1 km step = 18.1 units; major every 5 km (90.5 units)
@@ -330,9 +436,9 @@ export function buildBench({
   engraveParts.push(D([at([SCALE_BAR.x0, SCALE_BAR.y, PLATE_H + 0.4]), at([SCALE_BAR.x1, SCALE_BAR.y, PLATE_H + 0.4])], { size: 0.45 }));
 
   // Datum line and datum stamp
-  const datumLine = k.lineOnTop([-550, 350], [-250, 350], PLATE_H, P);
+  const datumLine = k.lineOnTop([-540, 120], [-300, 120], PLATE_H, P);
   engraveParts.push(Ln(datumLine, { tone: 'lo', free: true }));
-  const DATUM_STAMP = { x: -230, y: 340, w: 60, d: 20, r: 1.5 };
+  const DATUM_STAMP = { x: -280, y: 110, w: 60, d: 20, r: 1.5 };
   engraveParts.push(S(k.slabOf(DATUM_STAMP, PLATE_H, 0.5, P, 3), { tone: 'lo' }));
   engraveParts.push(Ln(k.planOutline(k.insetPlan(DATUM_STAMP, 2), PLATE_H + 0.5, P, 3), { tone: 'faint' }));
 
@@ -361,7 +467,7 @@ export function buildBench({
     const initialRouteContrib = Math.round(clusterRouteCases * (tokenPrice - 850));
     barParts.push(
       `<g class="bench-bar" data-cluster="${clusterId}" data-route-contribution="${initialRouteContrib}" [data-route-contribution]="${initialRouteContrib}"><text class="route-readout" style="display:none">${initialRouteContrib}</text>` +
-        `<path d="${barSegments.join('')}" stroke="var(--ink, #111111)" stroke-opacity="0.75" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>` +
+        `<path class="bench-bar__link" d="${barSegments.join('')}" stroke="var(--bench-ink, #111111)" stroke-opacity="0.38" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>` +
         `</g>`
     );
 
@@ -379,6 +485,7 @@ export function buildBench({
     }
   }
 
+
   // --- Stops (100 localities) ---
   // Sort stops back-to-front by depthOf
   const sortedLocalities = allLocalities.slice().sort((a, b) => {
@@ -391,40 +498,41 @@ export function buildBench({
   for (const loc of sortedLocalities) {
     const [sx, sy] = stopPoints.get(loc.id);
     const cases = loc.demand.cases_per_month_total || 0;
-    // Scale post height: 0 cases = 0 (flat disc), max cases (~736) = ~10 units (shallower range per §13)
-    const stemH = Math.max(0.4, Math.min(10, cases * 0.014));
+    // Post height carries the demand. A zero post is a flat disc in the plate.
+    const stemH = Math.max(0.6, Math.min(16, cases * 0.022));
     const isZero = cases < 2;
 
     const baseZ = CHANNEL_Z;
-    const collarH = 1.4;
+    const collarH = 1.6;
     const stemZ = baseZ + collarH;
     const headZ = stemZ + stemH;
-    const headH = 2.4;
+    const headH = 3.0;
 
     const stopInner = [];
 
     // Base collar
-    stopInner.push(S(k.cylinder(sx, sy, 2.6, baseZ, collarH, P, 18), { tone: 'mid' }));
+    stopInner.push(S(k.cylinder(sx, sy, 3.4, baseZ, collarH, P, 18), { tone: 'mid' }));
 
     // Post stem
     if (!isZero) {
-      stopInner.push(S(k.cylinder(sx, sy, 1.6, stemZ, stemH, P, 16), { tone: 'hi' }));
+      stopInner.push(S(k.cylinder(sx, sy, 2.0, stemZ, stemH, P, 16), { tone: 'hi' }));
     }
 
-    // Tier bracket cut under head
+    // Tier bracket: a ring cut around the post at the collar, wider than the
+    // head so it stays visible under it. Solid for A, dashed for B, dotted for C.
     const tier = loc.demand.tier || loc.pet_base.tier || 'C';
-    const tierRingZ = headZ - 0.6;
+    const tierRingZ = stemZ;
     if (tier === 'A') {
-      stopInner.push(Ln(k.ring(sx, sy, 1.8, tierRingZ, P, 16), { tone: 'lo' }));
+      stopInner.push(Ln(k.ring(sx, sy, 4.4, tierRingZ, P, 16), { tone: 'hi' }));
     } else if (tier === 'B') {
       // Dashed tier ring
       stopInner.push(
-        `<path d="${k.ring(sx, sy, 1.8, tierRingZ, P, 16)}" stroke="var(--ink-3, #6e6a62)" stroke-width="0.6" stroke-dasharray="2,2"/>`
+        `<path d="${k.ring(sx, sy, 4.4, tierRingZ, P, 16)}" stroke="var(--bench-ink-2, #3a3a36)" stroke-width="0.8" stroke-dasharray="3,2.4"/>`
       );
     } else {
       // Dotted tier ring
       stopInner.push(
-        `<path d="${k.ring(sx, sy, 1.8, tierRingZ, P, 16)}" stroke="var(--ink-4, #8b867d)" stroke-width="0.6" stroke-dasharray="1,2"/>`
+        `<path d="${k.ring(sx, sy, 4.4, tierRingZ, P, 16)}" stroke="var(--bench-ink-3, #6e6a62)" stroke-width="0.9" stroke-dasharray="1.2,2.4"/>`
       );
     }
 
@@ -434,20 +542,20 @@ export function buildBench({
     if (verdict === 'GO') {
       // Flat disc head
       headMarkup =
-        S(k.cylinder(sx, sy, 2.4, headZ, headH, P, 18), { tone: 'hi' }) +
-        D([at([sx, sy, headZ + headH])], { size: 0.45, tone: 'mid' });
+        S(k.cylinder(sx, sy, 3.2, headZ, headH, P, 18), { tone: 'hi' }) +
+        D([at([sx, sy, headZ + headH])], { size: 0.6, tone: 'mid' });
     } else if (verdict === 'HOLD') {
       // Square head
-      const squareHead = { x: sx - 2.0, y: sy - 2.0, w: 4.0, d: 4.0, r: 0.6 };
+      const squareHead = { x: sx - 2.6, y: sy - 2.6, w: 5.2, d: 5.2, r: 0.6 };
       headMarkup = S(k.slabOf(squareHead, headZ, headH, P, 3), { tone: 'hi' });
     } else {
       // NO-GO: disc with cross notch
       const notch = [
-        k.lineOnTop([sx - 1.8, sy], [sx + 1.8, sy], headZ + headH, P),
-        k.lineOnTop([sx, sy - 1.8], [sx, sy + 1.8], headZ + headH, P),
+        k.lineOnTop([sx - 2.4, sy], [sx + 2.4, sy], headZ + headH, P),
+        k.lineOnTop([sx, sy - 2.4], [sx, sy + 2.4], headZ + headH, P),
       ];
       headMarkup =
-        S(k.cylinder(sx, sy, 2.4, headZ, headH, P, 18), { tone: 'hi' }) +
+        S(k.cylinder(sx, sy, 3.2, headZ, headH, P, 18), { tone: 'hi' }) +
         Ln(notch.join(''), { tone: 'lo', free: true });
     }
     stopInner.push(`<g class="bench-head">${headMarkup}</g>`);
@@ -455,12 +563,18 @@ export function buildBench({
     // Highlight collar for selection
     const isSelected = loc.id === selectedId;
     const highlightRing = at([sx, sy, baseZ]);
-    const highlightSvg = `<circle class="bench-stop__highlight" cx="${highlightRing[0].toFixed(1)}" cy="${highlightRing[1].toFixed(1)}" r="5.0" fill="none" stroke="var(--signal, #f2c200)" stroke-width="2.0" opacity="${isSelected ? '1' : '0'}"/>`;
+    const highlightSvg = `<circle class="bench-stop__highlight" cx="${highlightRing[0].toFixed(1)}" cy="${highlightRing[1].toFixed(1)}" r="5.4" fill="none" stroke="var(--bench-signal, #f2c200)" stroke-width="2.2" opacity="${isSelected ? '1' : '0'}"/>`;
+
+    // A press target the size of a fingertip, so a stop can be pressed
+    // without aiming at a pin head.
+    const hitRing = at([sx, sy, headZ + headH]);
+    const hitSvg = `<circle class="bench-stop__hit" cx="${hitRing[0].toFixed(1)}" cy="${hitRing[1].toFixed(1)}" r="6"/>`;
 
     const stopGroup =
       `<g class="bench-stop${isSelected ? ' is-selected' : ''}" data-place data-place-id="${loc.id}" data-zone="${loc.zone || loc.id[0]}" data-cluster="${loc.route_cluster}" data-verdict="${verdict}" data-tier="${tier}" data-place-x="${sx.toFixed(2)}" data-place-y="${sy.toFixed(2)}" tabindex="0" role="button" aria-selected="${isSelected ? 'true' : 'false'}"${isSelected ? ' data-selected' : ''} aria-label="${loc.name} (${loc.id}): ${verdict}, ${Math.round(cases)} cases/month">` +
       highlightSvg +
       stopInner.join('') +
+      hitSvg +
       `</g>`;
 
     stopParts.push(stopGroup);
@@ -513,6 +627,17 @@ export function buildBench({
       `</g>`
   );
 
+  // The instrument's screen geometry, so the client layer never has to guess
+  // where the rail or the gauge is: the token slides along the rail's screen
+  // line and the needle turns about the gauge's centre.
+  const railY = RAIL.y + RAIL.d / 2;
+  const instrument = {
+    railLeft: at([RAIL.x + 20, railY, RAIL_H + 8]),
+    railRight: at([RAIL.x + RAIL.w - 20, railY, RAIL_H + 8]),
+    tokenBase: at([priceToX(tokenPrice), railY, RAIL_H + 8]),
+    gauge: at([GAUGE.x, GAUGE.y, GAUGE.h + 2]),
+  };
+
   // Selected stop's gauge: dial face, needle, bezel
   const gaugeParts = [];
   // Bezel
@@ -558,13 +683,13 @@ export function buildBench({
 
   // Platen data frame lines and text
   const platenRules = [
-    k.lineOnTop([currPlaten.x + 10, currPlaten.y + 24], [currPlaten.x + currPlaten.w - 10, currPlaten.y + 24], 3.0, P),
-    k.lineOnTop([currPlaten.x + 10, currPlaten.y + 54], [currPlaten.x + currPlaten.w - 10, currPlaten.y + 54], 3.0, P),
-    k.lineOnTop([currPlaten.x + 10, currPlaten.y + 84], [currPlaten.x + currPlaten.w - 10, currPlaten.y + 84], 3.0, P),
+    k.lineOnTop([currPlaten.x + 14, currPlaten.y + 50], [currPlaten.x + currPlaten.w - 14, currPlaten.y + 50], 3.0, P),
+    k.lineOnTop([currPlaten.x + 14, currPlaten.y + 76], [currPlaten.x + currPlaten.w - 14, currPlaten.y + 76], 3.0, P),
+    k.lineOnTop([currPlaten.x + 14, currPlaten.y + 100], [currPlaten.x + currPlaten.w - 14, currPlaten.y + 100], 3.0, P),
   ];
   platenParts.push(Ln(platenRules.join(''), { tone: 'lo', free: true }));
 
-  const matrix = k.topMatrix([currPlaten.x + 14, currPlaten.y + 12], 3.2, P, 'x');
+  const matrix = k.topMatrix([currPlaten.x + 16, currPlaten.y + 12], 3.2, P, 'x');
   const selTier = selectedLoc.demand?.tier || selectedLoc.pet_base?.tier || 'C';
   const selCases = Number(selectedLoc.demand?.cases_per_month_total || 0);
   const selPrice = Math.round(selectedLoc.price?.our_mix?.blended_price || 1308);
@@ -574,11 +699,11 @@ export function buildBench({
 
   platenParts.push(
     `<g transform="${matrix}" class="bench-platen__data" fill="var(--ink, #111111)" font-family="var(--face-data, 'Roboto Mono', monospace)">` +
-      `<text x="0" y="14" class="platen-name" data-readout-field="name" font-weight="600" font-size="14">${selectedLoc.name}</text>` +
-      `<text x="0" y="28" class="platen-meta" font-size="10.5" fill="var(--ink-3, #6e6a62)">${selectedLoc.id} &middot; ${selectedLoc.route_cluster} &middot; ${wardShort}</text>` +
-      `<text x="0" y="50" class="platen-cases" font-size="11"><tspan data-readout-field="cases">${selCases.toFixed(1)}</tspan> cases/mo &middot; Tier ${selTier} &middot; ${selectedLoc.travel_min_to_hub}m to hub</text>` +
-      `<text x="0" y="68" class="platen-econ" font-size="11">Rs <tspan data-readout-field="price">${selPrice.toLocaleString('en-IN')}</tspan> blend &middot; Rs <tspan data-readout-field="margin">${selMargin.toLocaleString('en-IN')}</tspan> margin</text>` +
-      `<text x="0" y="86" class="platen-verdict" font-size="11">Verdict: <tspan data-readout-field="verdict">${selectedLoc.verdict.status}</tspan> &middot; Saturation: <tspan data-readout-field="saturation">${selSat}</tspan>/100</text>` +
+      `<text x="0" y="14" class="platen-name" data-readout-field="name" font-weight="600" font-size="16">${selectedLoc.name}</text>` +
+      `<text x="0" y="38" class="platen-meta" font-size="12" fill="var(--ink-3, #6e6a62)">${selectedLoc.id} &middot; ${selectedLoc.route_cluster} &middot; ${wardShort}</text>` +
+      `<text x="0" y="72" class="platen-cases" font-size="13"><tspan data-readout-field="cases">${selCases.toFixed(1)}</tspan> cases/mo &middot; Tier ${selTier} &middot; ${selectedLoc.travel_min_to_hub}m to hub</text>` +
+      `<text x="0" y="94" class="platen-econ" font-size="13">Rs <tspan data-readout-field="price">${selPrice.toLocaleString('en-IN')}</tspan> blend &middot; Rs <tspan data-readout-field="margin">${selMargin.toLocaleString('en-IN')}</tspan> margin</text>` +
+      `<text x="0" y="112" class="platen-verdict" font-size="13">Verdict: <tspan data-readout-field="verdict">${selectedLoc.verdict.status}</tspan> &middot; Saturation: <tspan data-readout-field="saturation">${selSat}</tspan>/100</text>` +
       `</g>`
   );
 
@@ -603,6 +728,7 @@ export function buildBench({
     svg,
     width,
     height,
+    instrument,
     counts: {
       stops: allLocalities.length,
       clusters: clusters.size,

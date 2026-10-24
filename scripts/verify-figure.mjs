@@ -73,7 +73,7 @@ const TOL = {
   contribution: 0.001, // of the value: the corpus rounds contributions to whole rupees
 };
 
-const CHECKS = ['places', 'geometry', 'readout', 'token', 'filter', 'keyboard', 'deep link', 'console', 'mobile'];
+const CHECKS = ['places', 'geometry', 'render', 'readout', 'token', 'filter', 'keyboard', 'deep link', 'console', 'mobile'];
 
 const readJson = async (p) => JSON.parse(await readFile(p, 'utf8'));
 const zoneA = await readJson(join(root, RESEARCH, 'zone-a', 'localities.json'));
@@ -228,7 +228,7 @@ async function checkGeometry(ctx) {
   return { status: 'FAIL', reason: `the plate's placement misses the projection: worst is ${worst.id} at ${worst.d.toFixed(1)} units (tolerance ${TOL.geometry})` };
 }
 
-// 3. Selection raises a readout, and every number in it is the corpus's.
+// 4. Selection raises a readout, and every number in it is the corpus's.
 async function checkReadout(ctx) {
   const places = await ctx.readPlaces();
   const first = places[0];
@@ -274,7 +274,7 @@ async function checkReadout(ctx) {
     : { status: 'PASS', reason: `${first.id} reads back its corpus numbers` };
 }
 
-// 4. The token re-reads the routes, and the routes agree with the corpus.
+// 5. The token re-reads the routes, and the routes agree with the corpus.
 async function checkToken(ctx) {
   const price0 = await ctx.readToken();
   const routes0 = await ctx.readRoutes();
@@ -337,7 +337,51 @@ async function checkToken(ctx) {
     : { status: 'PASS', reason: `token ${price0} to ${price1}, ${Object.keys(routes1).length} routes re-read (${[...matched].join(', ')})` };
 }
 
-// 5. The board filters the plate.
+// 3. The plate is actually painted. The kit's own rules ship with the
+// standalone page, but the site has to carry them itself; when they are
+// missing every solid inherits a black fill and every line inherits no
+// stroke, and the figure on the page is a black blob. Only the built site
+// can prove this, so this check runs here and not in the figure's own build.
+async function checkRender(ctx) {
+  const paint = await ctx.page.evaluate((dom) => {
+    const fig = document.querySelector(dom.figure);
+    if (!fig) return null;
+    const take = (sel) => [...fig.querySelectorAll(sel)].slice(0, 60);
+    const fills = take('.iso-fill');
+    const shades = take('.iso-shade');
+    const lines = take('.iso-line');
+    const colours = (nodes, prop) => [...new Set(nodes.map((n) => getComputedStyle(n)[prop]))];
+    return {
+      solids: fills.length,
+      shades: shades.length,
+      lines: lines.length,
+      fillColours: colours(fills, 'fill'),
+      shadeColours: colours(shades, 'fill'),
+      strokeColours: colours(lines, 'stroke'),
+    };
+  }, DOM);
+
+  if (!paint) return { status: 'FAIL', reason: 'the figure is not on the page' };
+
+  const fails = [];
+  if (!paint.solids) fails.push('the plate carries no solids at all');
+  if (paint.fillColours.includes('rgb(0, 0, 0)')) {
+    fails.push('a solid is filled black: the kit rules are missing from the site stylesheet');
+  }
+  if (paint.lines && paint.strokeColours.every((c) => c === 'none')) {
+    fails.push('no line carries a stroke: the kit rules are missing from the site stylesheet');
+  }
+  if (paint.shades && paint.shadeColours.length < 2) {
+    fails.push(`the four tones from facing are missing: ${paint.shadeColours.length} tone found`);
+  }
+  if (fails.length) return { status: 'FAIL', reason: fails.join('; ') };
+  return {
+    status: 'PASS',
+    reason: `${paint.solids} solids painted, ${paint.shadeColours.length} tones from facing, ${paint.strokeColours.length} line inks`,
+  };
+}
+
+// 6. The board filters the plate.
 async function checkFilter(ctx) {
   if (!(await ctx.page.$(BOARD.zone)) || !(await ctx.page.$(BOARD.verdict))) {
     return { status: 'SKIP', reason: 'the page has no decision board to filter with' };
@@ -374,7 +418,7 @@ async function checkFilter(ctx) {
     : { status: 'PASS', reason: 'Zone A lit, Zone B dimmed, empty filter dims the plate' };
 }
 
-// 6. Keyboard reaches a place, arrows move along a route, Enter selects.
+// 7. Keyboard reaches a place, arrows move along a route, Enter selects.
 async function checkKeyboard(ctx) {
   const walk = await tabToAPlace(ctx.page, DOM);
   if (!walk.place) return { status: 'FAIL', reason: `${walk.presses} tab presses never reached a stop` };
@@ -413,7 +457,7 @@ async function checkKeyboard(ctx) {
   };
 }
 
-// 7. Deep link in, deep link out.
+// 8. Deep link in, deep link out.
 async function checkDeepLink(ctx) {
   const target = corpus[4].id;
   await ctx.page.goto(`${ctx.origin}/zones/?place=${target}`, { waitUntil: 'networkidle0' });
@@ -438,14 +482,14 @@ async function checkDeepLink(ctx) {
     : { status: 'PASS', reason: `?place=${target} selects on load, selecting ${shared} writes the URL` };
 }
 
-// 8. No console errors, on load or after any of it.
+// 9. No console errors, on load or after any of it.
 function checkConsole(ctx) {
   return ctx.consoleErrors.length
     ? { status: 'FAIL', reason: `${ctx.consoleErrors.length} console error(s): ${ctx.consoleErrors.slice(0, 3).join(' | ')}` }
     : { status: 'PASS', reason: 'no console errors on load or after any interaction' };
 }
 
-// 9. On a phone the figure is there, whole, and pressable.
+// 10. On a phone the figure is there, whole, and pressable.
 async function checkMobile(ctx) {
   await ctx.page.setViewport({ width: 390, height: 844, isMobile: true, hasTouch: true });
   await ctx.page.goto(`${ctx.origin}/zones/`, { waitUntil: 'networkidle0' });
@@ -473,19 +517,70 @@ async function checkMobile(ctx) {
     return { status: 'FAIL', reason: `the page scrolls sideways at 390 pixels (${view.scrollWidth}px wide), so the figure is clipped out of the viewport` };
   }
 
-  const mobilePlace = corpus[20].id;
-  const handle = await ctx.page.$(`${DOM.place}[${DOM.placeId}="${mobilePlace}"]`);
-  if (!handle) return { status: 'FAIL', reason: `no stop for ${mobilePlace} to tap` };
+  // The card's own lines: the hint and the readout must not sit on top of
+  // each other, and neither may run off the plate.
+  const card = await ctx.page.evaluate((dom) => {
+    const fig = document.querySelector(dom.figure);
+    const hint = fig?.querySelector('.iso-plate-corner[data-corner="hint"]');
+    const readout = fig?.querySelector('.iso-plate-corner[data-corner="readout"]');
+    if (!fig || !hint || !readout) return null;
+    const h = hint.getBoundingClientRect();
+    const r = readout.getBoundingClientRect();
+    const box = fig.getBoundingClientRect();
+    const overlap = !(h.right <= r.left || r.right <= h.left || h.bottom <= r.top || r.bottom <= h.top);
+    return {
+      overlap,
+      readoutClipped: r.right > box.right + 1 || r.left < box.left - 1,
+      hintClipped: h.right > box.right + 1 || h.left < box.left - 1,
+    };
+  }, DOM);
+  if (!card) return { status: 'FAIL', reason: 'the card has no hint or readout line' };
+  if (card.overlap) return { status: 'FAIL', reason: 'the hint and the readout sit on top of each other at 390 pixels' };
+  if (card.readoutClipped || card.hintClipped) {
+    return { status: 'FAIL', reason: 'the card runs off the plate at 390 pixels' };
+  }
+
+  // A press on the plate has to work on a phone. Inside the dense cluster a
+  // pin is three pixels wide and its neighbours overlap it, so the stop the
+  // plate can be trusted to answer to is the one with room around it; the
+  // appendix table carries the precise per-place route on a phone.
+  const target = await ctx.page.evaluate((dom) => {
+    const stops = [...document.querySelectorAll(dom.place)];
+    const points = stops
+      .map((el) => {
+        const r = el.getBoundingClientRect();
+        return { id: el.getAttribute(dom.placeId), x: r.left + r.width / 2, y: r.top + r.height / 2 };
+      })
+      .filter((p) => Number.isFinite(p.x));
+    if (!points.length) return null;
+    let best = null;
+    for (const p of points) {
+      let nearest = Infinity;
+      for (const q of points) {
+        if (q === p) continue;
+        nearest = Math.min(nearest, Math.hypot(q.x - p.x, q.y - p.y));
+      }
+      if (!best || nearest > best.nearest) best = { ...p, nearest };
+    }
+    return best;
+  }, DOM);
+  if (!target) return { status: 'FAIL', reason: 'the plate carries no stops to press' };
+
+  const handle = await ctx.page.$(`${DOM.place}[${DOM.placeId}="${target.id}"]`);
+  if (!handle) return { status: 'FAIL', reason: `no stop for ${target.id} to tap` };
   await handle.evaluate((el) => el.scrollIntoView({ block: 'center' }));
   await settle(80);
   const spot = await rectOf(handle);
   await ctx.page.touchscreen.tap(spot.x + spot.width / 2, spot.y + spot.height / 2);
   await settle();
   const tapped = await ctx.readReadout();
-  if (!tapped.present || !nameMatches(tapped.fields[FIELDS.name], byId.get(mobilePlace))) {
-    return { status: 'FAIL', reason: `a tap on ${mobilePlace} raised no readout` };
+  if (!tapped.present || !nameMatches(tapped.fields[FIELDS.name], byId.get(target.id))) {
+    return { status: 'FAIL', reason: `a tap on ${target.id} raised no readout` };
   }
-  return { status: 'PASS', reason: `the figure fits 390px and a tap on ${mobilePlace} selects it` };
+  return {
+    status: 'PASS',
+    reason: `the figure fits 390px, the card lines do not collide, and a tap on ${target.id} selects it`,
+  };
 }
 
 // --- The run ------------------------------------------------------------------
@@ -606,6 +701,7 @@ try {
     };
     await run('places', checkPlaces);
     await run('geometry', checkGeometry);
+    await run('render', checkRender);
     await run('readout', checkReadout);
     await run('token', checkToken);
     await run('filter', checkFilter);

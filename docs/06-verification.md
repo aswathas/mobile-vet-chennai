@@ -79,6 +79,65 @@ move is now named, and the margin column is described as it was built.
 **The screenshots were checked, not just generated.** Desktop and mobile for
 both documents, plus the print slices, read one by one.
 
+## The Corridor Bench
+
+The dossier's figure is drawn, not plotted: a milled dispatch bench with a
+plate, two milled channels, a hundred stop pins, fifteen link bars, a price
+token, a dial gauge and a readout platen. The plan it was built to is
+`research/MAP-FIGURE-BRIEF.md`.
+
+**The geometry audit passes.** `node scripts/build-map-figure.mjs --audit`
+reports clearance, terminals, loose ends, support, depth order, self-overlap,
+wobble, saddles, stand-in shapes and crowding at zero, at rest and in flight,
+and ends `audit passed` over a hundred and five solids.
+
+**The line-end check passes.** `node scripts/lines.mjs` reports `line ends: 0`.
+Every open line in the drawing is an engraving marked free — the coastline, the
+four road spines and the datum line, which run to the edge of the plate. No
+tick, seam or rule floats.
+
+**Ten checks drive the built page.** `node scripts/verify-figure.mjs` opens the
+built `/zones/` page and proves that all hundred stops carry their own corpus
+record, that twelve sampled stops land exactly on the projection, that the
+plate is painted, that a selected stop's readout reads back the corpus's own
+numbers, that the price token re-reads all fifteen routes, that the decision
+board filters the plate and empties it correctly, that the keyboard reaches a
+stop and moves along a route, that a deep link selects on load and selection
+writes the URL, that nothing logs an error, and that on a phone the figure
+fits, the card's two lines do not collide and a stop can be pressed.
+
+**What failed.** The figure was never right on the page when the first build
+finished. The kit's rendering rules ship with the kit's own standalone page;
+the site carries the figure as a fragment and has to supply the rules itself,
+and it did not. Every solid inherited a black fill and every line inherited no
+stroke, so the figure on `/zones/` was a black mass — visible only to a reader
+of the site, because the standalone page carried the kit's own CSS and looked
+correct. The rules are now written into the figure's stylesheet and remapped
+to the dossier's inks: the four tones from facing are the ink at four opacities
+on the paper ground, and the faintest line tone is a step darker than the
+lightest site ink, which measures 3.62:1 on white against the dossier's 4.5:1
+rule. `verify-figure.mjs` now carries a render check that fails if a solid is
+filled black or if no line carries a stroke, so this cannot come back.
+
+The same class of fault ran through the instrument. The token slid along the
+screen's x axis while the rail runs diagonally, and the needle turned about a
+hard-coded point left over from the old layout. The build now measures the
+instrument's screen geometry and writes it into the figure's client layer, so
+the token, the needle and the drag follow the drawing instead of a copy of it.
+
+The third was a press that reached the wrong stop: the selection ring of a
+neighbouring stop was painted over it and took the press. The ring takes no
+pointer events now, and every stop carries an invisible press target the size
+of a fingertip.
+
+**What is still untested.** Inside the dense corridor the pins are three pixels
+wide on a phone and their neighbours overlap, so the plate cannot carry a
+finger to a named locality there; the appendix table is the phone's precise
+instrument. The western half of the plate is empty because the corpus is: three
+localities lie west of the OMR corridor and the other ninety-seven sit in a
+band sixteen kilometres wide. And the plate's engravings are OpenStreetMap at
+the corpus's own resolution, not a survey.
+
 ## What failed and what was done about it
 
 **The Zone B household model was three orders of magnitude out.** It computed
