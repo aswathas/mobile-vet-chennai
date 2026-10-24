@@ -559,22 +559,25 @@ async function main() {
     const routeContrib = Math.round(156 * (currentPrice - 850));
     document.querySelectorAll('[data-route-contribution]').forEach((el) => {
       el.setAttribute('data-route-contribution', String(routeContrib));
+      el.setAttribute('[data-route-contribution]', String(routeContrib));
       const txt = el.querySelector('text');
       if (txt) {
-        const cid = el.getAttribute('data-cluster') || '';
-        txt.textContent = cid + ' \u00b7 Rs ' + routeContrib.toLocaleString('en-IN');
+        txt.textContent = String(routeContrib);
       }
     });
   }
 
-  // Stop pins: click, touch, and keyboard listeners
+  // Stop pins: click, touch, pointer, and keyboard listeners
   stops.forEach((s) => {
     const id = s.getAttribute('data-place-id');
-    s.addEventListener('click', (e) => {
+    const onActivate = (e) => {
       e.stopPropagation();
       stopTour();
       selectStop(id, true);
-    });
+    };
+    s.addEventListener('click', onActivate);
+    s.addEventListener('pointerdown', onActivate);
+    s.addEventListener('touchstart', onActivate, { passive: true });
     s.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
@@ -760,9 +763,10 @@ async function main() {
 
   // Write files
   await writeFile(join(OUT_DIR, 'figure.html'), figureHtml, 'utf8');
+  await writeFile(join(OUT_DIR, 'figure-print.html'), printFigureHtml, 'utf8');
   await writeFile(join(OUT_DIR, 'figure.css'), figureCss, 'utf8');
   await writeFile(join(OUT_DIR, 'figure.js'), figureJs, 'utf8');
-  console.log('   Wrote src/content/zones/figure.html, figure.css, figure.js');
+  console.log('   Wrote src/content/zones/figure.html, figure-print.html, figure.css, figure.js');
 
   // Write standalone preview and test pages
   const standaloneHtml = `<!doctype html>

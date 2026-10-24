@@ -13,6 +13,7 @@
 html {
   scroll-padding-top: calc(var(--band-h) + 24px);
   -webkit-text-size-adjust: 100%;
+  overflow-x: clip;
 }
 
 body {
@@ -24,6 +25,7 @@ body {
   line-height: 1.6;
   font-variant-numeric: tabular-nums;
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 @media (prefers-reduced-motion: reduce) {

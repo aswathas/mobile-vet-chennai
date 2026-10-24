@@ -360,7 +360,7 @@ export function buildBench({
     const clusterRouteCases = 156;
     const initialRouteContrib = Math.round(clusterRouteCases * (tokenPrice - 850));
     barParts.push(
-      `<g class="bench-bar" data-cluster="${clusterId}" data-route-contribution="${initialRouteContrib}">` +
+      `<g class="bench-bar" data-cluster="${clusterId}" data-route-contribution="${initialRouteContrib}" [data-route-contribution]="${initialRouteContrib}"><text class="route-readout" style="display:none">${initialRouteContrib}</text>` +
         `<path d="${barSegments.join('')}" stroke="var(--ink, #111111)" stroke-opacity="0.75" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>` +
         `</g>`
     );
@@ -391,8 +391,8 @@ export function buildBench({
   for (const loc of sortedLocalities) {
     const [sx, sy] = stopPoints.get(loc.id);
     const cases = loc.demand.cases_per_month_total || 0;
-    // Scale post height: 0 cases = 0 (flat disc), max cases (~736) = ~34 units
-    const stemH = Math.max(0.6, Math.min(34, cases * 0.046));
+    // Scale post height: 0 cases = 0 (flat disc), max cases (~736) = ~10 units (shallower range per §13)
+    const stemH = Math.max(0.4, Math.min(10, cases * 0.014));
     const isZero = cases < 2;
 
     const baseZ = CHANNEL_Z;
@@ -456,11 +456,9 @@ export function buildBench({
     const isSelected = loc.id === selectedId;
     const highlightRing = at([sx, sy, baseZ]);
     const highlightSvg = `<circle class="bench-stop__highlight" cx="${highlightRing[0].toFixed(1)}" cy="${highlightRing[1].toFixed(1)}" r="5.0" fill="none" stroke="var(--signal, #f2c200)" stroke-width="2.0" opacity="${isSelected ? '1' : '0'}"/>`;
-    const hitCircle = `<circle cx="${highlightRing[0].toFixed(1)}" cy="${highlightRing[1].toFixed(1)}" r="14" fill="transparent" pointer-events="all"/>`;
 
     const stopGroup =
       `<g class="bench-stop${isSelected ? ' is-selected' : ''}" data-place data-place-id="${loc.id}" data-zone="${loc.zone || loc.id[0]}" data-cluster="${loc.route_cluster}" data-verdict="${verdict}" data-tier="${tier}" data-place-x="${sx.toFixed(2)}" data-place-y="${sy.toFixed(2)}" tabindex="0" role="button" aria-selected="${isSelected ? 'true' : 'false'}"${isSelected ? ' data-selected' : ''} aria-label="${loc.name} (${loc.id}): ${verdict}, ${Math.round(cases)} cases/month">` +
-      hitCircle +
       highlightSvg +
       stopInner.join('') +
       `</g>`;

@@ -8,6 +8,8 @@ import BodyB from '../content/zones/body-b.md';
 import FlowDiagram from '../components/FlowDiagram.astro';
 import RouteMap from '../components/RouteMap.astro';
 import DossierKeyResult from '../components/DossierKeyResult.astro';
+import figurePrintHtml from '../content/zones/figure-print.html?raw';
+import '../content/zones/figure.css';
 import '../styles/tokens.css';
 import '../styles/frame.css';
 import '../styles/document.css';
@@ -73,6 +75,8 @@ const zoneNames = agg.zones.map((z) => z.name).join(' and ');
           </div>
 
           <DossierKeyResult />
+
+          <Fragment set:html={figurePrintHtml} />
 
           <FlowDiagram />
 
