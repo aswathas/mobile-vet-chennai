@@ -41,7 +41,7 @@ morning peak under the midnight label.
 and its print twin. One Markdown source per document, one content build per
 document, no number typed twice.
 
-**Both PDFs render.** The market report at 703 kB, the dossier at 1,581 kB.
+**Both PDFs render.** The market report at 703 kB, the dossier at 1,819 kB.
 They are produced by printing the print routes through headless Chrome, so a
 PDF that looks wrong is a print stylesheet that looks wrong.
 
@@ -79,75 +79,124 @@ move is now named, and the margin column is described as it was built.
 **The screenshots were checked, not just generated.** Desktop and mobile for
 both documents, plus the print slices, read one by one.
 
-## The Corridor Bench
+## The Locality Map
 
-The dossier's figure is drawn, not plotted: a milled dispatch bench with a
-plate, two milled channels, a hundred stop pins, fifteen link bars, a price
-token, a dial gauge and a readout platen. The plan it was built to is
-`research/MAP-FIGURE-BRIEF.md`.
+The dossier's figure is a map: a hundred localities at their true coordinates,
+coloured by the dossier's own verdict rule and shaped by it, the fifteen
+routes drawn in travel order, and a live sheet that lifts a place under the
+pointer, reads its numbers, and filters by cases, price, margin and
+saturation. The plan it was built to is `research/MAP-FIGURE-BRIEF.md`.
 
-**The geometry audit passes.** `node scripts/build-map-figure.mjs --audit`
-reports clearance, terminals, loose ends, support, depth order, self-overlap,
-wobble, saddles, stand-in shapes and crowding at zero, at rest and in flight,
-and ends `audit passed` over a hundred and five solids.
+**It replaced the Corridor Bench, and the reader said why.** The first figure
+was an isometric drawing: a milled dispatch bench with a hundred machined stop
+pins, fifteen brass link bars, a price token on a rail and a dial gauge. It was
+built, audited, published and read, and it was rejected for two reasons that
+are worth recording because both are about legibility rather than craft. The
+words on the pins were too small to read, and the pins stood too close
+together to press on a phone. The drawing was also a picture of the market
+rather than the market: a flat plan shows the corpus's own distances, and the
+house rule refuses a tilted ground plane in any case. The bench's geometry
+audit, its line-end check and its eleven checks all passed. Passing every
+check is not the same as being read.
 
-**The line-end check passes.** `node scripts/lines.mjs` reports `line ends: 0`.
-Every open line in the drawing is an engraving marked free — the coastline, the
-four road spines and the datum line, which run to the edge of the plate. No
-tick, seam or rule floats.
+**The projection self-check passes.** `src/map/projection.mjs` places
+Tambaram→Velachery at 12.54 km and the corridor band across 15.86 km, and
+`node scripts/build-map-figure.mjs` refuses to draw the figure if either
+number moves.
 
-**Ten checks drive the built page.** `node scripts/verify-figure.mjs` opens the
-built `/zones/` page and proves that all hundred stops carry their own corpus
-record, that twelve sampled stops land exactly on the projection, that the
-plate is painted, that a selected stop's readout reads back the corpus's own
-numbers, that the price token re-reads all fifteen routes, that the decision
-board filters the plate and empties it correctly, that the keyboard reaches a
-stop and moves along a route, that a deep link selects on load and selection
-writes the URL, that nothing logs an error, and that on a phone the figure
-fits, the card's two lines do not collide and a stop can be pressed.
+**The corridor split is taken from the data.** The places are sorted along the
+east-west axis and the widest gap in that line is where the corridor ends.
+There is one such gap, of twenty-three kilometres, and two localities sit west
+of it: Parandur and Valathur. An earlier version cut the band at a longitude
+typed in by hand, which put Mangadu Industrial Estate and Perungalathur on
+the wrong side of it even though they sit within a kilometre of the
+corridor. The rule is now in the corpus, and the caption's counts are written
+from it.
 
-**What failed.** The figure was never right on the page when the first build
-finished. The kit's rendering rules ship with the kit's own standalone page;
-the site carries the figure as a fragment and has to supply the rules itself,
-and it did not. Every solid inherited a black fill and every line inherited no
-stroke, so the figure on `/zones/` was a black mass — visible only to a reader
-of the site, because the standalone page carried the kit's own CSS and looked
-correct. The rules are now written into the figure's stylesheet and remapped
-to the dossier's inks: the four tones from facing are the ink at four opacities
-on the paper ground, and the faintest line tone is a step darker than the
-lightest site ink, which measures 3.62:1 on white against the dossier's 4.5:1
-rule. `verify-figure.mjs` now carries a render check that fails if a solid is
-filled black or if no line carries a stroke, so this cannot come back.
+**Twelve checks drive the built page.** `node scripts/verify-figure.mjs` opens
+the built `/zones/` page and proves that all hundred places carry their own
+corpus record, that twelve sampled places land exactly on the projection, that
+the sheet is painted in the right verdict colours with the coastline and the
+routes drawn, that a selected place's readout reads the corpus's own numbers
+back, that the four sliders filter the sheet and the count follows them, that
+the merged clusters count their places and come apart on zoom, that not one
+name lies across a mark, a cluster or another name in either the opening frame
+or a zoomed one, that the decision board filters the sheet and empties it
+correctly, that the keyboard reaches a place and moves along its route, that a
+deep link selects on load and selection writes the URL, that nothing logs an
+error, and that on a phone the map fits and a tap on a place raises its
+readout. All twelve pass.
 
-The same class of fault ran through the instrument. The token slid along the
-screen's x axis while the rail runs diagonally, and the needle turned about a
-hard-coded point left over from the old layout. The build now measures the
-instrument's screen geometry and writes it into the figure's client layer, so
-the token, the needle and the drag follow the drawing instead of a copy of it.
+**The interaction path is clean.** `node scripts/verify-interactions.mjs`
+walks the board's filters, the corridor buttons, a press on a place, the
+sliders, the keyboard and the deep link, then the two documents' link both
+ways. It passes with no console error.
 
-The third was a press that reached the wrong stop: the selection ring of a
-neighbouring stop was painted over it and took the press. The ring takes no
-pointer events now, and every stop carries an invisible press target the size
-of a fingertip.
+**What failed, and what was done about it.**
 
-The fourth was found by the deploy, not by the reader. The figure is drawn
-rather than committed — its geometry, markup, styles and client layer are
-generated from the corpus into `src/content/zones`, which the repository
-ignores — and nothing in the Pages workflow ever drew it, so the first push
-of the figure failed the build with `Could not resolve
-../content/zones/figure.css`. `npm run build` now draws the figure before it
-builds the site, the workflow runs the geometry audit before the site build,
-and the PDF scripts build the site first, because the dossier's PDF prints the
-figure. The published dossier carries the bench on its second page and its
-PDF carries it too.
+The first of these was found by the reader and the rest by the checks, and
+they are recorded in the order they were found.
 
-**What is still untested.** Inside the dense corridor the pins are three pixels
-wide on a phone and their neighbours overlap, so the plate cannot carry a
-finger to a named locality there; the appendix table is the phone's precise
-instrument. The western half of the plate is empty because the corpus is: three
-localities lie west of the OMR corridor and the other ninety-seven sit in a
-band sixteen kilometres wide. And the plate's engravings are OpenStreetMap at
-the corpus's own resolution, not a survey.
+*The board never reached the map.* The decision board is printed further down
+the page than the figure, so the client looked for it with
+`document.getElementById('board')` before the board was in the document, found
+nothing, and wired up no listener at all. The board's zone filter moved the
+board's gates and left the sheet untouched: fifty Zone B places stayed at full
+contrast under a Zone A filter, and a filter that matched nothing left a
+hundred places lit. The board is now looked up when it is needed rather than
+cached at load, and the map listens on the document itself, because a change
+on a filter and a click on a gate both bubble up.
+
+*The corridor buttons did not reach the map either, for a second reason.* The
+zone buttons set the board's zone select and dispatched a `change` event that
+did not bubble, so the map never heard it even once the board was found. The
+event now bubbles.
+
+*The sliders had dead travel.* The price slider started at Rs 900 and the
+margin slider at zero, but the cheapest place in the corpus is at Rs 1,295 and
+the smallest margin is Rs 445. The bottom half of each slider did nothing.
+Every slider now travels across the range the data occupies.
+
+*The opening frame cut places off.* The first frame was fitted to *cover* the
+corridor, which is right on a wide panel and wrong on a tall one: on a phone
+the fit cropped the top and the bottom of the band, and six places sat half
+off the edge of the sheet, two of them invisible. The corridor is now fitted
+to contain, and only the two localities that genuinely stand apart are out of
+frame — which is what the caption says.
+
+*The names collided.* The labels were placed at build time, ranked by revenue,
+which meant the set was fixed the moment the reader zoomed and only three of
+the sixteen names were ever drawn. Every place now carries a name, and the
+client lays them out in the frame the reader is actually looking at: each name
+takes the first of four positions beside its mark that is clear of every other
+mark, every other name, the zoom control and the scale bar, and the biggest
+names are placed first. The widths are measured with the font rather than
+estimated by character count, because a name measured by characters is either
+too long, so that names nearly touch, or too short, so that a name crosses a
+mark it was told to clear. The check that holds this honest measures two
+frames — the one the reader opens on and a zoomed one where the places have
+come apart — because a layout that only works in one of them is a layout that
+will fail for someone.
+
+*A mixed cluster was a black blob.* A cluster whose places do not all carry
+the same verdict was drawn as a solid black disc, which was the loudest thing
+on the paper and said nothing: a mixed cluster says only that places are
+there. It is now drawn as an open ring, and a name that would lie across a
+cluster's count is dropped.
+
+*The print twin carried no names and a wrong scale bar.* The printed sheet
+had a scale bar that said "1 km" and meant nothing, because the bar's length
+is set by the client at run time, and not one place was named on it. The
+print twin now runs the same client layer, so its names and its scale bar are
+laid out at the printed size — the only size that matters on paper — and its
+hint and legend say what a reader of paper can actually do.
+
+**What is still untested.** Inside the dense corridor the marks are a few
+pixels wide on a phone and their neighbours overlap, so the sheet cannot carry
+a finger to a named locality there; the appendix table is the phone's precise
+instrument. The frame opens on the corridor, so the two western localities are
+reached by zooming out rather than by looking. And the sheet's geography is
+OpenStreetMap at the corpus's own resolution, not a survey.
 
 ## What failed and what was done about it
 

@@ -9,12 +9,15 @@ import FlowDiagram from '../components/FlowDiagram.astro';
 import RouteMap from '../components/RouteMap.astro';
 import DossierKeyResult from '../components/DossierKeyResult.astro';
 import figurePrintHtml from '../content/zones/figure-print.html?raw';
-import '../content/zones/figure.css';
+import figureJs from '../content/zones/figure.js?raw';
 import '../styles/tokens.css';
 import '../styles/frame.css';
 import '../styles/document.css';
 import '../styles/zones.css';
 import '../styles/print.css';
+// The figure's own styles come last: they are the figure's, and the site's
+// rules must not reach into it.
+import '../content/zones/figure.css';
 
 const [titleMain, titleSub] = meta.title.split(/: (.+)/);
 const B = import.meta.env.BASE_URL;
@@ -77,6 +80,10 @@ const zoneNames = agg.zones.map((z) => z.name).join(' and ');
           <DossierKeyResult />
 
           <Fragment set:html={figurePrintHtml} />
+          {/* The print twin runs the same client layer as the live figure: it
+              has no pointer, but the names and the scale bar are laid out at
+              the printed size, which is the only size that matters on paper. */}
+          <script is:inline set:html={figureJs} />
 
           <FlowDiagram />
 

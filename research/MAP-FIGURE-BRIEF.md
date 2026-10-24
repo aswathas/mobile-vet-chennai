@@ -1,315 +1,190 @@
-# The Corridor Bench — a plan for the dossier's map
+# The Locality Map — the plan, and what was built
 
-**Status.** Plan, written before any geometry. This file is the contract for
-the build. It is meant to be executable by someone else without a second
-briefing.
+**Status.** Built and shipped. This file is the record of the figure the
+dossier carries: what it is, what it was before it, why it changed, and what
+it is allowed to claim.
 
-**The skill.** `anatomy`, at `C:\Users\aswat\.agents\skills\anatomy\`. It builds
-crafted isometric SVG figures where the object itself is the explanation: many
-small precise solids, four-tone shading, correct painter's order, a framed card
-with a title, a hint and a live readout, calm eased motion, and an audit that
-proves the geometry. Read its `SKILL.md` and `references/craft.md` before
-starting. The bar is the test rig example for the drawing and the raptor for
-any shader work.
+**It replaced the Corridor Bench.** The first plan for this figure was an
+isometric drawing: a milled dispatch bench with a hundred machined stop pins,
+fifteen brass link bars, a price token on a rail and a dial gauge. It was
+built, audited, published and read — and the reader rejected it. The words on
+the pins were too small to read, the pins were too close together to press on
+a phone, and the drawing was a picture of the market rather than the market.
 
-**The world.** The site is "The Sign Band": one saturated yellow reserved for
-wayfinding, black type on white over a warm paper ground, hairline rules only,
-no shadows, no cards, no second accent. Public Sans for prose and monumental
-numbers, Roboto Mono for every parameter. The figure must read as part of that
-world, not as a museum piece dropped into it.
+The bench's own numbers were honest. Its *shape* was the failure. A flat plan
+map with colour, a lift under the pointer and four filters answers the
+question the dossier asks — where is the demand, and what is each place worth
+— and it answers it with the corpus's own coordinates rather than with a
+model of them. It also obeys the house rule that a figure must not tilt the
+ground plane, which the bench had to break.
 
----
-
-## 1. What we are building
+## 1. What the figure is
 
 One figure on the dossier route, above the reading column and below the zone
-buttons: **a milled plate on a dispatch bench showing the two corridors, every
-one of the hundred localities as a machined stop pin standing at its true
-coordinates, the fifteen routes as brass link bars joining their stops in
-travel order, and a movable price token that re-reads every route's margin
-when it is set.**
+buttons: **a plan map of the hundred localities at their true coordinates,
+coloured by the dossier's own verdict rule, with the fifteen routes drawn in
+travel order.**
 
-Clicking a pin raises a readout with that locality's numbers. The existing
-decision board filters the plate. A stop can be linked to and highlighted.
+- **Colour carries the verdict**, and shape repeats it: a disc for GO, a
+  square for HOLD, a disc with a cross notch for NO-GO. The map reads in
+  black and white.
+- **Hovering lifts a place** off the sheet and reads its numbers into the
+  readout panel beside the map.
+- **Clicking keeps it**: the place stays selected, the route it sits on
+  brightens, and the URL carries it as `?place=A02`.
+- **Four sliders filter the sheet**: cases a month, our blended price, margin
+  a visit, and saturation index. The count of matching places follows them.
+- **Zooming separates the places.** Where marks overlap they merge into one
+  counted disc; zooming in brings them apart, because they were never moved.
+- **The keyboard reaches every place**, arrow keys walk the route a place
+  actually sits on, and Enter selects.
+- **The decision board cross-filters the sheet**, and the corridor buttons
+  drive the same filter.
 
-## 2. What we are not building, and why
+## 2. What it is not, and why
 
-Each of these was considered and rejected for a reason that should survive into
-the build.
+**A choropleth on a map of Chennai.** Rejected in the first round of world
+exploration, for a reason that is still true: a choropleth of a market will be
+read as a claim about something else, and the dossier's hardest sentences —
+that forty-four of fifty south-east localities fail the price floor — would be
+laundered into civic authority by a map that looks official. The figure shows
+**places**, not areas. Nothing on it is filled in.
 
-**A choropleth on a map of Chennai.** It was considered and rejected in the
-first round of world exploration, for a reason that is still true: a choropleth
-of a market will be read as a claim about something else, and the site's
-hardest sentences — that 44 of 50 south-east localities fail the price floor —
-would be laundered into civic authority by a map that looks official. The
-plate is a *model of the market*, and it says so.
+**A perspective drawing.** Rejected by the house rule, and by the reader. A
+tilted ground plane makes distances lie, and this figure's whole claim is that
+the distances are the corpus's.
 
-**A flat GIS map with pins.** This is the category default for a data site, and
-the world record explicitly refuses it. It would also waste the corpus: the
-interesting structure in this data is not where the points are, it is the
-**order** of the stops inside a route and the **price** each route clears.
+**A fixed set of labels.** Rejected in the build. Ranking the places at build
+time and engraving the top sixteen fixes the set the moment the reader zooms,
+and the names that matter are not the ones that were biggest in the corpus.
+Every place carries a name; the client lays them out in the frame the reader
+is actually looking at, and drops the ones with no room.
 
-**A 3D globe or an orbit.** The reader is on a phone, alone, from a chat link.
-A globe asks for a rotation and gives nothing at 390 pixels.
+**Beeswarm and force-directed separation.** Rejected. The user asked for
+separation, and separation is what zooming and clustering give — but a place
+moved off its coordinate is a place that is no longer where the corpus says it
+is. Positions stay true.
 
-**A heatmap.** Colour carries a fact that a mark can carry, which the world
-record forbids.
+## 3. Truth first — the data binding
 
-## 3. The object
+Every number on the sheet is a pure function of a corpus field. No number is
+drawn by hand.
 
-**A dispatch bench.** A heavy base plate of pale metal, screwed at the corners
-to a bench top, carrying a milled landscape of the two corridors. Real planning
-tables are made exactly this way: a plate milled from a survey, the survey's
-lines inlaid, the important places marked with turned posts.
-
-Why this object and not another:
-
-| Candidate object | What it gets right | Why it loses |
+| What the map shows | Corpus field | Rule |
 |---|---|---|
-| A telegraph patch panel | A stop is a jack; pressing one shows its state | It has no geography and no order. The corpus's spine is order. |
-| A card-catalog plan chest | A drawer per locality, opened on click | It is an archive, not a decision. Nothing moves. |
-| A contour model | The city as a heightfield | Height would have to mean something; the corpus has no elevation. |
-| **A dispatch bench** | A stop is a post in a route's channel, in travel order, on a plate that shows where it sits | Nothing. This is the object. |
+| A mark's position | `lat`, `lon` | Plan projection in metres, with a `cos(lat)` correction at 13°N. Not a survey; a placement. |
+| A mark's colour and shape | `verdict.status` | GO = disc, HOLD = square, NO-GO = disc with a notch. |
+| A mark's tier | the locality's tier | Carried in the mark's data and used by the board's tier filter. |
+| A route's thread | `route_cluster` and travel order | One faint thread per cluster, drawn through its stops in travel order. |
+| A place's name | `name` | Laid out where it has room; never across another mark. |
+| The readout panel | the locality record | Name, ward, cases a month, our-mix price, margin, saturation, travel to hub, verdict and the reason. |
+| The four sliders' ranges | the corpus's own min and max | A slider can never reach past the data. |
 
-**What moves, and what it means.** The price token slides along the ladder and
-every route bar's contribution re-reads; the needle on the selected stop's
-gauge reads its margin over the clustered cost. Movement means *the price you
-charge*, always. Nothing else in the figure animates on its own except the
-idle tour and the selection.
+**The projection is a module with a self-check.** `src/map/projection.mjs`
+places Tambaram→Velachery at 12.54 km and the band across 15.86 km, and the
+build refuses to draw the figure if those numbers move.
 
-## 4. Truth first — the data binding
+**The corridor split is taken from the data.** The places are sorted along the
+east–west axis and the widest gap in that line is where the corridor ends.
+There is one such gap, of twenty-three kilometres, and two localities sit
+west of it. The caption counts them from the corpus rather than from a number
+typed in by hand.
 
-Every physical property below is a pure function of a corpus field. No number
-is drawn by hand. The binding is the contract; the table is the model.
+**Provenance.** The tier travels with the number it qualifies. The caption
+states that the positions are placed from coordinates and are not a survey,
+that the coastline and road spines are OpenStreetMap at the corpus's own
+resolution, and that Zone A's household base is modelled (tier C) while Zone
+B's is derived (tier B).
 
-| Physical property | Corpus field | Rule |
+## 4. The one piece of new data
+
+The map wants a coastline and four road spines. The committed OSM extracts
+carry road **centres** only, so the coastline and the road polylines were
+fetched once and committed, in `research/map-geometry/osm-coast-and-spines.json`,
+with the query, the timestamp and the ODbL attribution beside it.
+
+## 5. The world
+
+The site is "The Sign Band": one saturated yellow reserved for wayfinding,
+black type on white over a warm paper ground, hairline rules only, no shadows,
+no cards, no second accent.
+
+| Role | Token | Use |
 |---|---|---|
-| Post position | `lat`, `lon` | Equirectangular projection with a `cos(lat)` correction at 13°N, fitted to the plate. Not a survey; a placement. |
-| Post height | `demand.cases_per_month_total` | From zero. A zero post is a flat disc in the plate. |
-| Post head shape | `verdict.status` | GO = a flat disc. HOLD = a square head. NO-GO = a disc with a cross notch. Shape, never colour. |
-| Tier bracket | the zone's tier (A/B/C) | A bracket cut under the head: solid for A, dashed for B, dotted for C. The same code the dossier already uses. |
-| Brass link bar | `route_cluster` and the cluster's travel order | One bar per cluster, drawn through its stops in travel order. Bars are the only metal on the plate. |
-| Bar readout | `economics.our_mix.monthly_revenue_potential`, `cost_per_visit_clustered` | The bar's engraved plate reads the cluster's contribution at the token's price. |
-| Corridor channel | `zone` | Two milled channels, one per corridor, cut into the plate. |
-| Token | `price.our_mix` blends, `economics.blended_floor` (Rs 1,100), `cost_per_visit_clustered` (Rs 850), and the eight published operator prices | The token can be set to any of those. It is the figure's only instrument. |
-| Selected stop's gauge | `economics.our_mix.blended_price` against Rs 850 | The needle reads margin over clustered cost. |
-| Readout panel | the locality record | Name, ward, cluster, cases a month, our-mix price, margin, saturation, verdict and the gate it failed, travel to hub, peak window, tier. |
+| ground / paper | `--map-paper` | the sheet and the card |
+| structure | `--map-ink-2` | the frame, the readout's rules |
+| quiet ink | `--map-ink-3` | labels, the caption, the slider labels |
+| GO | `--map-go` | a place worth a round |
+| HOLD | `--map-hold` | one test fails |
+| NO-GO | `--map-nogo` | not worth a stop |
+| selection | `--map-signal` | the selected place's ring, and nothing else |
+| the fifteen routes | `--map-ink-2` at low opacity | faint threads until a route is asked for |
 
-**The four gates** are already defined in the corpus and already drawn on the
-decision board: price at or above Rs 1,100, margin at or above Rs 250, cases
-at or above 40, saturation under 70. The figure must not invent a fifth and
-must not restate them differently.
+**Exactly one accent.** The yellow marks the current selection. It is not used
+for verdicts, not for zones, not for price. No gradients, no shadows, no radius
+above 2px. The coastline and the road spines carry `vector-effect:
+non-scaling-stroke`, so they stay one rule wide at every zoom.
 
-**Provenance.** The tier travels with the number it qualifies, inside the
-readout, never in a footnote. The plate's own caption states that the
-positions are placed from coordinates and are not a survey, and that Zone A's
-household base is modelled (tier C) while Zone B's is derived (tier B).
+## 6. Interaction
 
-## 5. The parts list
+1. **Hover a place.** It lifts, a callout follows it, the readout reads its
+   numbers, and its route brightens.
+2. **Click a place.** It stays selected and the URL carries it.
+3. **The four sliders.** Cases, price, margin and saturation, each travelling
+   across the range the data occupies. The count follows.
+4. **Zoom and pan.** Wheel, drag, `+`, `−`, `fit` for the corridor and `all`
+   for the whole corpus. Zooming separates the merged marks.
+5. **The board.** The zone, verdict and tier filters dim what does not match.
+   The corridor buttons drive the zone filter.
+6. **Keyboard.** Every visible place is focusable. Arrow keys walk the route
+   the focused place sits on. Enter selects.
+7. **Deep link.** `?place=A05` selects and centres on load.
+8. **Reduced motion.** The lift becomes instant.
 
-Written before any geometry, as the skill requires. Counts are the target for
-a **Hero**: 120–180 solids, which is the count of drawn parts, not of lines.
-
-**Base (10).** Bench top with a chamfered front edge; four levelling feet; the
-plate; four corner screws with washers; a maker's plate with three engraved
-rule lines; a cable gland at the rear; a lamp arm bolted at the back left; the
-lamp head with a knurled rim; the lamp's shade; a small parts tray holding the
-spare token.
-
-**Plate and engraving (14).** The milled surface with its two corridors cut as
-channels; the channel walls; the channel floors in a different tone; the
-coastline inlay (see §6); four major road inlays (Rajiv Gandhi Salai, East
-Coast Road, Grand Southern Trunk Road, Outer Ring Road); the Vandalur–Tambaram
-airport road inlay; the engraved ward hairlines (six wards); the compass
-rose; the scale bar with major and minor ticks; the north pointer; the datum
-line; a datum stamp.
-
-**Stops (100 × 2).** For each locality: a turned post with a collar, and a
-head. Two solids each, 200 in total, which is the bulk of the drawing and is
-correct: the stops are the subject.
-
-**Route bars (15).** One brass bar per cluster, in travel order, with a
-collar at each stop and a terminal at each end. One bar carries an engraved
-plate with the cluster's contribution at the token's price.
-
-**Instrument (9).** The price token on its rail; the rail with its ladder
-ticks and the Rs 850 / Rs 1,100 marks; a knurled thumb screw that clamps the
-token; the selected stop's gauge, with a dial face, a needle and a bezel;
-the readout platen that slides out of the bench to carry the locality's
-numbers; two guide rails for the platen; an end stop.
-
-**Frame and legend (8).** The card; the figure number `Fig 4`; the title; the
-interaction hint; the live readout; the legend keys for GO / HOLD / NO-GO and
-for the tier bracket; the caption.
-
-## 6. The one piece of new data
-
-The plate wants a coastline and four road spines. The committed OSM extracts
-carry road **centres** only, and the ward relations carry member references
-without the member geometry, so the coastline and the road polylines have to be
-fetched once and committed, exactly like the other extracts in
-`research/zone-b/_work/`:
-
-- one Overpass query for the coastline relation and for the geometry of the
-  ways named Rajiv Gandhi Salai, East Coast Road, Grand Southern Trunk Road and
-  Outer Ring Road, restricted to the plate's bounding box;
-- written to `research/map-geometry/osm-coast-and-spines.json`;
-- a short `research/map-geometry/SOURCES.md` with the query, the timestamp and
-  the ODbL attribution.
-
-If the fetch fails, the plate ships without the coastline inlay and says so in
-the caption. A missing coastline is a smaller lie than a drawn one.
-
-## 7. Camera and world
-
-- Isometric, azimuth 45°, elevation 34° — the angle shows into the channels
-  without flattening the posts.
-- World units are about one pixel of the real thing. The plate is 1180 × 760
-  world units; the bench is 1400 × 940.
-- Projection is a **pure module**, `src/iso/projection.mjs`, with two
-  functions: `place(lat, lon)` and `fitProjection(points, width, height)`.
-  It must have a self-check — a known point must land on a known coordinate —
-  and the check runs in the build.
-- The plate's ground plane is the bench top. Posts stand on it, the bars lie
-  on it, the lamp throws from the back left.
-
-## 8. Interaction
-
-1. **Idle tour.** When nobody has touched it for eight seconds, the camera
-   eases slowly around the plate and the token drifts along the ladder. It
-   stops on any input and never restarts while the reader is reading.
-2. **Click a stop.** The platen slides out with that locality's numbers. The
-   post's head lifts a fraction, and the post that was selected is the only one
-   with a highlight collar.
-3. **Filter from the board.** The decision board's existing filters dim the
-   stops that do not match and keep the matching ones at full contrast. A
-   filter that matches nothing shows the empty state, and the plate dims
-   entirely.
-4. **The token.** Dragging it along the rail re-reads every bar's contribution
-   and the selected stop's needle, in one frame, with no fade.
-5. **Keyboard.** Every stop is focusable in route order with arrow keys
-   moving along a route and up and down between routes. Enter selects.
-6. **Reduced motion.** The figure is still and the idle tour does not run.
-   The platen still slides, once, quickly.
-7. **Deep link.** `?place=A05` or `#place-A05` selects and highlights a
-   locality on load, and the URL updates when a stop is selected. A place can
-   be shared as a link.
-
-## 9. The frame, and how it merges
-
-The card is the Anatomy card: `Fig 4` top left, a short title top right, the
-interaction hint bottom left, the live readout bottom right. Legend keys and
-the true caption go under the card. No words inside the drawing except at most
-one tiny engraved label.
+## 7. The frame, and how it merges
 
 Where it sits: `src/pages/zones.astro`, directly under the two corridor
-buttons and above the FlowDiagram. It is the first thing under the title and
-the last thing above the fold on a phone.
+buttons and above the FlowDiagram.
 
-What it merges with:
+- the **zone buttons** drive the same filter as the board's zone select;
+- the **decision board** cross-filters the sheet;
+- the **print twin** (`/zones-print/`) runs the same client layer, so the
+  names and the scale bar are laid out at the printed size — the only size
+  that matters on paper.
 
-- the **zone buttons** drive the same thing as the board's zone filter;
-- the **decision board** cross-filters the plate, and the plate's selected
-  locality scrolls the board to its gate row;
-- the **margin column** keeps its job — units, provenance, how to read a gate
-  — and the figure does not move into it;
-- the **print twin** (`/zones-print/`) gets the same SVG with every animation
-  disabled and the platen drawn open on the first locality, so the printed
-  dossier carries the figure and its numbers.
+## 8. Build order
 
-## 10. Palette — the kit against the world
+| Phase | What |
+|---|---|
+| 1 | The projection and its self-check. |
+| 2 | The OSM coastline and road spines, fetched and committed. |
+| 3 | The corpus binding: a hundred places into the fields the map draws. |
+| 4 | The geometry module, the figure script, the styles and the client layer. |
+| 5 | The live layer: lift, select, zoom, cluster, filter, keyboard, deep link. |
+| 6 | The print twin, and the merge into the dossier and its print route. |
+| 7 | Verification (§9) and the fixes. |
 
-The kit ships its own tones. This figure uses the **light theme**, and the
-tokens are remapped to the site's:
+## 9. Verification
 
-| Kit role | Site token | Use |
-|---|---|---|
-| ground / paper | `--paper` | the bench top and the card |
-| `lo` | `--ink-3` | base, feet, the plate's edge, minor ticks |
-| `mid` | `--ink-2` | structure: channels, rails, frame |
-| `hi` | `--ink` | the stops, the bars, the gauge bezel |
-| `lit` (one accent) | `--signal` | the token, and the selected stop's collar — nothing else |
-| brass | `--ink` at 70% | the route bars, read as metal by tone, not by hue |
-| engraved lines | `--rule` | the coastline, the road inlays, the ward hairlines |
+`node scripts/verify-figure.mjs` opens the built `/zones/` page and proves,
+in eleven checks, that all hundred places carry their own corpus record, that
+sampled places land on the projection, that the sheet is painted in the right
+verdict colours, that a selected place's readout reads the corpus's own
+numbers back, that the four sliders filter the sheet and the count follows,
+that the merged clusters count their places and come apart on zoom, that the
+board filters the sheet and empties it, that the keyboard reaches a place and
+moves along its route, that a deep link selects on load and selection writes
+the URL, that nothing logs an error, and that on a phone the map fits and a
+tap on a place raises its readout.
 
-**Exactly one accent.** The yellow marks the instrument and the current
-selection. It is not used for verdicts, not for zones, not for price. A
-verdict is a head shape. A corridor is a channel. A price is a number on a
-plate. This is the world record's own rule and the figure must obey it.
+`node scripts/verify-interactions.mjs` walks the rest of the dossier: the
+board's filters, the corridor buttons, the focus order and the link between
+the two documents.
 
-Shading is four tones from facing, as the kit does it, but the tones are the
-site's inks at four opacities on the paper ground rather than the kit's grey
-ramp. No gradients, no shadows, no radius above 2px.
+## 10. Definition of done
 
-## 11. Build order
-
-| Phase | What | Time |
-|---|---|---|
-| 1 | Vendor the kit: `kit/iso-kit.mjs`, `kit/lathe.mjs`, `kit/tube.mjs`, `kit/audit.mjs` into `src/iso/`. Write `src/iso/projection.mjs` and its self-check. | 45 min |
-| 2 | Fetch and commit the coastline and road spines (§6). | 30 min |
-| 3 | Write the parts and the geometry module `src/iso/bench.mjs`: base, plate, channels, engraving, bars, instrument. Stops come last, from the corpus. | 2 h |
-| 4 | The figure script `scripts/build-map-figure.mjs`, writing `src/content/zones/figure.html`, `figure.css` and `figure.js` — the same pattern as the other build scripts, so the output is generated, not hand-edited. | 1.5 h |
-| 5 | The live layer: idle tour, click, token drag, keyboard, deep link, board cross-filter. | 1.5 h |
-| 6 | Merge into `zones.astro` and `zones-print.astro`, with the print variant still. | 45 min |
-| 7 | Verification (§12) and the fixes. | 1.5 h |
-
-Roughly eight hours. Say so before starting; do not start an Epic.
-
-## 12. Verification
-
-The figure is not done until all of these are true, in both the light theme and
-the site's own theme:
-
-- `node scripts/build-map-figure.mjs --audit` ends `audit passed`: no clearance
-  failure, no terminal left loose, no fold, no self-overlap, no crowding
-  against a slender solid, no stand-in shape, no wobble, no bad depth order,
-  at rest and in the token's motion.
-- `node scripts/lines.mjs <figure>.html --out shots/lines.png` prints
-  `line ends: 0`.
-- 4× close-ups of every junction are read: the channel walls, the post
-  collars, the bar terminals, the rail screws, the gauge bezel, the platen
-  guides, the lamp joint. No bare face, no empty corner, no line ending in
-  mid-air.
-- Screenshots at 1440 and at 390, plus the hover state, plus the selected
-  state, plus the platen open. Read every one.
-- The site's own checks still pass: `node scripts/check-prose.mjs` (47 claims),
-  `node scripts/audit-dataset.mjs`, `node scripts/verify-interactions.mjs`.
-  The interaction script is extended to cover the figure: click a stop, move
-  the token, filter from the board, keyboard to a stop, deep link.
-- Every ink in the figure clears 4.5:1 on the paper ground, and the yellow
-  clears 3:1 on both grounds it sits on.
-- The print twin renders the figure and its numbers in the PDF, and the PDF is
-  read, not assumed.
-
-## 13. Risks, and what to do about them
-
-**Density.** A hundred posts on one plate can become a hedge. If the 4× check
-shows a hedge, cut the post height to a shallower range and let the *bars* and
-the *readout* carry the numbers, not the post heights. Do not drop localities
-to fix it.
-
-**Palette clash.** An isometric shaded figure in a flat sign-band world can
-look pasted on. If it does, the fix is subtraction, not addition: drop the
-bench, drop the lamp, and let the plate float as a printed plate with a
-caption. Never add a second accent to solve it.
-
-**Performance on a phone.** A dense SVG with a live layer can cost more than
-the page is worth. If the phone capture drops below thirty frames, the idle
-tour is the first thing to go, then the platen slide becomes a single frame
-change, and the figure still reads.
-
-**Print.** The print twin has no motion and no pointer. The platen is drawn
-open on one locality and the figure gets a full-width plate with the caption.
-
-**Scope.** If the figure is not right by the end of phase 4, ship the plate
-with the stops and the readout and leave the bars for later. A plain milled
-plate with a hundred pressable stops is already more than the dossier has
-today; the brass bars are the refinement.
-
-## 14. Definition of done
-
-A reader opens the dossier on a phone, sees the two corridors and a hundred
-places standing on them, presses one place, reads its numbers, drags the
-price token and watches the routes re-read themselves against the price they
-charge, and closes it knowing which corridor to open first and why. Nothing
-in the figure is a picture of that. All of it is the thing.
+A reader opens the dossier on a phone, sees a hundred places along two
+corridors, touches one and reads its numbers, drags a slider and watches the
+sheet thin out to the places worth a round, zooms in until the cluster
+separates, and closes it knowing which corridor to open first and why.
+Nothing in the figure is a picture of that. All of it is the thing.

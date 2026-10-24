@@ -1,0 +1,633 @@
+/* The Locality Map — Sign Band world tokens and rules.
+   The map is drawn in the dossier's own inks: paper ground, ink rules, one
+   yellow accent for the selection. The three verdict colours are the only
+   other colour on the sheet, and every mark repeats its verdict in shape so
+   the map still reads without them. */
+
+.map-figure {
+  --map-ink: var(--ink, #111111);
+  --map-ink-2: #3a3a36;
+  --map-ink-3: #6e6a62;
+  --map-ink-4: #76736d;
+  --map-paper: var(--paper, #ffffff);
+  --map-rule: var(--rule-soft, #cbc7be);
+  --map-hair: var(--rule-hair, #dedbd4);
+  --map-signal: var(--signal, #f2c200);
+  --map-go: #17694a;
+  --map-hold: #8a5a00;
+  --map-nogo: #a02c24;
+
+  margin: 28px 0 40px;
+  font-family: var(--face, 'Public Sans', sans-serif);
+}
+
+.map-figure * {
+  box-sizing: border-box;
+}
+
+/* --- The head: figure number, title and the hint --------------------------- */
+.map-head {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: 'fig title' 'hint hint';
+  align-items: baseline;
+  gap: 4px 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--map-ink);
+}
+
+.map-head__fig {
+  grid-area: fig;
+  font-family: var(--face-data, 'Roboto Mono', monospace);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--map-ink);
+}
+
+.map-head__title {
+  grid-area: title;
+  font-family: var(--face-data, 'Roboto Mono', monospace);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: right;
+  color: var(--map-ink-2);
+}
+
+.map-head__hint {
+  grid-area: hint;
+  font-family: var(--face-data, 'Roboto Mono', monospace);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--map-ink-3);
+}
+
+/* --- The toolbar: four sliders and a count -------------------------------- */
+.map-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 14px 28px;
+  padding: 12px 0 14px;
+  border-top: 1px solid var(--map-ink);
+  border-bottom: 1px solid var(--map-hair);
+}
+
+.map-toolbar__sliders {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 26px;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.map-slider {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: 'label value' 'range range';
+  gap: 2px 8px;
+  min-width: 168px;
+  flex: 1 1 168px;
+}
+
+.map-slider__label {
+  grid-area: label;
+  font-family: var(--face-data, 'Roboto Mono', monospace);
+  font-size: 10px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--map-ink-3);
+  /* The label gives way before the number does: a number broken over two
+     lines cannot be read at a glance, and the label can. */
+  overflow-wrap: normal;
+  word-break: keep-all;
+}
+
+.map-slider__value {
+  grid-area: value;
+  font-family: var(--face-data, 'Roboto Mono', monospace);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  color: var(--map-ink);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.map-slider input[type='range'] {
+  grid-area: range;
+  width: 100%;
+  height: 18px;
+  margin: 0;
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: ew-resize;
+}
+
+.map-slider input[type='range']::-webkit-slider-runnable-track {
+  height: 2px;
+  background: var(--map-ink-4);
+}
+
+.map-slider input[type='range']::-moz-range-track {
+  height: 2px;
+  background: var(--map-ink-4);
+}
+
+.map-slider input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 16px;
+  margin-top: -7px;
+  border: 1px solid var(--map-ink);
+  border-radius: 0;
+  background: var(--map-paper);
+}
+
+.map-slider input[type='range']::-moz-range-thumb {
+  width: 12px;
+  height: 16px;
+  border: 1px solid var(--map-ink);
+  border-radius: 0;
+  background: var(--map-paper);
+}
+
+.map-slider input[type='range']:focus-visible {
+  outline: 2px solid var(--map-signal);
+  outline-offset: 2px;
+}
+
+.map-toolbar__count {
+  margin: 0;
+  font-family: var(--face-data, 'Roboto Mono', monospace);
+  font-size: 12px;
+  color: var(--map-ink-2);
+  white-space: nowrap;
+}
+
+/* --- The body: the sheet and the readout ---------------------------------- */
+.map-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 316px;
+  gap: 20px;
+  align-items: start;
+  margin-top: 16px;
+}
+
+.map-stage {
+  position: relative;
+  height: 620px;
+  border: 1px solid var(--map-ink);
+  background: var(--map-paper);
+  overflow: hidden;
+  touch-action: none;
+}
+
+.map-stage.is-panning {
+  cursor: grabbing;
+}
+
+.map-canvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.map-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+
+/* --- The sheet ------------------------------------------------------------ */
+/* The geography is drawn in metres, so its strokes are told to keep a screen
+   width: without that a one-metre line is a hundredth of a pixel. */
+.map-coast {
+  fill: none;
+  stroke: var(--map-ink);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.map-road {
+  fill: none;
+  stroke: var(--map-ink-3);
+  stroke-width: 1.1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.map-route {
+  fill: none;
+  stroke: var(--map-ink-2);
+  stroke-width: 1;
+  stroke-opacity: 0.22;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  transition: stroke-opacity 160ms var(--ease, cubic-bezier(0.16, 0.84, 0.44, 1));
+}
+
+.map-route.is-active {
+  stroke-opacity: 0.9;
+  stroke-width: 2;
+}
+
+/* --- The marks ------------------------------------------------------------ */
+.map-place {
+  cursor: pointer;
+}
+
+.map-place__body {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 140ms var(--ease, cubic-bezier(0.16, 0.84, 0.44, 1));
+}
+
+.map-place.is-lifted .map-place__body {
+  transform: translateY(-11px) scale(1.28);
+}
+
+.map-place__hit {
+  fill: transparent;
+  stroke: none;
+}
+
+.map-place:focus {
+  outline: none;
+}
+
+.map-place:focus-visible .map-place__shape {
+  stroke: var(--map-ink);
+  stroke-width: 2.4;
+}
+
+.map-place__selection {
+  fill: none;
+  stroke: var(--map-signal);
+  stroke-width: 2.4;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.map-place.is-selected .map-place__selection {
+  opacity: 1;
+}
+
+.map-place.is-dimmed {
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+.map-place.is-clustered {
+  display: none;
+}
+
+.map-label[hidden] {
+  display: none;
+}
+
+.map-label text {
+  font-family: var(--face, 'Public Sans', sans-serif);
+  font-size: 12px;
+  fill: var(--map-ink-2);
+  paint-order: stroke;
+  stroke: var(--map-paper);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+
+/* --- Clusters -------------------------------------------------------------- */
+.map-cluster {
+  cursor: pointer;
+}
+
+/* A cluster whose places do not all carry the same verdict is drawn as an
+   open ring, not a black disc: a solid black blob on a paper sheet is the
+   loudest thing on the page, and a mixed cluster is saying nothing about a
+   verdict. It says only that places are here. */
+.map-cluster__disc {
+  fill: var(--map-paper);
+  stroke: var(--map-ink);
+  stroke-width: 1.6;
+}
+
+.map-cluster--go .map-cluster__disc { fill: var(--map-go); stroke: var(--map-go); }
+.map-cluster--hold .map-cluster__disc { fill: var(--map-hold); stroke: var(--map-hold); }
+.map-cluster--nogo .map-cluster__disc { fill: var(--map-nogo); stroke: var(--map-nogo); }
+
+.map-cluster__count {
+  font-family: var(--face-data, 'Roboto Mono', monospace);
+  font-size: 11px;
+  font-weight: 600;
+  fill: var(--map-ink);
+  text-anchor: middle;
+}
+
+.map-cluster--go .map-cluster__count,
+.map-cluster--hold .map-cluster__count,
+.map-cluster--nogo .map-cluster__count {
+  fill: var(--map-paper);
+}
+
+.map-cluster:focus-visible .map-cluster__disc {
+  stroke: var(--map-signal);
+  stroke-width: 3;
+}
+
+/* --- Furniture -------------------------------------------------------------- */
+.map-scale {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.map-scale__bar {
+  display: block;
+  height: 7px;
+  border: 1px solid var(--map-ink-2);
+  border-top: none;
+}
+
+.map-scale__label {
+  font-family: var(--face-data, 'Roboto Mono', monospace);
+  font-size: 10px;
+  color: var(--map-ink-2);
+}
+
+.map-north {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  z-index: 2;
+  color: var(--map-ink-2);
+  pointer-events: none;
+}
+
+.map-north text {
+  font-family: var(--face-data, 'Roboto Mono', monospace);
+}
+
+/* --- The callout ------------------------------------------------------------ */
+.map-callout {
+  position: absolute;
+  z-index: 3;
+  display: grid;
+  gap: 2px;
+  max-width: 210px;
+  padding: 7px 10px;
+  background: var(--map-paper);
+  border: 1px solid var(--map-ink);
+  pointer-events: none;
+}
+
+.map-callout--flip {
+  transform: translateX(-100%);
+}
+
+.map-callout__name {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--map-ink);
+}
+
+.map-callout__figures {
+  font-family: var(--face-data, 'Roboto Mono', monospace);
+  font-size: 10.5px;
+  line-height: 1.35;
+  color: var(--map-ink-2);
+}
+
+/* --- The zoom control -------------------------------------------------------- */
+.map-zoom {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 4;
+  display: grid;
+  gap: 4px;
+}
+
+.map-zoom button {
+  min-width: 30px;
+  height: 28px;
+  padding: 0 7px;
+  border: 1px solid var(--map-ink);
+  border-radius: 0;
+  background: var(--map-paper);
+  color: var(--map-ink);
+  font-family: var(--face-data, 'Roboto Mono', monospace);
+  font-size: 12px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.map-zoom button:hover {
+  background: var(--map-panel, #f6f5f1);
+}
+
+.map-zoom button:focus-visible {
+  outline: 2px solid var(--map-signal);
+  outline-offset: 1px;
+}
+
+/* --- The readout -------------------------------------------------------------- */
+.map-readout {
+  padding: 14px 16px 16px;
+  border: 1px solid var(--map-ink);
+  background: var(--map-paper);
+}
+
+.map-readout__eyebrow {
+  margin: 0 0 4px;
+  font-family: var(--face-data, 'Roboto Mono', monospace);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--map-ink-3);
+}
+
+.map-readout__name {
+  margin: 0 0 2px;
+  font-size: 21px;
+  line-height: 1.15;
+  font-weight: 600;
+  color: var(--map-ink);
+}
+
+.map-readout__where {
+  margin: 0 0 12px;
+  font-size: 12.5px;
+  line-height: 1.35;
+  color: var(--map-ink-3);
+}
+
+.map-readout__numbers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 14px;
+  margin: 0 0 12px;
+  padding: 12px 0 0;
+  border-top: 1px solid var(--map-hair);
+}
+
+.map-readout__numbers div {
+  min-width: 0;
+}
+
+.map-readout__numbers dt {
+  font-family: var(--face-data, 'Roboto Mono', monospace);
+  font-size: 9.5px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--map-ink-3);
+}
+
+.map-readout__numbers dd {
+  margin: 2px 0 0;
+  font-family: var(--face-data, 'Roboto Mono', monospace);
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+  color: var(--map-ink);
+}
+
+.map-readout__reason {
+  margin: 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--map-hair);
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--map-ink-2);
+}
+
+.map-readout[data-verdict='GO'] .map-readout__numbers dd { color: var(--map-go); }
+.map-readout[data-verdict='HOLD'] .map-readout__numbers dd { color: var(--map-hold); }
+.map-readout[data-verdict='NO-GO'] .map-readout__numbers dd { color: var(--map-nogo); }
+
+/* --- The legend ---------------------------------------------------------------- */
+.map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--face-data, 'Roboto Mono', monospace);
+  font-size: 11.5px;
+  color: var(--map-ink-2);
+}
+
+.map-legend li {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.map-legend__mark {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  flex: none;
+}
+
+.map-legend__mark--go {
+  border-radius: 50%;
+  background: var(--map-go);
+}
+
+.map-legend__mark--hold {
+  background: var(--map-hold);
+}
+
+.map-legend__mark--nogo {
+  border-radius: 50%;
+  background: var(--map-nogo);
+}
+
+.map-legend__mark--route {
+  height: 2px;
+  background: var(--map-ink-2);
+  opacity: 0.5;
+}
+
+.map-caption {
+  margin: 10px 0 0;
+  max-width: 74ch;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--map-ink-3);
+}
+
+/* --- Narrow screens -------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .map-body {
+    grid-template-columns: 1fr;
+  }
+
+  .map-stage {
+    height: 56vh;
+    min-height: 340px;
+  }
+
+  .map-readout__name {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 640px) {
+  .map-figure {
+    margin: 20px 0 28px;
+  }
+
+  .map-toolbar {
+    gap: 10px 18px;
+  }
+
+  .map-slider {
+    min-width: 140px;
+    flex: 1 1 140px;
+  }
+
+  .map-legend {
+    font-size: 10.5px;
+    gap: 6px 14px;
+  }
+}
+
+/* --- Print ------------------------------------------------------------------------ */
+@media print {
+  /* The toolbar, the zoom control and the callout are the reader's tools, not
+     the figure's: they have no meaning on paper. The names and the scale bar
+     do, and they are laid out by the client at the printed size. */
+  .map-toolbar,
+  .map-zoom,
+  .map-callout {
+    display: none !important;
+  }
+
+  .map-stage {
+    height: 380px;
+    break-inside: avoid;
+  }
+
+  .map-body {
+    grid-template-columns: minmax(0, 1fr) 260px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .map-place__body {
+    transition: none;
+  }
+}

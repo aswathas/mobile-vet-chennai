@@ -122,6 +122,26 @@ sources could not carry a hundred localities and six hundred competitor rows.
 Its frame did not scale, and keeping it would have meant a lateral move rather
 than a replacement.
 
+The dossier's figure was a second bench, and it was cut for much the same
+reason. An isometric dispatch bench carried a hundred machined stop pins,
+fifteen brass link bars, a price token on a rail and a dial gauge. It was the
+strongest drawing this project made, it passed its own geometry audit, its
+line-end check and every check written against it, and the reader still could
+not use it: the words on the pins were too small to read, and the pins stood
+too close together to press on a phone. Passing every check is not the same as
+being read, and a picture of the market is not the market.
+
+What replaced it is a flat plan. A hundred localities at their true
+coordinates, coloured by the dossier's own verdict rule and shaped by it so the
+sheet still reads in black and white, the fifteen routes drawn in travel order,
+and a live layer that lifts a place under the pointer, reads its numbers back,
+separates the places that overlap by zooming, and filters the sheet on cases,
+price, margin and saturation. Positions stay true; separation is done by
+zooming and by counting the clusters, never by moving a place off its own
+coordinates. The plan also obeys the house rule about perspective that the
+bench broke, and it carries the one thing the bench could not: a name beside
+every place, laid out in the frame the reader is actually looking at.
+
 ## The build rule: one source, two documents, four routes
 
 Every number on screen comes from one place. Each document is one Markdown

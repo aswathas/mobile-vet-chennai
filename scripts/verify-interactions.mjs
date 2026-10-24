@@ -92,38 +92,60 @@ try {
     }
   }
 
-  // the Corridor Bench figure interactions
+  // the Locality Map figure interactions
   const figure = await page.$('[data-figure]');
   if (!figure) {
-    problems.push('the Corridor Bench figure is not on the page');
+    problems.push('the Locality Map figure is not on the page');
   } else {
-    // 1. Select a stop
-    const stopA01 = await page.$('[data-place][data-place-id="A01"]');
-    if (!stopA01) problems.push('no stop element for A01');
+    // A place that is not swallowed by a cluster at this zoom. The clustered
+    // ones are hidden on purpose: the reader reaches them by zooming in.
+    const visibleId = await page.evaluate(() => {
+      const open = [...document.querySelectorAll('[data-place]')].find(
+        (el) => !el.classList.contains('is-clustered')
+      );
+      return open?.getAttribute('data-place-id') ?? null;
+    });
+    if (!visibleId) problems.push('no place is visible on the map at the opening frame');
     else {
-      await stopA01.click();
-      await new Promise((r) => setTimeout(r, 100));
-      const isSel = await page.evaluate(() => document.querySelector('[data-place][data-place-id="A01"]')?.classList.contains('is-selected'));
+      // 1. Press a place: it lifts, and the readout reads it out.
+      await page.evaluate((id) => {
+        const el = document.querySelector(`[data-place][data-place-id="${id}"]`);
+        el?.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window }));
+      }, visibleId);
+      await new Promise((r) => setTimeout(r, 120));
+      const isSel = await page.evaluate(
+        (id) => document.querySelector(`[data-place][data-place-id="${id}"]`)?.classList.contains('is-selected'),
+        visibleId
+      );
       const name = await page.evaluate(() => document.querySelector('[data-readout] [data-readout-field="name"]')?.textContent);
-      note(`figure stop selection  A01 selected: ${isSel}, readout: "${name}"`);
-      if (!isSel) problems.push('clicking A01 did not mark it as selected');
-      if (!name || !name.includes('Tambaram West')) problems.push(`readout for A01 reads "${name}", expected Tambaram West`);
+      const cases = await page.evaluate(() => document.querySelector('[data-readout] [data-readout-field="cases"]')?.textContent);
+      note(`figure place press    ${visibleId} selected: ${isSel}, readout: "${name}", "${cases}"`);
+      if (!isSel) problems.push(`pressing ${visibleId} did not mark it as selected`);
+      if (!name) problems.push(`pressing ${visibleId} raised no name in the readout`);
+      if (!cases) problems.push(`pressing ${visibleId} raised no cases in the readout`);
     }
 
-    // 2. Move the price token
-    const token = await page.$('[data-token]');
-    if (!token) problems.push('no token element in figure');
-    else {
-      const pBefore = await page.evaluate(() => Number(document.querySelector('[data-token]')?.getAttribute('data-token-value')));
-      await page.evaluate(() => document.querySelector('[data-token]')?.focus());
-      await page.keyboard.press('ArrowRight');
-      await page.keyboard.press('ArrowRight');
-      await new Promise((r) => setTimeout(r, 100));
-      const pAfter = await page.evaluate(() => Number(document.querySelector('[data-token]')?.getAttribute('data-token-value')));
-      const rContrib = await page.evaluate(() => document.querySelector('[data-cluster="A-R1"][data-route-contribution]')?.getAttribute('data-route-contribution'));
-      note(`figure price token     ${pBefore} -> ${pAfter}, route A-R1 contrib: ${rContrib}`);
-      if (pAfter <= pBefore) problems.push(`ArrowRight did not increase token price (${pBefore} -> ${pAfter})`);
-    }
+    // 2. The sliders filter the map and the count follows them.
+    const before = await page.evaluate(() => document.querySelector('[data-map-count]')?.textContent);
+    const sliderWorked = await page.evaluate(() => {
+      const slider = document.querySelector('[data-slider="cases"]');
+      if (!slider) return false;
+      slider.value = String(Math.round(Number(slider.max) * 0.6));
+      slider.dispatchEvent(new Event('input', { bubbles: true }));
+      return true;
+    });
+    await new Promise((r) => setTimeout(r, 120));
+    const after = await page.evaluate(() => document.querySelector('[data-map-count]')?.textContent);
+    note(`figure slider         count "${before}" -> "${after}"`);
+    if (!sliderWorked) problems.push('the map has no cases slider');
+    if (before === after) problems.push('moving the cases slider did not change the count');
+    await page.evaluate(() => {
+      for (const slider of document.querySelectorAll('[data-slider]')) {
+        slider.value = slider.dataset.slider === 'saturation' ? slider.max : slider.min;
+        slider.dispatchEvent(new Event('input', { bubbles: true }));
+      }
+    });
+    await new Promise((r) => setTimeout(r, 120));
 
     // 3. Filter from the decision board
     await page.select('select[data-filter="zone"]', 'B');
@@ -137,30 +159,46 @@ try {
       return stopsB.every((s) => !s.hasAttribute('data-dimmed'));
     });
     note(`figure board filter    Zone A dimmed: ${filterDimA}, Zone B lit: ${filterLitB}`);
-    if (!filterDimA) problems.push('Zone A stops were not dimmed under Zone B filter');
-    if (!filterLitB) problems.push('Zone B stops were dimmed under Zone B filter');
+    if (!filterDimA) problems.push('Zone A places were not dimmed under Zone B filter');
+    if (!filterLitB) problems.push('Zone B places were dimmed under Zone B filter');
     await page.select('select[data-filter="zone"]', '');
     await new Promise((r) => setTimeout(r, 100));
 
     // 4. Keyboard navigation along route
-    await page.evaluate(() => {
-      const stop = document.querySelector('[data-place][data-place-id="A01"]');
-      if (stop) stop.focus();
+    const walkFrom = await page.evaluate(() => {
+      const open = [...document.querySelectorAll('[data-place]')].find(
+        (el) => !el.classList.contains('is-clustered') && el.getAttribute('data-cluster')
+      );
+      if (!open) return null;
+      open.focus();
+      return {
+        id: open.getAttribute('data-place-id'),
+        cluster: open.getAttribute('data-cluster'),
+      };
     });
-    await page.keyboard.press('ArrowRight');
-    await new Promise((r) => setTimeout(r, 80));
-    const activeId = await page.evaluate(() => document.activeElement?.getAttribute('data-place-id'));
-    note(`figure keyboard        focused A01 -> ArrowRight focused ${activeId}`);
-    if (activeId !== 'A02') problems.push(`ArrowRight on A01 focused ${activeId}, expected A02`);
+    if (!walkFrom) problems.push('no place is focusable on the map');
+    else {
+      await page.keyboard.press('ArrowRight');
+      await new Promise((r) => setTimeout(r, 80));
+      const activeId = await page.evaluate(() => document.activeElement?.getAttribute('data-place-id'));
+      const activeCluster = await page.evaluate(() => document.activeElement?.getAttribute('data-cluster'));
+      note(`figure keyboard        focused ${walkFrom.id} -> ArrowRight focused ${activeId}`);
+      if (!activeId) problems.push(`ArrowRight on ${walkFrom.id} moved focus nowhere`);
+      else if (activeCluster !== walkFrom.cluster) {
+        problems.push(`ArrowRight moved from ${walkFrom.id} to ${activeId}, which is on route ${activeCluster}, not ${walkFrom.cluster}`);
+      }
+    }
 
     // 5. Follow a deep link
     await page.goto(`${server.origin}/zones/?place=A05`, { waitUntil: 'networkidle0' });
     await new Promise((r) => setTimeout(r, 100));
     const deepSel = await page.evaluate(() => document.querySelector('[data-place][data-place-id="A05"]')?.classList.contains('is-selected'));
     const deepName = await page.evaluate(() => document.querySelector('[data-readout] [data-readout-field="name"]')?.textContent);
+    const deepUrl = await page.evaluate(() => location.search);
     note(`figure deep link       ?place=A05 selected: ${deepSel}, readout: "${deepName}"`);
     if (!deepSel) problems.push('?place=A05 did not select A05 on load');
     if (!deepName || !deepName.includes('Kadaperi')) problems.push(`deep link readout for A05 reads "${deepName}", expected Kadaperi`);
+    if (!deepUrl.includes('place=A05')) problems.push('the deep link did not hold the place in the URL');
   }
 
   // keyboard order on the dossier

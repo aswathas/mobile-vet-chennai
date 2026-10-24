@@ -14,11 +14,13 @@ import RouteMap from '../components/RouteMap.astro';
 import DossierRail from '../components/DossierRail.astro';
 import figureHtml from '../content/zones/figure.html?raw';
 import figureJs from '../content/zones/figure.js?raw';
-import '../content/zones/figure.css';
 import '../styles/tokens.css';
 import '../styles/frame.css';
 import '../styles/document.css';
 import '../styles/zones.css';
+// The figure's own styles come last: they are the figure's, and the site's
+// rules must not reach into it.
+import '../content/zones/figure.css';
 
 const [titleMain, titleSub] = meta.title.split(/: (.+)/);
 const zoneNames = agg.zones.map((z) => z.name).join(' and ');
@@ -216,7 +218,9 @@ const B = import.meta.env.BASE_URL;
             const zoneSelect = document.querySelector('select[data-filter="zone"]');
             if (zoneSelect) {
               zoneSelect.value = isZoneA ? 'A' : isZoneB ? 'B' : '';
-              zoneSelect.dispatchEvent(new Event('change'));
+              // The event has to bubble: the map listens for the board's
+              // filters on the document, so it hears this one too.
+              zoneSelect.dispatchEvent(new Event('change', { bubbles: true }));
             }
           });
         });

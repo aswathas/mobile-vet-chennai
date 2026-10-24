@@ -1,8 +1,8 @@
-// Proves the Corridor Bench behaves.
+// Proves the Locality Map behaves.
 //
 // The figure is a claim about the corpus: a hundred places, each carrying its
 // own numbers, a price token that re-reads the routes, a board that filters
-// the plate, a keyboard that reaches it and a link that shares it. This drives
+// the sheet, a keyboard that reaches it and a link that shares it. This drives
 // the built page the way a reader does and checks every number it finds
 // against the research corpus, never against a count the page writes about
 // itself.
@@ -23,19 +23,21 @@ const RESEARCH = process.env.MVT_RESEARCH ?? 'research';
 // Everything the figure has to expose, in one place, so the whole set can be
 // corrected in one edit when the markup lands.
 const DOM = {
-  figure: '[data-figure]',            // the plate: one element, the figure's root
-  place: '[data-place]',              // one pressable stop on the plate
-  placeId: 'data-place-id',           // the locality id the stop carries
+  figure: '[data-figure]',            // the map: one element, the figure's root
+  place: '[data-place]',              // one mark on the map
+  placeId: 'data-place-id',           // the locality id the mark carries
   zone: 'data-zone',                  // 'A' or 'B'
   cluster: 'data-cluster',            // the route cluster id, e.g. 'A-R7'
   verdict: 'data-verdict',            // 'GO' | 'HOLD' | 'NO-GO'
-  dimmed: 'data-dimmed',              // present when the board filtered the stop out
-  token: '[data-token]',              // the price token on its rail
-  tokenValue: 'data-token-value',     // the token's price in rupees
-  route: '[data-route-contribution]', // one engraved plate per route
-  readout: '[data-readout]',          // the platen that slides out
+  dimmed: 'data-dimmed',              // present when a filter put the mark out
+  cases: 'data-cases',                // the mark's own demand, as the map knows it
+  route: '.map-route',                // one path per route, in travel order
+  slider: '[data-slider]',            // the four filter sliders
+  clusterMark: '.map-cluster',        // a merged mark, carrying a count
+  count: '[data-map-count]',          // the live count of places matching
+  readout: '[data-readout]',          // the panel that reads the place out
   readoutField: 'data-readout-field', // names the number a readout field carries
-  placeX: 'data-place-x',             // the placement the page used, world units
+  placeX: 'data-place-x',             // the placement the page used, metres
   placeY: 'data-place-y',
   selected: [                         // how a selected stop might be marked
     '[aria-pressed="true"]',
@@ -55,7 +57,7 @@ const BOARD = {
   empty: '.board__empty',
 };
 
-// The platen names its own fields.
+// The readout names its own fields.
 const FIELDS = {
   name: 'name',
   cases: 'cases',
@@ -73,7 +75,7 @@ const TOL = {
   contribution: 0.001, // of the value: the corpus rounds contributions to whole rupees
 };
 
-const CHECKS = ['places', 'geometry', 'render', 'readout', 'token', 'filter', 'keyboard', 'deep link', 'console', 'mobile'];
+const CHECKS = ['places', 'geometry', 'render', 'readout', 'sliders', 'clusters', 'labels', 'filter', 'keyboard', 'deep link', 'console', 'mobile'];
 
 const readJson = async (p) => JSON.parse(await readFile(p, 'utf8'));
 const zoneA = await readJson(join(root, RESEARCH, 'zone-a', 'localities.json'));
@@ -161,7 +163,7 @@ async function checkPlaces(ctx) {
   for (const p of places) seen.set(p.id, (seen.get(p.id) ?? 0) + 1);
 
   if (places.length !== corpus.length) {
-    problems.push(`the plate carries ${places.length} stops, the corpus has ${corpus.length}`);
+    problems.push(`the map carries ${places.length} stops, the corpus has ${corpus.length}`);
   }
   for (const l of corpus) {
     const n = seen.get(l.id) ?? 0;
@@ -176,7 +178,7 @@ async function checkPlaces(ctx) {
     if (squash(p.verdict) !== squash(l.verdict.status)) problems.push(`${l.id} carries verdict "${p.verdict}", the corpus says ${l.verdict.status}`);
   }
   for (const p of places.filter((x) => !byId.has(x.id))) {
-    problems.push(`the plate carries "${p.id}", which is not in the corpus`);
+    problems.push(`the map carries "${p.id}", which is not in the corpus`);
   }
 
   return problems.length
@@ -184,16 +186,16 @@ async function checkPlaces(ctx) {
     : { status: 'PASS', reason: `${places.length} stops, each with the corpus id, zone, cluster and verdict` };
 }
 
-// 2. Geometry is honest: the plate's own placement is the projection.
+// 2. Geometry is honest: the map's own placement is the projection.
 async function checkGeometry(ctx) {
   let projection = null;
   try {
-    projection = await import(pathToFileURL(join(root, 'src', 'iso', 'projection.mjs')).href);
+    projection = await import(pathToFileURL(join(root, 'src', 'map', 'projection.mjs')).href);
   } catch {
     projection = null;
   }
   if (!projection?.place) {
-    return { status: 'SKIP', reason: 'src/iso/projection.mjs could not be read, so there is no projection to check against' };
+    return { status: 'SKIP', reason: 'src/map/projection.mjs could not be read, so there is no projection to check against' };
   }
 
   const places = await ctx.readPlaces();
@@ -220,19 +222,19 @@ async function checkGeometry(ctx) {
   const spread = Math.max(...shown.map((s) => s[0])) - Math.min(...shown.map((s) => s[0]));
   const tol = Math.max(TOL.geometry, 0.005 * spread);
   if (fit !== null && fit <= tol) {
-    return { status: 'PASS', reason: `${withPos.length} places land within ${fit.toFixed(2)} units of the projection through the plate's camera` };
+    return { status: 'PASS', reason: `${withPos.length} places land within ${fit.toFixed(2)} units of the projection through the map's camera` };
   }
   const worst = withPos
     .map((p, i) => ({ id: p.id, d: Math.hypot(shown[i][0] - expected[i][0], shown[i][1] - expected[i][1]) }))
     .sort((a, b) => b.d - a.d)[0];
-  return { status: 'FAIL', reason: `the plate's placement misses the projection: worst is ${worst.id} at ${worst.d.toFixed(1)} units (tolerance ${TOL.geometry})` };
+  return { status: 'FAIL', reason: `the map's placement misses the projection: worst is ${worst.id} at ${worst.d.toFixed(1)} units (tolerance ${TOL.geometry})` };
 }
 
 // 4. Selection raises a readout, and every number in it is the corpus's.
 async function checkReadout(ctx) {
   const places = await ctx.readPlaces();
   const first = places[0];
-  if (!first) return { status: 'FAIL', reason: 'the plate carries no stop to press' };
+  if (!first) return { status: 'FAIL', reason: 'the map carries no stop to press' };
   if (!(await ctx.pressPlace(first.id))) {
     return { status: 'FAIL', reason: `no stop could be pressed for ${first.id}` };
   }
@@ -274,67 +276,117 @@ async function checkReadout(ctx) {
     : { status: 'PASS', reason: `${first.id} reads back its corpus numbers` };
 }
 
-// 5. The token re-reads the routes, and the routes agree with the corpus.
-async function checkToken(ctx) {
-  const price0 = await ctx.readToken();
-  const routes0 = await ctx.readRoutes();
-  if (price0 === null) return { status: 'FAIL', reason: `the figure exposes no token price (expected ${DOM.tokenValue})` };
-  if (Object.keys(routes0).length === 0) return { status: 'FAIL', reason: `the figure exposes no route readouts (expected ${DOM.route})` };
-
-  const moved = await moveToken(ctx.page, DOM, String(price0));
-  const price1 = await ctx.readToken();
-  const routes1 = await ctx.readRoutes();
-  if (price1 === price0) {
-    return { status: 'FAIL', reason: `the token did not move: still at ${price0} after ${moved}` };
+// 5. The four sliders filter the map, and the count follows.
+async function checkSliders(ctx) {
+  const sliders = await ctx.page.$$(DOM.slider);
+  if (!sliders.length) {
+    return { status: 'FAIL', reason: `the map exposes no filter sliders (expected ${DOM.slider})` };
   }
-  const changed = Object.keys(routes1).filter((k) => routes1[k].value !== routes0[k]?.value);
-  if (changed.length === 0) {
-    return { status: 'FAIL', reason: `the token moved from ${price0} to ${price1} but no route readout changed` };
+  const keys = await ctx.page.evaluate(
+    (dom) => [...document.querySelectorAll(dom.slider)].map((el) => el.getAttribute('data-slider')),
+    DOM
+  );
+  for (const want of ['cases', 'price', 'margin', 'saturation']) {
+    if (!keys.includes(want)) return { status: 'FAIL', reason: `the map has no ${want} slider` };
   }
 
-  // What a route may legitimately read at a price, all of it from the corpus:
-  // one route's contribution, two routes', one route's revenue, or the whole
-  // cluster's contribution or revenue.
-  const readings = (c, p) => [
-    ['one route contribution', c.routeCases * (p - CLUSTER_COST), c.routeCases],
-    ['two route contribution', 2 * c.routeCases * (p - CLUSTER_COST), 2 * c.routeCases],
-    ['one route revenue', c.routeCases * p, c.routeCases],
-    ['cluster contribution', c.cases * (p - CLUSTER_COST), c.cases],
-    ['cluster revenue', c.cases * p, c.cases],
-  ];
+  const before = await ctx.readPlaces();
+  const level = await ctx.page.evaluate(() => {
+    const slider = document.querySelector('[data-slider="cases"]');
+    if (!slider) return null;
+    const value = Math.round(Number(slider.max) * 0.55);
+    slider.value = String(value);
+    slider.dispatchEvent(new Event('input', { bubbles: true }));
+    return value;
+  });
+  if (level === null) return { status: 'FAIL', reason: 'the cases slider could not be read' };
+  await settle();
+
+  const after = await ctx.readPlaces();
   const fails = [];
-  const matched = new Set();
-  const dp = price1 - price0;
-  for (const [id, r] of Object.entries(routes1)) {
-    const c = clusters.get(id);
-    if (!c) {
-      fails.push(`route ${id} is not a corpus cluster`);
-      continue;
-    }
-    const got = r.value;
-    if (got === null) {
-      fails.push(`route ${id} reads "${r.text}", which carries no number`);
-      continue;
-    }
-    const want = readings(c, price1);
-    const before = routes0[id]?.value ?? firstNumber(routes0[id]?.text);
-    const hit = want.find(([, value, slope]) => {
-      const valueTol = Math.max(2, TOL.contribution * Math.abs(value));
-      const deltaTol = Math.max(2, TOL.contribution * Math.abs(slope * dp));
-      const deltaOk = before === null || before === undefined ? true : Math.abs((got - before) - slope * dp) <= deltaTol;
-      return Math.abs(got - value) <= valueTol && deltaOk;
-    });
-    if (!hit) {
-      fails.push(
-        `route ${id} reads ${got} at ${price1}, the corpus says one route ${Math.round(want[0][1])}, one route revenue ${Math.round(want[2][1])} or cluster ${Math.round(want[3][1])}`
-      );
-    } else {
-      matched.add(hit[0]);
+  if (after.length !== before.length) fails.push('a slider changed the number of marks on the map');
+  const dimmed = after.filter((p) => p.dimmed);
+  if (!dimmed.length) fails.push(`the cases slider at ${level} dimmed nothing`);
+  for (const p of after.filter((x) => !x.dimmed)) {
+    if (Number(p.cases) < level) fails.push(`${p.id} carries ${p.cases} cases and still stands at ${level}`);
+  }
+  const count = await ctx.readCount();
+  if (count && !count.includes(String(after.length - dimmed.length))) {
+    fails.push(`the count reads "${count}" while ${after.length - dimmed.length} places match`);
+  }
+
+  // The saturation slider counts the other way: under a level.
+  const satLevel = await ctx.page.evaluate(() => {
+    const slider = document.querySelector('[data-slider="saturation"]');
+    if (!slider) return null;
+    const value = 40;
+    slider.value = String(value);
+    slider.dispatchEvent(new Event('input', { bubbles: true }));
+    return value;
+  });
+  await settle();
+  const sat = await ctx.readPlaces();
+  for (const p of sat.filter((x) => !x.dimmed)) {
+    if (Number(p.saturation) > satLevel) {
+      fails.push(`${p.id} carries saturation ${p.saturation} and still stands under ${satLevel}`);
     }
   }
-  return fails.length
-    ? { status: 'FAIL', reason: fails.slice(0, 3).join('; ') + (fails.length > 3 ? `; and ${fails.length - 3} more` : '') }
-    : { status: 'PASS', reason: `token ${price0} to ${price1}, ${Object.keys(routes1).length} routes re-read (${[...matched].join(', ')})` };
+
+  // Clear every slider and the map must come back whole.
+  await ctx.page.evaluate(() => {
+    for (const slider of document.querySelectorAll('[data-slider]')) {
+      slider.value = slider.dataset.slider === 'saturation' ? slider.max : slider.min;
+      slider.dispatchEvent(new Event('input', { bubbles: true }));
+    }
+  });
+  await settle();
+  const cleared = await ctx.readPlaces();
+  if (cleared.filter((p) => p.dimmed).length) {
+    fails.push('some marks stayed dimmed after the sliders were cleared');
+  }
+  if (fails.length) return { status: 'FAIL', reason: fails.slice(0, 3).join('; ') };
+  return {
+    status: 'PASS',
+    reason: `four sliders filter ${after.length} marks and the count follows them`,
+  };
+}
+
+// 6. Overlapping marks merge into counted clusters, and zooming separates them.
+async function checkClusters(ctx) {
+  const before = await ctx.readClusters();
+  if (!before.clusters.length) {
+    return { status: 'FAIL', reason: 'the map merges nothing: overlapping marks are not counted' };
+  }
+  const fails = [];
+  for (const cluster of before.clusters) {
+    if (cluster.count < 2) fails.push(`a cluster carries ${cluster.count} places`);
+    if (cluster.count !== cluster.members.length) {
+      fails.push(`a cluster counts ${cluster.count} places and names ${cluster.members.length}`);
+    }
+  }
+  const counted = before.clusters.reduce((sum, c) => sum + c.count, 0);
+  const clustered = await ctx.page.evaluate(() => document.querySelectorAll('.map-place.is-clustered').length);
+  if (counted !== clustered) {
+    fails.push(`the clusters count ${counted} places but ${clustered} marks are merged`);
+  }
+
+  // Zoom in and the marks come apart: they were never moved.
+  const viewBefore = await ctx.page.evaluate(() => document.querySelector('.map-svg').getAttribute('viewBox'));
+  for (let i = 0; i < 3; i += 1) {
+    await ctx.page.click('[data-zoom="in"]');
+    await settle(120);
+  }
+  const after = await ctx.readClusters();
+  const viewAfter = await ctx.page.evaluate(() => document.querySelector('.map-svg').getAttribute('viewBox'));
+  if (viewBefore === viewAfter) fails.push('zooming in did not change the frame');
+  if (after.clusters.length >= before.clusters.length) {
+    fails.push(`zooming in did not separate the marks: ${before.clusters.length} clusters before, ${after.clusters.length} after`);
+  }
+  if (fails.length) return { status: 'FAIL', reason: fails.slice(0, 3).join('; ') };
+  return {
+    status: 'PASS',
+    reason: `${before.clusters.length} counted clusters hold ${counted} places, and zooming separates them`,
+  };
 }
 
 // 3. The plate is actually painted. The kit's own rules ship with the
@@ -342,42 +394,114 @@ async function checkToken(ctx) {
 // missing every solid inherits a black fill and every line inherits no
 // stroke, and the figure on the page is a black blob. Only the built site
 // can prove this, so this check runs here and not in the figure's own build.
+// The names on the map. A name that lies across a mark hides the mark and
+// smudges the name, and a name that lies over another name makes both
+// unreadable. The layout is meant to prevent both, so the built page is
+// measured to prove it did.
+async function checkLabels(ctx) {
+  // Two frames: the one the reader opens on, and a zoomed one where the
+  // places have come apart and the names have room to spread. A layout that
+  // only works in one of them is a layout that will fail for someone.
+  const frames = [];
+  await ctx.page.click('[data-zoom="fit"]');
+  await settle(180);
+  frames.push({ name: 'the opening frame', laid: await ctx.readLabels() });
+  await ctx.page.click('[data-zoom="in"]');
+  await settle(180);
+  frames.push({ name: 'a zoomed frame', laid: await ctx.readLabels() });
+  await ctx.page.click('[data-zoom="fit"]');
+  await settle(180);
+
+  const fails = [];
+  let drawn = 0;
+  const hits = (a, b) => a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top;
+
+  for (const frame of frames) {
+    const laid = frame.laid;
+    if (!laid) {
+      fails.push(`the map has no stage to lay names on in ${frame.name}`);
+      continue;
+    }
+    drawn += laid.labels.length;
+    if (!laid.labels.length) {
+      fails.push(`the map draws no names at all in ${frame.name}: every place should carry one where it has room`);
+      continue;
+    }
+
+    for (const label of laid.labels) {
+      for (const mark of laid.marks) {
+        if (mark.id === label.id) continue;
+        if (hits(label.box, mark.box)) {
+          fails.push(`in ${frame.name} the name "${label.name}" lies across the mark ${mark.id}`);
+          break;
+        }
+      }
+      for (const cluster of laid.clusters) {
+        if (hits(label.box, cluster.box)) {
+          fails.push(`in ${frame.name} the name "${label.name}" lies across a cluster of ${cluster.id}`);
+          break;
+        }
+      }
+    }
+
+    for (let i = 0; i < laid.labels.length; i += 1) {
+      for (let j = i + 1; j < laid.labels.length; j += 1) {
+        if (hits(laid.labels[i].box, laid.labels[j].box)) {
+          fails.push(
+            `in ${frame.name} the names "${laid.labels[i].name}" and "${laid.labels[j].name}" lie over each other`
+          );
+          break;
+        }
+      }
+    }
+  }
+
+  if (fails.length) return { status: 'FAIL', reason: fails.slice(0, 3).join('; ') };
+  return {
+    status: 'PASS',
+    reason: `${drawn} names are drawn across two frames, and none of them crosses a mark, a cluster or another name`,
+  };
+}
+
 async function checkRender(ctx) {
   const paint = await ctx.page.evaluate((dom) => {
     const fig = document.querySelector(dom.figure);
     if (!fig) return null;
     const take = (sel) => [...fig.querySelectorAll(sel)].slice(0, 60);
-    const fills = take('.iso-fill');
-    const shades = take('.iso-shade');
-    const lines = take('.iso-line');
+    const marks = take('.map-place__shape');
+    const coast = take('.map-coast');
+    const routes = take('.map-route');
     const colours = (nodes, prop) => [...new Set(nodes.map((n) => getComputedStyle(n)[prop]))];
     return {
-      solids: fills.length,
-      shades: shades.length,
-      lines: lines.length,
-      fillColours: colours(fills, 'fill'),
-      shadeColours: colours(shades, 'fill'),
-      strokeColours: colours(lines, 'stroke'),
+      marks: marks.length,
+      markColours: colours(marks, 'fill'),
+      coastColours: colours(coast, 'stroke'),
+      routeColours: colours(routes, 'stroke'),
+      routeWidths: colours(routes, 'stroke-width'),
+      coastWidths: colours(coast, 'stroke-width'),
     };
   }, DOM);
 
   if (!paint) return { status: 'FAIL', reason: 'the figure is not on the page' };
 
   const fails = [];
-  if (!paint.solids) fails.push('the plate carries no solids at all');
-  if (paint.fillColours.includes('rgb(0, 0, 0)')) {
-    fails.push('a solid is filled black: the kit rules are missing from the site stylesheet');
+  if (!paint.marks) fails.push('the map carries no marks at all');
+  if (paint.markColours.includes('rgb(0, 0, 0)')) {
+    fails.push('a mark is filled black: the map rules are missing from the site stylesheet');
   }
-  if (paint.lines && paint.strokeColours.every((c) => c === 'none')) {
-    fails.push('no line carries a stroke: the kit rules are missing from the site stylesheet');
+  if (paint.markColours.length < 2) {
+    fails.push(`the marks carry one colour: the verdict colours are missing`);
   }
-  if (paint.shades && paint.shadeColours.length < 2) {
-    fails.push(`the four tones from facing are missing: ${paint.shadeColours.length} tone found`);
+  if (paint.coastColours.every((c) => c === 'none')) {
+    fails.push('the coastline carries no stroke: the map rules are missing from the site stylesheet');
+  }
+  if (paint.routeWidths.every((w) => w === '0px')) {
+    fails.push('every route is drawn with no width');
   }
   if (fails.length) return { status: 'FAIL', reason: fails.join('; ') };
   return {
     status: 'PASS',
-    reason: `${paint.solids} solids painted, ${paint.shadeColours.length} tones from facing, ${paint.strokeColours.length} line inks`,
+    reason: `${paint.marks} marks painted in ${paint.markColours.length} verdict colours, the coastline and ${paint.routeColours.length} route inks drawn`,
   };
 }
 
@@ -415,7 +539,7 @@ async function checkFilter(ctx) {
 
   return fails.length
     ? { status: 'FAIL', reason: fails.join('; ') }
-    : { status: 'PASS', reason: 'Zone A lit, Zone B dimmed, empty filter dims the plate' };
+    : { status: 'PASS', reason: 'Zone A lit, Zone B dimmed, empty filter dims the map' };
 }
 
 // 7. Keyboard reaches a place, arrows move along a route, Enter selects.
@@ -519,39 +643,36 @@ async function checkMobile(ctx) {
 
   // The card's own lines: the hint and the readout must not sit on top of
   // each other, and neither may run off the plate.
-  const card = await ctx.page.evaluate((dom) => {
-    const fig = document.querySelector(dom.figure);
-    const hint = fig?.querySelector('.iso-plate-corner[data-corner="hint"]');
-    const readout = fig?.querySelector('.iso-plate-corner[data-corner="readout"]');
-    if (!fig || !hint || !readout) return null;
-    const h = hint.getBoundingClientRect();
-    const r = readout.getBoundingClientRect();
-    const box = fig.getBoundingClientRect();
-    const overlap = !(h.right <= r.left || r.right <= h.left || h.bottom <= r.top || r.bottom <= h.top);
-    return {
-      overlap,
-      readoutClipped: r.right > box.right + 1 || r.left < box.left - 1,
-      hintClipped: h.right > box.right + 1 || h.left < box.left - 1,
-    };
-  }, DOM);
-  if (!card) return { status: 'FAIL', reason: 'the card has no hint or readout line' };
-  if (card.overlap) return { status: 'FAIL', reason: 'the hint and the readout sit on top of each other at 390 pixels' };
-  if (card.readoutClipped || card.hintClipped) {
-    return { status: 'FAIL', reason: 'the card runs off the plate at 390 pixels' };
-  }
-
   // A press on the plate has to work on a phone. Inside the dense cluster a
   // pin is three pixels wide and its neighbours overlap it, so the stop the
   // plate can be trusted to answer to is the one with room around it; the
   // appendix table carries the precise per-place route on a phone.
   const target = await ctx.page.evaluate((dom) => {
     const stops = [...document.querySelectorAll(dom.place)];
+    const stage = document.querySelector('[data-map-stage]');
+    const stageRect = stage?.getBoundingClientRect();
     const points = stops
+      .filter((el) => !el.classList.contains('is-clustered'))
       .map((el) => {
         const r = el.getBoundingClientRect();
-        return { id: el.getAttribute(dom.placeId), x: r.left + r.width / 2, y: r.top + r.height / 2 };
+        return {
+          id: el.getAttribute(dom.placeId),
+          x: r.left + r.width / 2,
+          y: r.top + r.height / 2,
+        };
       })
-      .filter((p) => Number.isFinite(p.x));
+      .filter((p) => Number.isFinite(p.x) && Number.isFinite(p.y))
+      // Only marks inside the visible frame can be tapped: the four western
+      // localities sit outside the corridor view and are reached by zooming.
+      .filter((p) => {
+        if (!stageRect) return true;
+        return (
+          p.x >= stageRect.left &&
+          p.x <= stageRect.right &&
+          p.y >= stageRect.top &&
+          p.y <= stageRect.bottom
+        );
+      });
     if (!points.length) return null;
     let best = null;
     for (const p of points) {
@@ -564,7 +685,7 @@ async function checkMobile(ctx) {
     }
     return best;
   }, DOM);
-  if (!target) return { status: 'FAIL', reason: 'the plate carries no stops to press' };
+  if (!target) return { status: 'FAIL', reason: 'the map carries no stops to press' };
 
   const handle = await ctx.page.$(`${DOM.place}[${DOM.placeId}="${target.id}"]`);
   if (!handle) return { status: 'FAIL', reason: `no stop for ${target.id} to tap` };
@@ -579,7 +700,7 @@ async function checkMobile(ctx) {
   }
   return {
     status: 'PASS',
-    reason: `the figure fits 390px, the card lines do not collide, and a tap on ${target.id} selects it`,
+    reason: `the map fits 390px and a tap on ${target.id} raises its readout`,
   };
 }
 
@@ -620,6 +741,7 @@ try {
             cluster: val(el, dom.cluster),
             verdict: val(el, dom.verdict),
             dimmed: el.hasAttribute(dom.dimmed) && dim !== 'false' && dim !== '0',
+            cases: val(el, dom.cases),
             x: val(el, dom.placeX),
             y: val(el, dom.placeY),
             selected: dom.selected.some((sel) => el.matches(sel)),
@@ -635,6 +757,20 @@ try {
           fields[el.getAttribute(dom.readoutField)] = (el.textContent ?? '').trim();
         }
         return { present: Boolean(root), fields };
+      }, DOM),
+    readCount: () =>
+      page.evaluate((dom) => {
+        const el = document.querySelector(dom.count);
+        return el ? (el.textContent ?? '').trim() : null;
+      }, DOM),
+    readClusters: () =>
+      page.evaluate((dom) => {
+        const out = [];
+        for (const el of document.querySelectorAll(dom.clusterMark)) {
+          const members = (el.getAttribute('data-cluster-members') || '').split(' ').filter(Boolean);
+          out.push({ count: Number(el.getAttribute('data-cluster-count')), members });
+        }
+        return { clusters: out };
       }, DOM),
     readToken: () =>
       page.evaluate((dom) => {
@@ -659,6 +795,41 @@ try {
         }
         return out;
       }, DOM),
+    // What is drawn on the stage right now: the names, the marks that stand
+    // on their own, and the cluster discs, each as a box in stage pixels.
+    readLabels: () =>
+      page.evaluate(() => {
+        const stage = document.querySelector('[data-map-stage]');
+        if (!stage) return null;
+        const sr = stage.getBoundingClientRect();
+
+        const boxOf = (el) => {
+          if (!el) return null;
+          const r = el.getBoundingClientRect();
+          if (!r.width && !r.height) return null;
+          return { left: r.left - sr.left, right: r.right - sr.left, top: r.top - sr.top, bottom: r.bottom - sr.top };
+        };
+
+        const labels = [...document.querySelectorAll('.map-label')]
+          .filter((g) => !g.hasAttribute('hidden'))
+          .map((g) => {
+            const text = g.querySelector('text');
+            const box = boxOf(text);
+            return { id: g.getAttribute('data-label-for'), name: (text?.textContent ?? '').trim(), box };
+          })
+          .filter((l) => l.box);
+
+        const marks = [...document.querySelectorAll('[data-place]')]
+          .filter((el) => !el.classList.contains('is-clustered'))
+          .map((el) => ({ id: el.getAttribute('data-place-id'), box: boxOf(el.querySelector('.map-place__shape')) }))
+          .filter((m) => m.box);
+
+        const clusters = [...document.querySelectorAll('.map-cluster')]
+          .map((el) => ({ id: el.getAttribute('data-cluster-count'), box: boxOf(el.querySelector('.map-cluster__disc')) }))
+          .filter((c) => c.box);
+
+        return { labels, marks, clusters };
+      }),
     // Pressing a stop: an SVG element has no click() of its own, so the press
     // is dispatched as the event a reader's pointer would send.
     pressPlace: (id) =>
@@ -679,14 +850,14 @@ try {
   // Without the figure there is nothing to prove: say so and leave the exit
   // code alone, so a half-built site does not fail a run.
   if (figureCount === 0) {
-    let why = 'the Corridor Bench is not on the page';
+    let why = 'the Locality Map is not on the page';
     try {
       const source = await readFile(join(root, 'src', 'pages', 'zones.astro'), 'utf8');
       if (source.includes('data-figure')) why = 'the figure is in src/pages/zones.astro but the built site is older — run npm run build';
     } catch {
       /* the source is not readable; the default message stands */
     }
-    note(`the Corridor Bench is not in the built page: ${why}`);
+    note(`the Locality Map is not in the built page: ${why}`);
     note('');
     for (const name of CHECKS) record(name, 'SKIP', 'the figure is not on the page');
   } else {
@@ -703,7 +874,9 @@ try {
     await run('geometry', checkGeometry);
     await run('render', checkRender);
     await run('readout', checkReadout);
-    await run('token', checkToken);
+    await run('sliders', checkSliders);
+    await run('clusters', checkClusters);
+    await run('labels', checkLabels);
     await run('filter', checkFilter);
     await run('keyboard', checkKeyboard);
     await run('deep link', checkDeepLink);
