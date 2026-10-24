@@ -8,3 +8,10 @@ graphify-out/
 .DS_Store
 *.log
 src/content/
+
+# A raw Google Sheets HTML capture, saved as a probe and read by nothing. The
+# street ledger it sat beside (gcc_streets.csv) is the evidence and is kept.
+research/zone-b/_work/gcc_wards.csv
+
+__pycache__/
+*.pyc
