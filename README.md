@@ -72,6 +72,7 @@ docs/04-plan.md               what was done, in order
 docs/05-mvp.md                what it does, and what it deliberately does not
 docs/06-verification.md       what was measured, and what is still untested
 docs/07-retro.md               what we would do differently
+docs/08-design-history.md     how the thinking ran: the worlds, the re-rolls, the build
 docs/DOSSIER-STATUS.md        what the dossier is and is not
 docs/attempts/                the failed paths
 docs/decisions/               the changes to locked beats
@@ -79,6 +80,27 @@ docs/decisions/               the changes to locked beats
 
 `DESIGN.md` is the design record: the tokens, the components, the state
 vocabulary and the rules the build was made against.
+
+## Publishing
+
+The site is published by GitHub Pages from `master`, through
+`.github/workflows/pages.yml`. The workflow runs the same content build the
+local site uses and uploads `dist/` as a Pages artifact.
+
+Pages serves a repository under its own name, so the build needs to know its
+mount point. `SITE_BASE` carries it:
+
+```
+npm run build                                  # local, at the root
+SITE_BASE=/mobile-vet-chennai/ npm run build  # Pages, under the repository name
+```
+
+Every internal link is written against `import.meta.env.BASE_URL`, so one set
+of pages serves both. The workflow deliberately does **not** run
+`npm run harmonise`: that step rewrites the research pass's `localities.json`
+in place and is not idempotent, so running it on an already harmonised corpus
+would overwrite the original research output with its own result. The
+harmonised corpus is committed and the build reads it as it stands.
 
 ## The reading
 
