@@ -5,6 +5,12 @@ name: Deploy the report to GitHub Pages
 # the same content build the local site uses, then uploads dist/ as a Pages
 # artifact.
 #
+# The corridor bench is drawn, not committed: its geometry, markup, styles and
+# client layer are built from the research corpus by scripts/build-map-figure.mjs
+# into src/content/zones, which the site imports. The build therefore draws the
+# figure first and audits its geometry, and `npm run build` does the same
+# locally, so the page and the picture can never disagree.
+#
 # The harmonise step is deliberately absent. It rewrites the research pass's
 # localities.json in place and is not idempotent — running it on an already
 # harmonised corpus would overwrite the original research output with its own
@@ -42,6 +48,9 @@ jobs:
 
       - name: Build the report content
         run: npm run content
+
+      - name: Build the corridor bench and audit its geometry
+        run: npm run figure:audit
 
       - name: Build the site
         run: npm run build

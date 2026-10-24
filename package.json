@@ -5,13 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "figure": "node scripts/build-map-figure.mjs",
+    "figure:audit": "node scripts/build-map-figure.mjs --audit",
+    "build": "npm run figure && astro build",
     "preview": "astro preview",
     "content": "node scripts/build-content.mjs",
     "zones": "node scripts/build-zones.mjs",
     "harmonise": "node scripts/harmonize.mjs",
-    "pdf": "node scripts/make-pdf.mjs",
-    "pdf:zones": "node scripts/make-pdf.mjs /zones-print/index.html mobile-vet-locality-dossier.pdf \"Locality Dossier &mdash; South Chennai &nbsp;&middot;&nbsp; MVT-CHN-002\""
+    "pdf": "npm run build && node scripts/make-pdf.mjs",
+    "pdf:zones": "npm run build && node scripts/make-pdf.mjs /zones-print/index.html mobile-vet-locality-dossier.pdf \"Locality Dossier &mdash; South Chennai &nbsp;&middot;&nbsp; MVT-CHN-002\""
   },
   "dependencies": {
     "astro": "^5.14.1"
