@@ -1,0 +1,67 @@
+name: Deploy the report to GitHub Pages
+
+# The two documents are static: one Markdown source per document, one content
+# build per document, one Astro build for all four routes. The workflow runs
+# the same content build the local site uses, then uploads dist/ as a Pages
+# artifact.
+#
+# The harmonise step is deliberately absent. It rewrites the research pass's
+# localities.json in place and is not idempotent — running it on an already
+# harmonised corpus would overwrite the original research output with its own
+# result. The harmonised corpus is committed; the build reads it as it stands.
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build the dossier content
+        run: npm run zones
+
+      - name: Build the report content
+        run: npm run content
+
+      - name: Build the site
+        run: npm run build
+        env:
+          # Pages serves this repository under its own name, so every internal
+          # link has to carry the mount point. Locally the same pages build at
+          # the root, and the two never disagree because both read one source.
+          SITE_BASE: /mobile-vet-chennai/
+          SITE_URL: https://aswathas.github.io
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -19,6 +19,7 @@ import '../styles/zones.css';
 
 const [titleMain, titleSub] = meta.title.split(/: (.+)/);
 const zoneNames = agg.zones.map((z) => z.name).join(' and ');
+const B = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
@@ -33,9 +34,9 @@ const zoneNames = agg.zones.map((z) => z.name).join(' and ');
     />
     <meta name="color-scheme" content="light" />
     <meta name="robots" content="noindex" />
-    <link rel="preload" href="/fonts/public-sans-var.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href={`${B}fonts/public-sans-var.woff2`} as="font" type="font/woff2" crossorigin />
+    <link rel="icon" href={`${B}favicon.svg`} type="image/svg+xml" />
+    <link rel="stylesheet" href={`${B}fonts/fonts.css`} />
   </head>
 
   <body>
@@ -76,7 +77,7 @@ const zoneNames = agg.zones.map((z) => z.name).join(' and ');
       </div>
     </header>
 
-    <a class="backlink" href="/">&larr; The market report</a>
+    <a class="backlink" href={`${B}`}>&larr; The market report</a>
 
     <Rail
       outline={outline}
