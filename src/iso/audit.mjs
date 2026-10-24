@@ -1007,6 +1007,7 @@ export function looseEnds(tubes, solids, { state = 1, tolerance = 0.15 } = {}) {
 }
 
 function surfaceOf(shape, spacing = 0.6) {
+  spacing = shape.spacing ?? spacing;
   const points = [];
   if (shape.kind === "body") {
     const { F, poly } = shape;
