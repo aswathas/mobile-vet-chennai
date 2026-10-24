@@ -130,6 +130,17 @@ neighbouring stop was painted over it and took the press. The ring takes no
 pointer events now, and every stop carries an invisible press target the size
 of a fingertip.
 
+The fourth was found by the deploy, not by the reader. The figure is drawn
+rather than committed — its geometry, markup, styles and client layer are
+generated from the corpus into `src/content/zones`, which the repository
+ignores — and nothing in the Pages workflow ever drew it, so the first push
+of the figure failed the build with `Could not resolve
+../content/zones/figure.css`. `npm run build` now draws the figure before it
+builds the site, the workflow runs the geometry audit before the site build,
+and the PDF scripts build the site first, because the dossier's PDF prints the
+figure. The published dossier carries the bench on its second page and its
+PDF carries it too.
+
 **What is still untested.** Inside the dense corridor the pins are three pixels
 wide on a phone and their neighbours overlap, so the plate cannot carry a
 finger to a named locality there; the appendix table is the phone's precise
