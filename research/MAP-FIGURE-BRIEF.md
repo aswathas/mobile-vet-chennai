@@ -167,15 +167,16 @@ buttons and above the FlowDiagram.
 ## 9. Verification
 
 `node scripts/verify-figure.mjs` opens the built `/zones/` page and proves,
-in eleven checks, that all hundred places carry their own corpus record, that
+in twelve checks, that all hundred places carry their own corpus record, that
 sampled places land on the projection, that the sheet is painted in the right
 verdict colours, that a selected place's readout reads the corpus's own
 numbers back, that the four sliders filter the sheet and the count follows,
-that the merged clusters count their places and come apart on zoom, that the
-board filters the sheet and empties it, that the keyboard reaches a place and
-moves along its route, that a deep link selects on load and selection writes
-the URL, that nothing logs an error, and that on a phone the map fits and a
-tap on a place raises its readout.
+that the merged clusters count their places and come apart on zoom, that not
+one name lies across a mark, a cluster or another name in either the opening
+frame or a zoomed one, that the board filters the sheet and empties it, that
+the keyboard reaches a place and moves along its route, that a deep link
+selects on load and selection writes the URL, that nothing logs an error, and
+that on a phone the map fits and a tap on a place raises its readout.
 
 `node scripts/verify-interactions.mjs` walks the rest of the dossier: the
 board's filters, the corridor buttons, the focus order and the link between
